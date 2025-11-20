@@ -1,0 +1,150 @@
+/* =============================================
+   Tokyo Trip 2026 - Cover Page Styles
+   Styles for cover.html (Print Reference Guide)
+   ============================================= */
+
+body {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background: #f5f5f5;
+}
+
+/* Page Layout (A4 Print) */
+.page {
+    page-break-after: always;
+    width: 210mm;
+    min-height: 297mm;
+    padding: 15mm;
+    box-sizing: border-box;
+    margin: 20px auto;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.page:last-child {
+    page-break-after: avoid;
+}
+
+/* Screen mode - responsive */
+@media screen and (max-width: 768px) {
+    .page {
+        width: 100%;
+        min-height: auto;
+        padding: 1rem;
+        margin: 0;
+        box-shadow: none;
+    }
+}
+
+/* Typography */
+h1, h2, h3 {
+    color: #004d40;
+    border-bottom: 2px solid #e0f2f1;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24pt;
+    text-align: center;
+    border-bottom: 4px solid #004d40;
+    padding: 10px 0;
+    margin-bottom: 30px;
+    color: #00796b;
+}
+
+h2 {
+    font-size: 16pt;
+    color: #00897b;
+}
+
+h3 {
+    font-size: 12pt;
+    color: #009688;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+    font-size: 9pt;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+/* Utility Classes */
+.highlight {
+    background-color: #fffde7;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.remark {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.list-style {
+    list-style-type: disc;
+    margin-left: 20px;
+    font-size: 9pt;
+}
+
+.small-text {
+    font-size: 8pt;
+    color: #777;
+}
+
+.icon {
+    font-size: 12pt;
+}
+
+/* Responsive typography */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    table {
+        font-size: 0.85rem;
+    }
+
+    .small-text {
+        font-size: 0.75rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+    }
+
+    .page {
+        box-shadow: none;
+        margin: 0;
+    }
+}

@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Trip 2026 - หน้าหลักสรุป</title>
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header .subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .header-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Section */
+        .section {
+            padding: 40px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
+            display: inline-block;
+        }
+
+        /* Cards */
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border-left: 5px solid #667eea;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .card-image {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        /* Day Timeline */
+        .day-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-left: 8px solid #667eea;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .day-info h3 {
+            font-size: 28px;
+            color: #1e3c72;
+        }
+
+        .day-info .date {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            padding-left: 30px;
+            border-left: 3px solid #667eea;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 20px;
+        }
+
+        .timeline-activity {
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #b8daff;
+        }
+
+        .info-box.highlight {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .info-box.success {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        /* Links */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            background: #764ba2;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 1024px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hotel Card */
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hotel-content {
+            padding: 25px;
+        }
+
+        .hotel-name {
+            font-size: 22px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .hotel-detail {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .hotel-detail strong {
+            color: #667eea;
+        }
+
+        /* Place Detail */
+        .place-detail {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .place-detail h4 {
+            font-size: 22px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .place-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .place-detail li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .place-detail li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .footer .exchange-rate {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer .update-info {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Emoji Icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .badge-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        /* 2 Column Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .content-left {
+            /* Main content stays as is */
+        }
+
+        .content-right {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            min-height: 300px;
+        }
+
+        .content-right h4 {
+            font-size: 18px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Grid for Right Column */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* Extra Info Section */
+        .extra-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .extra-info h5 {
+            font-size: 16px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .extra-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .extra-info li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-link.pinterest {
+            background: #e60023;
+        }
+
+        .social-link.tiktok {
+            background: #000;
+        }
+
+        .social-link.lemon8 {
+            background: #ffeb3b;
+            color: #333;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.youtube {
+            background: #ff0000;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗼 Tokyo Trip 2026</h1>
+            <div class="subtitle">แผนการเดินทางฉบับสมบูรณ์ • 6-13 มีนาคม 2026</div>
+            <img src="../images/001.jpg" alt="ภาพวิวเมืองโตเกียวยามค่ำคืนพร้อมโตเกียวทาวเวอร์" class="header-image">
+        </div>
+
+        <!-- Flight Information -->
+        <div class="section">
+            <h2 class="section-title">✈️ ข้อมูลเที่ยวบิน</h2>
+
+            <div class="grid-2">
+                <!-- Outbound Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛫 เที่ยวบินขาไป - SL 394</h3>
+                    <img src="../images/002.jpg" alt="เครื่องบินกำลังทะยานขึ้นฟ้า" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>สายการบิน</strong></td>
+                            <td>ไทย ไลอ้อน แอร์ (Thai Lion Air)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>วันที่</strong></td>
+                            <td>ศุกร์ที่ 6 มีนาคม 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>เวลา</strong></td>
+                            <td>06:15 สนามบินดอนเมือง (DMK) → 16:20 สนามบินนาริตะ (NRT)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terminal</strong></td>
+                            <td>สนามบินนาริตะ เทอร์มินัล 2 (Narita International Airport Terminal 2)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>MYOWFY</td>
+                        </tr>
+                        <tr>
+                            <td><strong>สัมภาระถือ</strong></td>
+                            <td>7 กก. (40×30×20 ซม.)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>สัมภาระเช็คอิน</strong></td>
+                            <td>Arilek: 15 กก. / Nunnaphat: ไม่มี</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ สำคัญ:</strong> ถึงสนามบินดอนเมือง (DMK) 03:15 น. (3 ชม.ก่อนเครื่องออก) | เคาน์เตอร์ F-H
+                    </div>
+                </div>
+
+                <!-- Return Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛬 เที่ยวบินขากลับ - XJ 607</h3>
+                    <img src="../images/003.jpg" alt="บรรยากาศภายในสนามบินนาริตะ" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>สายการบิน</strong></td>
+                            <td>ไทย แอร์เอเชีย เอ็กซ์ (Thai AirAsia X)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>วันที่</strong></td>
+                            <td>ศุกร์ที่ 13 มีนาคม 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>เวลา</strong></td>
+                            <td>21:15 สนามบินนาริตะ (NRT) → 02:40+1 สนามบินดอนเมือง (DMK)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terminal</strong></td>
+                            <td>สนามบินนาริตะ เทอร์มินัล 1 (Narita International Airport Terminal 1)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>G7Y6YF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>สัมภาระเช็คอิน</strong></td>
+                            <td>20 กก. ต่อคน (ซื้อเพิ่ม)</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ สำคัญ:</strong> ถึงสนามบินนาริตะ (NRT) 17:15 น. (4 ชม.ก่อนเครื่องออก) | ทำการขอคืนภาษี (Tax Refund) ก่อนเช็คอิน
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accommodation -->
+        <div class="section">
+            <h2 class="section-title">🏨 ที่พัก (7 คืน)</h2>
+
+            <div class="grid-3">
+                <!-- Hotel 1 -->
+                <div class="hotel-card">
+                    <img src="../images/004.jpg" alt="ล็อบบี้ของโรงแรม APA" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🏨 โรงแรมเอพีเอ อาซากุสะ ทาวาระมาจิ เอกิมาเอะ (APA Hotel Asakusa Tawaramachi Ekimae)</h3>
+                        <p class="hotel-detail"><strong>วันที่:</strong> 6-8 มี.ค. (2 คืน)</p>
+                        <p class="hotel-detail"><strong>ห้อง:</strong> ห้องเตียงใหญ่ - ห้ามสูบบุหรี่ (Double Room - Non-Smoking)</p>
+                        <p class="hotel-detail"><strong>ที่อยู่:</strong> 1-2-3 นิชิอาซากุสะ, ไทโต-คุ, โตเกียว, 111-0035 (1-2-3 Nishi Asakusa, Taito-ku, Tokyo, 111-0035)</p>
+                        <p class="hotel-detail"><strong>โทรศัพท์:</strong> +81-3-5830-0611</p>
+                        <p class="hotel-detail"><strong>เช็คอิน (Check-in):</strong> 15:00 / <strong>เช็คเอาท์ (Check-out):</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>การเดินทาง:</strong> เดิน 1 นาที จากสถานีทาวาระมาจิ (Tawaramachi Station) [สายกินซ่า (Ginza Line)]</p>
+
+                        <div class="info-box success">
+                            <strong>📍 สถานที่ใกล้เคียง:</strong><br>
+                            • วัดเซนโซจิ (Senso-ji Temple) - 740 เมตร<br>
+                            • ประตูคามินาริมง (Kaminarimon Gate) - 600 เมตร<br>
+                            • ตลาดนากามิเสะ (Nakamise-dori Street) - 650 เมตร<br>
+                            • ดองกิโฮเต้ อาซากุสะ (Don Quijote Asakusa) - 500 เมตร<br>
+                            • โตเกียว สกายทรี (Tokyo Skytree) - 1.5 กม.
+                        </div>
+
+                        <a href="https://maps.google.com/?q=APA+Hotel+Asakusa+Tawaramachi+Ekimae" target="_blank" class="link-button">📍 Google Maps</a>
+                        <a href="https://www.apahotel.com/hotel/shutoken/tokyo/asakusa-tawaramachi-ekimae/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="hotel-card">
+                    <img src="../images/005.jpg" alt="วิวภูเขาไฟฟูจิจากโรงแรม" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">♨️ โรงแรมมายสเตย์ ฟูจิ ออนเซ็น รีสอร์ท (HOTEL MYSTAYS Fuji Onsen Resort)</h3>
+                        <p class="hotel-detail"><strong>วันที่:</strong> 8-10 มี.ค. (2 คืน)</p>
+                        <p class="hotel-detail"><strong>ห้อง:</strong> ห้องมาตรฐานเตียงใหญ่ - ห้ามสูบบุหรี่ (Standard Double - Non-Smoking)</p>
+                        <p class="hotel-detail"><strong>ที่อยู่:</strong> 2654 อาราคุระ, ฟูจิโยชิดะ-ชิ, ยามานาชิ, 403-0011 (2654 Arakura, Fuji-Yoshida-shi, Yamanashi, 403-0011)</p>
+                        <p class="hotel-detail"><strong>โทรศัพท์:</strong> +81-555-21-7510</p>
+                        <p class="hotel-detail"><strong>เช็คอิน (Check-in):</strong> 15:00 / <strong>เช็คเอาท์ (Check-out):</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>การเดินทาง:</strong> รถรับส่งฟรี/แท็กซี่ จากสถานีคาวากุจิโกะ (Kawaguchiko Station)</p>
+
+                        <div class="info-box success">
+                            <strong>✨ จุดเด่น:</strong><br>
+                            • วิวภูเขาไฟฟูจิ (Mt. Fuji) จากห้องพัก!<br>
+                            • ออนเซ็น (Onsen) ธรรมชาติ<br>
+                            • เจดีย์ชูเรโตะ (Chureito Pagoda) - 3 กม.<br>
+                            • ทะเลสาบคาวากุจิโกะ (Lake Kawaguchiko) - 5 กม.<br>
+                            • ⚠️ ภาษีอาบน้ำ <strong>฿63 (≈ ¥300)</strong> (จ่าย ณ ที่พัก)
+                        </div>
+
+                        <a href="https://maps.google.com/?q=HOTEL+MYSTAYS+Fuji+Onsen+Resort" target="_blank" class="link-button">📍 Google Maps</a>
+                        <a href="https://www.mystays.com/hotel-mystays-fuji-onsen-resort-yamanashi/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="hotel-card">
+                    <img src="../images/006.jpg" alt="ถนนยามค่ำคืนในย่านชินจูกุ" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🌃 โรงแรมชินจูกุ แกรนเบลล์ (Shinjuku Granbell Hotel)</h3>
+                        <p class="hotel-detail"><strong>วันที่:</strong> 10-13 มี.ค. (3 คืน)</p>
+                        <p class="hotel-detail"><strong>ห้อง:</strong> ห้องประหยัดเตียงใหญ่ - ห้ามสูบบุหรี่ (Economy Double Room Non-Smoking)</p>
+                        <p class="hotel-detail"><strong>ที่อยู่:</strong> 2-14-5 คาบุกิโจ, ชินจูกุ, โตเกียว, 160-0021 (2-14-5 Kabukicho, Shinjuku, Tokyo, 160-0021)</p>
+                        <p class="hotel-detail"><strong>โทรศัพท์:</strong> +81-3-5155-2666</p>
+                        <p class="hotel-detail"><strong>เช็คอิน (Check-in):</strong> 15:00 / <strong>เช็คเอาท์ (Check-out):</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>การเดินทาง:</strong> เดิน 5 นาที จากสถานีเจอาร์ชินจูกุ (JR Shinjuku Station) [ทางออกทิศตะวันออก (East Exit)]</p>
+
+                        <div class="info-box success">
+                            <strong>📍 สถานที่ใกล้เคียง:</strong><br>
+                            • ย่านคาบุกิโจ (Kabukicho) - ติดโรงแรม<br>
+                            • ดองกิโฮเต้ ชินจูกุ (Don Quijote Shinjuku) - 300 เมตร<br>
+                            • บิ๊กคาเมร่า (Bic Camera) - 500 เมตร<br>
+                            • ซานริโอ เวิลด์ (Sanrio World) - 800 เมตร<br>
+                            • ร้านกิ๊บลิ (Ghibli Store) - 600 เมตร
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Shinjuku+Granbell+Hotel" target="_blank" class="link-button">📍 Google Maps</a>
+                        <a href="https://www.granbellhotel.jp/shinjuku/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Day 1 -->
+        <div class="section">
+            <h2 class="section-title">📅 Timeline รายวัน</h2>
+
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div class="day-info">
+                        <h3>เดินทางถึงนาริตะ & เริ่มต้นที่อาซากุสะ</h3>
+                        <div class="date">ศุกร์ที่ 6 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">02:00</div>
+                    <div class="timeline-activity">🚗 ออกจากบ้านไปสนามบินดอนเมือง (Don Mueang International Airport - DMK)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">04:30</div>
+                    <div class="timeline-activity">✈️ ถึงสนามบินดอนเมือง (DMK), เช็คอินสายการบินไทย ไลอ้อน แอร์ (Thai Lion Air) ที่เคาน์เตอร์ F-H</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:15</div>
+                    <div class="timeline-activity">🛫 เที่ยวบิน SL394 ออกเดินทาง (ใช้เวลาบินประมาณ 6 ชั่วโมง)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:20</div>
+                    <div class="timeline-activity">
+                        🛬 ถึงสนามบินนาริตะ (Narita International Airport - NRT) Terminal 2<br>
+                        • ผ่านด่านตรวจคนเข้าเมืองและรับกระเป๋า (ประมาณ 40 นาที)<br>
+                        • ซื้อตั๋วรถไฟนาริตะ เอ็กซ์เพรส (N'EX) ที่ศูนย์บริการนักท่องเที่ยวเจอาร์ตะวันออก (JR East Travel Service Center)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00-18:30</div>
+                    <div class="timeline-activity">
+                        🚄 เดินทางด้วยรถไฟนาริตะ เอ็กซ์เพรส (Narita Express - N'EX) → สถานีโตเกียว (Tokyo Station) หรือ สถานีอุเอโนะ (Ueno Station)<br>
+                        • ต่อรถไฟใต้ดินสายกินซ่า (Metro Ginza Line) → สถานีทาวาระมะชิ (Tawaramachi Station)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-19:00</div>
+                    <div class="timeline-activity">🏨 เช็คอินที่โรงแรมเอพีเอ อาซากุสะ ทาวาระมาจิ เอกิมาเอะ (APA Hotel Asakusa Tawaramachi Ekimae) และเก็บสัมภาระ</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00-20:00</div>
+                    <div class="timeline-activity">
+                        🍽️ รับประทานอาหารเย็นในย่านอาซากุสะ (Asakusa)<br>
+                        • ร้านแนะนำ: ราเมนอิจิรัน (Ichiran Ramen), สุกี้ยะ (Sukiya), โยชิโนยะ (Yoshinoya) (ใกล้โรงแรม)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">
+                        🛍️ <strong>ช้อปปิ้งเสื้อผ้ากันหนาวที่ร้านดองกิโฮเต้ อาซากุสะ (Don Quijote Asakusa)</strong>
+                    </div>
+                </div>
+
+                <!-- Don Quijote Detail -->
+                <div class="place-detail">
+                    <h4>🏪 ดองกิโฮเต้ อาซากุสะ (Don Quijote Asakusa)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/007.jpg" alt="บรรยากาศหน้าร้านดองกิโฮเต้ที่เต็มไปด้วยสินค้า" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>2-10-4 คามินาริมง, ไทโต-คุ, โตเกียว (2-10-4 Kaminarimon, Taito-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>🔥 <strong>เปิด 24 ชั่วโมง!</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ระยะทาง</strong></td>
+                                    <td>เดินจากโรงแรมประมาณ 10 นาที</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🛒 สินค้าที่ต้องซื้อ:</strong></p>
+                            <ul>
+                                <li>เสื้อกันหนาว, เสื้อฮีทเทค (สไตล์ยูนิโคล่ - UNIQLO) - ราคา <strong>฿420 - ฿1,050 (≈ ¥2,000 - ¥5,000)</strong></li>
+                                <li>ถุงเท้าหนา, ผ้าพันคอ, หมวกไหมพรม - ราคา <strong>฿105 - ฿420 (≈ ¥500 - ¥2,000)</strong></li>
+                                <li>ร่ม, ของใช้ส่วนตัว</li>
+                                <li>ชั้น 3-4: เสื้อผ้า | ชั้น 2: เครื่องสำอาง</li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ ข้อดี:</strong> ราคาไม่แพง, ใกล้โรงแรม, เปิด 24 ชั่วโมง, มีสินค้าครบครัน, สามารถขอคืนภาษี (Tax-Free) ได้เมื่อซื้อเกิน <strong>฿1,050 (≈ ¥5,000)</strong>
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.donki.com/store/shop_detail.php?shop_id=29" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/008.jpg" alt="ภายในร้านดองกิโฮเต้">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/009.jpg" alt="สินค้าญี่ปุ่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/010.jpg" alt="ย่านอาซากุสะยามค่ำ">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• ชั้น 2 เครื่องสำอางราคาดี!</li>
+                                    <li>• ขนมชั้น 1 หลากหลาย</li>
+                                    <li>• ขอ Tax-Free ที่เคาน์เตอร์ชั้น 1</li>
+                                </ul>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 พักผ่อน (เตรียมตัวสำหรับวันพรุ่งนี้: ซื้อกล้อง!)</div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div class="day-info">
+                        <h3>ทัวร์อาซากุสะ & ชมวิวพระอาทิตย์ตกที่โตเกียวสกายทรี 🌇</h3>
+                        <div class="date">เสาร์ที่ 7 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-08:00</div>
+                    <div class="timeline-activity">
+                        🌅 ตื่นนอนและรับประทานอาหารเช้าที่โรงแรม<br>
+                        • เตรียมพาสปอร์ตสำหรับขอคืนภาษี (Tax-Free)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30-09:00</div>
+                    <div class="timeline-activity">
+                        🚇 เดินทางไปย่านอากิฮาบาระ (Akihabara)<br>
+                        • รถไฟใต้ดินสายกินซ่า (Metro Ginza Line): สถานีทาวาระมาจิ (Tawaramachi) → สถานีซูเอฮิโระโช (Suehirocho) (5 นาที)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:30-11:00</div>
+                    <div class="timeline-activity">📸 <strong>ช้อปปิ้งกล้อง 2 ตัวที่ร้านโยโดบาชิ อากิบะ (Yodobashi Akiba)</strong></div>
+                </div>
+
+                <!-- Yodobashi Detail -->
+                <div class="place-detail">
+                    <h4>📸 โยโดบาชิ อากิบะ (Yodobashi Akiba)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/011.jpg" alt="ชั้นวางกล้องถ่ายรูปหลากหลายรุ่นในร้าน Yodobashi" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>1 คันดะ ฮานาโอกะโช, ชิโยดะ-คุ, โตเกียว (1 Kanda Hanaokacho, Chiyoda-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>09:30-22:00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>จำนวนชั้น</strong></td>
+                                    <td>9 ชั้น (ชั้นขายกล้อง: 6-7)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>📷 กล้องที่ต้องการซื้อ:</strong></p>
+                            <ul>
+                                <li><strong>กล้องคุณพ่อ (มือสอง):</strong> แคนนอน (Canon) EOS 800D/200D/77D/M50 - ราคา <strong>฿3,150 - ฿4,620 (≈ ¥15,000 - ¥22,000)</strong></li>
+                                <li><strong>กล้องพอใจ (ใหม่):</strong> ริโก้ (Ricoh) WG-80 / แคนนอน (Canon) SX740 HS / โซนี่ (Sony) WX500 - ราคา <strong>฿6,300 - ฿9,450 (≈ ¥30,000 - ¥45,000)</strong></li>
+                            </ul>
+
+                            <p><strong>🔋 อุปกรณ์เสริม:</strong></p>
+                            <ul>
+                                <li>แบตเตอรี่สำรอง LP-E17 (สำหรับ Canon) - ราคา <strong>฿630 (≈ ¥3,000)</strong> 🔥 จำเป็นมาก!</li>
+                                <li>การ์ดหน่วยความจำ 64GB/128GB (ยี่ห้อ SanDisk) - ราคา <strong>฿315 - ฿630 (≈ ¥1,500 - ¥3,000)</strong></li>
+                                <li>กระเป๋ากล้องขนาดเล็ก - ราคา <strong>฿420 - ฿840 (≈ ¥2,000 - ¥4,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ ข้อดี:</strong> พนักงานให้ความช่วยเหลือและสามารถทดลองใช้ได้, มีบริการขอคืนภาษี (Tax-Free) (ต้องแสดงพาสปอร์ต), รับประกันสินค้าครบถ้วน, มีทั้งกล้องมือหนึ่งและมือสอง, อุปกรณ์เสริมครบครันในร้านเดียว
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.yodobashi.com/ec/store/0018/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/012.jpg" alt="กล้องถ่ายรูปวางอยู่บนโต๊ะ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/013.jpg" alt="อุปกรณ์กล้องวินเทจ">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/014.jpg" alt="บรรยากาศร้านขายเครื่องใช้ไฟฟ้า">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• เพิ่มรูปจาก Pinterest/Lemon8/TikTok ที่นี่</li>
+                                    <li>• ใส่ลิงก์วิดีโอรีวิว</li>
+                                    <li>• เพิ่มเคล็ดลับจากรีวิว</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00-12:00</div>
+                    <div class="timeline-activity">
+                        🏮 เดินทางไปวัดเซนโซจิ (Senso-ji Temple) และรับประทานอาหารกลางวัน<br>
+                        <strong>ทดลองถ่ายรูปด้วยกล้องใหม่ทันที! 📸</strong>
+                    </div>
+                </div>
+
+                <!-- Senso-ji Detail -->
+                <div class="place-detail">
+                    <h4>⛩️ วัดเซนโซจิ (Senso-ji Temple)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/015.jpg" alt="ภาพวัดเซนโซจิและเจดีย์ห้าชั้นยามค่ำคืน" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>2-3-1 อาซากุสะ, ไทโต-คุ, โตเกียว (2-3-1 Asakusa, Taito-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>06:00-17:00 (เข้าชมฟรี)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>สร้างเมื่อ</strong></td>
+                                    <td>ปี ค.ศ. 628 (วัดที่เก่าแก่ที่สุดในโตเกียว)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ไฮไลท์:</strong></p>
+                            <ul>
+                                <li><strong>ประตูคามินาริมง (Kaminarimon Gate):</strong> ประตูโคมไฟยักษ์สีแดง สัญลักษณ์ของย่านอาซากุสะ</li>
+                                <li><strong>ถนนนากามิเสะ (Nakamise-dori Shopping Street):</strong> ถนนช้อปปิ้งยาว 250 เมตร มีร้านค้าประมาณ 90 ร้าน</li>
+                                <li><strong>ประตูโฮโซมง (Hozomon Gate):</strong> ประตูชั้นในก่อนถึงวิหารหลัก</li>
+                                <li><strong>วิหารหลัก (Main Hall):</strong> สถานที่ประดิษฐานเจ้าแม่กวนอิม</li>
+                                <li><strong>เจดีย์ 5 ชั้น (Five-Story Pagoda):</strong> สูง 53 เมตร</li>
+                            </ul>
+
+                            <p><strong>🛍️ ของกินที่ต้องลอง (บนถนนนากามิเสะ):</strong></p>
+                            <ul>
+                                <li>ขนมนินเงียวยากิ (Ningyo-yaki) - <strong>฿42 (≈ ¥200)</strong></li>
+                                <li>ข้าวเกรียบเซมเบ้ (Senbei) - <strong>฿63 - ฿126 (≈ ¥300 - ¥600)</strong></li>
+                                <li>ไอศกรีมมัทฉะ (Matcha Ice Cream) - <strong>฿84 (≈ ¥400)</strong></li>
+                                <li>เครื่องรางโอมาโมริ (Omamori) - <strong>฿105 - ฿210 (≈ ¥500 - ¥1,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tips:</strong> เสี่ยงเซียมซี (Omikuji) <strong>฿21 (≈ ¥100)</strong> - หากได้ใบทำนาย "โชคร้าย" (凶 - kyo) ให้ผูกไว้ที่ราวในวัด ไม่ควรนำกลับบ้าน
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Senso-ji+Temple" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.senso-ji.jp/english/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/016.jpg" alt="โคมไฟยักษ์ที่ประตูคามินาริมง">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/017.jpg" alt="ถนนนากามิเสะที่เต็มไปด้วยร้านค้าและผู้คน">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/018.jpg" alt="วัดเซนโซจิยามค่ำคืน">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• เพิ่มรูปจาก Pinterest/Lemon8/TikTok ที่นี่</li>
+                                    <li>• มุมถ่ายรูปสวย ๆ</li>
+                                    <li>• ร้านของกินแนะนำ</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                                <a href="#" class="social-link lemon8">Lemon8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30-15:00</div>
+                    <div class="timeline-activity">🚇 เดินทางไปโตเกียว สกายทรี (Tokyo Skytree) [สถานีโอชิอาเกะ (Oshiage Station)]</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00-18:30</div>
+                    <div class="timeline-activity">🗼 <strong>โตเกียว สกายทรี (Tokyo Skytree) และชมวิวพระอาทิตย์ตก</strong></div>
+                </div>
+
+                <!-- Skytree Detail -->
+                <div class="place-detail">
+                    <h4>🗼 โตเกียว สกายทรี (Tokyo Skytree)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/019.jpg" alt="โตเกียวสกายทรีตั้งตระหง่าน" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>1-1-2 โอชิอาเกะ, ซุมิดะ-คุ, โตเกียว (1-1-2 Oshiage, Sumida-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ความสูง</strong></td>
+                                    <td>634 เมตร (หอคอยที่สูงที่สุดในโลก)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>08:00-22:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎫 ค่าเข้าชม:</strong></p>
+                            <ul>
+                                <li><strong>เท็มโบเด็ค (Tembo Deck) (350ม.):</strong> ผู้ใหญ่ <strong>฿651 (≈ ¥3,100)</strong> / เด็ก <strong>฿326 (≈ ¥1,550)</strong></li>
+                                <li><strong>เท็มโบแกลเลอเรีย (Tembo Galleria) (450ม.):</strong> เพิ่ม <strong>฿216 (≈ ¥1,030)</strong> / เด็ก <strong>฿172 (≈ ¥820)</strong></li>
+                                <li><strong>รวม 2 คน (ถึงชั้น Galleria):</strong> <strong>฿1,775 (≈ ¥8,450)</strong></li>
+                            </ul>
+
+                            <div class="info-box highlight">
+                                <strong>🌅 เวลาพระอาทิตย์ตก:</strong> 17:45 น.<br>
+                                <strong>📸 ช่วงเวลาทอง (Golden Hour):</strong> 17:15-18:15 น. (เหมาะแก่การถ่ายรูปที่สุด!)<br>
+                                แนะนำให้ขึ้นไปรอก่อนเวลา 17:00 น. เพื่อชมวิวตั้งแต่กลางวัน → พระอาทิตย์ตก → กลางคืน
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Skytree" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.tokyo-skytree.jp/en/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/020.jpg" alt="วิวเมืองโตเกียวจากมุมสูงยามพระอาทิตย์ตก">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/021.jpg" alt="วิวเมืองโตเกียวพร้อมภูเขาไฟฟูจิ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/022.jpg" alt="วิวเมืองโตเกียวยามค่ำคืน">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• เพิ่มรูปจาก Pinterest/Lemon8/TikTok ที่นี่</li>
+                                    <li>• มุมถ่ายรูปพระอาทิตย์ตก</li>
+                                    <li>• ร้านอาหารที่โซลามาจิ (Solamachi)</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-20:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารเย็นที่โตเกียว โซลามาจิ (Tokyo Solamachi) [ศูนย์การค้าติดกับสกายทรี (Skytree)]</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">🛍️ <strong>โตเกียว คาแรคเตอร์ สตรีท (Tokyo Character Street)</strong> [ใต้สถานีโตเกียว (Tokyo Station)]</div>
+                </div>
+
+                <!-- Character Street Detail -->
+                <div class="place-detail">
+                    <h4>🧸 โตเกียว คาแรคเตอร์ สตรีท (Tokyo Character Street)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/027.jpg" alt="ร้านค้าขายตุ๊กตาและของเล่นคาแรคเตอร์" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>ชั้น B1F สถานีโตเกียว (Tokyo Station) [ทางออกยาเอสุ (Yaesu Exit)]</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>10:00-20:30</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>สายฮันโซมง (Hanzomon Line): สถานีโอชิอาเกะ (Oshiage) → สถานีมิตสึโคชิมาเอะ (Mitsukoshimae) (ประมาณ 30 นาที)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ร้านไฮไลท์ (พอใจต้องชอบ!):</strong></p>
+                            <ul>
+                                <li><strong>ดงกูริ รีพับบลิค (Donguri Republic):</strong> ร้านค้าอย่างเป็นทางการของสตูดิโอจิบลิ (Studio Ghibli) - โทโทโร่ (Totoro), กิกิ (Kiki), โนเฟซ (No-Face)</li>
+                                <li><strong>ซานริโอ กิฟต์ เกต (Sanrio Gift Gate):</strong> เฮลโลคิตตี้ (Hello Kitty), ชินนามอนโรล (Cinnamoroll), มายเมโลดี้ (My Melody)</li>
+                                <li><strong>โปเกมอน สโตร์ (Pokemon Store):</strong> สินค้าพิคาชู (Pikachu) และโปเกมอนทั้งหมด</li>
+                                <li><strong>สนูปปี้ ทาวน์ (Snoopy Town):</strong> พีนัทส์/สนูปปี้ (Peanuts/Snoopy)</li>
+                                <li><strong>อุลตร้าแมน เวิลด์ (Ultraman World):</strong> สำหรับแฟนอุลตร้าแมน</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Character+Street" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.tokyoeki-1bangai.co.jp/street/character" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/023.jpg" alt="ตุ๊กตาคาแรคเตอร์ญี่ปุ่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/024.jpg" alt="สินค้า Sanrio">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/025.jpg" alt="สถานีโตเกียว">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/026.jpg" alt="สถานีโตเกียว">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/027.jpg" alt="สถานีโตเกียว">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• ร้าน Ghibli มีของ Limited!</li>
+                                    <li>• Pokemon Store คิวยาวช่วงเย็น</li>
+                                    <li>• แนะนำมาก่อน 18:00</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 กลับโรงแรม, จัดกระเป๋าเตรียมเช็คเอาท์ในวันพรุ่งนี้</div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <div class="day-info">
+                        <h3>เดินทางสู่คาวากุจิโกะ 🏔️</h3>
+                        <div class="date">อาทิตย์ที่ 8 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-08:00</div>
+                    <div class="timeline-activity">🍳 ตื่นนอน/รับประทานอาหารเช้า และเช็คเอาท์จากโรงแรมเอพีเอ อาซากุสะ (APA Hotel Asakusa)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30</div>
+                    <div class="timeline-activity">
+                        🚃 เดินทางจากอาซากุสะ (Asakusa) → ชินจูกุ (Shinjuku)<br>
+                        • รถไฟใต้ดินสายกินซ่า (Metro Ginza Line) + รถไฟเจอาร์ (JR) (ประมาณ 30-40 นาที)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:30</div>
+                    <div class="timeline-activity">
+                        🚌 ขึ้นรถบัสไปคาวากุจิโกะ (Kawaguchiko) ที่สถานีขนส่งชินจูกุ (Shinjuku Expressway Bus Terminal - Busta Shinjuku) ชั้น 4<br>
+                        • ค่าโดยสาร: ผู้ใหญ่ <strong>฿462 (≈ ¥2,200)</strong> / เด็ก <strong>฿231 (≈ ¥1,100)</strong><br>
+                        • ระยะเวลาเดินทาง: ประมาณ 2 ชั่วโมง
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:40</div>
+                    <div class="timeline-activity">🏔️ ถึงสถานีขนส่งคาวากุจิโกะ (Kawaguchiko Bus Terminal)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-14:30</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารกลางวัน และฝากกระเป๋าที่โรงแรมหรือสถานี</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-activity">🏨 เช็คอินที่โรงแรมมายสเตย์ ฟูจิ ออนเซ็น รีสอร์ท (HOTEL MYSTAYS Fuji Onsen Resort)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-activity">🚡 <strong>กระเช้าคาชิ-คาชิ (Kachi-Kachi Ropeway)</strong></div>
+                </div>
+
+                <!-- Kachi-Kachi Ropeway Detail -->
+                <div class="place-detail">
+                    <h4>🚡 กระเช้าคาชิ-คาชิ (Kachi-Kachi Ropeway)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/028.jpg" alt="วิวกระเช้าลอยฟ้าเหนือทะเลสาบคาวากุจิโกะ" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>จุดหมาย</strong></td>
+                                    <td>จุดชมวิวภูเขาเท็นโจ (Mt. Tenjo Observation Deck) (1,075 เมตร)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ค่าโดยสาร</strong></td>
+                                    <td><strong>฿189 (≈ ¥900)</strong> ไป-กลับ ต่อคน</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลา</strong></td>
+                                    <td>ประมาณ 3 นาที ต่อเที่ยว</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ไฮไลท์:</strong></p>
+                            <ul>
+                                <li>ชมวิวทะเลสาบคาวากุจิโกะ (Lake Kawaguchiko) และภูเขาไฟฟูจิ (Mt. Fuji) แบบพาโนรามา</li>
+                                <li>เรียนรู้ตำนานกระต่ายกับแรคคูน (Kachi-Kachi Yama) - นิทานพื้นบ้านของญี่ปุ่น</li>
+                                <li>ถ่ายรูปกับรูปปั้นกระต่ายและแรคคูนที่จุดชมวิว</li>
+                                <li>สั่นกระดิ่งเท็นโจ (Tenjo Bell) เพื่อขอพร</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Kachi+Kachi+Ropeway" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.kachikachiyama-ropeway.com/en/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/029.jpg" alt="วิวภูเขาไฟฟูจิจากกระเช้า">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/030.jpg" alt="ทะเลสาบคาวากุจิโกะ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/031.jpg" alt="จุดชมวิว Mt. Tenjo">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• มาเช้าคิวสั้นกว่า</li>
+                                    <li>• วิวสวยสุดช่วงเช้าอากาศใส</li>
+                                    <li>• อย่าลืมถ่ายรูปกับกระต่าย!</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-activity">
+                        🍽️ <strong>อาหารเย็น: โฮโต ฟุโด (Hoto Fudo)</strong><br>
+                        • อาหารพื้นเมืองของยามานาชิ - บะหมี่เส้นแบนในซุปมิโสะพร้อมผักต่างๆ
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-activity">😴 พักผ่อน, เตรียมตัวสำหรับวันเกิดของพอใจในวันพรุ่งนี้! 🎂</div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card" style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-left-color: #ff6b6b;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">4</div>
+                    <div class="day-info">
+                        <h3>🎂 วันเกิดครบรอบ 11 ปีของพอใจ!</h3>
+                        <div class="date">จันทร์ที่ 9 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #fff5f5; border-color: #ff6b6b; text-align: center; font-size: 24px;">
+                    🎉 <strong>สุขสันต์วันเกิด 11 ปีนะพอใจ! (HAPPY 11th BIRTHDAY POJAI!)</strong> ✨
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00</div>
+                    <div class="timeline-activity">
+                        🌅 ตื่นนอนชมวิวพระอาทิตย์ขึ้นพร้อมกับฟูจิซังจากห้องพัก<br>
+                        📸 ถ่ายรูป "สาวน้อยวันเกิดกับภูเขาไฟฟูจิยามเช้า"
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:30</div>
+                    <div class="timeline-activity">
+                        🎁 <strong>เซอร์ไพรส์วันเกิด</strong><br>
+                        • ร้องเพลง "สุขสันต์วันเกิด"<br>
+                        • มอบของขวัญสุดพิเศษ (กล้องถ่ายรูป)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00</div>
+                    <div class="timeline-activity">⛩️ <strong>เจดีย์ชูเรโตะ (Chureito Pagoda)</strong></div>
+                </div>
+
+                <!-- Chureito Pagoda Detail -->
+                <div class="place-detail">
+                    <h4>🏯 เจดีย์ชูเรโตะ (Chureito Pagoda)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/032.jpg" alt="ภาพเจดีย์ชูเรโตะกับภูเขาไฟฟูจิ" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>อาราคุระ, ฟูจิโยชิดะ, ยามานาชิ (Arakura, Fujiyoshida, Yamanashi)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>รถบัสท้องถิ่นจากสถานีคาวากุจิโกะ (Kawaguchiko Station)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ค่าเข้าชม</strong></td>
+                                    <td>ฟรี</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ไฮไลท์:</strong></p>
+                            <ul>
+                                <li>เดินขึ้นบันได 398 ขั้นเพื่อไปยังเจดีย์ (ใช้เวลาประมาณ 15 นาที)</li>
+                                <li><strong>จุดถ่ายรูปภูเขาไฟฟูจิ (Mt. Fuji) ที่โด่งดังที่สุดในโลก!</strong></li>
+                                <li>เจดีย์สีแดง 5 ชั้น สร้างขึ้นในปี 1963 เพื่อรำลึกถึงผู้เสียชีวิตจากสงคราม</li>
+                                <li>สวยงามเป็นพิเศษในช่วงซากุระบาน (ปลายเดือนมีนาคม - ต้นเดือนเมษายน)</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tips:</strong> ไปถึงในตอนเช้าเพื่อหลีกเลี่ยงผู้คนและได้ภาพที่สวยงาม | แนะนำให้สวมรองเท้าผ้าใบที่ใส่สบายสำหรับการเดินขึ้นบันได
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank" class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/033.jpg" alt="เจดีย์ชูเรโตะกับภูเขาฟูจิ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/034.jpg" alt="บันไดขึ้นเจดีย์">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/035.jpg" alt="วิวภูเขาฟูจิยามเช้า">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• มาก่อน 8:00 คนน้อย!</li>
+                                    <li>• เตรียมน้ำ 398 ขั้นเหนื่อย</li>
+                                    <li>• มุมถ่ายรูปสวยสุดอยู่ข้างบน</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">13:00</div>
+                    <div class="timeline-activity">
+                        🍽️ <strong>อาหารกลางวันฉลองวันเกิดสุดพิเศษ</strong><br>
+                        • เมนู: ซูชิแซลมอนและเทมปุระ<br>
+                        • งบประมาณ: <strong>฿1,680 (≈ ¥8,000)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30</div>
+                    <div class="timeline-activity">💧 <strong>หมู่บ้านโอชิโนะ ฮักไค (Oshino Hakkai)</strong></div>
+                </div>
+
+                <!-- Oshino Hakkai Detail -->
+                <div class="place-detail">
+                    <h4>💧 หมู่บ้านโอชิโนะ ฮักไค (Oshino Hakkai)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/036.jpg" alt="หมู่บ้านโอชิโนะ ฮักไค พร้อมวิวภูเขาไฟฟูจิ" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>โอชิโนะ, เขตมินามิซึรุ, ยามานาชิ (Oshino, Minamitsuru District, Yamanashi)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>รถบัสท้องถิ่นจากสถานีคาวากุจิโกะ (Kawaguchiko Station) (ประมาณ 20 นาที)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ค่าเข้าชม</strong></td>
+                                    <td><strong>฿63 (≈ ¥300)</strong> ต่อคน</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ไฮไลท์:</strong></p>
+                            <ul>
+                                <li><strong>บ่อน้ำพุธรรมชาติ 8 บ่อ</strong> ที่เกิดจากการละลายของหิมะบนภูเขาไฟฟูจิ (Mt. Fuji)</li>
+                                <li>น้ำที่ซึมผ่านชั้นหินภูเขาไฟมานานกว่า 80 ปี!</li>
+                                <li>น้ำใสจนสามารถมองเห็นก้นบ่อได้</li>
+                                <li><strong>บ่อที่มีชื่อเสียง:</strong> บ่อวากุอิเกะ (Wakuike Pond), บ่อคางามิอิเกะ (Kagamiike Pond - บ่อกระจก)</li>
+                                <li>หมู่บ้านโบราณสไตล์ญี่ปุ่นดั้งเดิม</li>
+                            </ul>
+
+                            <p><strong>🍡 ของกินเล่น:</strong></p>
+                            <ul>
+                                <li>โมจิย่าง - <strong>฿63 (≈ ¥300)</strong></li>
+                                <li>น้ำจากภูเขาไฟฟูจิ - ฟรี (สามารถตักดื่มได้)</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank" class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/037.jpg" alt="หมู่บ้านญี่ปุ่นดั้งเดิม">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/038.jpg" alt="บ่อน้ำใส">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/039.jpg" alt="วิวภูเขาฟูจิ">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• น้ำใสมาก ถ่ายรูปสวย!</li>
+                                    <li>• ลองโมจิย่างร้อนๆ อร่อย</li>
+                                    <li>• บ่อกระจกถ่ายรูปดีสุด</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-activity">
+                        ♨️ <strong>ช่วงเวลาออนเซ็น (Onsen Time) ในช่วงโกลเด้นอาวร์ (Golden Hour)</strong><br>
+                        แช่น้ำร้อนพร้อมชมพระอาทิตย์ตกดินและวิวภูเขาไฟฟูจิ (Mt. Fuji)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-activity">
+                        🎂 <strong>อาหารค่ำฉลองวันเกิด (พิเศษ)</strong><br>
+                        • มื้อค่ำสุดพิเศษพร้อมเค้กวันเกิด<br>
+                        • งบประมาณ: <strong>฿2,520 (≈ ¥12,000)</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">5</div>
+                    <div class="day-info">
+                        <h3>กลับสู่โตเกียวและช้อปปิ้ง 🛍️</h3>
+                        <div class="date">อังคารที่ 10 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:00-09:00</div>
+                    <div class="timeline-activity">🍳 ตื่นนอน/รับประทานอาหารเช้า และเช็คเอาท์จากโรงแรมมายสเตย์ ฟูจิ (HOTEL MYSTAYS Fuji)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00</div>
+                    <div class="timeline-activity">
+                        🚌 ขึ้นรถบัสจากคาวากุจิโกะ (Kawaguchiko) → ชินจูกุ (Shinjuku)<br>
+                        • ค่าโดยสาร: ผู้ใหญ่ <strong>฿462 (≈ ¥2,200)</strong> / เด็ก <strong>฿231 (≈ ¥1,100)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00</div>
+                    <div class="timeline-activity">🏙️ ถึงสถานีขนส่งชินจูกุ (Shinjuku Bus Terminal)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-13:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารกลางวัน</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">13:00-15:00</div>
+                    <div class="timeline-activity">🏨 เช็คอินที่โรงแรมชินจูกุ แกรนเบลล์ (Shinjuku Granbell Hotel) และพักผ่อน</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30-17:30</div>
+                    <div class="timeline-activity">
+                        👟 <strong>ร้าน ABC-MART Outlet สาขาโกทันดะ (ABC-MART Outlet Gotanda)</strong><br>
+                        • รถไฟสายยามาโนเตะ (JR Yamanote Line): สถานีชินจูกุ (Shinjuku) → สถานีโกทันดะ (Gotanda) (15 นาที)<br>
+                        • รองเท้า: โอนิซึกะ ไทเกอร์ (Onitsuka Tiger), สเก็ตเชอร์ส (Skechers), ไนกี้ (Nike), อาดิดาส (Adidas)<br>
+                        • ลดราคาสูงสุด 50%! งบประมาณ: <strong>฿1,050 - ฿3,150 (≈ ¥5,000 - ¥15,000)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00-20:00</div>
+                    <div class="timeline-activity">🏢 <strong>ตึกทาเคยะ (Takeya Building - ตึกม่วง) ที่อุเอโนะ (Ueno)</strong></div>
+                </div>
+
+                <!-- Takeya Detail -->
+                <div class="place-detail">
+                    <h4>🏢 ตึกทาเคยะ (Takeya Building - ตึกม่วง)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/040.jpg" alt="บรรยากาศภายในร้านค้าที่มีสินค้าหลากหลาย" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>2-27-1 ยูชิมะ, ไทโต-คุ, โตเกียว (Ueno) (2-27-1 Yushima, Taito-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>10:00-20:00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>รถไฟสายยามาโนเตะ (JR Yamanote Line): สถานีโกทันดะ (Gotanda) → สถานีอุเอโนะ (Ueno) (15 นาที)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🏬 แผนผังชั้น:</strong></p>
+                            <ul>
+                                <li><strong>ชั้น 1:</strong> ขนมญี่ปุ่น - คิทแคท (KitKat) รสชาติพิเศษ, โตเกียวบานาน่า (Tokyo Banana), ป๊อกกี้ (Pocky), ช็อกโกแลตรอยซ์ (Royce' Chocolate)</li>
+                                <li><strong>ชั้น 2-3:</strong> เครื่องสำอาง/สกินแคร์ - ชิเซโด้ (Shiseido), เอสเค-ทู (SK-II), แคนเมค (Canmake), มาจอลิกา มาจอร์กา (Majolica Majorca)</li>
+                                <li><strong>TAKEYA 3:</strong> เสื้อผ้าแบรนด์เนม</li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ ข้อดี:</strong> ราคาถูกกว่าดองกิโฮเต้ (Don Quijote) และมัตสึโมโตะ คิโยชิ (Matsumoto Kiyoshi)! สามารถขอคืนภาษี (Tax-Free) ได้
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Takeya+Ueno" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.takeya.co.jp/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/041.jpg" alt="ตึกทาเคยะ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/042.jpg" alt="เครื่องสำอางญี่ปุ่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/043.jpg" alt="ขนมญี่ปุ่น">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• ราคาถูกกว่า Don Quijote!</li>
+                                    <li>• ชั้น 1 ขนมเยอะมาก</li>
+                                    <li>• Tax-Free ได้ทุกชั้น</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:30-21:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารเย็นที่อุเอโนะ (Ueno)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:30</div>
+                    <div class="timeline-activity">😴 พักผ่อน, เตรียมตัวสำหรับวันแรกของการใช้บัตร TWP (Tokyo Wide Pass) พรุ่งนี้ (ไปกาล่า ยูซาวะ!)</div>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-card" style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-left-color: #00bcd4;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);">6</div>
+                    <div class="day-info">
+                        <h3>⛷️ ผจญภัยในหิมะที่กาล่า ยูซาวะ (GALA Yuzawa)</h3>
+                        <div class="date">พุธที่ 11 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 บัตรโตเกียวไวด์พาส (Tokyo Wide Pass - TWP) วันที่ 1</strong> - ครอบคลุมค่าเดินทางทั้งหมดด้วยรถไฟชินคันเซ็น (Shinkansen) ไป-กลับ กาล่า ยูซาวะ (Gala Yuzawa)!
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00</div>
+                    <div class="timeline-activity">
+                        🍳 ตื่นนอน/รับประทานอาหารเช้า<br>
+                        • เตรียมเสื้อผ้ากันหนาวขั้นสุด (อุณหภูมิ 0°C - ติดลบ!)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:00</div>
+                    <div class="timeline-activity">
+                        🚅 <strong>รถไฟโจเอ็ตสึ ชินคันเซ็น (Joetsu Shinkansen)</strong><br>
+                        • เส้นทาง: สถานีโตเกียว (Tokyo) / สถานีอุเอโนะ (Ueno) → สถานีกาล่า ยูซาวะ (Gala Yuzawa)<br>
+                        • ใช้เวลาเดินทาง: ประมาณ 77 นาที
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:40</div>
+                    <div class="timeline-activity">⛷️ ถึง <strong>กาล่า ยูซาวะ (GALA Yuzawa)</strong></div>
+                </div>
+
+                <!-- GALA Yuzawa Detail -->
+                <div class="place-detail">
+                    <h4>⛷️ กาล่า ยูซาวะ สกีรีสอร์ท (GALA Yuzawa Snow Resort)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/044.jpg" alt="ลานสกีที่เต็มไปด้วยหิมะและนักท่องเที่ยว" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>ยูซาวะ-มาจิ, เขตมินามิอุโอนุมะ, นีงาตะ (Yuzawa-machi, Minamiuonuma-gun, Niigata)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>สถานีรถไฟชินคันเซ็น (Shinkansen) เชื่อมต่อโดยตรงกับสกีรีสอร์ท!</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>08:00-17:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎿 กิจกรรม:</strong></p>
+                            <ul>
+                                <li>เล่นหิมะ (Snow Play Area)</li>
+                                <li>ปั้นตุ๊กตาหิมะ</li>
+                                <li>นั่งกระเช้ากอนโดล่า (Gondola) ชมวิวภูเขาหิมะ</li>
+                                <li>เลื่อนหิมะ (Sledding)</li>
+                                <li>สกี/สโนว์บอร์ด (สำหรับผู้เริ่มต้น)</li>
+                            </ul>
+
+                            <p><strong>💰 ค่าใช้จ่าย:</strong></p>
+                            <ul>
+                                <li>บัตรกอนโดล่า (Gondola Pass): <strong>฿420 (≈ ¥2,000)</strong> ต่อคน</li>
+                                <li>ตั๋วสำหรับเล่นหิมะ (Snow Play Ticket): <strong>฿462 (≈ ¥2,200)</strong> ต่อคน</li>
+                                <li>ชุดเช่า (ชุด+รองเท้า): <strong>฿1,155 (≈ ¥5,500)</strong> ต่อคน</li>
+                                <li><strong>รวมประมาณ 2 คน:</strong> <strong>฿4,095 (≈ ¥19,500)</strong></li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>♨️ พิเศษ:</strong> มีออนเซ็น (Onsen) ในรีสอร์ท! แช่น้ำร้อนเพื่อผ่อนคลายความหนาวก่อนกลับ
+                            </div>
+
+                            <a href="https://maps.google.com/?q=GALA+Yuzawa" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://gala.co.jp/winter/en/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/045.jpg" alt="ลานหิมะสำหรับเล่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/046.jpg" alt="กระเช้า Gondola">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/047.jpg" alt="ตุ๊กตาหิมะ">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• เช่าชุดกันหนาวที่นี่ได้</li>
+                                    <li>• Snow Play Area สนุกมาก!</li>
+                                    <li>• อย่าลืมแช่ Onsen ก่อนกลับ</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link youtube">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00-14:00</div>
+                    <div class="timeline-activity">🏂 เล่นหิมะ! ปั้นตุ๊กตาหิมะ, นั่งกระเช้ากอนโดล่า</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารกลางวัน (ข้าวแกงกะหรี่ร้อนๆ)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-activity">♨️ แช่ออนเซ็น (Onsen) เพื่อผ่อนคลายความหนาว</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-activity">🚄 เดินทางกลับชินจูกุ (Shinjuku) [ใช้บัตร TWP วันที่ 1]</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:30</div>
+                    <div class="timeline-activity">🍽️ อาหารเย็น: สุกี้ยากี้/ชาบู-ชาบู ในย่านชินจูกุ (Shinjuku)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-activity">😴 พักผ่อน, เตรียมตัวสำหรับวันพรุ่งนี้ (ใช้บัตร TWP วันที่ 2)</div>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-card" style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); border-left-color: #e91e63;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);">7</div>
+                    <div class="day-info">
+                        <h3>ตามรอย Your Name และช้อปปิ้งที่ฮาราจูกุ 🛍️</h3>
+                        <div class="date">พฤหัสบดีที่ 12 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 บัตรโตเกียวไวด์พาส (Tokyo Wide Pass - TWP) วันที่ 2</strong> - ครอบคลุมรถไฟสาย JR ทั้งหมดในโตเกียว
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-07:00</div>
+                    <div class="timeline-activity">🍳 ตื่นนอน/รับประทานอาหารเช้า</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:00-08:00</div>
+                    <div class="timeline-activity">
+                        🚇 เดินทางไปศาลเจ้าซูกะ (Suga Shrine)<br>
+                        • รถไฟสายจูโอ (JR Chuo Line): สถานีชินจูกุ (Shinjuku) → สถานีโยทสึยะ (Yotsuya)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:00-09:30</div>
+                    <div class="timeline-activity">⛩️ <strong>ศาลเจ้าซูกะ (Suga Shrine)</strong> - บันไดจากเรื่อง Your Name! 🎬</div>
+                </div>
+
+                <!-- Suga Shrine Detail -->
+                <div class="place-detail">
+                    <h4>⛩️ ศาลเจ้าซูกะ (Suga Shrine) - บันไดจาก Your Name</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/048.jpg" alt="บันไดสีแดงในศาลเจ้าซูกะจากเรื่อง Your Name" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>5 สึกะโช, ชินจูกุ-คุ, โตเกียว (5 Sugacho, Shinjuku-ku, Tokyo)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>การเดินทาง</strong></td>
+                                    <td>เดิน 5 นาที จากสถานีโยทสึยะ (Yotsuya Station)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>ค่าเข้าชม</strong></td>
+                                    <td>ฟรี</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎬 ความโด่งดัง:</strong></p>
+                            <ul>
+                                <li>บันไดในฉากสำคัญของอนิเมะ <strong>"Your Name" (คิมิ โนะ นะ วะ)</strong></li>
+                                <li>ฉากที่ทาคิและมิตสึฮะเดินสวนกันบนบันได</li>
+                                <li>จุดหมายของแฟนอนิเมะจากทั่วโลกที่ต้องมาถ่ายรูป!</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tips:</strong> ไปถึงในตอนเช้า (07:00-08:00) เพื่อหลีกเลี่ยงผู้คนและได้ภาพที่สวยงามโดยไม่ต้องรอคิว
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Suga+Shrine+Yotsuya" target="_blank" class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/049.jpg" alt="บันได Your Name">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/050.jpg" alt="ศาลเจ้าญี่ปุ่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/051.jpg" alt="โตเกียวยามเช้า">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• มาก่อน 8:00 คนน้อย!</li>
+                                    <li>• มุมถ่ายรูปเหมือนในอนิเมะ</li>
+                                    <li>• พระอาทิตย์ตกก็สวย</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00-11:00</div>
+                    <div class="timeline-activity">
+                        🛍️ ช้อปปิ้งยามเช้าที่ชินจูกุ (Shinjuku) (เลือกได้)<br>
+                        • แวะร้าน GU/UNIQLO เพื่อช้อปปิ้งเบาๆ
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00-12:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารกลางวันที่ชินจูกุ (Shinjuku)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:30-16:30</div>
+                    <div class="timeline-activity">🌸 <strong>ช้อปปิ้งที่ฮาราจูกุ/โอโมเตะซันโด (Harajuku/Omotesando) (4 ชั่วโมง)</strong></div>
+                </div>
+
+                <!-- Harajuku Shopping Details -->
+                <div class="place-detail">
+                    <h4>🧸 คิดดี้ แลนด์ ฮาราจูกุ (Kiddy Land Harajuku) - 12:30-14:00</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/052.jpg" alt="ร้าน Kiddy Land" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>6-1-9 จิงกูมาเอะ, ชิบูย่า-คุ (6-1-9 Jingumae, Shibuya-ku)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>11:00-21:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🏬 แผนผังชั้น (พอใจต้องชอบ!):</strong></p>
+                            <ul>
+                                <li><strong>B1F:</strong> ซานริโอ (Sanrio) - เฮลโลคิตตี้ (Hello Kitty), ชินนามอนโรล (Cinnamoroll), มายเมโลดี้ (My Melody), คุโรมิ (Kuromi)</li>
+                                <li><strong>1F:</strong> ร้านกิ๊บลิ (Ghibli Store) - โทโทโร่ (Totoro), กิกิ (Kiki), โนเฟซ (No-Face), โปเนียว (Ponyo)</li>
+                                <li><strong>2F:</strong> สนูปปี้ (Snoopy), มูมิน (Moomin)</li>
+                                <li><strong>3F:</strong> ดิสนีย์ (Disney)</li>
+                                <li><strong>4F:</strong> ริลัคคุมะ (Rilakkuma), ซูมิโกะ กุราชิ (Sumikko Gurashi)</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Kiddy+Land+Harajuku" target="_blank" class="link-button">📍 Google Maps</a>
+                            <a href="https://www.kiddyland.co.jp/harajuku/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/053.jpg" alt="ของเล่นคาแรคเตอร์">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/054.jpg" alt="Sanrio">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/055.jpg" alt="ตุ๊กตา">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• B1F Sanrio ของเยอะมาก!</li>
+                                    <li>• 1F Ghibli มีของ Limited</li>
+                                    <li>• 4F Sumikko น่ารัก</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-detail">
+                    <h4>👗 แบรนดี้ เมลวิลล์ (Brandy Melville) - 14:00-15:00</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/056.jpg" alt="ร้านเสื้อผ้า Brandy Melville" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>ที่อยู่</strong></td>
+                                    <td>3-29-5 จิงกูมาเอะ, ชิบูย่า-คุ (3-29-5 Jingumae, Shibuya-ku)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>เวลาทำการ</strong></td>
+                                    <td>11:00-19:00 ⚠️ ปิดเร็ว!</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>👚 สินค้า:</strong></p>
+                            <ul>
+                                <li>เสื้อผ้าวัยรุ่นหญิงสไตล์ลำลอง/ทันสมัย</li>
+                                <li>เสื้อครอป, เสื้อยืด, กางเกงยีนส์</li>
+                                <li>ราคา: <strong>฿420 - ฿1,050 (≈ ¥2,000 - ¥5,000)</strong></li>
+                                <li>ขนาดเดียว (One size fits most)</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Brandy+Melville+Harajuku" target="_blank" class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/057.jpg" alt="เสื้อผ้าแฟชั่น">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/058.jpg" alt="ร้านเสื้อผ้า">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/059.jpg" alt="แฟชั่นวัยรุ่น">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• ปิด 19:00 มาก่อน!</li>
+                                    <li>• One size เหมาะคนตัวเล็ก</li>
+                                    <li>• เสื้อครอปน่ารักมาก</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-detail">
+                    <h4>🛍️ ถนนทาเคชิตะ (Takeshita Street) - 15:00-16:30</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/060.jpg" alt="ถนนทาเคชิตะ" class="card-image">
+                            <p><strong>ร้านแนะนำ:</strong></p>
+                            <ul>
+                                <li><strong>WEGO:</strong> แฟชั่นสตรีทราคาประหยัด</li>
+                                <li><strong>SPINNS:</strong> เสื้อผ้าวินเทจ/มือสอง</li>
+                                <li><strong>6% DOKIDOKI:</strong> แฟชั่นฮาราจูกุสีสันสดใส</li>
+                                <li><strong>Marion Crepes:</strong> เครปญี่ปุ่นชื่อดัง! 🥞</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Takeshita+Street" target="_blank" class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/061.jpg" alt="ฮาราจูกุ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/062.jpg" alt="ร้านค้า">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/063.jpg" alt="เครป">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• Marion Crepes ต้องลอง!</li>
+                                    <li>• WEGO ราคาถูกดี</li>
+                                    <li>• วันเสาร์คนเยอะมาก</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00-20:00</div>
+                    <div class="timeline-activity">🛍️ <strong>ช้อปปิ้งรอบสุดท้ายที่ชินจูกุ (Shinjuku) (3 ชั่วโมง)</strong></div>
+                </div>
+
+                <div class="place-detail">
+                    <h4>🎒 ภารกิจ: ซื้อกระเป๋าเดินทางใหม่ 20 กก. - 17:00-17:45</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/064.jpg" alt="กระเป๋าเดินทาง" class="card-image">
+                            <p>สถานที่แนะนำ:</p>
+                            <ul>
+                                <li><strong>ดองกิโฮเต้ ชินจูกุ (Don Quijote Shinjuku):</strong> ราคา <strong>฿1,050 - ฿1,680 (≈ ¥5,000 - ¥8,000)</strong></li>
+                                <li><strong>บิ๊กคาเมร่า ชินจูกุ (Bic Camera Shinjuku):</strong> ราคา <strong>฿1,680 - ฿3,150 (≈ ¥8,000 - ¥15,000)</strong></li>
+                            </ul>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/065.jpg" alt="กระเป๋าเดินทาง">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/066.jpg" alt="Don Quijote">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/067.jpg" alt="Bic Camera">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• Don Quijote ราคาถูกกว่า</li>
+                                    <li>• Bic Camera คุณภาพดี</li>
+                                    <li>• เลือกขนาด 20kg พอดี</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="place-detail">
+                    <h4>🧸 ซานริโอ เวิลด์ และร้านกิ๊บลิ - 17:45-19:00</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/068.jpg" alt="Sanrio characters" class="card-image">
+                            <p><strong>ซานริโอ เวิลด์ ชินจูกุ (Sanrio World Shinjuku) [ห้างทาคาชิมายะ (Takashimaya) ชั้น 11F]:</strong></p>
+                            <ul>
+                                <li>ร้าน Flagship Store ที่ใหญ่ที่สุด!</li>
+                                <li>เฮลโลคิตตี้ (Hello Kitty), ชินนามอนโรล (Cinnamoroll), คุโรมิ (Kuromi), มายเมโลดี้ (My Melody)</li>
+                                <li>สินค้าลิมิเต็ดอิดิชั่นเฉพาะที่นี่</li>
+                            </ul>
+
+                            <p><strong>ร้านกิ๊บลิ (Ghibli Store) [ห้างลูมิเน่ เอสท์ ชินจูกุ (Lumine EST Shinjuku)]:</strong></p>
+                            <ul>
+                                <li>ร้านค้าอย่างเป็นทางการของสตูดิโอจิบลิ (Studio Ghibli)</li>
+                                <li>โทโทโร่ (Totoro), กิกิ (Kiki), สปิริตด์ อเวย์ (Spirited Away), ฮาวล์ส มูฟวิ่ง คาสเซิล (Howl's Moving Castle)</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Sanrio+World+Shinjuku" target="_blank" class="link-button">📍 Sanrio</a>
+                            <a href="https://maps.google.com/?q=Ghibli+Store+Lumine+Shinjuku" target="_blank" class="link-button">📍 Ghibli</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/069.jpg" alt="Sanrio Shop">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/070.jpg" alt="Hello Kitty">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/071.jpg" alt="Totoro">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips จากโซเชียลมีเดีย</h5>
+                                <ul>
+                                    <li>• Sanrio ชั้น 11F มีของ Limited!</li>
+                                    <li>• Ghibli ที่ Lumine EST ใกล้กัน</li>
+                                    <li>• Cinnamoroll น่ารักมาก</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00-20:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารเย็นที่ชินจูกุ (Shinjuku)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-22:00</div>
+                    <div class="timeline-activity">
+                        🎒 กลับโรงแรมและจัดกระเป๋าใหม่ทั้งหมด<br>
+                        • ย้ายของลงในกระเป๋าเดินทางใบใหม่, ชั่งน้ำหนัก (ไม่เกิน 20 กก./คน)
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">8</div>
+                    <div class="day-info">
+                        <h3>เดินทางกลับบ้าน ✈️🇹🇭</h3>
+                        <div class="date">ศุกร์ที่ 13 มีนาคม 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 บัตรโตเกียวไวด์พาส (Tokyo Wide Pass - TWP) วันที่ 3</strong> - ใช้เดินทางไปสนามบินนาริตะด้วยรถไฟนาริตะ เอ็กซ์เพรส (N'EX)
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00</div>
+                    <div class="timeline-activity">🍳 ตื่นนอน/รับประทานอาหารเช้า</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30</div>
+                    <div class="timeline-activity">🏨 เช็คเอาท์จากโรงแรมชินจูกุ แกรนเบลล์ (Shinjuku Granbell Hotel) (ฝากกระเป๋าไว้ที่โรงแรม)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00-12:00</div>
+                    <div class="timeline-activity">
+                        🛍️ <strong>ช้อปปิ้งรอบสุดท้ายที่อุเอโนะ (Ueno) (3 ชั่วโมง)</strong><br>
+                        • รถไฟสายยามาโนเตะ (JR Yamanote Line): สถานีชินจูกุ (Shinjuku) → สถานีอุเอโนะ (Ueno) (15 นาที) [ใช้บัตร TWP วันที่ 3]<br>
+                        • 09:00-11:00: ตึกทาเคยะ (Takeya Building - ตึกม่วง) - ขนมญี่ปุ่น, เครื่องสำอาง, ของฝาก<br>
+                        • 11:00-12:00: ตลาดอะเมโยโกะ (Ameyoko Market) - ช้อปปิ้งเก็บตก
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-13:00</div>
+                    <div class="timeline-activity">🍽️ รับประทานอาหารกลางวันที่อุเอโนะ (Ueno)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">13:30-15:30</div>
+                    <div class="timeline-activity">
+                        🛍️ ช้อปปิ้งนาทีสุดท้ายที่ชินจูกุ (Shinjuku)<br>
+                        • เก็บตก: ร้าน GU/UNIQLO, ของฝาก<br>
+                        • จัดกระเป๋า/ชั่งน้ำหนัก
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-activity">🎒 รับกระเป๋าที่โรงแรม</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:45</div>
+                    <div class="timeline-activity">
+                        🚄 <strong>รถไฟนาริตะ เอ็กซ์เพรส (Narita Express - N'EX)</strong> จากสถานีชินจูกุ (Shinjuku) → สนามบินนาริตะ (NRT)<br>
+                        • ใช้บัตร TWP วันที่ 3<br>
+                        • ระยะเวลาเดินทาง: ประมาณ 1 ชั่วโมง 20 นาที<br>
+                        • คาดว่าจะถึงสนามบิน: 17:05-17:15 น.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:15</div>
+                    <div class="timeline-activity">🛬 ถึงสนามบินนาริตะ (NRT) Terminal 1 <strong>(4 ชั่วโมงก่อนเครื่องออก)</strong></div>
+                </div>
+
+                <!-- Airport Process -->
+                <div class="place-detail">
+                    <h4>🛃 ขั้นตอนที่สนามบินนาริตะ</h4>
+                    <table>
+                        <tr>
+                            <th>เวลา</th>
+                            <th>กิจกรรม</th>
+                            <th>ระยะเวลา</th>
+                        </tr>
+                        <tr>
+                            <td>17:15-18:00</td>
+                            <td>💰 ขอคืนภาษี (Tax-Free Refund) (ทำก่อนเช็คอิน)</td>
+                            <td>45 นาที</td>
+                        </tr>
+                        <tr>
+                            <td>18:00-18:30</td>
+                            <td>✅ เช็คอินสายการบินไทย แอร์เอเชีย เอ็กซ์ (Thai AirAsia X)</td>
+                            <td>30 นาที</td>
+                        </tr>
+                        <tr>
+                            <td>18:30-19:00</td>
+                            <td>🛂 ผ่านด่านตรวจคนออกเมือง</td>
+                            <td>30 นาที</td>
+                        </tr>
+                        <tr>
+                            <td>19:00-19:30</td>
+                            <td>🔍 ผ่านจุดตรวจความปลอดภัย</td>
+                            <td>30 นาที</td>
+                        </tr>
+                        <tr>
+                            <td>19:30-21:00</td>
+                            <td>🛍️ ช้อปปิ้งสินค้าปลอดภาษี (Duty Free) และพักผ่อน</td>
+                            <td>1.5 ชั่วโมง</td>
+                        </tr>
+                        <tr>
+                            <td>21:00</td>
+                            <td>🚪 ขึ้นเครื่อง (Boarding)</td>
+                            <td>-</td>
+                        </tr>
+                    </table>
+
+                    <div class="info-box highlight">
+                        <strong>⚠️ สำคัญ:</strong><br>
+                        • เคาน์เตอร์เช็คอินปิดเวลา 20:15 น. (1 ชั่วโมงก่อนเครื่องออก)<br>
+                        • ประตูขึ้นเครื่อง (Gate) ปิดเวลา 20:45 น. (30 นาทีก่อนเครื่องออก)<br>
+                        • เตรียมใบเสร็จสำหรับขอคืนภาษี (Tax-Free) และพาสปอร์ตให้พร้อม
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:15</div>
+                    <div class="timeline-activity">🛫 <strong>เที่ยวบิน XJ 607</strong> ออกเดินทาง</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">02:40 (Day 9)</div>
+                    <div class="timeline-activity">🛬 ถึงสนามบินดอนเมือง (DMK) 🇹🇭</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Transportation -->
+        <div class="section">
+            <h2 class="section-title">🚅 การเดินทาง</h2>
+
+            <div class="grid-2">
+                <div class="card">
+                    <h3 class="card-title">🎫 บัตรโตเกียวไวด์พาส (Tokyo Wide Pass - TWP)</h3>
+                    <table>
+                        <tr>
+                            <td><strong>ราคา</strong></td>
+                            <td><strong>฿2,138 (≈ ¥10,180)</strong> สำหรับผู้ใหญ่<br><strong>฿1,069 (≈ ¥5,090)</strong> สำหรับเด็ก</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ระยะเวลา</strong></td>
+                            <td>3 วันติดต่อกัน</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ซื้อที่</strong></td>
+                            <td>ศูนย์บริการนักท่องเที่ยวเจอาร์ตะวันออก (JR East Travel Service Center) ที่สนามบินนาริตะ (NRT) หรือสถานีโตเกียว (Tokyo)</td>
+                        </tr>
+                    </table>
+
+                    <p><strong>แผนการใช้งาน:</strong></p>
+                    <ul>
+                        <li><strong>วันที่ 1 (11 มี.ค.):</strong> ชินจูกุ (Shinjuku) ↔ กาล่า ยูซาวะ (Gala Yuzawa) [รถไฟชินคันเซ็น (Shinkansen)]</li>
+                        <li><strong>วันที่ 2 (12 มี.ค.):</strong> ศาลเจ้าซูกะ (Suga Shrine) และการเดินทางในโตเกียวด้วยรถไฟสาย JR</li>
+                        <li><strong>วันที่ 3 (13 มี.ค.):</strong> ชินจูกุ (Shinjuku) → สนามบินนาริตะ (NRT) [รถไฟนาริตะ เอ็กซ์เพรส (N'EX)]</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3 class="card-title">🎫 ตั๋วอื่นๆ</h3>
+                    <table>
+                        <tr>
+                            <td><strong>รถไฟนาริตะ เอ็กซ์เพรส (N'EX) (ขาเข้า)</strong></td>
+                            <td><strong>฿672 (≈ ¥3,200)</strong><br>NRT → Tokyo/Ueno</td>
+                        </tr>
+                        <tr>
+                            <td><strong>บัตรโดยสารรถไฟใต้ดินโตเกียว 24 ชั่วโมง (Tokyo Subway 24-hour Ticket)</strong></td>
+                            <td><strong>฿126 (≈ ¥600)</strong><br>ใช้ในวันที่ 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>รถบัสไป-กลับคาวากุจิโกะ</strong></td>
+                            <td><strong>฿1,386 (≈ ¥6,600)</strong><br>สำหรับ 2 คน ไป-กลับ</td>
+                        </tr>
+                    </table>
+
+                    <p><strong>รวมค่าเดินทางโดยประมาณ:</strong> <strong>฿5,400 (≈ ¥25,710)</strong></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="exchange-rate">
+                💱 <strong>อัตราแลกเปลี่ยน:</strong> ¥100 ≈ 21 บาท (1 บาท ≈ ¥4.76)
+            </div>
+            <div class="update-info">
+                📅 อัปเดตล่าสุด: 19 พฤศจิกายน 2025 | เวอร์ชัน: Final v5.1 (Localized)
+            </div>
+        </div>
+    </div>
+
+    <script src="../asset/js/common.js"></script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+{
+    "name": "Tokyo Trip March 2026",
+    "short_name": "Tokyo Trip",
+    "description": "Travel guide for Tokyo trip March 2026",
+    "start_url": "./index.html",
+    "display": "standalone",
+    "background_color": "#F5F7FA",
+    "theme_color": "#1e293b",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗾</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["travel", "lifestyle"],
+    "lang": "th",
+    "dir": "ltr"
+}

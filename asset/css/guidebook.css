@@ -1,0 +1,172 @@
+/* =============================================
+   Tokyo Trip 2026 - Guidebook Styles
+   Styles for shopping.html (Guide Book)
+   ============================================= */
+
+body {
+    font-family: 'Tahoma', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #222;
+    line-height: 1.7;
+    font-size: 15pt;
+    background-color: #f7fcfc;
+}
+
+/* Main Container */
+.guide-container {
+    width: 100%;
+    max-width: 1280px;
+    padding: 30px 50px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #ffffff;
+    box-shadow: 0 0 30px rgba(0, 77, 64, 0.1);
+    border-radius: 12px;
+}
+
+/* Typography */
+h1 {
+    font-size: 32pt;
+    text-align: center;
+    color: #004d40;
+    border-bottom: 8px solid #004d40;
+    padding: 20px 0;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+h2 {
+    font-size: 24pt;
+    color: #00796b;
+    background-color: #e0f2f1;
+    padding: 15px 25px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 18pt;
+    color: #d84315;
+    margin-top: 25px;
+    font-weight: bold;
+    border-left: 6px solid #d84315;
+    padding-left: 15px;
+}
+
+/* Sections */
+.activity-section {
+    padding: 15px 0;
+}
+
+.detail-item {
+    margin-bottom: 25px;
+    padding-left: 15px;
+    border-left: 2px solid #bdbdbd;
+}
+
+/* Tags */
+.pojai-fav-tag {
+    display: inline-block;
+    background-color: #ffcdd2;
+    color: #c2185b;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pojai-anime-tag {
+    display: inline-block;
+    background-color: #ffe0b2;
+    color: #e65100;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pojai-food-tag {
+    display: inline-block;
+    background-color: #b2ebf2;
+    color: #00838f;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.icon {
+    font-size: 16pt;
+    margin-right: 10px;
+}
+
+/* Lists */
+ul {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .guide-container {
+        padding: 15px 20px;
+        border-radius: 0;
+    }
+
+    h1 {
+        font-size: 1.75rem;
+        padding: 15px 0;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        padding: 10px 15px;
+        margin-top: 25px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        padding-left: 10px;
+    }
+
+    body {
+        font-size: 1rem;
+    }
+
+    .icon {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .guide-container {
+        padding: 10px 15px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.15rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    .pojai-fav-tag,
+    .pojai-anime-tag,
+    .pojai-food-tag {
+        font-size: 0.85rem;
+        padding: 4px 8px;
+    }
+}

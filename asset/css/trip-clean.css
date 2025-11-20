@@ -1,0 +1,582 @@
+/* =============================================
+   Tokyo Trip 2026 - Clean Theme
+   Styles for trip-plan.html
+   ============================================= */
+
+/* Trip Header */
+.trip-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 2rem 1.5rem;
+    position: relative;
+}
+
+.trip-header h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.75rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.trip-meta {
+    display: flex;
+    gap: 1rem;
+    font-size: 1.1rem;
+    opacity: 0.95;
+    flex-wrap: wrap;
+}
+
+.trip-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+/* Timeline */
+.timeline {
+    padding: 0.75rem;
+}
+
+/* Day Section */
+.day-section {
+    margin-bottom: 1.5rem;
+}
+
+.day-header {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 1rem;
+    padding-left: 0.5rem;
+}
+
+/* Section Headers (Collapsible Days) */
+.section-header {
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, #F8FAFC 0%, #EFF6FF 100%);
+    border-left: 4px solid #3B82F6;
+    transition: background 0.2s;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+}
+
+.section-header:hover {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+}
+
+.section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+}
+
+.section-chevron {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    color: #64748B;
+    transition: transform 0.3s;
+    cursor: pointer;
+    padding: 0;
+    min-width: 24px;
+}
+
+.section-chevron.expanded {
+    transform: rotate(90deg);
+}
+
+.section-body {
+    padding: 0 0.5rem;
+}
+
+.section-body.hidden {
+    display: none;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border: 1px solid #E2E8F0;
+}
+
+.card.confirmed {
+    border-left: 4px solid #10B981;
+}
+
+.card-header {
+    padding: 0.75rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.badge {
+    display: inline-block;
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 0.4rem 1rem;
+    border-radius: 14px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+.card-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1E293B;
+    line-height: 1.4;
+}
+
+.card-subtitle {
+    font-size: 1.05rem;
+    color: #64748B;
+    margin-bottom: 0.35rem;
+    line-height: 1.5;
+}
+
+.card-meta {
+    font-size: 1rem;
+    color: #94A3B8;
+    margin-top: 0.5rem;
+}
+
+.chevron {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #94A3B8;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.chevron.expanded {
+    transform: rotate(180deg);
+}
+
+.card-body {
+    padding: 0 0.75rem 0.75rem 0.75rem;
+    border-top: 1px solid #F1F5F9;
+    background: #FAFBFC;
+}
+
+.card-body.hidden {
+    display: none;
+}
+
+/* Timeline Items */
+.timeline-item {
+    display: flex;
+    gap: 1rem;
+    margin: 0.75rem 0;
+}
+
+.timeline-time {
+    color: #64748B;
+    font-size: 1rem;
+    min-width: 70px;
+    font-weight: 700;
+}
+
+.timeline-content {
+    flex: 1;
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* Info Sections */
+.info-section {
+    margin: 0.75rem 0;
+}
+
+.info-label {
+    font-size: 1rem;
+    color: #64748B;
+    margin-bottom: 0.35rem;
+    font-weight: 600;
+}
+
+.info-value {
+    font-size: 1.1rem;
+    color: #1E293B;
+    line-height: 1.6;
+}
+
+.info-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.btn-action {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    background: #E3F2FD;
+    color: #1976D2;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-action:hover {
+    background: #BBDEFB;
+}
+
+/* Subsections (Level 3+) */
+.subsection {
+    margin-bottom: 0.75rem;
+    border-left: 3px solid #E2E8F0;
+    padding-left: 0.75rem;
+}
+
+.subsection-header {
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: #FAFBFC;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.subsection-header:hover {
+    background: #F1F5F9;
+}
+
+.subsection-title {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #334155;
+    margin: 0;
+}
+
+.subsection-chevron {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #94A3B8;
+    transition: transform 0.3s;
+    cursor: pointer;
+    padding: 0;
+    min-width: 20px;
+}
+
+.subsection-chevron.expanded {
+    transform: rotate(90deg);
+}
+
+.subsection-body {
+    padding: 0.75rem 1rem 0.75rem 1rem;
+    background: #FAFBFC;
+    border-top: 1px solid #F1F5F9;
+    margin-left: 0.5rem;
+    border-radius: 0 0 6px 6px;
+}
+
+.subsection-body.hidden {
+    display: none;
+}
+
+/* Font sizes by level */
+.level-1 .section-title {
+    font-size: 1.5rem;
+}
+
+.card-title.level-2 {
+    font-size: 1.35rem;
+}
+
+.card-title.level-3 {
+    font-size: 1.2rem;
+}
+
+.subsection.level-3 .subsection-title {
+    font-size: 1.15rem;
+}
+
+.subsection.level-4 .subsection-title {
+    font-size: 1.05rem;
+}
+
+/* Birthday badge */
+.birthday-badge {
+    background: linear-gradient(135deg, #D97BA6 0%, #F4A261 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 14px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    display: inline-block;
+    margin-left: 0.75rem;
+}
+
+/* Recommendations Section */
+.recommendations {
+    background: white;
+    border-radius: 12px;
+    margin: 1rem 0;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.rec-header {
+    padding: 1.25rem;
+    background: #F8FAFC;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #3B82F6;
+}
+
+.rec-body {
+    padding: 1rem;
+}
+
+.rec-body.hidden {
+    display: none;
+}
+
+.rec-category {
+    margin-bottom: 1.5rem;
+}
+
+.rec-category:last-child {
+    margin-bottom: 0;
+}
+
+.rec-category-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 1rem;
+}
+
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+.rec-card {
+    background: #FFF9E6;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: all 0.2s;
+    border: 1px solid #FFE4B5;
+    position: relative;
+}
+
+.rec-card:hover {
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.rec-card.transport {
+    background: #E8F4F8;
+    border-color: #B3E5FC;
+}
+
+.rec-card-header {
+    padding: 0.75rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.rec-card-chevron {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: rgba(0,0,0,0.05);
+    border: none;
+    font-size: 0.75rem;
+    color: #64748B;
+    cursor: pointer;
+    transition: transform 0.3s;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.rec-card-chevron.expanded {
+    transform: rotate(180deg);
+}
+
+.rec-card-detail {
+    padding: 0.75rem 0.75rem 0.75rem 0.75rem;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    background: rgba(0,0,0,0.02);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #475569;
+}
+
+.rec-card-detail.hidden {
+    display: none;
+}
+
+.rec-card-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.rec-card-detail li {
+    padding: 0.25rem 0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.rec-card-detail li::before {
+    content: "•";
+    margin-right: 0.5rem;
+    color: #94A3B8;
+}
+
+.rec-card-img {
+    width: 100%;
+    height: 80px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    background: #F1F5F9 !important;
+}
+
+.rec-card-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #1E293B;
+    line-height: 1.4;
+}
+
+.rec-card-subtitle {
+    font-size: 1.1rem;
+    color: #64748B;
+    line-height: 1.5;
+}
+
+.rec-link {
+    color: #3B82F6;
+    font-size: 0.85rem;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    display: inline-block;
+}
+
+/* =============================================
+   Responsive Styles
+   ============================================= */
+
+/* Tablet */
+@media (min-width: 768px) {
+    .timeline {
+        padding: 1.5rem;
+    }
+
+    .trip-header {
+        padding: 3rem 2rem;
+    }
+
+    .trip-header h1 {
+        font-size: 2.75rem;
+    }
+
+    .trip-meta {
+        font-size: 1.2rem;
+    }
+
+    .day-header {
+        font-size: 1.75rem;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+    }
+
+    .rec-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.25rem;
+    }
+
+    .card-title.level-2 {
+        font-size: 1.15rem;
+    }
+
+    .subsection-title {
+        font-size: 1rem;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .timeline {
+        padding: 1.5rem 3rem;
+    }
+
+    .trip-header {
+        padding: 3rem 4rem;
+    }
+
+    .rec-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    .trip-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .trip-meta {
+        font-size: 0.95rem;
+    }
+
+    .day-header {
+        font-size: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+    }
+
+    .timeline {
+        padding: 0.75rem;
+    }
+
+    .rec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card-header {
+        padding: 0.75rem;
+    }
+}

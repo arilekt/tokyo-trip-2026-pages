@@ -1,0 +1,439 @@
+/* =============================================
+   Tokyo Trip 2026 - Common Styles
+   Base styles shared across all pages
+   ============================================= */
+
+/* CSS Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, 'Tahoma', sans-serif;
+    line-height: 1.7;
+    color: #2C3E50;
+    background: #F5F7FA;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+a {
+    color: #3B82F6;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+
+/* =============================================
+   Floating Navigator Menu (Top Right)
+   ============================================= */
+
+#navMenu {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1000;
+}
+
+#navMenuBtn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #1e293b;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+#navMenuBtn:hover {
+    background: #334155;
+    transform: scale(1.05);
+}
+
+#navMenuBtn.active {
+    background: #dc2626;
+}
+
+/* Slide-in Menu */
+#navMenuPanel {
+    position: fixed;
+    top: 0;
+    right: -300px;
+    width: 280px;
+    height: 100vh;
+    background: white;
+    box-shadow: -4px 0 20px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 999;
+    overflow-y: auto;
+}
+
+#navMenuPanel.open {
+    right: 0;
+}
+
+.nav-header {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 1rem 0;
+}
+
+.nav-links li {
+    border-bottom: 1px solid #f1f5f9;
+}
+
+.nav-links a {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    color: #334155;
+    font-size: 1.1rem;
+    transition: background 0.2s;
+}
+
+.nav-links a:hover {
+    background: #f8fafc;
+    text-decoration: none;
+}
+
+.nav-links a.active {
+    background: #eff6ff;
+    color: #2563eb;
+    font-weight: 600;
+}
+
+.nav-icon {
+    font-size: 1.3rem;
+}
+
+/* Language Selector */
+.nav-lang {
+    padding: 1rem 1.5rem;
+    border-top: 2px solid #e2e8f0;
+}
+
+.nav-lang-title {
+    font-size: 0.85rem;
+    color: #64748b;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.nav-lang-btns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.nav-lang-btn {
+    flex: 1;
+    padding: 0.5rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    background: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-lang-btn:hover {
+    border-color: #3b82f6;
+}
+
+.nav-lang-btn.active {
+    background: #3b82f6;
+    color: white;
+    border-color: #3b82f6;
+}
+
+/* Overlay */
+#navOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 998;
+}
+
+#navOverlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* =============================================
+   Go-to-Top Button (Bottom Left)
+   ============================================= */
+
+#goToTop {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #1e293b;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    z-index: 900;
+}
+
+#goToTop.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#goToTop:hover {
+    background: #334155;
+    transform: scale(1.1);
+}
+
+/* =============================================
+   Home Button (Bottom Right)
+   ============================================= */
+
+#homeBtn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: #3b82f6;
+    color: white;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    transition: all 0.3s;
+    z-index: 900;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#homeBtn:hover {
+    background: #2563eb;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    #goToTop {
+        bottom: 1rem;
+        left: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #homeBtn {
+        bottom: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    #navMenuBtn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+    }
+}
+
+/* =============================================
+   Common Buttons & UI Elements
+   ============================================= */
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background: #3B82F6;
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+}
+
+.btn-secondary {
+    background: #E3F2FD;
+    color: #1976D2;
+}
+
+.btn-secondary:hover {
+    background: #BBDEFB;
+}
+
+/* =============================================
+   Tables (Common Style)
+   ============================================= */
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 1rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info-table thead tr {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: white;
+    text-align: left;
+}
+
+.info-table th {
+    padding: 0.75rem;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.info-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.info-table tbody tr:nth-child(even) {
+    background-color: #F8FAFC;
+}
+
+.info-table tbody tr:hover {
+    background-color: #EFF6FF;
+}
+
+.info-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.info-table strong {
+    color: #1E293B;
+}
+
+/* =============================================
+   Footer
+   ============================================= */
+
+footer {
+    text-align: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
+    color: #64748B;
+    font-size: 0.9rem;
+    border-top: 2px solid #E2E8F0;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer p:first-child {
+    font-weight: 700;
+    color: #1E293B;
+    font-size: 1.1rem;
+}
+
+/* =============================================
+   Utility Classes
+   ============================================= */
+
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.hidden { display: none !important; }
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+
+/* Price tag */
+.price-tag {
+    color: #059669;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+/* Status indicators */
+.status-confirmed {
+    color: #10B981;
+}
+
+.status-pending {
+    color: #F59E0B;
+}
+
+.status-required {
+    color: #EF4444;
+    font-weight: 700;
+}
