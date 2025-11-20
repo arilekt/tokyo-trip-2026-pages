@@ -9,6 +9,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     initNavigator();
     initGoToTop();
+    initLightbox();
     initServiceWorker();
 });
 
@@ -209,6 +210,63 @@ function initHomeButton() {
     btn.setAttribute('aria-label', 'Go to home');
     btn.title = 'หน้าแรก';
     document.body.appendChild(btn);
+}
+
+// =============================================
+// Image Lightbox / Popup
+// =============================================
+function initLightbox() {
+    // Create lightbox container
+    const lightbox = document.createElement('div');
+    lightbox.id = 'lightbox';
+    lightbox.className = 'lightbox';
+    lightbox.innerHTML = `
+        <button class="lightbox-close" aria-label="Close">✕</button>
+        <img src="" alt="Full size image">
+    `;
+    document.body.appendChild(lightbox);
+
+    const lightboxImg = lightbox.querySelector('img');
+    const closeBtn = lightbox.querySelector('.lightbox-close');
+
+    // Find all images and make them clickable
+    const images = document.querySelectorAll('img:not(.no-lightbox):not([src*="icon"]):not([src*="logo"])');
+
+    images.forEach(img => {
+        // Skip very small images (icons, etc.)
+        if (img.naturalWidth < 100 || img.naturalHeight < 100) return;
+
+        // Add clickable class and event
+        img.classList.add('clickable-img');
+
+        img.addEventListener('click', function(e) {
+            e.preventDefault();
+            lightboxImg.src = this.src;
+            lightboxImg.alt = this.alt || 'Image';
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close lightbox on click
+    lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target === closeBtn) {
+            closeLightbox();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+            closeLightbox();
+        }
+    });
+
+    function closeLightbox() {
+        lightbox.classList.remove('active');
+        document.body.style.overflow = '';
+        lightboxImg.src = '';
+    }
 }
 
 // =============================================

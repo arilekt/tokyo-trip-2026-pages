@@ -1,0 +1,222 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tokyo Trip 2026//Day 7//TH
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tokyo Trip Day 7 - ฮาราจุกุ & Your Name
+X-WR-TIMEZONE:Asia/Tokyo
+
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:day7-event1-wakeup@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T060000
+DTEND;TZID=Asia/Tokyo:20260312T070000
+SUMMARY:⏰ ตื่นนอน + เตรียมตัว (Wake up & Get ready)
+DESCRIPTION:เตรียมตัวไปถ่ายรูป Your Name\\n\\n📝 สิ่งที่ต้องเตรียม:\\n- กล้อง\\n- ชาร์จแบตเต็ม\\n- Memory Card ว่าง\\n\\n🎫 Tokyo Wide Pass Day 2\\n\\n🎯 วันนี้: ศาลเจ้าซูกะ + Harajuku Shopping
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event2-breakfast@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T070000
+DTEND;TZID=Asia/Tokyo:20260312T073000
+SUMMARY:🍳 อาหารเช้า (Breakfast)
+DESCRIPTION:อาหารเช้าก่อนออกเดินทาง\\n\\n📍 Shinjuku area\\n💰 งบ: ¥500-800/คน
+LOCATION:Shinjuku area
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event3-travel-suga@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T073000
+DTEND;TZID=Asia/Tokyo:20260312T080000
+SUMMARY:🚃 เดินทางไปศาลเจ้าซูกะ (Travel to Suga Shrine)
+DESCRIPTION:ไปจุดถ่ายรูป Your Name\\n\\n🚃 เส้นทาง:\\nJR Chuo Line: Shinjuku → Yotsuya\\n⏱️ ใช้เวลา: ~10-15 นาที\\n\\n🎫 ใช้ Tokyo Wide Pass
+LOCATION:Shinjuku to Yotsuya Station
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event4-suga-shrine@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T080000
+DTEND;TZID=Asia/Tokyo:20260312T093000
+SUMMARY:📸⛩️ ศาลเจ้าซูกะ - บันไดจาก Your Name (Suga Shrine)
+DESCRIPTION:🎬 จุดถ่ายรูปจากอนิเมะ Your Name (Kimi no Na wa)!\\n\\n📍 Suga Shrine, Yotsuya\\n💰 ฟรี\\n\\n📸 จุดถ่ายรูป:\\n- บันไดที่มีชื่อเสียง (ฉากจากหนัง)\\n- ศาลเจ้าซูกะ\\n- มุมเดียวกับในอนิเมะ\\n\\n⏰ มาเช้า = คนน้อย รูปสวย!\\n\\n🎵 อนิเมะ Your Name:\\n- กำกับโดย Makoto Shinkai\\n- ฉากสุดท้ายที่ Taki กับ Mitsuha เจอกัน
+LOCATION:Suga Shrine, Yotsuya, Shinjuku-ku, Tokyo
+CATEGORIES:ATTRACTION
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event5-travel-back@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T093000
+DTEND;TZID=Asia/Tokyo:20260312T100000
+SUMMARY:🚃 เดินทางกลับชินจูกุ (Travel back to Shinjuku)
+DESCRIPTION:กลับชินจูกุ\\n\\n🚃 เส้นทาง:\\nJR: Yotsuya → Shinjuku\\n⏱️ ใช้เวลา: ~10 นาที
+LOCATION:Yotsuya to Shinjuku
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event6-morning-shopping@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T100000
+DTEND;TZID=Asia/Tokyo:20260312T110000
+SUMMARY:🛍️ ช็อปปิ้งเช้า GU/UNIQLO (Morning Shopping - Optional)
+DESCRIPTION:แวะช็อปปิ้งหรือพักผ่อน\\n\\n📍 Shinjuku area\\n\\n🛒 ร้าน:\\n- GU\\n- UNIQLO\\n- หรือพักผ่อนที่โรงแรม\\n\\n💰 งบ: ตามต้องการ
+LOCATION:Shinjuku, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event7-lunch@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T110000
+DTEND;TZID=Asia/Tokyo:20260312T120000
+SUMMARY:🍜 อาหารกลางวัน (Lunch)
+DESCRIPTION:อาหารกลางวันย่านชินจูกุ\\n\\n📍 Shinjuku area\\n💰 งบ: ¥1,000-1,500/คน
+LOCATION:Shinjuku, Tokyo
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event8-travel-harajuku@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T120000
+DTEND;TZID=Asia/Tokyo:20260312T123000
+SUMMARY:🚃 เดินทางไปฮาราจุกุ (Travel to Harajuku)
+DESCRIPTION:ไปช็อปปิ้งย่านวัยรุ่น\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Shinjuku → Harajuku\\n⏱️ ใช้เวลา: ~5-10 นาที\\n\\n🎫 ใช้ Tokyo Wide Pass
+LOCATION:Shinjuku to Harajuku Station
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event9-kiddy-land@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T123000
+DTEND;TZID=Asia/Tokyo:20260312T140000
+SUMMARY:🧸 Kiddy Land ฮาราจุกุ (Kiddy Land Harajuku)
+DESCRIPTION:🎁 สวรรค์ของเล่นและ Character!\\n\\n📍 Kiddy Land Harajuku\\n🏢 6-1-9 Jingumae, Shibuya-ku\\n⏰ เปิด 11:00-21:00\\n\\n🏪 ชั้นต่างๆ:\\n- Sanrio\\n- Studio Ghibli (Donguri Republic)\\n- Disney\\n- Snoopy\\n- Pokemon\\n\\n🎁 ของซื้อให้พจน์:\\n- ตุ๊กตา Character\\n- ของ Sanrio\\n- Ghibli goods\\n\\n💰 งบ: ¥3,000-5,000
+LOCATION:Kiddy Land Harajuku, 6-1-9 Jingumae, Shibuya-ku, Tokyo
+CATEGORIES:SHOPPING
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event10-brandy-melville@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T140000
+DTEND;TZID=Asia/Tokyo:20260312T150000
+SUMMARY:👗 Brandy Melville (Teen Fashion)
+DESCRIPTION:ร้านเสื้อผ้าวัยรุ่น\\n\\n📍 Brandy Melville\\n🏢 3 Chome-29-5 Jingumae\\n⏰ เปิด 11:00-19:00\\n\\n👗 สไตล์:\\n- เสื้อผ้าวัยรุ่น\\n- Crop tops\\n- เสื้อยืด\\n- กางเกง\\n\\n💰 งบ: ¥2,000-5,000
+LOCATION:Brandy Melville, 3 Chome-29-5 Jingumae, Shibuya-ku, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event11-takeshita@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T150000
+DTEND;TZID=Asia/Tokyo:20260312T160000
+SUMMARY:🛍️ ถนนทาเคชิตะ (Takeshita Street)
+DESCRIPTION:ถนนช็อปปิ้งวัยรุ่นที่มีชื่อ\\n\\n📍 Takeshita-dori, Harajuku\\n⏰ ร้านเปิด ~10:00-20:00\\n\\n🏪 ร้านที่น่าสนใจ:\\n- WEGO\\n- SPINNS\\n- 6% DOKIDOKI\\n- ร้านขนม\\n- ร้านเสื้อผ้าแฟชั่น\\n\\n💰 งบ: ¥2,000-5,000
+LOCATION:Takeshita-dori, Harajuku, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event12-crepes@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T160000
+DTEND;TZID=Asia/Tokyo:20260312T163000
+SUMMARY:🥞 Marion Crepes + พักถ่ายรูป (Crepes & Photo Break)
+DESCRIPTION:ของว่างฮาราจุกุ\\n\\n📍 Marion Crepes, Takeshita Street\\n\\n🥞 เครป:\\n- ไส้ช็อกโกแลต\\n- ไส้สตรอว์เบอร์รี่\\n- ไส้ไอศกรีม\\n\\n💰 งบ: ¥500-800/ชิ้น\\n\\n📸 ถ่ายรูปกับเครป!
+LOCATION:Marion Crepes, Takeshita Street, Harajuku
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event13-travel-shinjuku@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T163000
+DTEND;TZID=Asia/Tokyo:20260312T170000
+SUMMARY:🚃 เดินทางกลับชินจูกุ (Travel back to Shinjuku)
+DESCRIPTION:กลับชินจูกุช็อปปิ้งต่อ\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Harajuku → Shinjuku\\n⏱️ ใช้เวลา: ~5-10 นาที
+LOCATION:Harajuku to Shinjuku
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event14-buy-luggage@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T170000
+DTEND;TZID=Asia/Tokyo:20260312T174500
+SUMMARY:🧳 ซื้อกระเป๋าเดินทางใหม่ (Buy New Luggage)
+DESCRIPTION:ซื้อกระเป๋าใบใหญ่สำหรับของฝาก\\n\\n📍 Don Quijote หรือ Bic Camera Shinjuku\\n\\n🧳 สเปค:\\n- ขนาด 20kg ขึ้นไป\\n- ล้อลาก\\n- แข็งแรง\\n\\n💰 งบ: ¥3,000-8,000\\n\\n⚠️ จำเป็นมาก! ของเยอะ
+LOCATION:Don Quijote/Bic Camera Shinjuku
+CATEGORIES:SHOPPING
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event15-sanrio-ghibli@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T174500
+DTEND;TZID=Asia/Tokyo:20260312T190000
+SUMMARY:🎀 Sanrio World + Ghibli Store (Final Character Shopping)
+DESCRIPTION:ช็อปปิ้ง Character สุดท้าย\\n\\n📍 Sanrio World\\n🏢 Takashimaya 11F, 5 Chome-24-2 Sendagaya\\n\\n📍 Ghibli Store\\n🏢 Lumine EST Shinjuku, 3 Chome-38-1\\n\\n🛒 รายการซื้อ:\\n- ของ Sanrio\\n- ของ Ghibli\\n- ของฝากสุดท้าย\\n\\n💰 งบ: ¥3,000-5,000
+LOCATION:Shinjuku area
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event16-dinner@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T190000
+DTEND;TZID=Asia/Tokyo:20260312T200000
+SUMMARY:🍜 อาหารเย็น (Dinner)
+DESCRIPTION:อาหารเย็นมื้อสุดท้ายในญี่ปุ่น\\n\\n📍 Shinjuku area\\n\\n🍽️ เลือกอาหารที่อยากกิน\\n\\n💰 งบ: ¥1,500-2,500/คน
+LOCATION:Shinjuku, Tokyo
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event17-repack@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T200000
+DTEND;TZID=Asia/Tokyo:20260312T220000
+SUMMARY:🧳 เก็บกระเป๋า + ชั่งน้ำหนัก (Repack & Weigh Luggage)
+DESCRIPTION:⚠️ สำคัญมาก! เตรียมกระเป๋าสำหรับกลับบ้าน\\n\\n📝 สิ่งที่ต้องทำ:\\n- เอาของใส่กระเป๋าใหม่\\n- แยกของใส่ถือขึ้นเครื่อง\\n- ชั่งน้ำหนัก\\n\\n⚠️ น้ำหนักจำกัด: 20kg/คน\\n\\n📝 ของใส่ถือขึ้นเครื่อง:\\n- พาสปอร์ต\\n- ตั๋วเครื่องบิน\\n- เงิน\\n- มือถือ/ชาร์จเจอร์\\n- ยา\\n- ของมีค่า
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event18-rest@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260312T220000
+DTEND;TZID=Asia/Tokyo:20260312T230000
+SUMMARY:😴 พักผ่อน (Rest)
+DESCRIPTION:พักผ่อนคืนสุดท้าย\\n\\n🎯 วันพรุ่งนี้: กลับบ้าน!\\n\\n📝 เช็คลิสต์:\\n- Alarm 06:00\\n- เอกสารพร้อม\\n- กระเป๋าพร้อม\\n\\n🎫 Tokyo Wide Pass Day 3 - ใช้ไป Narita
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR

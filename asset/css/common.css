@@ -437,3 +437,175 @@ footer p:first-child {
     color: #EF4444;
     font-weight: 700;
 }
+
+/* =============================================
+   Image Lightbox / Popup
+   ============================================= */
+
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    cursor: zoom-out;
+    padding: 1rem;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
+}
+
+/* Clickable images */
+.clickable-img {
+    cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.clickable-img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* =============================================
+   Mobile Responsive Styles
+   ============================================= */
+
+/* Small screens */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    h3 { font-size: 1.1rem; }
+    h4 { font-size: 1rem; }
+
+    .container {
+        padding: 0;
+    }
+
+    /* Tables responsive */
+    .info-table {
+        font-size: 0.85rem;
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 0.5rem;
+    }
+
+    /* Stack table on very small screens */
+    .table-responsive {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Footer */
+    footer {
+        padding: 1.5rem 1rem;
+        font-size: 0.8rem;
+    }
+
+    footer p:first-child {
+        font-size: 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Extra small screens */
+@media (max-width: 480px) {
+    body {
+        font-size: 13px;
+    }
+
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1.15rem; }
+    h3 { font-size: 1rem; }
+
+    .info-table {
+        font-size: 0.8rem;
+    }
+
+    .info-table th,
+    .info-table td {
+        padding: 0.4rem;
+    }
+
+    /* Nav menu smaller */
+    #navMenuPanel {
+        width: 260px;
+    }
+
+    .nav-header {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+
+    .nav-links a {
+        padding: 0.8rem 1rem;
+        font-size: 1rem;
+    }
+}
+
+/* Print styles */
+@media print {
+    #navMenu,
+    #goToTop,
+    #homeBtn,
+    .lightbox {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .container {
+        max-width: 100%;
+        box-shadow: none;
+    }
+}

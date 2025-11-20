@@ -1,0 +1,221 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tokyo Trip 2026//Day 8//TH
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tokyo Trip Day 8 - ✈️ กลับบ้าน
+X-WR-TIMEZONE:Asia/Tokyo
+
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:day8-event1-wakeup@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T060000
+DTEND;TZID=Asia/Tokyo:20260313T070000
+SUMMARY:⏰ ตื่นนอน + เตรียมตัว (Wake up & Get ready)
+DESCRIPTION:วันสุดท้าย! เตรียมตัวกลับบ้าน\\n\\n📝 สิ่งที่ต้องทำ:\\n- อาบน้ำแต่งตัว\\n- เช็คกระเป๋าอีกครั้ง\\n- เก็บของที่เหลือ\\n\\n🎫 Tokyo Wide Pass Day 3
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event2-breakfast@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T070000
+DTEND;TZID=Asia/Tokyo:20260313T080000
+SUMMARY:🍳 อาหารเช้า (Breakfast)
+DESCRIPTION:อาหารเช้ามื้อสุดท้ายในญี่ปุ่น\\n\\n📍 Shinjuku area\\n💰 งบ: ¥500-800/คน
+LOCATION:Shinjuku area
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event3-checkout@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T080000
+DTEND;TZID=Asia/Tokyo:20260313T083000
+SUMMARY:🏣🚶‍➡️ CHECK-OUT - Shinjuku Granbell Hotel
+DESCRIPTION:Check-out และฝากกระเป๋า\\n\\n🏨 Shinjuku Granbell Hotel\\n📍 2 Chome-14-5 Kabukicho, Shinjuku\\n\\n📝 สิ่งที่ต้องทำ:\\n- คืนกุญแจห้อง\\n- ฝากกระเป๋าที่โรงแรม (Free storage)\\n- รับกระเป๋าตอนบ่าย\\n\\n⏰ รับกระเป๋า: 15:30
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event4-travel-ueno@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T083000
+DTEND;TZID=Asia/Tokyo:20260313T090000
+SUMMARY:🚃 เดินทางไปอุเอโนะ (Travel to Ueno)
+DESCRIPTION:ไปช็อปปิ้งสุดท้าย\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Shinjuku → Ueno\\n⏱️ ใช้เวลา: ~25-30 นาที\\n\\n🎫 ใช้ Tokyo Wide Pass Day 3
+LOCATION:Shinjuku to Ueno Station
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event5-takeya-final@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T090000
+DTEND;TZID=Asia/Tokyo:20260313T113000
+SUMMARY:🛍️ Takeya - ช็อปปิ้งของฝากสุดท้าย (Final Souvenir Shopping)
+DESCRIPTION:ซื้อของฝากรอบสุดท้าย\\n\\n📍 Takeya (ตึกม่วง)\\n🏢 2 Chome-27-1 Yushima, Taito-ku\\n⏰ เปิด 10:00-20:30\\n\\n🛒 รายการซื้อ:\\n- ขนมญี่ปุ่น\\n- ของฝากครอบครัว\\n- ของฝากเพื่อน\\n- เครื่องสำอาง\\n\\n💰 งบ: ¥5,000-10,000\\n\\n⚠️ ระวังน้ำหนักกระเป๋า!
+LOCATION:Takeya, 2 Chome-27-1 Yushima, Taito-ku, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event6-ameyoko@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T113000
+DTEND;TZID=Asia/Tokyo:20260313T120000
+SUMMARY:🛍️ ตลาดอะเมโยโกะ (Ameyoko Market - Quick visit)
+DESCRIPTION:แวะตลาดอะเมโยโกะ\\n\\n📍 Ameyoko Market, Ueno\\n\\n🛒 ของซื้อ:\\n- ของกินราคาถูก\\n- ผลไม้แห้ง\\n- ขนม\\n\\n💰 งบ: ¥1,000-2,000
+LOCATION:Ameyoko Market, Ueno, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event7-lunch@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T120000
+DTEND;TZID=Asia/Tokyo:20260313T130000
+SUMMARY:🍜 อาหารกลางวัน อุเอโนะ (Lunch at Ueno)
+DESCRIPTION:อาหารกลางวันมื้อสุดท้าย\\n\\n📍 Ueno / Ameyoko area\\n💰 งบ: ¥1,000-1,500/คน
+LOCATION:Ueno, Tokyo
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event8-travel-shinjuku@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T130000
+DTEND;TZID=Asia/Tokyo:20260313T133000
+SUMMARY:🚃 เดินทางกลับชินจูกุ (Travel back to Shinjuku)
+DESCRIPTION:กลับไปช็อปปิ้งสุดท้ายและรับกระเป๋า\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Ueno → Shinjuku\\n⏱️ ใช้เวลา: ~25-30 นาที
+LOCATION:Ueno to Shinjuku
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event9-last-shopping@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T133000
+DTEND;TZID=Asia/Tokyo:20260313T153000
+SUMMARY:🛍️ ช็อปปิ้งสุดท้าย + เก็บกระเป๋า (Last Shopping & Repack)
+DESCRIPTION:ช็อปปิ้งและเตรียมกระเป๋า\\n\\n📍 Shinjuku area\\n\\n🛒 กิจกรรม:\\n- GU/UNIQLO final check\\n- ของฝากที่ลืม\\n- เก็บของลงกระเป๋า\\n- ชั่งน้ำหนักอีกครั้ง\\n\\n💰 งบ: ตามต้องการ\\n\\n⚠️ น้ำหนักจำกัด 20kg/คน
+LOCATION:Shinjuku, Tokyo
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event10-collect-luggage@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T153000
+DTEND;TZID=Asia/Tokyo:20260313T154500
+SUMMARY:🧳 รับกระเป๋าจากโรงแรม (Collect Luggage from Hotel)
+DESCRIPTION:รับกระเป๋าที่ฝากไว้\\n\\n📍 Shinjuku Granbell Hotel\\n\\n📝 เช็คให้ครบ:\\n- กระเป๋าเดินทาง\\n- ของถือขึ้นเครื่อง\\n- พาสปอร์ต\\n- ตั๋วเครื่องบิน
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event11-nex-narita@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T154500
+DTEND;TZID=Asia/Tokyo:20260313T171500
+SUMMARY:🚃 Narita Express ไปสนามบิน (N'EX to Narita Airport)
+DESCRIPTION:เดินทางไปสนามบินนาริตะ\\n\\n🚃 Narita Express (N'EX)\\n📍 ขึ้นที่: Shinjuku Station\\n📍 ลงที่: Narita Airport Terminal 2\\n⏱️ ใช้เวลา: ~80 นาที\\n\\n🎫 Tokyo Wide Pass Day 3\\n💰 ฟรี (รวมใน TWP)\\n\\n⚠️ ถึงสนามบิน 4 ชม. ก่อนเที่ยวบิน
+LOCATION:Shinjuku to Narita Airport Terminal 2
+CATEGORIES:TRAVEL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event12-arrive-narita@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T171500
+DTEND;TZID=Asia/Tokyo:20260313T180000
+SUMMARY:🛬 ถึงสนามบินนาริตะ + Tax Refund (Arrive Narita & Tax Refund)
+DESCRIPTION:ถึงสนามบินและทำ Tax Refund\\n\\n📍 Narita Airport Terminal 2\\n\\n📝 Tax-Free Refund:\\n- ไปที่เคาน์เตอร์ Tax Refund\\n- แสดงพาสปอร์ต + ใบเสร็จ\\n- ต้องทำก่อนเข้า Immigration\\n\\n⏰ ใช้เวลา: ~30-45 นาที\\n\\n💰 ได้เงินคืน 8-10%
+LOCATION:Narita Airport Terminal 2 - Tax Refund Counter
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event13-checkin-airasia@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T180000
+DTEND;TZID=Asia/Tokyo:20260313T183000
+SUMMARY:✈️ เช็คอิน Thai AirAsia X (Check-in AirAsia X)
+DESCRIPTION:เช็คอินเที่ยวบิน XJ 607\\n\\n📍 Thai AirAsia X Counter\\n\\n📝 ขั้นตอน:\\n- เช็คอิน\\n- โหลดกระเป๋า (20kg/คน)\\n- รับ Boarding Pass\\n\\n🔖 Booking ID: 1891021791\\n🔖 PNR: G7Y6YF\\n\\n⚠️ เช็คอินปิด: 20:15 (1 ชม. ก่อนบิน)
+LOCATION:Narita Airport Terminal 2 - AirAsia X Counter
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event14-immigration@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T183000
+DTEND;TZID=Asia/Tokyo:20260313T190000
+SUMMARY:🛂 ผ่านตรวจคนเข้าเมือง (Immigration)
+DESCRIPTION:ผ่านด่านตรวจคนเข้าเมือง\\n\\n📍 Narita Airport Immigration\\n⏱️ ใช้เวลา: ~20-30 นาที\\n\\n📝 เตรียม:\\n- พาสปอร์ต\\n- Boarding Pass
+LOCATION:Narita Airport Terminal 2 - Immigration
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event15-security@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T190000
+DTEND;TZID=Asia/Tokyo:20260313T193000
+SUMMARY:🔒 ตรวจ Security (Security Check)
+DESCRIPTION:ผ่านจุดตรวจ Security\\n\\n📍 Narita Airport Security\\n⏱️ ใช้เวลา: ~20-30 นาที\\n\\n📝 ของที่ต้องเอาออก:\\n- Laptop\\n- แบตเตอรี่สำรอง\\n- ของเหลว (ใส่ถุงใส)
+LOCATION:Narita Airport Terminal 2 - Security
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event16-duty-free@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T193000
+DTEND;TZID=Asia/Tokyo:20260313T210000
+SUMMARY:🛍️ Duty Free + พักรอขึ้นเครื่อง (Duty Free & Wait)
+DESCRIPTION:ช็อปปิ้ง Duty Free และรอขึ้นเครื่อง\\n\\n📍 Duty Free Zone\\n\\n🛒 ของที่น่าซื้อ:\\n- ขนม\\n- เครื่องสำอาง\\n- เหล้า\\n- บุหรี่ (ถ้าต้องการ)\\n\\n💰 งบ: ตามต้องการ\\n\\n☕ พักผ่อน / กินของว่าง\\n\\n⚠️ เช็ค Gate และเวลา Boarding
+LOCATION:Narita Airport Terminal 2 - Duty Free
+CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event17-boarding@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T210000
+DTEND;TZID=Asia/Tokyo:20260313T211500
+SUMMARY:🚶 ไปที่ Gate + Boarding (Go to Gate & Board)
+DESCRIPTION:เดินไปที่ Gate และขึ้นเครื่อง\\n\\n📍 Gate (เช็ค Boarding Pass)\\n\\n⏰ Boarding เริ่ม: 21:00\\n⚠️ Gate ปิด: 20:45 (30 นาที ก่อนบิน)\\n\\n📝 เตรียมให้พร้อม:\\n- พาสปอร์ต\\n- Boarding Pass\\n- ของถือขึ้นเครื่อง
+LOCATION:Narita Airport Terminal 2 - Departure Gate
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event18-flight@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260313T211500
+DTEND;TZID=Asia/Bangkok:20260314T024000
+SUMMARY:✈️ เที่ยวบิน XJ 607 นาริตะ→กรุงเทพฯ (Flight NRT→DMK)
+DESCRIPTION:บินกลับบ้าน!\\n\\n✈️ Thai AirAsia X XJ 607\\n🛫 ออก: 21:15 NRT Terminal 2 (Tokyo)\\n🛬 ถึง: 02:40+1 DMK (Bangkok)\\n⏱️ ใช้เวลา: ~7 ชม. 25 นาที\\n\\n🔖 Booking ID: 1891021791\\n🔖 PNR: G7Y6YF\\n\\n📝 หมายเหตุ:\\n- ถึงไทยวันที่ 14 มี.ค. ตี 2:40\\n- เวลาไทยช้ากว่าญี่ปุ่น 2 ชม.\\n\\n🏠 กลับถึงบ้านปลอดภัย!\\n\\n🙏 ขอบคุณประเทศญี่ปุ่น!\\nสุขสันต์วันเกิด พจน์ 11 ขวบ!\\nทริปนี้สนุกมาก! 🗾❤️
+LOCATION:Thai AirAsia X Flight XJ 607
+CATEGORIES:TRAVEL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR

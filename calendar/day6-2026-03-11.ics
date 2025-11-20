@@ -1,0 +1,165 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tokyo Trip 2026//Day 6//TH
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tokyo Trip Day 6 - ❄️ เล่นหิมะ Gala Yuzawa
+X-WR-TIMEZONE:Asia/Tokyo
+
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:day6-event1-wakeup@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T060000
+DTEND;TZID=Asia/Tokyo:20260311T070000
+SUMMARY:⏰ ตื่นนอน + เตรียมตัวเล่นหิมะ (Wake up & Prepare for Snow)
+DESCRIPTION:เตรียมตัวไปเล่นหิมะ!\\n\\n📝 เสื้อผ้าที่ต้องใส่:\\n- เสื้อฮีทเทค\\n- เสื้อกันหนาวหนา\\n- กางเกงกันหนาว\\n- ถุงเท้าหนา\\n- หมวก + ผ้าพันคอ + ถุงมือ\\n\\n⚠️ อากาศหนาวมาก! -5 ถึง 5°C\\n\\n🎫 Tokyo Wide Pass Day 1
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event2-breakfast@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T070000
+DTEND;TZID=Asia/Tokyo:20260311T073000
+SUMMARY:🍳 อาหารเช้าเร็ว (Quick Breakfast)
+DESCRIPTION:อาหารเช้าก่อนออกเดินทาง\\n\\n📍 Shinjuku area / Convenience Store\\n💰 งบ: ¥500-800/คน\\n\\n⏰ ต้องรีบ! ขึ้น Shinkansen 08:00
+LOCATION:Shinjuku area
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event3-travel-tokyo@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T073000
+DTEND;TZID=Asia/Tokyo:20260311T080000
+SUMMARY:🚃 เดินทางไปสถานีโตเกียว (Travel to Tokyo Station)
+DESCRIPTION:ไปขึ้น Shinkansen\\n\\n🚃 เส้นทาง:\\nJR: Shinjuku → Tokyo/Ueno\\n⏱️ ใช้เวลา: ~20-25 นาที\\n\\n🎫 ใช้ Tokyo Wide Pass
+LOCATION:Shinjuku to Tokyo Station
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event4-shinkansen-gala@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T080000
+DTEND;TZID=Asia/Tokyo:20260311T094000
+SUMMARY:🚄 ชินคันเซ็นไป Gala Yuzawa (Shinkansen to Snow Resort)
+DESCRIPTION:❄️ ไปเล่นหิมะ!\\n\\n🚄 Joetsu Shinkansen\\n📍 ขึ้นที่: Tokyo/Ueno Station\\n📍 ลงที่: Gala Yuzawa Station\\n⏱️ ใช้เวลา: ~80 นาที\\n\\n🎫 Tokyo Wide Pass Day 1\\n💰 ฟรี (รวมใน TWP)\\n\\n❄️ Gala Yuzawa เป็นสถานีที่เชื่อมต่อกับรีสอร์ทโดยตรง!
+LOCATION:Tokyo Station to Gala Yuzawa Station
+CATEGORIES:TRAVEL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event5-arrive-gala@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T094000
+DTEND;TZID=Asia/Tokyo:20260311T100000
+SUMMARY:❄️ ถึง Gala Yuzawa + ซื้อตั๋ว/เช่าอุปกรณ์ (Arrive & Get Ready)
+DESCRIPTION:ถึงรีสอร์ทเล่นหิมะ!\\n\\n📍 GALA Yuzawa Snow Resort\\n\\n📝 สิ่งที่ต้องทำ:\\n- ซื้อตั๋ว Lift\\n- เช่าอุปกรณ์เล่นหิมะ\\n  - Sled (เลื่อน)\\n  - Snow boots\\n  - Gloves (ถ้าไม่มี)\\n\\n💰 ค่าใช้จ่าย:\\n- Lift ticket: ~¥3,000-4,000\\n- Equipment rental: ~¥2,000-3,000\\n\\n⚠️ ไม่จำเป็นต้องสกี ถ้าไม่เป็น
+LOCATION:GALA Yuzawa Snow Resort
+CATEGORIES:ATTRACTION
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event6-snow-play@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T100000
+DTEND;TZID=Asia/Tokyo:20260311T140000
+SUMMARY:⛷️❄️ เล่นหิมะ! (Snow Activities!)
+DESCRIPTION:🎉 สนุกกับหิมะ 4 ชั่วโมง!\\n\\n📍 GALA Yuzawa Snow Resort\\n\\n❄️ กิจกรรม:\\n- ปั้นตุ๊กตาหิมะ (Snowman)\\n- สร้างป้อมหิมะ\\n- เล่น Sled (เลื่อนหิมะ)\\n- ขึ้น Gondola ชมวิว\\n- ถ่ายรูปกับหิมะ\\n- เล่นสกี/สโนว์บอร์ด (ถ้าต้องการ)\\n\\n📸 ถ่ายรูปเยอะๆ!\\n\\n⚠️ หยุดพักบ่อยๆ ถ้าหนาวมาก\\n🧤 ระวังมือเท้าหนาว
+LOCATION:GALA Yuzawa Snow Resort
+CATEGORIES:SPECIAL
+PRIORITY:1
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event7-lunch@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T140000
+DTEND;TZID=Asia/Tokyo:20260311T150000
+SUMMARY:🍛 อาหารกลางวัน - แกงกะหรี่ร้อนๆ (Hot Curry Lunch)
+DESCRIPTION:อาหารกลางวันที่รีสอร์ท\\n\\n📍 GALA Yuzawa Restaurant\\n\\n🍽️ แนะนำ:\\n- แกงกะหรี่ข้าว (Curry Rice) - ร้อนๆ อุ่นตัว\\n- ราเมน\\n- อุด้ง\\n\\n💰 งบ: ¥1,000-1,500/คน\\n\\n☕ ดื่มเครื่องดื่มร้อนอุ่นตัว
+LOCATION:GALA Yuzawa Restaurant
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event8-more-snow@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T150000
+DTEND;TZID=Asia/Tokyo:20260311T163000
+SUMMARY:❄️ เล่นหิมะต่อ (More Snow Fun)
+DESCRIPTION:เล่นหิมะรอบบ่าย\\n\\n📍 GALA Yuzawa Snow Resort\\n\\n❄️ กิจกรรม:\\n- กิจกรรมที่ยังไม่ได้ทำ\\n- ถ่ายรูปเพิ่ม\\n- เล่น Sled\\n\\n⏰ ต้องเตรียมออก 16:30
+LOCATION:GALA Yuzawa Snow Resort
+CATEGORIES:SPECIAL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event9-return-equipment@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T163000
+DTEND;TZID=Asia/Tokyo:20260311T170000
+SUMMARY:🔙 คืนอุปกรณ์ + เตรียมกลับ (Return equipment)
+DESCRIPTION:เตรียมตัวกลับโตเกียว\\n\\n📝 สิ่งที่ต้องทำ:\\n- คืนอุปกรณ์เช่า\\n- เปลี่ยนเสื้อผ้า (ถ้าเปียก)\\n- ซื้อของที่ระลึก\\n\\n🚄 Shinkansen: 17:00
+LOCATION:GALA Yuzawa Snow Resort
+CATEGORIES:ATTRACTION
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event10-shinkansen-back@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T170000
+DTEND;TZID=Asia/Tokyo:20260311T183000
+SUMMARY:🚄 ชินคันเซ็นกลับโตเกียว (Shinkansen back to Tokyo)
+DESCRIPTION:เดินทางกลับโตเกียว\\n\\n🚄 Joetsu Shinkansen\\n📍 ขึ้นที่: Gala Yuzawa Station\\n📍 ลงที่: Tokyo Station\\n⏱️ ใช้เวลา: ~80 นาที\\n\\n🎫 Tokyo Wide Pass Day 1\\n💰 ฟรี (รวมใน TWP)\\n\\n😴 พักผ่อนบนรถไฟ
+LOCATION:Gala Yuzawa to Tokyo Station
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event11-travel-shinjuku@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T183000
+DTEND;TZID=Asia/Tokyo:20260311T190000
+SUMMARY:🚃 เดินทางไปชินจูกุ (Travel to Shinjuku)
+DESCRIPTION:กลับย่านชินจูกุ\\n\\n🚃 เส้นทาง:\\nJR: Tokyo → Shinjuku\\n⏱️ ใช้เวลา: ~15-20 นาที\\n\\n🎫 ใช้ Tokyo Wide Pass
+LOCATION:Tokyo Station to Shinjuku
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event12-dinner@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T190000
+DTEND;TZID=Asia/Tokyo:20260311T210000
+SUMMARY:🍲 อาหารเย็น - สุกี้ยากี้/ชาบู (Dinner - Sukiyaki/Shabu)
+DESCRIPTION:อาหารเย็นอุ่นตัวหลังเล่นหิมะ\\n\\n📍 Shinjuku area\\n\\n🍽️ แนะนำ:\\n- สุกี้ยากี้ (Sukiyaki)\\n- ชาบูชาบู (Shabu-shabu)\\n- หม้อไฟ (Nabe)\\n\\n💰 งบ: ¥2,000-3,000/คน\\n\\n🔥 อาหารร้อนๆ อุ่นตัว!
+LOCATION:Shinjuku, Tokyo
+CATEGORIES:FOOD
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event13-rest@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260311T210000
+DTEND;TZID=Asia/Tokyo:20260311T230000
+SUMMARY:😴 พักผ่อน (Rest)
+DESCRIPTION:พักผ่อนหลังวันที่เหนื่อยมาก\\n\\n📝 เตรียมสำหรับวันพรุ่งนี้:\\n- ซักผ้า (ถ้าต้องการ)\\n- ชาร์จอุปกรณ์\\n- เช็คร้านค้า Harajuku\\n\\n🎫 Tokyo Wide Pass Day 2 พรุ่งนี้\\n\\n🎯 วันพรุ่งนี้: ศาลเจ้าซูกะ (Your Name) + Harajuku Shopping
+LOCATION:Shinjuku Granbell Hotel
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR

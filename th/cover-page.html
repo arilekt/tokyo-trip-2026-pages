@@ -507,6 +507,106 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                padding: 30px 15px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .header-subtitle {
+                font-size: 18px;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 24px;
+            }
+
+            .card {
+                padding: 20px 15px;
+            }
+
+            .card-title {
+                font-size: 20px;
+            }
+
+            .hotel-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .place-list {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            th, td {
+                padding: 8px 6px;
+            }
+
+            .budget-section,
+            .packing-section {
+                padding: 15px;
+            }
+
+            .packing-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header-subtitle {
+                font-size: 16px;
+            }
+
+            .section-title {
+                font-size: 20px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            th, td {
+                padding: 6px 4px;
+            }
+        }
     </style>
 </head>
 <body>
