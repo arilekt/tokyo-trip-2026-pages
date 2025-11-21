@@ -510,101 +510,152 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            body {
+                padding: 0;
+                font-size: 16px;
+            }
+            .container {
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
             .header {
-                padding: 30px 15px;
+                padding: 25px 15px;
             }
-
             .header h1 {
-                font-size: 28px;
+                font-size: 26px;
             }
-
-            .header-subtitle {
+            .header .subtitle {
+                font-size: 16px;
+            }
+            .section {
+                padding: 25px 15px;
+            }
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+            .card {
+                padding: 15px;
+            }
+            .card-title {
                 font-size: 18px;
             }
-
-            .section {
+            .day-card {
                 padding: 20px 15px;
+                border-left-width: 5px;
             }
-
-            .section-title {
-                font-size: 24px;
+            .day-header {
+                align-items: flex-start;
+                margin-bottom: 20px;
             }
-
-            .card {
-                padding: 20px 15px;
-            }
-
-            .card-title {
+            .day-number {
+                width: 50px;
+                height: 50px;
                 font-size: 20px;
+                margin-right: 15px;
+                flex-shrink: 0;
             }
-
-            .hotel-grid {
-                grid-template-columns: 1fr;
+            .day-info h3 {
+                font-size: 18px;
             }
-
-            .place-list {
-                grid-template-columns: 1fr;
+            .day-info .date {
+                font-size: 15px;
             }
-
+            .timeline-item {
+                margin-left: 25px;
+                padding-left: 20px;
+            }
+            .timeline-time {
+                font-size: 15px;
+            }
+            .timeline-activity {
+                font-size: 14px;
+            }
+            .hotel-content, .place-detail, .content-right {
+                padding: 20px 15px;
+            }
+            .hotel-name, .place-detail h4 {
+                font-size: 18px;
+            }
+            .hotel-detail {
+                font-size: 14px;
+            }
+            .place-detail ul li {
+                font-size: 14px;
+                padding-left: 20px;
+            }
             .gallery-grid {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 8px;
             }
-
             .gallery-item.large {
                 grid-column: span 2;
             }
-
             table {
                 font-size: 14px;
             }
 
+            .info-box {
+                padding: 12px;
+                font-size: 14px;
+            }
             th, td {
-                padding: 8px 6px;
-            }
-
-            .budget-section,
-            .packing-section {
-                padding: 15px;
-            }
-
-            .packing-grid {
-                grid-template-columns: 1fr;
+                padding: 10px 8px;
             }
         }
 
         /* Extra small screens */
         @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px;
+            }
             .header h1 {
                 font-size: 22px;
             }
-
-            .header-subtitle {
-                font-size: 16px;
+            .header .subtitle {
+                font-size: 14px;
             }
-
+            .section {
+                padding: 20px 15px;
+            }
             .section-title {
-                font-size: 20px;
+                font-size: 19px;
             }
-
-            .card-title {
-                font-size: 18px;
+            .card-title, .hotel-name, .place-detail h4 {
+                font-size: 17px;
             }
-
+            .day-info h3 {
+                font-size: 17px;
+            }
+            .timeline-activity, .hotel-detail {
+                font-size: 13px;
+            }
+            .place-detail ul li {
+                font-size: 13px;
+                padding-left: 18px;
+            }
+            .link-button {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
             .gallery-grid {
                 grid-template-columns: 1fr;
             }
-
             .gallery-item.large {
                 grid-column: span 1;
             }
-
             table {
                 font-size: 12px;
             }
 
+            .info-box {
+                padding: 10px;
+                font-size: 13px;
+            }
             th, td {
-                padding: 6px 4px;
+                padding: 8px 5px;
             }
         }
     </style>

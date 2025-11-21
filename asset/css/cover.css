@@ -117,41 +117,11 @@ th {
 /* Responsive typography */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 1.5rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-
-    table {
-        font-size: 0.85rem;
-    }
-
-    th, td {
-        padding: 0.5rem;
-    }
-
-    .small-text {
-        font-size: 0.75rem;
-    }
-}
-
-/* Extra small screens */
-@media screen and (max-width: 480px) {
-    h1 {
         font-size: 1.3rem;
-        padding: 0.5rem 0;
-        margin-bottom: 1rem;
     }
 
     h2 {
         font-size: 1.1rem;
-        margin-top: 1rem;
     }
 
     h3 {
@@ -166,9 +136,39 @@ th {
         padding: 0.4rem;
     }
 
+    .small-text {
+        font-size: 0.7rem;
+    }
+}
+
+/* Extra small screens */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        margin-bottom: 1rem;
+    }
+
+    h2 {
+        font-size: 1.0rem;
+        margin-top: 1rem;
+    }
+
+    h3 {
+        font-size: 0.9rem;
+    }
+
+    table {
+        font-size: 0.75rem;
+    }
+
+    th, td {
+        padding: 0.3rem;
+    }
+
     .list-style {
         margin-left: 1rem;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
     }
 }
 

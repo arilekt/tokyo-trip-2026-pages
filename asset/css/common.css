@@ -509,8 +509,10 @@ footer p:first-child {
 
 /* Small screens */
 @media (max-width: 768px) {
-    body {
+    html {
         font-size: 14px;
+    }
+    body {
         line-height: 1.6;
     }
 
@@ -558,7 +560,7 @@ footer p:first-child {
 
 /* Extra small screens */
 @media (max-width: 480px) {
-    body {
+    html {
         font-size: 13px;
     }
 
