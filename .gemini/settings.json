@@ -1,0 +1,13 @@
+{
+  "general": {
+    "enablePromptCompletion": true
+  },
+  "ui": {
+    "useAlternateBuffer": false
+  },
+  "security": {
+    "folderTrust": {
+      "enabled": true
+    }
+  }
+}
