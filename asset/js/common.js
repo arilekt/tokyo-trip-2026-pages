@@ -274,14 +274,19 @@ function initLightbox() {
 // =============================================
 function initServiceWorker() {
     if ('serviceWorker' in navigator) {
-        // Get base path for service worker
-        const path = window.location.pathname;
-        const isInSubfolder = path.includes('/th/') || path.includes('/en/') || path.includes('/jp/');
-        const basePath = isInSubfolder ? '../' : '';
+        const isGithubPages = window.location.hostname === 'arilekt.github.io';
+        // The repository name from user feedback on the working manifest.json URL
+        const repoName = 'tokyo-trip-2026-pages'; 
+        
+        // Define the base path for the site. On GitHub Pages, it's /<repo-name>/.
+        const siteBasePath = isGithubPages ? `/${repoName}/` : '/';
+        
+        // The path to the service worker file must be an absolute path from the origin.
+        const swPath = `${siteBasePath}sw.js`;
 
-        navigator.serviceWorker.register(basePath + 'sw.js')
+        navigator.serviceWorker.register(swPath, { scope: siteBasePath })
             .then(function(registration) {
-                console.log('SW registered:', registration.scope);
+                console.log('SW registered with scope:', registration.scope);
             })
             .catch(function(error) {
                 console.log('SW registration failed:', error);
