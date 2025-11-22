@@ -19,10 +19,11 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:day1-event1-departure@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Bangkok:20260306T020000
 DTEND;TZID=Asia/Bangkok:20260306T043000
 SUMMARY:🚗 ออกจากบ้านไปสนามบิน (Leave home to DMK Airport)
-DESCRIPTION:เตรียมตัวออกเดินทาง\\n\\n📍 บ้าน → สนามบินดอนเมือง\\n⏰ ออก 02:00 น.\\n🎯 ถึง DMK ประมาณ 04:30 น.\\n\\n📝 เช็คลิสต์:\\n- พาสปอร์ต\\n- ตั๋วเครื่องบิน\\n- เงินเยน\\n- กระเป๋าเดินทาง
+DESCRIPTION:เตรียมตัวออกเดินทาง\n\n📍 บ้าน → สนามบินดอนเมือง\n⏰ ออก 02:00 น.\n🎯 ถึง DMK ประมาณ 04:30 น.\n\n📝 เช็คลิสต์:\n- พาสปอร์ต\n- ตั๋วเครื่องบิน\n- เงินเยน\n- กระเป๋าเดินทาง
 LOCATION:Bangkok to Don Mueang Airport
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -30,10 +31,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event2-checkin-dmk@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Bangkok:20260306T043000
 DTEND;TZID=Asia/Bangkok:20260306T060000
 SUMMARY:✈️ เช็คอินสนามบิน Thai Lion Air (Check-in DMK)
-DESCRIPTION:เช็คอินเที่ยวบิน SL 394\\n\\n📍 Counter F-H, Don Mueang Airport\\n✈️ Thai Lion Air\\n🔖 Booking ID: 1891021792\\n🔖 PNR: MYOWFY\\n\\n📝 ขั้นตอน:\\n1. เช็คอินที่เคาน์เตอร์\\n2. โหลดกระเป๋า\\n3. ผ่านตรวจคนเข้าเมือง\\n4. รอที่ Gate
+DESCRIPTION:เช็คอินเที่ยวบิน SL 394\n\n📍 Counter F-H, Don Mueang Airport\n✈️ Thai Lion Air\n🔖 Booking ID: 1891021792\n🔖 PNR: MYOWFY\n\n📝 ขั้นตอน:\n1. เช็คอินที่เคาน์เตอร์\n2. โหลดกระเป๋า\n3. ผ่านตรวจคนเข้าเมือง\n4. รอที่ Gate
 LOCATION:Don Mueang International Airport (DMK), Counter F-H
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -41,10 +43,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event3-flight@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Bangkok:20260306T061500
 DTEND;TZID=Asia/Tokyo:20260306T162000
 SUMMARY:✈️ เที่ยวบิน SL 394 กรุงเทพฯ→นาริตะ (Flight DMK→NRT)
-DESCRIPTION:Thai Lion Air SL 394\\n\\n🛫 ออก: 06:15 DMK (Bangkok)\\n🛬 ถึง: 16:20 NRT Terminal 2 (Tokyo)\\n⏱️ ใช้เวลา: ~6 ชม. 5 นาที\\n\\n🔖 Booking ID: 1891021792\\n🔖 PNR: MYOWFY\\n\\n📝 หมายเหตุ:\\n- เวลาญี่ปุ่นเร็วกว่าไทย 2 ชม.\\n- เตรียมกรอก Immigration Card บนเครื่อง
+DESCRIPTION:Thai Lion Air SL 394\n\n🛫 ออก: 06:15 DMK (Bangkok)\n🛬 ถึง: 16:20 NRT Terminal 2 (Tokyo)\n⏱️ ใช้เวลา: ~6 ชม. 5 นาที\n\n🔖 Booking ID: 1891021792\n🔖 PNR: MYOWFY\n\n📝 หมายเหตุ:\n- เวลาญี่ปุ่นเร็วกว่าไทย 2 ชม.\n- เตรียมกรอก Immigration Card บนเครื่อง
 LOCATION:Thai Lion Air Flight SL 394
 CATEGORIES:TRAVEL
 PRIORITY:1
@@ -53,10 +56,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event4-arrival-nrt@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T162000
 DTEND;TZID=Asia/Tokyo:20260306T170000
 SUMMARY:🛬 ถึงสนามบินนาริตะ (Arrive Narita Airport)
-DESCRIPTION:ถึง Narita Airport Terminal 2\\n\\n📍 Narita International Airport\\n⏱️ ขั้นตอน ~40 นาที:\\n1. Immigration\\n2. รับกระเป๋า\\n3. ผ่าน Customs\\n4. ซื้อ Suica/PASMO (ถ้าต้องการ)\\n\\n🚃 ต่อไป: N'EX → Tokyo/Ueno
+DESCRIPTION:ถึง Narita Airport Terminal 2\n\n📍 Narita International Airport\n⏱️ ขั้นตอน ~40 นาที:\n1. Immigration\n2. รับกระเป๋า\n3. ผ่าน Customs\n4. ซื้อ Suica/PASMO (ถ้าต้องการ)\n\n🚃 ต่อไป: N'EX → Tokyo/Ueno
 LOCATION:Narita International Airport Terminal 2
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -64,10 +68,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event5-nex-train@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T170000
 DTEND;TZID=Asia/Tokyo:20260306T183000
 SUMMARY:🚃 รถไฟ N'EX + Metro ไปโรงแรม (Train to Hotel)
-DESCRIPTION:เดินทางจากนาริตะไปโรงแรม\\n\\n🚃 เส้นทาง:\\n1. Narita Express (N'EX) → Tokyo/Ueno\\n2. Metro Ginza Line → Tawaramachi\\n\\n⏱️ ใช้เวลา: ~90 นาที\\n💰 ค่าใช้จ่าย: ~¥3,000-3,500\\n\\n📍 ปลายทาง: APA Hotel Asakusa Tawaramachi
+DESCRIPTION:เดินทางจากนาริตะไปโรงแรม\n\n🚃 เส้นทาง:\n1. Narita Express (N'EX) → Tokyo/Ueno\n2. Metro Ginza Line → Tawaramachi\n\n⏱️ ใช้เวลา: ~90 นาที\n💰 ค่าใช้จ่าย: ~¥3,000-3,500\n\n📍 ปลายทาง: APA Hotel Asakusa Tawaramachi
 LOCATION:Narita Airport to Tawaramachi Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -75,10 +80,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event6-checkin-hotel@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T183000
 DTEND;TZID=Asia/Tokyo:20260306T190000
 SUMMARY:➡️🏢 CHECK-IN - APA Hotel Asakusa Tawaramachi
-DESCRIPTION:เช็คอินที่พักคืนที่ 1-2\\n\\n🏨 APA Hotel Asakusa Tawaramachi Ekimae\\n📍 1-2-3 Nishi Asakusa, Taito-ku, Tokyo 111-0035\\n📞 +81-3-5830-0611\\n\\n🛏️ ห้อง: Double Room - Non-Smoking\\n📅 พัก 2 คืน (6-8 มี.ค.)\\n⏰ Check-out: 11:00 น. วันที่ 8 มี.ค.\\n\\n📝 เอกสาร:\\n- พาสปอร์ต\\n- Booking Confirmation
+DESCRIPTION:เช็คอินที่พักคืนที่ 1-2\n\n🏨 APA Hotel Asakusa Tawaramachi Ekimae\n📍 1-2-3 Nishi Asakusa, Taito-ku, Tokyo 111-0035\n📞 +81-3-5830-0611\n\n🛏️ ห้อง: Double Room - Non-Smoking\n📅 พัก 2 คืน (6-8 มี.ค.)\n⏰ Check-out: 11:00 น. วันที่ 8 มี.ค.\n\n📝 เอกสาร:\n- พาสปอร์ต\n- Booking Confirmation
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae, 1-2-3 Nishi Asakusa, Taito-ku, Tokyo 111-0035
 CATEGORIES:HOTEL
 PRIORITY:1
@@ -87,10 +93,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event7-dinner@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T190000
 DTEND;TZID=Asia/Tokyo:20260306T200000
 SUMMARY:🍜 อาหารเย็น อาซากุสะ (Dinner at Asakusa)
-DESCRIPTION:มื้อเย็นแรกในญี่ปุ่น!\\n\\n📍 ย่านอาซากุสะ (Asakusa)\\n\\n🍽️ ร้านแนะนำ:\\n- Ichiran Ramen (ราเมนซุปกระดูกหมู)\\n- Sukiya (ข้าวหน้าเนื้อ)\\n- Yoshinoya (ข้าวหน้าเนื้อ)\\n\\n💰 งบประมาณ: ¥1,000-1,500/คน
+DESCRIPTION:มื้อเย็นแรกในญี่ปุ่น!\n\n📍 ย่านอาซากุสะ (Asakusa)\n\n🍽️ ร้านแนะนำ:\n- Ichiran Ramen (ราเมนซุปกระดูกหมู)\n- Sukiya (ข้าวหน้าเนื้อ)\n- Yoshinoya (ข้าวหน้าเนื้อ)\n\n💰 งบประมาณ: ¥1,000-1,500/คน
 LOCATION:Asakusa, Taito-ku, Tokyo
 CATEGORIES:FOOD
 STATUS:CONFIRMED
@@ -98,10 +105,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event8-donquijote@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T200000
 DTEND;TZID=Asia/Tokyo:20260306T213000
 SUMMARY:🛍️ ช็อปปิ้ง Don Quijote อาซากุสะ (Shopping Don Quijote)
-DESCRIPTION:ซื้อของใช้และเสื้อผ้ากันหนาว\\n\\n📍 Don Quijote Asakusa\\n🏢 2-10-4 Kaminarimon, Taito-ku\\n⏰ เปิด 24 ชั่วโมง\\n\\n🛒 รายการซื้อ:\\n- เสื้อแจ็คเก็ตกันหนาว\\n- เสื้อฮีทเทค (Heat-tech)\\n- ถุงเท้าหนา\\n- ผ้าพันคอ\\n- หมวกกันหนาว\\n- ร่ม\\n- ของใช้ส่วนตัว\\n\\n💰 งบประมาณ: ¥10,000-15,000
+DESCRIPTION:ซื้อของใช้และเสื้อผ้ากันหนาว\n\n📍 Don Quijote Asakusa\n🏢 2-10-4 Kaminarimon, Taito-ku\n⏰ เปิด 24 ชั่วโมง\n\n🛒 รายการซื้อ:\n- เสื้อแจ็คเก็ตกันหนาว\n- เสื้อฮีทเทค (Heat-tech)\n- ถุงเท้าหนา\n- ผ้าพันคอ\n- หมวกกันหนาว\n- ร่ม\n- ของใช้ส่วนตัว\n\n💰 งบประมาณ: ¥10,000-15,000
 LOCATION:Don Quijote Asakusa, 2-10-4 Kaminarimon, Taito-ku, Tokyo
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
@@ -109,10 +117,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event9-walkback@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T213000
 DTEND;TZID=Asia/Tokyo:20260306T220000
 SUMMARY:🚶 เดินกลับโรงแรม (Walk back to Hotel)
-DESCRIPTION:เดินกลับที่พัก\\n\\n📍 Don Quijote → APA Hotel\\n⏱️ ระยะทาง: ~10-15 นาที\\n\\n🌙 ชมบรรยากาศอาซากุสะยามค่ำคืน
+DESCRIPTION:เดินกลับที่พัก\n\n📍 Don Quijote → APA Hotel\n⏱️ ระยะทาง: ~10-15 นาที\n\n🌙 ชมบรรยากาศอาซากุสะยามค่ำคืน
 LOCATION:Asakusa to APA Hotel
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -120,10 +129,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day1-event10-rest@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T220000
 DTEND;TZID=Asia/Tokyo:20260306T230000
 SUMMARY:😴 พักผ่อน (Rest)
-DESCRIPTION:พักผ่อนหลังเดินทางวันแรก\\n\\n📝 เตรียมตัวสำหรับวันพรุ่งนี้:\\n- ชาร์จมือถือ/กล้อง\\n- เช็ค Google Maps เส้นทาง\\n- เตรียมเสื้อผ้า\\n\\n🎯 วันพรุ่งนี้: วัดเซ็นโซจิ + Tokyo Skytree
+DESCRIPTION:พักผ่อนหลังเดินทางวันแรก\n\n📝 เตรียมตัวสำหรับวันพรุ่งนี้:\n- ชาร์จมือถือ/กล้อง\n- เช็ค Google Maps เส้นทาง\n- เตรียมเสื้อผ้า\n\n🎯 วันพรุ่งนี้: วัดเซ็นโซจิ + Tokyo Skytree
 LOCATION:APA Hotel Asakusa Tawaramachi
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
