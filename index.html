@@ -428,9 +428,7 @@
         </section>
 
         <!-- Offline Status -->
-        <div id="offlineStatus" class="offline-status">
-            ✅ พร้อมใช้งาน Offline updated: 22 พ.ย. 2568 19:45
-        </div>
+        <div id="offlineStatus" class="offline-status"></div>
 
         <!-- Footer -->
         <footer>
@@ -455,14 +453,23 @@
 
     <script src="asset/js/common.js"></script>
     <script>
+        function getTimestamp() {
+            const now = new Date();
+            const date = now.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            return `${date} ${hours}:${minutes}`;
+        }
+
         // Check online/offline status
         function updateOnlineStatus() {
             const statusEl = document.getElementById('offlineStatus');
+            const timestamp = getTimestamp();
             if (navigator.onLine) {
-                statusEl.textContent = '✅ พร้อมใช้งาน Offline';
+                statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
                 statusEl.classList.remove('offline');
             } else {
-                statusEl.textContent = '📴 กำลังใช้งาน Offline Mode';
+                statusEl.textContent = `📴 กำลังใช้งาน Offline Mode updated: ${timestamp}`;
                 statusEl.classList.add('offline');
             }
         }

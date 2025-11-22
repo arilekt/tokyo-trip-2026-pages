@@ -275,9 +275,9 @@ function initLightbox() {
 function initServiceWorker() {
     if ('serviceWorker' in navigator) {
         // Get base path for service worker
-        const basePath = window.location.pathname.includes('/pages/')
-            ? '/pages/'
-            : '/';
+        const path = window.location.pathname;
+        const isInSubfolder = path.includes('/th/') || path.includes('/en/') || path.includes('/jp/');
+        const basePath = isInSubfolder ? '../' : '';
 
         navigator.serviceWorker.register(basePath + 'sw.js')
             .then(function(registration) {
