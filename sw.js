@@ -62,6 +62,13 @@ self.addEventListener('activate', event => {
 
 // Fetch event - cache-first strategy
 self.addEventListener('fetch', event => {
+    const requestUrl = new URL(event.request.url);
+
+    // Don't handle .ics files; let the browser/OS handle it.
+    if (requestUrl.pathname.endsWith('.ics')) {
+      return;
+    }
+
     // Let the browser handle cross-origin requests
     const requestUrl = new URL(event.request.url);
     if (requestUrl.origin !== self.location.origin) {
