@@ -16,7 +16,7 @@ body {
     page-break-after: always;
     width: 210mm;
     min-height: 297mm;
-    padding: 15mm;
+    padding: 12mm; /* Adjusted padding */
     box-sizing: border-box;
     margin: 20px auto;
     background: white;
@@ -47,21 +47,21 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: 24pt;
+    font-size: 26pt; /* Increased font size */
     text-align: center;
     border-bottom: 4px solid #004d40;
     padding: 10px 0;
-    margin-bottom: 30px;
+    margin-bottom: 20px; /* Adjusted margin */
     color: #00796b;
 }
 
 h2 {
-    font-size: 16pt;
+    font-size: 18pt; /* Increased font size */
     color: #00897b;
 }
 
 h3 {
-    font-size: 12pt;
+    font-size: 14pt; /* Increased font size */
     color: #009688;
 }
 
@@ -69,13 +69,13 @@ h3 {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-bottom: 15px;
-    font-size: 9pt;
+    margin-bottom: 12px; /* Adjusted margin */
+    font-size: 10.5pt; /* Increased font size */
 }
 
 th, td {
     border: 1px solid #ddd;
-    padding: 6px;
+    padding: 5px; /* Adjusted padding */
     text-align: left;
 }
 
@@ -102,11 +102,11 @@ th {
 .list-style {
     list-style-type: disc;
     margin-left: 20px;
-    font-size: 9pt;
+    font-size: 10.5pt; /* Increased font size */
 }
 
 .small-text {
-    font-size: 8pt;
+    font-size: 9pt; /* Increased font size */
     color: #777;
 }
 
@@ -117,19 +117,19 @@ th {
 /* Responsive typography */
 @media screen and (max-width: 768px) {
     h1 {
-        font-size: 1.3rem;
+        font-size: 1.5rem; /* Adjusted for better scaling */
     }
 
     h2 {
-        font-size: 1.1rem;
+        font-size: 1.3rem; /* Adjusted for better scaling */
     }
 
     h3 {
-        font-size: 0.95rem;
+        font-size: 1.1rem; /* Adjusted for better scaling */
     }
 
     table {
-        font-size: 0.8rem;
+        font-size: 0.9rem; /* Adjusted for better scaling */
     }
 
     th, td {
@@ -137,29 +137,29 @@ th {
     }
 
     .small-text {
-        font-size: 0.7rem;
+        font-size: 0.8rem; /* Adjusted for better scaling */
     }
 }
 
 /* Extra small screens */
 @media screen and (max-width: 480px) {
     h1 {
-        font-size: 1.2rem;
+        font-size: 1.3rem; /* Adjusted for better scaling */
         padding: 0.5rem 0;
         margin-bottom: 1rem;
     }
 
     h2 {
-        font-size: 1.0rem;
+        font-size: 1.1rem; /* Adjusted for better scaling */
         margin-top: 1rem;
     }
 
     h3 {
-        font-size: 0.9rem;
+        font-size: 1.0rem; /* Adjusted for better scaling */
     }
 
     table {
-        font-size: 0.75rem;
+        font-size: 0.85rem; /* Adjusted for better scaling */
     }
 
     th, td {
@@ -168,7 +168,7 @@ th {
 
     .list-style {
         margin-left: 1rem;
-        font-size: 0.75rem;
+        font-size: 0.85rem; /* Adjusted for better scaling */
     }
 }
 

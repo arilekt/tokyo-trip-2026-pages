@@ -88,6 +88,13 @@ pages/
 - [ ] สร้าง jp/ folder - Japanese version
 - [ ] Language switcher ใน Navigator
 
+### Phase 10: Mobile UI/UX Overhaul (Nov 2025)
+- [x] **Goal:** Drastically improve mobile readability and reduce excessive whitespace.
+- [x] **common.css:** Refactored mobile font sizing to use the `html` element for better `rem` scaling.
+- [x] **cover-page.html / shopping-list.html:** Performed aggressive reduction of font sizes and spacing in embedded styles. Added missing responsive rules for `.info-box`, `.floor-guide`, and generic `<li>` elements.
+- [x] **trip-clean.css / cover.css:** Refactored and simplified responsive media queries to fix layout gaps and apply more consistent, compact styling.
+- [x] **Result:** Achieved a more professional, compact, and user-friendly layout across all pages on mobile and tablet devices.
+
 ---
 
 ## UI Components

@@ -325,8 +325,31 @@
                 <span data-i18n="hero-duration">🕐 8 วัน 7 คืน</span>
             </div>
         </header>
+        <section class="page-grid">
 
-        <!-- Page Cards -->
+            <!-- Main page for overall activity -->
+            <a href="th/cover-page.html" class="page-card">
+                <div class="page-card-icon">📋</div>
+                <div class="page-card-content">
+                    <div class="page-card-title">หน้าหลักสรุป</div>
+                    <div class="page-card-desc">
+                        สรุปแผนรายวันพร้อมรูปภาพประกอบ
+                    </div>
+                </div>
+            </a>
+
+            <!-- Main page for shopping list -->
+            <a href="th/shopping-list.html" class="page-card">
+                <div class="page-card-icon">🛍️</div>
+                <div class="page-card-content">
+                    <div class="page-card-title">รายการซื้อของ</div>
+                    <div class="page-card-desc">
+                        สถานที่ช็อปปิ้ง ของฝาก ขนมญี่ปุ่น พร้อมรูปภาพ
+                    </div>
+                </div>
+            </a>
+        </section>
+        <!-- Page Cards for trip plan with timeline details -->
         <section class="page-grid">
             <a href="th/trip-plan.html" class="page-card">
                 <div class="page-card-icon">📅</div>
@@ -338,35 +361,17 @@
                 </div>
             </a>
 
-            <a href="th/cover-page.html" class="page-card">
-                <div class="page-card-icon">📋</div>
-                <div class="page-card-content">
-                    <div class="page-card-title">หน้าหลักสรุป</div>
-                    <div class="page-card-desc">
-                        สรุปแผนรายวันพร้อมรูปภาพประกอบ
-                    </div>
-                </div>
-            </a>
-
+            <!-- Main page for cover printable -->
             <a href="th/cover.html" class="page-card">
                 <div class="page-card-icon">🖨️</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">Cover Printable</div>
+                    <div class="page-card-title">เอกสารสำหรับพิมพ์</div>
                     <div class="page-card-desc">
                         เอกสารสำคัญ เที่ยวบิน ที่พัก งบประมาณ (A4)
                     </div>
                 </div>
             </a>
 
-            <a href="th/shopping-list.html" class="page-card">
-                <div class="page-card-icon">🛍️</div>
-                <div class="page-card-content">
-                    <div class="page-card-title">Shopping List</div>
-                    <div class="page-card-desc">
-                        สถานที่ช็อปปิ้ง ของฝาก ขนมญี่ปุ่น พร้อมรูปภาพ
-                    </div>
-                </div>
-            </a>
 
             <!-- Currency Converter Card -->
             <div class="page-card converter-card">
@@ -396,27 +401,27 @@
                     <div class="rate-inputs-wrapper">
                         <div class="rate-input-group">
                             <label>1 JPY =</label>
-                            <input type="number" id="exchangeRate1" class="rate-input" value="0.238" step="0.001"
+                            <input type="number" id="exchangeRate1" class="rate-input" value="0.21" step="0.001"
                                 min="0">
                             <label>THB</label>
                         </div>
 
                         <div class="rate-input-group">
                             <label>1 THB =</label>
-                            <input type="number" id="exchangeRate" class="rate-input" value="4.20" step="0.01" min="0">
+                            <input type="number" id="exchangeRate" class="rate-input" value="4.83" step="0.01" min="0">
                             <label>JPY</label>
                         </div>
 
                         <div class="rate-input-group">
                             <label>100 JPY =</label>
-                            <input type="number" id="exchangeRate100" class="rate-input" value="23.81" step="0.01"
+                            <input type="number" id="exchangeRate100" class="rate-input" value="20.71" step="0.01"
                                 min="0">
                             <label>THB</label>
                         </div>
                     </div>
 
                     <div class="rate-info">
-                        บันทึกอัตโนมัติ
+                        บันทึกอัตโนมัติ ข้อมูลอัตรแลกเปลี่ยน ณ วันที่ 22 พ.ย. 2568
                     </div>
                 </div>
             </div>
@@ -431,6 +436,20 @@
         <footer>
             <p>🗾 Tokyo Trip March 2026</p>
             <p>📱 Offline-ready • Responsive Design</p>
+            <p style="font-size: 0.8rem; color: #64748b; text-align: center; margin-top: 1rem;">
+                Download Calendar: 
+                <a href="calendar/day1-2026-03-06.ics" style="color: inherit;">Day 1</a> |
+                <a href="calendar/day2-2026-03-07.ics" style="color: inherit;">Day 2</a> |
+                <a href="calendar/day3-2026-03-08.ics" style="color: inherit;">Day 3</a> |
+                <a href="calendar/day4-2026-03-09.ics" style="color: inherit;">Day 4</a> |
+                <a href="calendar/day5-2026-03-10.ics" style="color: inherit;">Day 5</a> |
+                <a href="calendar/day6-2026-03-11.ics" style="color: inherit;">Day 6</a> |
+                <a href="calendar/day7-2026-03-12.ics" style="color: inherit;">Day 7</a> |
+                <a href="calendar/day8-2026-03-13.ics" style="color: inherit;">Day 8</a> |
+                <a href="calendar/hotel1-apa-asakusa.ics" style="color: inherit;">APA Asakusa</a> |
+                <a href="calendar/hotel2-mystays-fuji.ics" style="color: inherit;">Mystays Fuji</a> |
+                <a href="calendar/hotel3-shinjuku-granbell.ics" style="color: inherit;">Shinjuku Granbell</a>
+            </p>
         </footer>
     </div>
 

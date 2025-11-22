@@ -1,0 +1,42 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Tokyo Trip 2026//Hotel 3//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hotel Stay: Shinjuku Granbell Hotel
+X-WR-TIMEZONE:Asia/Tokyo
+
+BEGIN:VTIMEZONE
+TZID:Asia/Tokyo
+X-LIC-LOCATION:Asia/Tokyo
+BEGIN:STANDARD
+TZOFFSETFROM:+0900
+TZOFFSETTO:+0900
+TZNAME:JST
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+
+BEGIN:VEVENT
+UID:hotel3-shinjuku-granbell-stay@tokyotrip2026
+DTSTART;TZID=Asia/Tokyo:20260310T150000
+DTEND;TZID=Asia/Tokyo:20260313T083000
+SUMMARY:🏨 ที่พัก: Shinjuku Granbell Hotel
+DESCRIPTION:ที่พัก 3 คืนสุดท้ายใจกลางชินจูกุ ย่านคาบุกิโจ
+
+เช็คอิน: 10 มี.ค. 2026, 15:00
+เช็คเอาท์: 13 มี.ค. 2026, 08:30
+
+ที่อยู่: 2-chōme-14-5 Kabukichō, Shinjuku City, Tokyo 160-0021, Japan
+โทร: +81 3-5155-2666
+
+การเดินทาง:
+สถานี Higashi-Shinjuku (Oedo Line) - ทางออก A1 (เดิน 4 นาที)
+สถานี Shinjuku-sanchome (Marunouchi Line) - (เดิน 7 นาที)
+สถานี JR Shinjuku - (เดิน 15 นาที)
+LOCATION:Shinjuku Granbell Hotel, 2-chōme-14-5 Kabukichō, Shinjuku City, Tokyo 160-0021, Japan
+CATEGORIES:HOTEL
+STATUS:CONFIRMED
+END:VEVENT
+
+END:VCALENDAR

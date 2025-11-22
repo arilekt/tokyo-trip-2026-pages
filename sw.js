@@ -62,6 +62,12 @@ self.addEventListener('activate', event => {
 
 // Fetch event - cache-first strategy
 self.addEventListener('fetch', event => {
+    // Let the browser handle cross-origin requests
+    const requestUrl = new URL(event.request.url);
+    if (requestUrl.origin !== self.location.origin) {
+        return;
+    }
+
     // Only handle GET requests
     if (event.request.method !== 'GET') {
         return;
