@@ -19,10 +19,11 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:day4-event1-sunrise@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T060000
 DTEND;TZID=Asia/Tokyo:20260309T063000
 SUMMARY:🌅 ชมพระอาทิตย์ขึ้น + วิวฟูจิ (Sunrise & Mt. Fuji View)
-DESCRIPTION:ตื่นมาชมพระอาทิตย์ขึ้นกับภูเขาฟูจิ\\n\\n📍 ห้องพัก / ระเบียงโรงแรม\\n🌅 พระอาทิตย์ขึ้น: ~06:00-06:30\\n\\n📸 ถ่ายรูปภูเขาฟูจิยามเช้า\\n\\n🎂 วันพิเศษ: วันเกิดพจน์!
+DESCRIPTION:ตื่นมาชมพระอาทิตย์ขึ้นกับภูเขาฟูจิ\n\n📍 ห้องพัก / ระเบียงโรงแรม\n🌅 พระอาทิตย์ขึ้น: ~06:00-06:30\n\n📸 ถ่ายรูปภูเขาฟูจิยามเช้า\n\n🎂 วันพิเศษ: วันเกิดพจน์!
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:SPECIAL
 STATUS:CONFIRMED
@@ -30,10 +31,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event2-birthday-surprise@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T063000
 DTEND;TZID=Asia/Tokyo:20260309T073000
 SUMMARY:🎂🎁 Birthday Surprise! - ของขวัญวันเกิดพจน์ 11 ขวบ
-DESCRIPTION:🎉 สุขสันต์วันเกิด พจน์! 🎉\\n\\n🎂 อายุ 11 ขวบ!\\n\\n🎁 ของขวัญ:\\n- กล้อง Ricoh WG-80 หรือ Canon SX740 HS\\n- (ซื้อไว้จาก Yodobashi วันที่ 7)\\n\\n🎵 ร้องเพลง Happy Birthday\\n📸 ถ่ายรูปกับของขวัญ\\n\\n💝 วันนี้เป็นวันของพจน์!
+DESCRIPTION:🎉 สุขสันต์วันเกิด พจน์! 🎉\n\n🎂 อายุ 11 ขวบ!\n\n🎁 ของขวัญ:\n- กล้อง Ricoh WG-80 หรือ Canon SX740 HS\n- (ซื้อไว้จาก Yodobashi วันที่ 7)\n\n🎵 ร้องเพลง Happy Birthday\n📸 ถ่ายรูปกับของขวัญ\n\n💝 วันนี้เป็นวันของพจน์!
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:SPECIAL
 PRIORITY:1
@@ -42,10 +44,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event3-breakfast@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T073000
 DTEND;TZID=Asia/Tokyo:20260309T083000
 SUMMARY:🍳 อาหารเช้าวันเกิด (Birthday Breakfast)
-DESCRIPTION:อาหารเช้าวันพิเศษ\\n\\n📍 HOTEL MYSTAYS / ร้านใกล้เคียง\\n💰 งบ: ¥800-1,200/คน
+DESCRIPTION:อาหารเช้าวันพิเศษ\n\n📍 HOTEL MYSTAYS / ร้านใกล้เคียง\n💰 งบ: ¥800-1,200/คน
 LOCATION:HOTEL MYSTAYS area
 CATEGORIES:FOOD
 STATUS:CONFIRMED
@@ -53,10 +56,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event4-travel-chureito@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T083000
 DTEND;TZID=Asia/Tokyo:20260309T090000
 SUMMARY:🚌 เดินทางไปเจดีย์ชูเรโตะ (Travel to Chureito Pagoda)
-DESCRIPTION:ไปจุดถ่ายรูปที่มีชื่อที่สุด\\n\\n🚌 เส้นทาง:\\nLocal Bus จาก Kawaguchiko Station\\n⏱️ ใช้เวลา: ~20-30 นาที\\n\\n📍 ลงที่: Shimoyoshida Station area
+DESCRIPTION:ไปจุดถ่ายรูปที่มีชื่อที่สุด\n\n🚌 เส้นทาง:\nLocal Bus จาก Kawaguchiko Station\n⏱️ ใช้เวลา: ~20-30 นาที\n\n📍 ลงที่: Shimoyoshida Station area
 LOCATION:Kawaguchiko to Chureito Pagoda
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -64,10 +68,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event5-chureito@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T090000
 DTEND;TZID=Asia/Tokyo:20260309T113000
 SUMMARY:📸 เจดีย์ชูเรโตะ (Chureito Pagoda)
-DESCRIPTION:🏆 จุดถ่ายรูปที่มีชื่อที่สุดของภูเขาฟูจิ!\\n\\n📍 Chureito Pagoda, Arakurayama Sengen Park\\n💰 ฟรี\\n\\n🚶 ต้องเดินขึ้นบันได 398 ขั้น!\\n\\n📸 จุดถ่ายรูป:\\n- เจดีย์กับภูเขาฟูจิ (รูป Iconic)\\n- วิว 360° จากยอดเขา\\n- ต้นซากุระ (ถ้าบาน)\\n\\n⏱️ เวลาถ่ายรูปที่ดี: เช้า (แสงสวย)\\n\\n🎂 ถ่ายรูปวันเกิดพจน์กับฟูจิ!
+DESCRIPTION:🏆 จุดถ่ายรูปที่มีชื่อที่สุดของภูเขาฟูจิ!\n\n📍 Chureito Pagoda, Arakurayama Sengen Park\n💰 ฟรี\n\n🚶 ต้องเดินขึ้นบันได 398 ขั้น!\n\n📸 จุดถ่ายรูป:\n- เจดีย์กับภูเขาฟูจิ (รูป Iconic)\n- วิว 360° จากยอดเขา\n- ต้นซากุระ (ถ้าบาน)\n\n⏱️ เวลาถ่ายรูปที่ดี: เช้า (แสงสวย)\n\n🎂 ถ่ายรูปวันเกิดพจน์กับฟูจิ!
 LOCATION:Chureito Pagoda, Arakurayama Sengen Park, Fujiyoshida
 CATEGORIES:ATTRACTION
 PRIORITY:1
@@ -76,10 +81,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event6-travel-lunch@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T113000
 DTEND;TZID=Asia/Tokyo:20260309T120000
 SUMMARY:🚌 เดินทางไปร้านอาหาร (Travel to Restaurant)
-DESCRIPTION:ไปทาน Birthday Lunch\\n\\n🚌 เส้นทาง: Local Bus\\n⏱️ ใช้เวลา: ~20-30 นาที
+DESCRIPTION:ไปทาน Birthday Lunch\n\n🚌 เส้นทาง: Local Bus\n⏱️ ใช้เวลา: ~20-30 นาที
 LOCATION:Chureito to Restaurant
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -87,10 +93,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event7-birthday-lunch@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T120000
 DTEND;TZID=Asia/Tokyo:20260309T133000
 SUMMARY:🍣🎂 Birthday Lunch - มื้อกลางวันวันเกิด
-DESCRIPTION:🎉 มื้อพิเศษฉลองวันเกิด!\\n\\n📍 ร้านอาหารญี่ปุ่น Kawaguchiko area\\n\\n🍽️ เมนูแนะนำ:\\n- ซูชิแซลมอน (Salmon Sushi)\\n- เท็มปุระ (Tempura)\\n- อาหารที่พจน์ชอบ\\n\\n💰 งบ: ~¥8,000 (2 คน)\\n\\n🎂 บอกร้านว่าวันเกิด อาจได้ของพิเศษ!
+DESCRIPTION:🎉 มื้อพิเศษฉลองวันเกิด!\n\n📍 ร้านอาหารญี่ปุ่น Kawaguchiko area\n\n🍽️ เมนูแนะนำ:\n- ซูชิแซลมอน (Salmon Sushi)\n- เท็มปุระ (Tempura)\n- อาหารที่พจน์ชอบ\n\n💰 งบ: ~¥8,000 (2 คน)\n\n🎂 บอกร้านว่าวันเกิด อาจได้ของพิเศษ!
 LOCATION:Japanese Restaurant, Kawaguchiko area
 CATEGORIES:FOOD
 PRIORITY:1
@@ -99,10 +106,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event8-travel-oshino@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T133000
 DTEND;TZID=Asia/Tokyo:20260309T143000
 SUMMARY:🚌 เดินทางไปโอชิโนะฮักไก (Travel to Oshino Hakkai)
-DESCRIPTION:ไปหมู่บ้านโอชิโนะฮักไก\\n\\n🚌 เส้นทาง: Local Bus\\n⏱️ ใช้เวลา: ~40-60 นาที
+DESCRIPTION:ไปหมู่บ้านโอชิโนะฮักไก\n\n🚌 เส้นทาง: Local Bus\n⏱️ ใช้เวลา: ~40-60 นาที
 LOCATION:Kawaguchiko to Oshino Hakkai
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -110,10 +118,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event9-oshino-hakkai@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T143000
 DTEND;TZID=Asia/Tokyo:20260309T163000
 SUMMARY:🏘️ หมู่บ้านโอชิโนะฮักไก (Oshino Hakkai Village)
-DESCRIPTION:หมู่บ้านญี่ปุ่นดั้งเดิม + บ่อน้ำใส 8 บ่อ\\n\\n📍 Oshino Hakkai, Minamitsuru-gun, Yamanashi\\n💰 ฟรี (บางจุดเสียค่าเข้า ~¥300)\\n\\n💧 บ่อน้ำ 8 บ่อ:\\n- น้ำจากหิมะละลายของภูเขาฟูจิ\\n- ใสมากจนเห็นก้นบ่อ\\n- กรองผ่านหินภูเขาไฟนับร้อยปี\\n\\n📸 จุดถ่ายรูป:\\n- บ่อน้ำใส\\n- บ้านญี่ปุ่นดั้งเดิม\\n- วิวภูเขาฟูจิ\\n\\n🍡 ของกิน:\\n- โมจิย่าง\\n- ขนมญี่ปุ่น\\n\\n🎂 ถ่ายรูปวันเกิดกับหมู่บ้านสวยๆ
+DESCRIPTION:หมู่บ้านญี่ปุ่นดั้งเดิม + บ่อน้ำใส 8 บ่อ\n\n📍 Oshino Hakkai, Minamitsuru-gun, Yamanashi\n💰 ฟรี (บางจุดเสียค่าเข้า ~¥300)\n\n💧 บ่อน้ำ 8 บ่อ:\n- น้ำจากหิมะละลายของภูเขาฟูจิ\n- ใสมากจนเห็นก้นบ่อ\n- กรองผ่านหินภูเขาไฟนับร้อยปี\n\n📸 จุดถ่ายรูป:\n- บ่อน้ำใส\n- บ้านญี่ปุ่นดั้งเดิม\n- วิวภูเขาฟูจิ\n\n🍡 ของกิน:\n- โมจิย่าง\n- ขนมญี่ปุ่น\n\n🎂 ถ่ายรูปวันเกิดกับหมู่บ้านสวยๆ
 LOCATION:Oshino Hakkai, Minamitsuru-gun, Yamanashi
 CATEGORIES:ATTRACTION
 STATUS:CONFIRMED
@@ -121,10 +130,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event10-travel-hotel@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T163000
 DTEND;TZID=Asia/Tokyo:20260309T170000
 SUMMARY:🚌 กลับโรงแรม (Travel back to Hotel)
-DESCRIPTION:กลับโรงแรมเตรียมแช่ออนเซ็น\\n\\n🚌 เส้นทาง: Local Bus → HOTEL MYSTAYS\\n⏱️ ใช้เวลา: ~30-40 นาที
+DESCRIPTION:กลับโรงแรมเตรียมแช่ออนเซ็น\n\n🚌 เส้นทาง: Local Bus → HOTEL MYSTAYS\n⏱️ ใช้เวลา: ~30-40 นาที
 LOCATION:Oshino Hakkai to HOTEL MYSTAYS
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -132,10 +142,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event11-golden-hour-onsen@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T170000
 DTEND;TZID=Asia/Tokyo:20260309T183000
 SUMMARY:♨️🌅 Golden Hour Onsen - ออนเซ็นยามพระอาทิตย์ตก
-DESCRIPTION:🌅 แช่ออนเซ็นชมพระอาทิตย์ตก!\\n\\n📍 HOTEL MYSTAYS Fuji Onsen Resort\\n🌅 พระอาทิตย์ตก: ~17:45\\n\\n♨️ ประสบการณ์พิเศษ:\\n- แช่น้ำร้อนธรรมชาติ\\n- ชมวิวภูเขาฟูจิ\\n- ท้องฟ้าสีส้ม-ชมพู\\n\\n🎂 ของขวัญวันเกิด: ความทรงจำสวยๆ
+DESCRIPTION:🌅 แช่ออนเซ็นชมพระอาทิตย์ตก!\n\n📍 HOTEL MYSTAYS Fuji Onsen Resort\n🌅 พระอาทิตย์ตก: ~17:45\n\n♨️ ประสบการณ์พิเศษ:\n- แช่น้ำร้อนธรรมชาติ\n- ชมวิวภูเขาฟูจิ\n- ท้องฟ้าสีส้ม-ชมพู\n\n🎂 ของขวัญวันเกิด: ความทรงจำสวยๆ
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort - Onsen
 CATEGORIES:SPECIAL
 STATUS:CONFIRMED
@@ -143,10 +154,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event12-rest@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T183000
 DTEND;TZID=Asia/Tokyo:20260309T190000
 SUMMARY:😌 พักผ่อน + แต่งตัว (Rest & Get ready)
-DESCRIPTION:พักผ่อนหลังออนเซ็น\\n\\n📝 เตรียมตัว:\\n- แต่งตัวสวยๆ\\n- เตรียมไป Birthday Dinner\\n\\n🍽️ ต่อไป: Birthday Dinner!
+DESCRIPTION:พักผ่อนหลังออนเซ็น\n\n📝 เตรียมตัว:\n- แต่งตัวสวยๆ\n- เตรียมไป Birthday Dinner\n\n🍽️ ต่อไป: Birthday Dinner!
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
@@ -154,10 +166,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event13-birthday-dinner@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T190000
 DTEND;TZID=Asia/Tokyo:20260309T210000
 SUMMARY:🍽️🎂 Birthday Dinner - มื้อค่ำฉลองวันเกิด
-DESCRIPTION:🎉 มื้อค่ำพิเศษฉลองวันเกิดพจน์ 11 ขวบ! 🎉\\n\\n📍 ร้านอาหารดีๆ Kawaguchiko area\\n\\n🍽️ เมนูพิเศษ:\\n- อาหารญี่ปุ่นชั้นดี\\n- เนื้อวากิว / ซูชิ / เซ็ตพิเศษ\\n- ของหวาน\\n\\n💰 งบ: ~¥12,000 (2 คน)\\n\\n🎂 ขอเค้กหรือของหวานพิเศษจากร้าน\\n📸 ถ่ายรูปฉลองวันเกิด\\n\\n💝 สุขสันต์วันเกิด พจน์!\\nขอให้มีความสุขมากๆ นะลูก
+DESCRIPTION:🎉 มื้อค่ำพิเศษฉลองวันเกิดพจน์ 11 ขวบ! 🎉\n\n📍 ร้านอาหารดีๆ Kawaguchiko area\n\n🍽️ เมนูพิเศษ:\n- อาหารญี่ปุ่นชั้นดี\n- เนื้อวากิว / ซูชิ / เซ็ตพิเศษ\n- ของหวาน\n\n💰 งบ: ~¥12,000 (2 คน)\n\n🎂 ขอเค้กหรือของหวานพิเศษจากร้าน\n📸 ถ่ายรูปฉลองวันเกิด\n\n💝 สุขสันต์วันเกิด พจน์!\nขอให้มีความสุขมากๆ นะลูก
 LOCATION:Restaurant, Kawaguchiko area
 CATEGORIES:SPECIAL
 PRIORITY:1
@@ -166,10 +179,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day4-event14-back-rest@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T210000
 DTEND;TZID=Asia/Tokyo:20260309T220000
 SUMMARY:😴 กลับโรงแรม + พักผ่อน (Back to Hotel & Rest)
-DESCRIPTION:จบวันเกิดที่สมบูรณ์แบบ\\n\\n📝 เตรียมตัวสำหรับวันพรุ่งนี้:\\n- เก็บกระเป๋า Check-out พรุ่งนี้!\\n- ชาร์จอุปกรณ์\\n- เช็คตารางรถบัสกลับโตเกียว\\n\\n🎯 วันพรุ่งนี้: กลับโตเกียว + ช็อปปิ้ง\\n\\n💕 งบวันเกิดวันนี้: ~¥21,500
+DESCRIPTION:จบวันเกิดที่สมบูรณ์แบบ\n\n📝 เตรียมตัวสำหรับวันพรุ่งนี้:\n- เก็บกระเป๋า Check-out พรุ่งนี้!\n- ชาร์จอุปกรณ์\n- เช็คตารางรถบัสกลับโตเกียว\n\n🎯 วันพรุ่งนี้: กลับโตเกียว + ช็อปปิ้ง\n\n💕 งบวันเกิดวันนี้: ~¥21,500
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED

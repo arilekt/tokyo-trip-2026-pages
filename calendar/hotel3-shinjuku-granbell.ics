@@ -19,6 +19,7 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:hotel3-shinjuku-granbell-stay@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T150000
 DTEND;TZID=Asia/Tokyo:20260313T083000
 SUMMARY:🏨 ที่พัก: Shinjuku Granbell Hotel

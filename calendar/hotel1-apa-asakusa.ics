@@ -19,10 +19,21 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:hotel1-apa-asakusa-stay@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T183000
 DTEND;TZID=Asia/Tokyo:20260308T080000
 SUMMARY:🏨 ที่พัก: APA Hotel Asakusa Tawaramachi Ekimae
-DESCRIPTION:ที่พัก 2 คืนแรกในโตเกียว ย่านอาซากุสะ\n\nเช็คอิน: 6 มี.ค. 2026, 18:30\nเช็คเอาท์: 8 มี.ค. 2026, 08:00\n\nที่อยู่: 2-chōme-7-10 Nishiasakusa, Taito City, Tokyo 111-0035, Japan\nโทร: +81 3-5830-0611\n\nการเดินทาง:\nสถานี Tawaramachi (Ginza Line) - ทางออก 2 (เดิน 1 นาที)\nสถานี Asakusa (Tsukuba Express) - ทางออก A1 (เดิน 5 นาที)
+DESCRIPTION:ที่พัก 2 คืนแรกในโตเกียว ย่านอาซากุสะ
+
+เช็คอิน: 6 มี.ค. 2026, 18:30
+เช็คเอาท์: 8 มี.ค. 2026, 08:00
+
+ที่อยู่: 2-chōme-7-10 Nishiasakusa, Taito City, Tokyo 111-0035, Japan
+โทร: +81 3-5830-0611
+
+การเดินทาง:
+สถานี Tawaramachi (Ginza Line) - ทางออก 2 (เดิน 1 นาที)
+สถานี Asakusa (Tsukuba Express) - ทางออก A1 (เดิน 5 นาที)
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae, 2-chōme-7-10 Nishiasakusa, Taito City, Tokyo 111-0035, Japan
 CATEGORIES:HOTEL
 STATUS:CONFIRMED

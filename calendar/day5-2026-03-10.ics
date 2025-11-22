@@ -19,10 +19,11 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:day5-event1-wakeup@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T070000
 DTEND;TZID=Asia/Tokyo:20260310T080000
 SUMMARY:⏰ ตื่นนอน + เก็บกระเป๋า (Wake up & Pack)
-DESCRIPTION:เตรียมตัว Check-out\\n\\n📝 สิ่งที่ต้องทำ:\\n- อาบน้ำแต่งตัว\\n- เก็บกระเป๋าให้เรียบร้อย\\n- เช็คของในห้องไม่ให้ลืม\\n\\n⚠️ Check-out วันนี้!
+DESCRIPTION:เตรียมตัว Check-out\n\n📝 สิ่งที่ต้องทำ:\n- อาบน้ำแต่งตัว\n- เก็บกระเป๋าให้เรียบร้อย\n- เช็คของในห้องไม่ให้ลืม\n\n⚠️ Check-out วันนี้!
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
@@ -30,10 +31,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event2-breakfast@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T080000
 DTEND;TZID=Asia/Tokyo:20260310T090000
 SUMMARY:🍳 อาหารเช้า (Breakfast)
-DESCRIPTION:อาหารเช้าก่อนออกเดินทาง\\n\\n📍 HOTEL MYSTAYS / ร้านใกล้เคียง\\n💰 งบ: ¥800-1,000/คน
+DESCRIPTION:อาหารเช้าก่อนออกเดินทาง\n\n📍 HOTEL MYSTAYS / ร้านใกล้เคียง\n💰 งบ: ¥800-1,000/คน
 LOCATION:HOTEL MYSTAYS area
 CATEGORIES:FOOD
 STATUS:CONFIRMED
@@ -41,10 +43,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event3-checkout@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T090000
 DTEND;TZID=Asia/Tokyo:20260310T093000
 SUMMARY:🏣🚶‍➡️ CHECK-OUT - HOTEL MYSTAYS Fuji Onsen Resort
-DESCRIPTION:Check-out และออกเดินทางกลับโตเกียว\\n\\n🏨 HOTEL MYSTAYS Fuji Onsen Resort\\n📍 2654 Arakura, Fuji-Yoshida-shi\\n\\n📝 ขั้นตอน:\\n- คืนกุญแจห้อง\\n- ชำระค่าใช้จ่ายเพิ่มเติม (Bath Tax ¥200)\\n\\n🎯 ต่อไป: รถบัสกลับชินจูกุ
+DESCRIPTION:Check-out และออกเดินทางกลับโตเกียว\n\n🏨 HOTEL MYSTAYS Fuji Onsen Resort\n📍 2654 Arakura, Fuji-Yoshida-shi\n\n📝 ขั้นตอน:\n- คืนกุญแจห้อง\n- ชำระค่าใช้จ่ายเพิ่มเติม (Bath Tax ¥200)\n\n🎯 ต่อไป: รถบัสกลับชินจูกุ
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 PRIORITY:1
@@ -53,10 +56,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event4-travel-bus@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T093000
 DTEND;TZID=Asia/Tokyo:20260310T100000
 SUMMARY:🚌 เดินทางไปสถานีรถบัส (Travel to Bus Terminal)
-DESCRIPTION:ไปขึ้นรถบัสกลับโตเกียว\\n\\n📍 Kawaguchiko Bus Terminal\\n⏱️ ใช้เวลา: ~20-30 นาที
+DESCRIPTION:ไปขึ้นรถบัสกลับโตเกียว\n\n📍 Kawaguchiko Bus Terminal\n⏱️ ใช้เวลา: ~20-30 นาที
 LOCATION:Hotel to Kawaguchiko Bus Terminal
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -64,10 +68,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event5-bus-shinjuku@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T100000
 DTEND;TZID=Asia/Tokyo:20260310T120000
 SUMMARY:🚌 รถบัสด่วนกลับชินจูกุ (Express Bus to Shinjuku)
-DESCRIPTION:เดินทางกลับโตเกียว\\n\\n📍 ขึ้นรถ: Kawaguchiko Bus Terminal\\n📍 ลงรถ: Shinjuku Expressway Bus Terminal (Busta)\\n⏱️ ใช้เวลา: ~2 ชม.\\n\\n💰 ค่ารถบัส: ~¥2,000/คน
+DESCRIPTION:เดินทางกลับโตเกียว\n\n📍 ขึ้นรถ: Kawaguchiko Bus Terminal\n📍 ลงรถ: Shinjuku Expressway Bus Terminal (Busta)\n⏱️ ใช้เวลา: ~2 ชม.\n\n💰 ค่ารถบัส: ~¥2,000/คน
 LOCATION:Kawaguchiko to Shinjuku Busta
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -75,10 +80,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event6-lunch@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T120000
 DTEND;TZID=Asia/Tokyo:20260310T130000
 SUMMARY:🍜 อาหารกลางวัน ชินจูกุ (Lunch at Shinjuku)
-DESCRIPTION:อาหารกลางวันย่านชินจูกุ\\n\\n📍 Shinjuku area\\n🍽️ แนะนำ:\\n- ราเมน\\n- อุด้ง\\n- ข้าวหน้าต่างๆ\\n\\n💰 งบ: ¥1,000-1,500/คน
+DESCRIPTION:อาหารกลางวันย่านชินจูกุ\n\n📍 Shinjuku area\n🍽️ แนะนำ:\n- ราเมน\n- อุด้ง\n- ข้าวหน้าต่างๆ\n\n💰 งบ: ¥1,000-1,500/คน
 LOCATION:Shinjuku, Tokyo
 CATEGORIES:FOOD
 STATUS:CONFIRMED
@@ -86,10 +92,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event7-checkin@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T130000
 DTEND;TZID=Asia/Tokyo:20260310T150000
 SUMMARY:➡️🏢 CHECK-IN - Shinjuku Granbell Hotel
-DESCRIPTION:เช็คอินที่พักคืนที่ 5-7\\n\\n🏨 Shinjuku Granbell Hotel\\n📍 2 Chome-14-5 Kabukicho, Shinjuku, Tokyo 160-0021\\n📞 +81-3-5155-2666\\n\\n🛏️ ห้อง: Economy Double Room Non-Smoking\\n📅 พัก 3 คืน (10-13 มี.ค.)\\n⏰ Check-out: 11:00 น. วันที่ 13 มี.ค.\\n\\n🚶 เดิน 5 นาทีจาก JR Shinjuku (East Exit)\\n\\n📝 หลัง Check-in: พักผ่อน + เก็บของ
+DESCRIPTION:เช็คอินที่พักคืนที่ 5-7\n\n🏨 Shinjuku Granbell Hotel\n📍 2 Chome-14-5 Kabukicho, Shinjuku, Tokyo 160-0021\n📞 +81-3-5155-2666\n\n🛏️ ห้อง: Economy Double Room Non-Smoking\n📅 พัก 3 คืน (10-13 มี.ค.)\n⏰ Check-out: 11:00 น. วันที่ 13 มี.ค.\n\n🚶 เดิน 5 นาทีจาก JR Shinjuku (East Exit)\n\n📝 หลัง Check-in: พักผ่อน + เก็บของ
 LOCATION:Shinjuku Granbell Hotel, 2 Chome-14-5 Kabukicho, Shinjuku, Tokyo 160-0021
 CATEGORIES:HOTEL
 PRIORITY:1
@@ -98,10 +105,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event8-travel-gotanda@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T150000
 DTEND;TZID=Asia/Tokyo:20260310T153000
 SUMMARY:🚃 เดินทางไปโกทันดะ (Travel to Gotanda)
-DESCRIPTION:ไปช็อปปิ้งรองเท้า\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Shinjuku → Gotanda\\n⏱️ ใช้เวลา: ~15-20 นาที
+DESCRIPTION:ไปช็อปปิ้งรองเท้า\n\n🚃 เส้นทาง:\nJR Yamanote Line: Shinjuku → Gotanda\n⏱️ ใช้เวลา: ~15-20 นาที
 LOCATION:Shinjuku to Gotanda Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -109,10 +117,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event9-abc-mart@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T153000
 DTEND;TZID=Asia/Tokyo:20260310T173000
 SUMMARY:👟 ช็อปปิ้งรองเท้า ABC-MART Outlet (Shoes Shopping)
-DESCRIPTION:ซื้อรองเท้าราคาดี\\n\\n📍 ABC-MART Outlet Gotanda\\n🏢 1-2-7 Nishigotanda, Shinagawa-ku\\n⏰ เปิด 11:00-20:00\\n\\n👟 แบรนด์:\\n- Onitsuka Tiger\\n- Skechers\\n- Nike\\n- Adidas\\n- New Balance\\n\\n💰 ลดสูงสุด 50%!\\n💰 งบ: ¥5,000-15,000
+DESCRIPTION:ซื้อรองเท้าราคาดี\n\n📍 ABC-MART Outlet Gotanda\n🏢 1-2-7 Nishigotanda, Shinagawa-ku\n⏰ เปิด 11:00-20:00\n\n👟 แบรนด์:\n- Onitsuka Tiger\n- Skechers\n- Nike\n- Adidas\n- New Balance\n\n💰 ลดสูงสุด 50%!\n💰 งบ: ¥5,000-15,000
 LOCATION:ABC-MART Outlet Gotanda, 1-2-7 Nishigotanda, Shinagawa-ku, Tokyo
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
@@ -120,10 +129,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event10-travel-ueno@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T173000
 DTEND;TZID=Asia/Tokyo:20260310T180000
 SUMMARY:🚃 เดินทางไปอุเอโนะ (Travel to Ueno)
-DESCRIPTION:ไปช็อปปิ้งที่ Takeya\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Gotanda → Ueno\\n⏱️ ใช้เวลา: ~25-30 นาที
+DESCRIPTION:ไปช็อปปิ้งที่ Takeya\n\n🚃 เส้นทาง:\nJR Yamanote Line: Gotanda → Ueno\n⏱️ ใช้เวลา: ~25-30 นาที
 LOCATION:Gotanda to Ueno Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -131,10 +141,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event11-takeya@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T180000
 DTEND;TZID=Asia/Tokyo:20260310T200000
 SUMMARY:🛍️ ช็อปปิ้ง Takeya อุเอโนะ (Shopping at Takeya)
-DESCRIPTION:ห้างสรรพสินค้าราคาดี\\n\\n📍 Takeya (ตึกม่วง)\\n🏢 2 Chome-27-1 Yushima, Taito-ku\\n⏰ เปิด 10:00-20:30\\n\\n🏬 ชั้นต่างๆ:\\n- ชั้น 1: ขนมญี่ปุ่น / ของฝาก\\n- ชั้น 2-3: เครื่องสำอาง / Skincare\\n- ชั้น 3+: เสื้อผ้า\\n\\n🛒 รายการซื้อ:\\n- ขนมญี่ปุ่น\\n- เครื่องสำอาง\\n- ของฝาก\\n\\n💰 งบ: ¥5,000-10,000
+DESCRIPTION:ห้างสรรพสินค้าราคาดี\n\n📍 Takeya (ตึกม่วง)\n🏢 2 Chome-27-1 Yushima, Taito-ku\n⏰ เปิด 10:00-20:30\n\n🏬 ชั้นต่างๆ:\n- ชั้น 1: ขนมญี่ปุ่น / ของฝาก\n- ชั้น 2-3: เครื่องสำอาง / Skincare\n- ชั้น 3+: เสื้อผ้า\n\n🛒 รายการซื้อ:\n- ขนมญี่ปุ่น\n- เครื่องสำอาง\n- ของฝาก\n\n💰 งบ: ¥5,000-10,000
 LOCATION:Takeya, 2 Chome-27-1 Yushima, Taito-ku, Tokyo
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
@@ -142,10 +153,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event12-abc-ueno@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T200000
 DTEND;TZID=Asia/Tokyo:20260310T203000
 SUMMARY:👟 ABC-MART อุเอโนะ (ABC-MART Ueno - Quick stop)
-DESCRIPTION:แวะดูรองเท้าเพิ่มเติม\\n\\n📍 ABC-MART Ueno\\n⏱️ แวะเร็วๆ ถ้าต้องการ\\n\\n💰 งบ: ตามความจำเป็น
+DESCRIPTION:แวะดูรองเท้าเพิ่มเติม\n\n📍 ABC-MART Ueno\n⏱️ แวะเร็วๆ ถ้าต้องการ\n\n💰 งบ: ตามความจำเป็น
 LOCATION:ABC-MART Ueno
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
@@ -153,10 +165,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event13-dinner@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T203000
 DTEND;TZID=Asia/Tokyo:20260310T210000
 SUMMARY:🍜 อาหารเย็น อุเอโนะ (Dinner at Ueno)
-DESCRIPTION:อาหารเย็นย่านอุเอโนะ\\n\\n📍 Ueno / Ameyoko area\\n🍽️ แนะนำ:\\n- ร้านอาหารในตลาด Ameyoko\\n- ราเมน\\n- อาหารญี่ปุ่นทั่วไป\\n\\n💰 งบ: ¥1,000-1,500/คน
+DESCRIPTION:อาหารเย็นย่านอุเอโนะ\n\n📍 Ueno / Ameyoko area\n🍽️ แนะนำ:\n- ร้านอาหารในตลาด Ameyoko\n- ราเมน\n- อาหารญี่ปุ่นทั่วไป\n\n💰 งบ: ¥1,000-1,500/คน
 LOCATION:Ueno, Tokyo
 CATEGORIES:FOOD
 STATUS:CONFIRMED
@@ -164,10 +177,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event14-travel-back@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T210000
 DTEND;TZID=Asia/Tokyo:20260310T213000
 SUMMARY:🚃 เดินทางกลับโรงแรม (Travel back to Hotel)
-DESCRIPTION:กลับที่พัก\\n\\n🚃 เส้นทาง:\\nJR Yamanote Line: Ueno → Shinjuku\\n⏱️ ใช้เวลา: ~25-30 นาที
+DESCRIPTION:กลับที่พัก\n\n🚃 เส้นทาง:\nJR Yamanote Line: Ueno → Shinjuku\n⏱️ ใช้เวลา: ~25-30 นาที
 LOCATION:Ueno to Shinjuku
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -175,10 +189,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day5-event15-rest@tokyotrip2026
+DTSTAMP:20251122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T213000
 DTEND;TZID=Asia/Tokyo:20260310T230000
 SUMMARY:😴 พักผ่อน + เตรียม Tokyo Wide Pass (Rest & Prepare TWP)
-DESCRIPTION:พักผ่อนและเตรียมตัว\\n\\n📝 เตรียมสำหรับวันพรุ่งนี้:\\n- เตรียมเสื้อผ้ากันหนาวหนักมาก (เล่นหิมะ!)\\n- ชาร์จอุปกรณ์\\n- เช็คเวลา Shinkansen\\n\\n🎫 Tokyo Wide Pass:\\n- ใช้ได้ 3 วัน (11-13 มี.ค.)\\n- ครอบคลุม Shinkansen ไป Gala Yuzawa\\n\\n🎯 วันพรุ่งนี้: ❄️ เล่นหิมะ Gala Yuzawa!
+DESCRIPTION:พักผ่อนและเตรียมตัว\n\n📝 เตรียมสำหรับวันพรุ่งนี้:\n- เตรียมเสื้อผ้ากันหนาวหนักมาก (เล่นหิมะ!)\n- ชาร์จอุปกรณ์\n- เช็คเวลา Shinkansen\n\n🎫 Tokyo Wide Pass:\n- ใช้ได้ 3 วัน (11-13 มี.ค.)\n- ครอบคลุม Shinkansen ไป Gala Yuzawa\n\n🎯 วันพรุ่งนี้: ❄️ เล่นหิมะ Gala Yuzawa!
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
