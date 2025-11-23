@@ -1,0 +1,1394 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>東京旅行 2026 - メイン概要</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .header-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Section */
+        .section {
+            padding: 40px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
+            display: inline-block;
+        }
+
+        /* Cards */
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #667eea;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .card-image {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        /* Day Timeline */
+        .day-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-left: 8px solid #667eea;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .day-info h3 {
+            font-size: 28px;
+            color: #1e3c72;
+        }
+
+        .day-info .date {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            padding-left: 30px;
+            border-left: 3px solid #667eea;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 20px;
+        }
+
+        .timeline-activity {
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #b8daff;
+        }
+
+        .info-box.highlight {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .info-box.success {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        /* Links */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            background: #764ba2;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 1024px) {
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hotel Card */
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hotel-content {
+            padding: 25px;
+        }
+
+        .hotel-name {
+            font-size: 22px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .hotel-detail {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .hotel-detail strong {
+            color: #667eea;
+        }
+
+        /* Place Detail */
+        .place-detail {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .place-detail h4 {
+            font-size: 22px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .place-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .place-detail li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .place-detail li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .footer .exchange-rate {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer .update-info {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Emoji Icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .badge-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        /* 2 Column Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .content-left {
+            /* Main content stays as is */
+        }
+
+        .content-right {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            min-height: 300px;
+        }
+
+        .content-right h4 {
+            font-size: 18px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Grid for Right Column */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* Extra Info Section */
+        .extra-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .extra-info h5 {
+            font-size: 16px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .extra-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .extra-info li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-link.pinterest {
+            background: #e60023;
+        }
+
+        .social-link.tiktok {
+            background: #000;
+        }
+
+        .social-link.lemon8 {
+            background: #ffeb3b;
+            color: #333;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.youtube {
+            background: #ff0000;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                font-size: 16px;
+            }
+
+            .container {
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 25px 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .day-card {
+                padding: 20px 15px;
+                border-left-width: 5px;
+            }
+
+            .day-header {
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+
+            .day-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-right: 15px;
+                flex-shrink: 0;
+            }
+
+            .day-info h3 {
+                font-size: 18px;
+            }
+
+            .day-info .date {
+                font-size: 15px;
+            }
+
+            .timeline-item {
+                margin-left: 25px;
+                padding-left: 20px;
+            }
+
+            .timeline-time {
+                font-size: 15px;
+            }
+
+            .timeline-activity {
+                font-size: 14px;
+            }
+
+            .hotel-content,
+            .place-detail,
+            .content-right {
+                padding: 20px 15px;
+            }
+
+            .hotel-name,
+            .place-detail h4 {
+                font-size: 18px;
+            }
+
+            .hotel-detail {
+                font-size: 14px;
+            }
+
+            .place-detail ul li {
+                font-size: 14px;
+                padding-left: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .info-box {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 10px 8px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .card-title,
+            .hotel-name,
+            .place-detail h4 {
+                font-size: 17px;
+            }
+
+            .day-info h3 {
+                font-size: 17px;
+            }
+
+            .timeline-activity,
+            .hotel-detail {
+                font-size: 13px;
+            }
+
+            .place-detail ul li {
+                font-size: 13px;
+                padding-left: 18px;
+            }
+
+            .link-button {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .info-box {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗼 東京旅行 2026</h1>
+            <div class="subtitle">完全な旅程 • 2026年3月6日〜13日</div>
+            <img src="../images/001.jpg" alt="東京タワーと夜の東京の街並み" class="header-image">
+        </div>
+
+        <!-- Flight Information -->
+        <div class="section">
+            <h2 class="section-title">✈️ フライト情報</h2>
+
+            <div class="grid-2">
+                <!-- Outbound Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛫 往路便 - SL 394</h3>
+                    <img src="../images/002.jpg" alt="離陸する飛行機" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>航空会社</strong></td>
+                            <td>タイ・ライオン・エア</td>
+                        </tr>
+                        <tr>
+                            <td><strong>日付</strong></td>
+                            <td>2026年3月6日(金)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>時間</strong></td>
+                            <td>06:15 ドンムアン (DMK) → 16:20 成田 (NRT)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ターミナル</strong></td>
+                            <td>成田国際空港 第2ターミナル</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>MYOWFY</td>
+                        </tr>
+                        <tr>
+                            <td><strong>機内持ち込み</strong></td>
+                            <td>7 kg (40×30×20 cm)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>受託手荷物</strong></td>
+                            <td>Arilek: 15 kg / Nunnaphat: なし</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ 重要:</strong> ドンムアン空港 (DMK) に03:15に到着 (出発の3時間前) | カウンター F-H
+                    </div>
+                </div>
+
+                <!-- Return Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛬 復路便 - XJ 607</h3>
+                    <img src="../images/003.jpg" alt="成田空港の内部" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>航空会社</strong></td>
+                            <td>タイ・エアアジアX</td>
+                        </tr>
+                        <tr>
+                            <td><strong>日付</strong></td>
+                            <td>2026年3月13日(金)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>時間</strong></td>
+                            <td>21:15 成田 (NRT) → 02:40+1 ドンムアン (DMK)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>ターミナル</strong></td>
+                            <td>成田国際空港 第1ターミナル</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>G7Y6YF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>受託手荷物</strong></td>
+                            <td>1人20 kg (追加購入)</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ 重要:</strong> 成田空港 (NRT) に17:15に到着 (出発の4時間前) | チェックイン前に免税手続きを行うこと
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accommodation -->
+        <div class="section">
+            <h2 class="section-title">🏨 宿泊施設 (7泊)</h2>
+
+            <div class="grid-3">
+                <!-- Hotel 1 -->
+                <div class="hotel-card">
+                    <img src="../images/004.jpg" alt="アパホテルのロビー" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🏨 アパホテル〈浅草 田原町駅前〉</h3>
+                        <p class="hotel-detail"><strong>日程:</strong> 3月6日〜8日 (2泊)</p>
+                        <p class="hotel-detail"><strong>部屋:</strong> ダブルルーム（禁煙）</p>
+                        <p class="hotel-detail"><strong>住所:</strong> 〒111-0035 東京都台東区西浅草1-2-3</p>
+                        <p class="hotel-detail"><strong>電話:</strong> +81-3-5830-0611</p>
+                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>チェックアウト:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>アクセス:</strong> 田原町駅（銀座線）から徒歩1分</p>
+
+                        <div class="info-box success">
+                            <strong>📍 周辺情報:</strong><br>
+                            • 浅草寺 - 740m<br>
+                            • 雷門 - 600m<br>
+                            • 仲見世通り - 650m<br>
+                            • ドン・キホーテ浅草店 - 500m<br>
+                            • 東京スカイツリー - 1.5 km
+                        </div>
+
+                        <a href="https://maps.google.com/?q=APA+Hotel+Asakusa+Tawaramachi+Ekimae" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.apahotel.com/hotel/shutoken/tokyo/asakusa-tawaramachi-ekimae/"
+                            target="_blank" class="link-button">🌐 ウェブサイト</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="hotel-card">
+                    <img src="../images/005.jpg" alt="ホテルから望む富士山" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">♨️ ホテルマイステイズ富士山 展望温泉</h3>
+                        <p class="hotel-detail"><strong>日程:</strong> 3月8日〜10日 (2泊)</p>
+                        <p class="hotel-detail"><strong>部屋:</strong> スタンダードダブル（禁煙）</p>
+                        <p class="hotel-detail"><strong>住所:</strong> 〒403-0011 山梨県富士吉田市新倉2654</p>
+                        <p class="hotel-detail"><strong>電話:</strong> +81-555-21-7510</p>
+                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>チェックアウト:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>アクセス:</strong> 河口湖駅から無料シャトルバス/タクシー</p>
+
+                        <div class="info-box success">
+                            <strong>✨ おすすめポイント:</strong><br>
+                            • 部屋から富士山の眺め！<br>
+                            • 天然温泉<br>
+                            • 忠霊塔 - 3 km<br>
+                            • 河口湖 - 5 km<br>
+                            • ⚠️ 入湯税 <strong>฿63 (約 ¥300)</strong> (現地払い)
+                        </div>
+
+                        <a href="https://maps.google.com/?q=HOTEL+MYSTAYS+Fuji+Onsen+Resort" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.mystays.com/hotel-mystays-fuji-onsen-resort-yamanashi/" target="_blank"
+                            class="link-button">🌐 ウェブサイト</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="hotel-card">
+                    <img src="../images/006.jpg" alt="新宿の夜の街並み" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🌃 新宿グランベルホテル</h3>
+                        <p class="hotel-detail"><strong>日程:</strong> 3月10日〜13日 (3泊)</p>
+                        <p class="hotel-detail"><strong>部屋:</strong> エコノミーダブルルーム（禁煙）</p>
+                        <p class="hotel-detail"><strong>住所:</strong> 〒160-0021 東京都新宿区歌舞伎町2-14-5</p>
+                        <p class="hotel-detail"><strong>電話:</strong> +81-3-5155-2666</p>
+                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>チェックアウト:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>アクセス:</strong> JR新宿駅（東口）から徒歩5分</p>
+
+                        <div class="info-box success">
+                            <strong>📍 周辺情報:</strong><br>
+                            • 歌舞伎町 - ホテル隣接<br>
+                            • ドン・キホーテ新宿店 - 300m<br>
+                            • ビックカメラ - 500m<br>
+                            • サンリオワールド - 800m<br>
+                            • ジブリストア - 600m
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Shinjuku+Granbell+Hotel" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.granbellhotel.jp/shinjuku/" target="_blank" class="link-button">🌐
+                            ウェブサイト</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Timeline -->
+        <div class="section">
+            <h2 class="section-title">📅 日別タイムライン</h2>
+
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div class="day-info">
+                        <h3>成田到着＆浅草からスタート</h3>
+                        <div class="date">2026年3月6日(金)</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">02:00</div>
+                    <div class="timeline-activity">🚗 自宅からドンムアン空港へ出発</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">04:30</div>
+                    <div class="timeline-activity">✈️ ドンムアン空港到着、タイ・ライオン・エアのカウンターF-Hでチェックイン</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:15</div>
+                    <div class="timeline-activity">🛫 SL394便出発 (飛行時間約6時間)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:20</div>
+                    <div class="timeline-activity">
+                        🛬 成田国際空港 第2ターミナル到着<br>
+                        • 入国審査と税関 (約40分)<br>
+                        • JR東日本トラベルサービスセンターで成田エクスプレス(N'EX)の切符を購入
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00-18:30</div>
+                    <div class="timeline-activity">
+                        🚄 成田エクスプレス(N'EX)で東京駅または上野駅へ<br>
+                        • メトロ銀座線に乗り換え → 田原町駅へ
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-19:00</div>
+                    <div class="timeline-activity">🏨 アパホテル〈浅草 田原町駅前〉にチェックイン、荷物を置く</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00-20:00</div>
+                    <div class="timeline-activity">
+                        🍽️ 浅草エリアで夕食<br>
+                        • おすすめ: 一蘭ラーメン、すき家、吉野家 (ホテル近く)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">
+                        🛍️ <strong>ドン・キホーテ浅草店で冬服の買い物</strong>
+                    </div>
+                </div>
+
+                <!-- Don Quijote Detail -->
+                <div class="place-detail">
+                    <h4>🏪 ドン・キホーテ浅草店</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/007.jpg" alt="商品が溢れるドン・キホーテの店頭" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>住所</strong></td>
+                                    <td>東京都台東区雷門2-10-4</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>営業時間</strong></td>
+                                    <td>🔥 <strong>24時間営業！</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>距離</strong></td>
+                                    <td>ホテルから徒歩約10分</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🛒 購入品:</strong></p>
+                            <ul>
+                                <li>冬用コート、ヒートテック (ユニクロ風) - 価格 <strong>฿420 - ฿1,050 (約 ¥2,000 - ¥5,000)</strong></li>
+                                <li>厚手の靴下、マフラー、ニット帽 - 価格 <strong>฿105 - ฿420 (約 ¥500 - ¥2,000)</strong></li>
+                                <li>傘、日用品</li>
+                                <li>3-4階: 衣料品 | 2階: 化粧品</li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ 利点:</strong> 安価、ホテルに近い、24時間営業、品揃え豊富、<strong>฿1,050 (約
+                                    ¥5,000)</strong>以上の購入で免税可能
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                            <a href="https://www.donki.com/store/shop_detail.php?shop_id=29" target="_blank"
+                                class="link-button">🌐 ウェブサイト</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 写真と詳細情報</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/008.jpg" alt="ドン・キホーテ店内">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/009.jpg" alt="日本の商品">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/010.jpg" alt="夜の浅草">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 SNSからのヒント</h5>
+                                <ul>
+                                    <li>• 2階の化粧品は値段が安い！</li>
+                                    <li>• 1階のお菓子は種類が豊富。</li>
+                                    <li>• 免税カウンターは1階。</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 休憩 (明日の準備: カメラ購入！)</div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div class="day-info">
+                        <h3>浅草観光＆東京スカイツリーで夕日観賞 🌇</h3>
+                        <div class="date">2026年3月7日(土)</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-08:00</div>
+                    <div class="timeline-activity">
+                        🌅 起床、ホテルで朝食<br>
+                        • 免税ショッピングのためにパスポートを準備
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30-09:00</div>
+                    <div class="timeline-activity">
+                        🚇 秋葉原へ移動<br>
+                        • メトロ銀座線: 田原町駅 → 末広町駅 (5分)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:30-11:00</div>
+                    <div class="timeline-activity">📸 <strong>ヨドバシAkibaでカメラ2台を購入</strong></div>
+                </div>
+
+                <!-- Yodobashi Detail -->
+                <div class="place-detail">
+                    <h4>📸 ヨドバシAkiba</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/011.jpg" alt="ヨドバシの様々なカメラモデルが並ぶ棚" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>住所</strong></td>
+                                    <td>東京都千代田区神田花岡町1-1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>営業時間</strong></td>
+                                    <td>09:30-22:00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>フロア</strong></td>
+                                    <td>9階建て (カメラフロア: 6-7階)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>📷 購入するカメラ:</strong></p>
+                            <ul>
+                                <li><strong>お父さんのカメラ (中古):</strong> Canon EOS 800D/200D/77D/M50 - 価格 <strong>฿3,150 -
+                                        ฿4,620 (約 ¥15,000 - ¥22,000)</strong></li>
+                                <li><strong>ポージャイのカメラ (新品):</strong> Ricoh WG-80 / Canon SX740 HS / Sony WX500 - 価格
+                                    <strong>฿6,300 - ฿9,450 (約 ¥30,000 - ¥45,000)</strong>
+                                </li>
+                            </ul>
+
+                            <p><strong>🔋 アクセサリー:</strong></p>
+                            <ul>
+                                <li>予備バッテリー LP-E17 (Canon用) - 価格 <strong>฿630 (約 ¥3,000)</strong> 🔥 必須！</li>
+                                <li>64GB/128GBメモリーカード (SanDisk) - 価格 <strong>฿315 - ฿630 (約 ¥1,500 - ¥3,000)</strong>
+                                </li>
+                                <li>小さなカメラバッグ - 価格 <strong>฿420 - ฿840 (約 ¥2,000 - ¥4,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ 利点:</strong>
+                                親切なスタッフ、商品を試用可能、免税サービスあり（パスポート要）、完全保証、新品・中古カメラの両方あり、すべてのアクセサリーが一度に揃う
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.yodobashi.com/ec/store/0018/" target="_blank" class="link-button">🌐
+                                ウェブサイト</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 写真と詳細情報</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/012.jpg" alt="テーブルの上のカメラ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/013.jpg" alt="ヴィンテージカメラ機材">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/014.jpg" alt="家電量販店の雰囲気">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 SNSからのヒント</h5>
+                                <ul>
+                                    <li>• ここにPinterest/Lemon8/TikTokからの写真を追加</li>
+                                    <li>• レビュー動画のリンクを追加</li>
+                                    <li>• レビューからのヒントを追加</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00-12:00</div>
+                    <div class="timeline-activity">
+                        🏮 浅草寺へ行き、昼食<br>
+                        <strong>すぐに新しいカメラを試してみましょう！ 📸</strong>
+                    </div>
+                </div>
+
+                <!-- Senso-ji Detail -->
+                <div class="place-detail">
+                    <h4>⛩️ 浅草寺</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/015.jpg" alt="夜の浅草寺と五重塔" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>住所</strong></td>
+                                    <td>東京都台東区浅草2-3-1</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>営業時間</strong></td>
+                                    <td>06:00-17:00 (入場無料)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>創建</strong></td>
+                                    <td>西暦628年 (東京最古の寺)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 ハイライト:</strong></p>
+                            <ul>
+                                <li><strong>雷門:</strong> 浅草のシンボルである巨大な赤い提灯の門。</li>
+                                <li><strong>仲見世通り:</strong> 約90店舗が並ぶ250mの商店街。</li>
+                                <li><strong>宝蔵門:</strong> 本堂前の内側の門。</li>
+                                <li><strong>本堂:</strong> 観音様が祀られている場所。</li>
+                                <li><strong>五重塔:</strong> 高さ53メートル。</li>
+                            </ul>
+
+                            <p><strong>🛍️ 必食グルメ (仲見世通り):</strong></p>
+                            <ul>
+                                <li>人形焼 - <strong>฿42 (約 ¥200)</strong></li>
+                                <li>せんべい - <strong>฿63 - ฿126 (約 ¥300 - ¥600)</strong></li>
+                                <li>抹茶アイスクリーム - <strong>฿84 (約 ¥400)</strong></li>
+                                <li>お守り - <strong>฿105 - ฿210 (約 ¥500 - ¥1,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 ヒント:</strong> <strong>฿21 (約 ¥100)</strong>でおみくじを引いてみましょう -
+                                「凶」が出たら、お寺の棚に結びつけ、持ち帰らないようにしましょう。
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Senso-ji+Temple" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.senso-ji.jp/english/" target="_blank" class="link-button">🌐 ウェブサイト</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 写真と詳細情報</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/016.jpg" alt="雷門の巨大な提灯">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/017.jpg" alt="店と人々で賑わう仲見世通り">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/018.jpg" alt="夜の浅草寺">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 SNSからのヒント</h5>
+                                <ul>
+                                    <li>• ここにPinterest/Lemon8/TikTokからの写真を追加</li>
+                                    <li>• 良い写真スポット</li>
+                                    <li>• おすすめの屋台</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                                <a href="#" class="social-link lemon8">Lemon8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30-15:00</div>
+                    <div class="timeline-activity">🚇 東京スカイツリーへ移動 (押上駅)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00-18:30</div>
+                    <div class="timeline-activity">🗼 <strong>東京スカイツリー＆夕日鑑賞</strong></div>
+                </div>
+
+                <!-- Skytree Detail -->
+                <div class="place-detail">
+                    <h4>🗼 東京スカイツリー</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/019.jpg" alt="そびえ立つ東京スカイツリー" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>住所</strong></td>
+                                    <td>東京都墨田区押上1-1-2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>高さ</strong></td>
+                                    <td>634メートル (世界一高いタワー)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>営業時間</strong></td>
+                                    <td>08:00-22:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎫 入場料:</strong></p>
+                            <ul>
+                                <li><strong>天望デッキ (350m):</strong> 大人 <strong>฿651 (約 ¥3,100)</strong> / 子供 <strong>฿326
+                                        (約 ¥1,550)</strong></li>
+                                <li><strong>天望回廊 (450m):</strong> 追加 <strong>฿216 (約 ¥1,030)</strong> / 子供 <strong>฿172
+                                        (約 ¥820)</strong></li>
+                                <li><strong>2名合計 (回廊まで):</strong> <strong>฿1,775 (約 ¥8,450)</strong></li>
+                            </ul>
+
+                            <div class="info-box highlight">
+                                <strong>🌅 日没時間:</strong> 17:45<br>
+                                <strong>📸 ゴールデンアワー:</strong> 17:15-18:15 (写真撮影に最適！)<br>
+                                昼→夕日→夜の景色を楽しむために、17:00前に上がることをお勧めします。
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Skytree" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.tokyo-skytree.jp/en/" target="_blank" class="link-button">🌐 ウェブサイト</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 写真と詳細情報</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/020.jpg" alt="夕暮れ時の東京の街並み">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/021.jpg" alt="富士山と東京の街並み">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/022.jpg" alt="夜の東京の街並み">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 SNSからのヒント</h5>
+                                <ul>
+                                    <li>• ここにPinterest/Lemon8/TikTokからの写真を追加</li>
+                                    <li>• 夕日の写真スポット</li>
+                                    <li>• ソラマチのレストラン</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-20:00</div>
+                    <div class="timeline-activity">🍽️ 東京ソラマチで夕食 (スカイツリー隣のモール)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">🛍️ <strong>東京キャラクターストリート</strong> (東京駅地下)</div>
+                </div>
+
+                <!-- Character Street Detail -->
+                <div class="place-detail">
+                    <h4>🧸 東京キャラクターストリート</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/027.jpg" alt="キャラクター人形やおもちゃを販売する店" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>住所</strong></td>
+                                    <td>東京駅B1F (八重洲口)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>営業時間</strong></td>
+                                    <td>10:00-20:30</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>アクセス</strong></td>
+                                    <td>半蔵門線: 押上駅 → 三越前駅 (約30分)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 おすすめ店舗 (ポージャイがきっと好き！):</strong></p>
+                            <ul>
+                                <li><strong>どんぐり共和国:</strong> 公式スタジオジブリストア - トトロ、キキ、カオナシ。</li>
+                                <li><strong>サンリオギフトゲート:</strong> ハローキティ、シナモロール、マイメロディ。</li>
+                                <li><strong>ポケモンストア:</strong> ピカチュウやすべてのポケモングッズ。</li>
+                                <li><strong>スヌーピータウン:</strong> ピーナッツ/スヌーピー。</li>
+                                <li><strong>ウルトラマンワールド:</strong> ウルトラマンファン向け。</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Character+Street" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                            <a href="https://www.tokyoeki-1bangai.co.jp/street/character" target="_blank"
+                                class="link-button">🌐 ウェブサイト</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 写真と詳細情報</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/023.jpg" alt="日本のキャラクター人形">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/024.jpg" alt="サンリオグッズ">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/025.jpg" alt="東京駅">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/026.jpg" alt="東京駅">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/027.jpg" alt="東京駅">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 SNSからのヒント</h5>
+                                <ul>
+                                    <li>• ジブリストアには限定品あり！</li>
+                                    <li>• ポケモンストアは夕方混雑します。</li>
+                                    <li>• 18:00前に訪れるのがおすすめ。</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 ホテルに戻り、明日のチェックアウトの準備。</div>
+                </div>
+            </div>
+
+            <!-- Day 3 to 8 need translation -->
+
+        </div>
+    </div>
+    <script src="../asset/js/common.js"></script>
+</body>
+
+</html>

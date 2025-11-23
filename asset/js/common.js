@@ -6,41 +6,82 @@
 // =============================================
 // Initialize on DOM Ready
 // =============================================
-document.addEventListener('DOMContentLoaded', function() {
-    initNavigator();
-    initGoToTop();
-    initLightbox();
-    initServiceWorker();
+document.addEventListener('DOMContentLoaded', function () {
+    try {
+        initNavigator();
+        initGoToTop();
+        initLightbox();
+        initServiceWorker();
+    } catch (e) {
+        console.error("Initialization failed:", e);
+        // Fallback or error message if needed
+    }
 });
+
+// =============================================
+// Global Translations
+// =============================================
+const translations = {
+    'th': { 'home': 'หน้าแรก', 'trip-plan': 'แผนการเดินทาง', 'summary-page': 'หน้าหลักสรุป', 'printable-cover': 'Cover Printable', 'shopping-list': 'Shopping List', 'language': 'ภาษา / Language', 'menuAria': 'เมนู', 'homeTitle': 'หน้าแรก' },
+    'en': { 'home': 'Home', 'trip-plan': 'Itinerary', 'summary-page': 'Summary Page', 'printable-cover': 'Printable Cover', 'shopping-list': 'Shopping List', 'language': 'Language / 言語', 'menuAria': 'Menu', 'homeTitle': 'Home' },
+    'jp': { 'home': 'ホーム', 'trip-plan': '旅行計画', 'summary-page': '概要ページ', 'printable-cover': '印刷用カバー', 'shopping-list': '買い物リスト', 'language': '言語 / Language', 'menuAria': 'メニュー', 'homeTitle': 'ホーム' }
+};
+
+function getCurrentLanguage() {
+    // 1. Priority: HTML lang attribute
+    const htmlLang = document.documentElement.lang;
+    if (htmlLang === 'ja') return 'jp'; // Map 'ja' to 'jp' key
+    if (translations[htmlLang]) return htmlLang;
+
+    // 2. Fallback: URL path detection
+    const path = window.location.pathname;
+    // Handle both forward slashes and backslashes (Windows file paths)
+    const normalizedPath = path.replace(/\\/g, '/');
+
+    if (normalizedPath.includes('/en/')) return 'en';
+    if (normalizedPath.includes('/jp/')) return 'jp';
+    if (normalizedPath.includes('/th/')) return 'th';
+
+    // 3. Fallback: Local Storage
+    return localStorage.getItem('tokyo-trip-lang') || 'th';
+}
 
 // =============================================
 // Navigator Menu (Top Right)
 // =============================================
 function initNavigator() {
-    // Determine base path based on current location
-    const path = window.location.pathname;
-    const isInSubfolder = path.includes('/th/') || path.includes('/en/') || path.includes('/jp/');
-    const basePath = isInSubfolder ? '../' : '';
+    const currentLang = getCurrentLanguage();
+    const t = translations[currentLang] || translations['th'];
 
-    // Create Navigator HTML
+    // Determine paths based on current location
+    const path = window.location.pathname.replace(/\\/g, '/');
+    // Check if we are in a language subfolder (en, jp, th)
+    // We assume structure is root/index.html and root/lang/page.html
+    const isInSubfolder = /\/(en|jp|th)\//.test(path);
+
+    const homePath = isInSubfolder ? '../index.html' : 'index.html';
+    // If we are in a subfolder, links to other pages in same lang are siblings
+    // If we are at root, we need to go into the lang folder
+    const pagePrefix = isInSubfolder ? '' : `${currentLang}/`;
+
     const navHTML = `
         <div id="navMenu">
-            <button id="navMenuBtn" aria-label="Menu">☰</button>
+            <button id="navMenuBtn" aria-label="${t.menuAria}">☰</button>
         </div>
         <div id="navOverlay"></div>
         <nav id="navMenuPanel">
             <div class="nav-header">🗾 Tokyo Trip 2026</div>
             <ul class="nav-links">
-                <li><a href="${basePath}index.html" data-page="index"><span class="nav-icon">🏠</span> หน้าแรก</a></li>
-                <li><a href="${basePath}th/trip-plan.html" data-page="trip-plan"><span class="nav-icon">📅</span> แผนการเดินทาง</a></li>
-                <li><a href="${basePath}th/cover-page.html" data-page="cover-page"><span class="nav-icon">📋</span> หน้าหลักสรุป</a></li>
-                <li><a href="${basePath}th/cover.html" data-page="cover"><span class="nav-icon">🖨️</span> Cover Printable</a></li>
-                <li><a href="${basePath}th/shopping-list.html" data-page="shopping-list"><span class="nav-icon">🛍️</span> Shopping List</a></li>
+                <li><a href="${homePath}" data-page="index"><span class="nav-icon">🏠</span> ${t.home}</a></li>
+                <li><a href="${pagePrefix}trip-plan.html" data-page="trip-plan"><span class="nav-icon">📅</span> ${t['trip-plan']}</a></li>
+                <li><a href="${pagePrefix}cover-page.html" data-page="cover-page"><span class="nav-icon">📋</span> ${t['summary-page']}</a></li>
+                <li><a href="${pagePrefix}cover.html" data-page="cover"><span class="nav-icon">🖨️</span> ${t['printable-cover']}</a></li>
+                <li><a href="${pagePrefix}shopping-list.html" data-page="shopping-list"><span class="nav-icon">🛍️</span> ${t['shopping-list']}</a></li>
             </ul>
             <div class="nav-lang">
-                <div class="nav-lang-title">ภาษา / Language</div>
+                <div class="nav-lang-title">${t.language}</div>
                 <div class="nav-lang-btns">
-                    <button class="nav-lang-btn active" data-lang="th">🇹🇭 TH</button>
+                    <button class="nav-lang-btn" data-lang="th">🇹🇭 TH</button>
                     <button class="nav-lang-btn" data-lang="en">🇬🇧 EN</button>
                     <button class="nav-lang-btn" data-lang="jp">🇯🇵 JP</button>
                 </div>
@@ -48,61 +89,28 @@ function initNavigator() {
         </nav>
     `;
 
-    // Insert Navigator
     document.body.insertAdjacentHTML('beforeend', navHTML);
 
-    // Get elements
-    const menuBtn = document.getElementById('navMenuBtn');
-    const menuPanel = document.getElementById('navMenuPanel');
-    const overlay = document.getElementById('navOverlay');
-    const langBtns = document.querySelectorAll('.nav-lang-btn');
+    document.getElementById('navMenuBtn').addEventListener('click', toggleMenu);
+    document.getElementById('navOverlay').addEventListener('click', closeMenu);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
 
-    // Toggle menu
-    menuBtn.addEventListener('click', function() {
-        toggleMenu();
-    });
-
-    // Close on overlay click
-    overlay.addEventListener('click', function() {
-        closeMenu();
-    });
-
-    // Close on escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') {
-            closeMenu();
-        }
-    });
-
-    // Language buttons
-    langBtns.forEach(btn => {
-        btn.addEventListener('click', function() {
-            const lang = this.dataset.lang;
-            switchLanguage(lang);
-
-            // Update active state
-            langBtns.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
+    document.querySelectorAll('.nav-lang-btn').forEach(btn => {
+        btn.addEventListener('click', function () {
+            switchLanguage(this.dataset.lang);
         });
     });
 
-    // Highlight current page
     highlightCurrentPage();
-
-    // Load saved language
-    const savedLang = localStorage.getItem('tokyo-trip-lang') || 'th';
-    langBtns.forEach(btn => {
-        btn.classList.toggle('active', btn.dataset.lang === savedLang);
-    });
+    const activeBtn = document.querySelector(`.nav-lang-btn[data-lang="${currentLang}"]`);
+    if (activeBtn) activeBtn.classList.add('active');
 }
 
 function toggleMenu() {
     const menuBtn = document.getElementById('navMenuBtn');
     const menuPanel = document.getElementById('navMenuPanel');
     const overlay = document.getElementById('navOverlay');
-
     const isOpen = menuPanel.classList.contains('open');
-
     if (isOpen) {
         closeMenu();
     } else {
@@ -117,7 +125,6 @@ function closeMenu() {
     const menuBtn = document.getElementById('navMenuBtn');
     const menuPanel = document.getElementById('navMenuPanel');
     const overlay = document.getElementById('navOverlay');
-
     menuPanel.classList.remove('open');
     overlay.classList.remove('show');
     menuBtn.classList.remove('active');
@@ -125,39 +132,40 @@ function closeMenu() {
 }
 
 function highlightCurrentPage() {
-    const path = window.location.pathname;
-    const links = document.querySelectorAll('.nav-links a');
-
-    links.forEach(link => {
-        const href = link.getAttribute('href');
-        if (path.includes(href) || (path.endsWith('/') && href === 'index.html')) {
+    const pageName = window.location.pathname.replace(/\\/g, '/').split('/').pop();
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        const linkName = link.getAttribute('href').split('/').pop();
+        if (linkName === pageName) {
             link.classList.add('active');
         }
     });
+    if (pageName === 'index.html' || pageName === '') {
+        document.querySelector('a[data-page="index"]')?.classList.add('active');
+    }
 }
 
-function switchLanguage(lang) {
-    localStorage.setItem('tokyo-trip-lang', lang);
+function switchLanguage(targetLang) {
+    localStorage.setItem('tokyo-trip-lang', targetLang);
 
-    // Get current path
-    const path = window.location.pathname;
+    const path = window.location.pathname.replace(/\\/g, '/');
+    const currentFilename = path.split('/').pop() || 'index.html';
 
-    // Replace language in path
-    let newPath;
-    if (path.includes('/th/')) {
-        newPath = path.replace('/th/', `/${lang}/`);
-    } else if (path.includes('/en/')) {
-        newPath = path.replace('/en/', `/${lang}/`);
-    } else if (path.includes('/jp/')) {
-        newPath = path.replace('/jp/', `/${lang}/`);
+    // Check if we are currently in a subfolder
+    const isInSubfolder = /\/(en|jp|th)\//.test(path);
+
+    if (isInSubfolder) {
+        // We are in .../lang/page.html
+        // We want to go to .../targetLang/page.html
+        // So we go up one level (../) and then into targetLang
+        window.location.href = `../${targetLang}/${currentFilename}`;
     } else {
-        // On index page, just save preference
-        return;
-    }
-
-    // Navigate if different
-    if (newPath !== path) {
-        window.location.href = newPath;
+        // We are at root (index.html likely)
+        // We want to go to targetLang/trip-plan.html (default landing for lang switch from home)
+        // Or if we map index to a specific page? 
+        // Usually index is just index. Let's assume if we switch lang from index, we go to trip-plan or stay on index if index is localized?
+        // The current project seems to have index.html only at root.
+        // If user switches lang at root, maybe redirect to trip-plan in that lang?
+        window.location.href = `${targetLang}/trip-plan.html`;
     }
 }
 
@@ -165,31 +173,17 @@ function switchLanguage(lang) {
 // Go-to-Top Button (Bottom Left)
 // =============================================
 function initGoToTop() {
-    // Create button
     const btn = document.createElement('button');
     btn.id = 'goToTop';
     btn.innerHTML = '↑';
     btn.setAttribute('aria-label', 'Go to top');
     document.body.appendChild(btn);
-
-    // Show/hide on scroll
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 300) {
-            btn.classList.add('show');
-        } else {
-            btn.classList.remove('show');
-        }
+    window.addEventListener('scroll', () => {
+        btn.classList.toggle('show', window.scrollY > 300);
     });
-
-    // Scroll to top on click
-    btn.addEventListener('click', function() {
-        window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-        });
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
-
-    // Create Home button
     initHomeButton();
 }
 
@@ -197,18 +191,17 @@ function initGoToTop() {
 // Home Button (Bottom Right)
 // =============================================
 function initHomeButton() {
-    // Determine base path
-    const path = window.location.pathname;
-    const isInSubfolder = path.includes('/th/') || path.includes('/en/') || path.includes('/jp/');
+    const path = window.location.pathname.replace(/\\/g, '/');
+    const isInSubfolder = /\/(en|jp|th)\//.test(path);
     const basePath = isInSubfolder ? '../' : '';
+    const currentLang = getCurrentLanguage();
 
-    // Create button
     const btn = document.createElement('a');
     btn.id = 'homeBtn';
     btn.href = basePath + 'index.html';
     btn.innerHTML = '🏠';
     btn.setAttribute('aria-label', 'Go to home');
-    btn.title = 'หน้าแรก';
+    btn.title = translations[currentLang] ? translations[currentLang].homeTitle : 'Home';
     document.body.appendChild(btn);
 }
 
@@ -216,30 +209,19 @@ function initHomeButton() {
 // Image Lightbox / Popup
 // =============================================
 function initLightbox() {
-    // Create lightbox container
     const lightbox = document.createElement('div');
     lightbox.id = 'lightbox';
     lightbox.className = 'lightbox';
-    lightbox.innerHTML = `
-        <button class="lightbox-close" aria-label="Close">✕</button>
-        <img src="" alt="Full size image">
-    `;
+    lightbox.innerHTML = `<button class="lightbox-close" aria-label="Close">✕</button><img src="" alt="Full size image">`;
     document.body.appendChild(lightbox);
 
     const lightboxImg = lightbox.querySelector('img');
     const closeBtn = lightbox.querySelector('.lightbox-close');
 
-    // Find all images and make them clickable
-    const images = document.querySelectorAll('img:not(.no-lightbox):not([src*="icon"]):not([src*="logo"])');
-
-    images.forEach(img => {
-        // Skip very small images (icons, etc.)
-        if (img.naturalWidth < 100 || img.naturalHeight < 100) return;
-
-        // Add clickable class and event
+    document.querySelectorAll('img:not(.no-lightbox):not([src*="icon"]):not([src*="logo"])').forEach(img => {
+        if (img.naturalWidth < 100 && img.naturalHeight < 100 && img.clientWidth < 100) return;
         img.classList.add('clickable-img');
-
-        img.addEventListener('click', function(e) {
+        img.addEventListener('click', function (e) {
             e.preventDefault();
             lightboxImg.src = this.src;
             lightboxImg.alt = this.alt || 'Image';
@@ -248,25 +230,18 @@ function initLightbox() {
         });
     });
 
-    // Close lightbox on click
-    lightbox.addEventListener('click', function(e) {
-        if (e.target === lightbox || e.target === closeBtn) {
-            closeLightbox();
-        }
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape' && lightbox.classList.contains('active')) {
-            closeLightbox();
-        }
-    });
-
-    function closeLightbox() {
+    const closeLightbox = () => {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
         lightboxImg.src = '';
-    }
+    };
+
+    lightbox.addEventListener('click', e => {
+        if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+    });
 }
 
 // =============================================
@@ -274,74 +249,45 @@ function initLightbox() {
 // =============================================
 function initServiceWorker() {
     if ('serviceWorker' in navigator) {
-        const isGithubPages = window.location.hostname === 'arilekt.github.io';
-        // The repository name from user feedback on the working manifest.json URL
-        const repoName = 'tokyo-trip-2026-pages'; 
-        
-        // Define the base path for the site. On GitHub Pages, it's /<repo-name>/.
-        const siteBasePath = isGithubPages ? `/${repoName}/` : '/';
-        
-        // The path to the service worker file must be an absolute path from the origin.
-        const swPath = `${siteBasePath}sw.js`;
-
-        navigator.serviceWorker.register(swPath, { scope: siteBasePath })
-            .then(function(registration) {
-                console.log('SW registered with scope:', registration.scope);
-            })
-            .catch(function(error) {
-                console.log('SW registration failed:', error);
-            });
+        const isGithubPages = window.location.hostname.includes('github.io');
+        const repoName = 'tokyo-trip-2026-pages';
+        const scope = isGithubPages ? `/${repoName}/` : '/';
+        navigator.serviceWorker.register(`${scope}sw.js`, { scope: scope })
+            .then(reg => console.log('SW registered:', reg.scope))
+            .catch(err => console.log('SW registration failed:', err));
     }
 }
 
 // =============================================
 // Utility Functions
 // =============================================
-
-// Copy text to clipboard
 function copyText(text) {
-    if (navigator.clipboard) {
-        navigator.clipboard.writeText(text).then(() => {
-            showToast('📋 คัดลอกแล้ว: ' + text);
-        });
-    } else {
-        // Fallback for older browsers
-        const textarea = document.createElement('textarea');
-        textarea.value = text;
-        document.body.appendChild(textarea);
-        textarea.select();
-        document.execCommand('copy');
-        document.body.removeChild(textarea);
-        showToast('📋 คัดลอกแล้ว: ' + text);
-    }
+    const message = {
+        'th': 'คัดลอกแล้ว',
+        'en': 'Copied',
+        'jp': 'コピーしました'
+    };
+    const currentLang = getCurrentLanguage();
+    navigator.clipboard.writeText(text).then(() => {
+        showToast(`📋 ${message[currentLang]}: ${text}`);
+    }).catch(err => {
+        console.error('Copy failed', err);
+    });
 }
 
-// Show toast notification
 function showToast(message) {
-    // Remove existing toast
     const existing = document.querySelector('.toast');
     if (existing) existing.remove();
 
-    // Create toast
     const toast = document.createElement('div');
     toast.className = 'toast';
     toast.textContent = message;
     toast.style.cssText = `
-        position: fixed;
-        bottom: 80px;
-        left: 50%;
-        transform: translateX(-50%);
-        background: #1e293b;
-        color: white;
-        padding: 0.75rem 1.5rem;
-        border-radius: 8px;
-        font-size: 0.9rem;
-        z-index: 9999;
-        animation: fadeInOut 2s ease;
-    `;
+        position: fixed; bottom: 80px; left: 50%; transform: translateX(-50%);
+        background: #1e293b; color: white; padding: 0.75rem 1.5rem; border-radius: 8px;
+        font-size: 0.9rem; z-index: 9999; animation: fadeInOut 2s ease;`;
     document.body.appendChild(toast);
 
-    // Remove after animation
     setTimeout(() => toast.remove(), 2000);
 }
 
@@ -353,6 +299,5 @@ style.textContent = `
         15% { opacity: 1; transform: translate(-50%, 0); }
         85% { opacity: 1; transform: translate(-50%, 0); }
         100% { opacity: 0; transform: translate(-50%, -20px); }
-    }
-`;
+    }`;
 document.head.appendChild(style);

@@ -1,0 +1,2232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Trip 2026 - Main Summary</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100%;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .header .subtitle {
+            font-size: 24px;
+            opacity: 0.9;
+        }
+
+        .header-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Section */
+        .section {
+            padding: 40px;
+            border-bottom: 3px solid #f0f0f0;
+        }
+
+        .section:last-child {
+            border-bottom: none;
+        }
+
+        .section-title {
+            font-size: 32px;
+            color: #1e3c72;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 4px solid #667eea;
+            display: inline-block;
+        }
+
+        /* Cards */
+        .card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            border-left: 5px solid #667eea;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #2a5298;
+            margin-bottom: 15px;
+        }
+
+        .card-image {
+            width: 100%;
+            max-height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+
+        /* Day Timeline */
+        .day-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            border-left: 8px solid #667eea;
+        }
+
+        .day-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .day-number {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 20px;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .day-info h3 {
+            font-size: 28px;
+            color: #1e3c72;
+        }
+
+        .day-info .date {
+            font-size: 18px;
+            color: #666;
+        }
+
+        .timeline-item {
+            padding: 15px 0;
+            padding-left: 30px;
+            border-left: 3px solid #667eea;
+            margin-left: 40px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            background: #667eea;
+            border-radius: 50%;
+        }
+
+        .timeline-time {
+            font-weight: bold;
+            color: #764ba2;
+            font-size: 20px;
+        }
+
+        .timeline-activity {
+            margin-top: 8px;
+            font-size: 18px;
+        }
+
+        /* Info Box */
+        .info-box {
+            background: #e8f4f8;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 2px solid #b8daff;
+        }
+
+        .info-box.highlight {
+            background: #fff3cd;
+            border-color: #ffc107;
+        }
+
+        .info-box.success {
+            background: #d4edda;
+            border-color: #28a745;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        th,
+        td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 2px solid #dee2e6;
+        }
+
+        th {
+            background: #1e3c72;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        /* Links */
+        a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #764ba2;
+        }
+
+        .link-button {
+            display: inline-block;
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .link-button:hover {
+            background: #764ba2;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Grid */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        @media (max-width: 1024px) {
+
+            .grid-2,
+            .grid-3 {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Hotel Card */
+        .hotel-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hotel-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .hotel-content {
+            padding: 25px;
+        }
+
+        .hotel-name {
+            font-size: 22px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .hotel-detail {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .hotel-detail strong {
+            color: #667eea;
+        }
+
+        /* Place Detail */
+        .place-detail {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+        }
+
+        .place-detail h4 {
+            font-size: 22px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        .place-detail ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .place-detail li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .place-detail li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #28a745;
+            font-weight: bold;
+        }
+
+        /* Footer */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .footer .exchange-rate {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer .update-info {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Emoji Icons */
+        .icon {
+            font-size: 24px;
+            margin-right: 10px;
+        }
+
+        /* Badge */
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin: 5px;
+        }
+
+        .badge-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .badge-success {
+            background: #28a745;
+            color: white;
+        }
+
+        .badge-warning {
+            background: #ffc107;
+            color: #333;
+        }
+
+        /* 2 Column Content Layout */
+        .content-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .content-left {
+            /* Main content stays as is */
+        }
+
+        .content-right {
+            background: #fff;
+            border-radius: 15px;
+            padding: 20px;
+            border: 2px dashed #ddd;
+            min-height: 300px;
+        }
+
+        .content-right h4 {
+            font-size: 18px;
+            color: #764ba2;
+            margin-bottom: 15px;
+        }
+
+        /* Gallery Grid for Right Column */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            aspect-ratio: 1;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-item.large {
+            grid-column: span 2;
+            aspect-ratio: 16/9;
+        }
+
+        /* Extra Info Section */
+        .extra-info {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        .extra-info h5 {
+            font-size: 16px;
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .extra-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .extra-info li {
+            padding: 5px 0;
+            font-size: 14px;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+
+        .social-link:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+            color: white;
+        }
+
+        .social-link.pinterest {
+            background: #e60023;
+        }
+
+        .social-link.tiktok {
+            background: #000;
+        }
+
+        .social-link.lemon8 {
+            background: #ffeb3b;
+            color: #333;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.youtube {
+            background: #ff0000;
+        }
+
+        @media (max-width: 1024px) {
+            .content-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            body {
+                padding: 0;
+                font-size: 16px;
+            }
+
+            .container {
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .header {
+                padding: 25px 15px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .header .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 25px 15px;
+            }
+
+            .section-title {
+                font-size: 22px;
+                margin-bottom: 20px;
+                padding-bottom: 10px;
+            }
+
+            .card {
+                padding: 15px;
+            }
+
+            .card-title {
+                font-size: 18px;
+            }
+
+            .day-card {
+                padding: 20px 15px;
+                border-left-width: 5px;
+            }
+
+            .day-header {
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+
+            .day-number {
+                width: 50px;
+                height: 50px;
+                font-size: 20px;
+                margin-right: 15px;
+                flex-shrink: 0;
+            }
+
+            .day-info h3 {
+                font-size: 18px;
+            }
+
+            .day-info .date {
+                font-size: 15px;
+            }
+
+            .timeline-item {
+                margin-left: 25px;
+                padding-left: 20px;
+            }
+
+            .timeline-time {
+                font-size: 15px;
+            }
+
+            .timeline-activity {
+                font-size: 14px;
+            }
+
+            .hotel-content,
+            .place-detail,
+            .content-right {
+                padding: 20px 15px;
+            }
+
+            .hotel-name,
+            .place-detail h4 {
+                font-size: 18px;
+            }
+
+            .hotel-detail {
+                font-size: 14px;
+            }
+
+            .place-detail ul li {
+                font-size: 14px;
+                padding-left: 20px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .gallery-item.large {
+                grid-column: span 2;
+            }
+
+            table {
+                font-size: 14px;
+            }
+
+            .info-box {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            th,
+            td {
+                padding: 10px 8px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .header {
+                padding: 20px 15px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .card-title,
+            .hotel-name,
+            .place-detail h4 {
+                font-size: 17px;
+            }
+
+            .day-info h3 {
+                font-size: 17px;
+            }
+
+            .timeline-activity,
+            .hotel-detail {
+                font-size: 13px;
+            }
+
+            .place-detail ul li {
+                font-size: 13px;
+                padding-left: 18px;
+            }
+
+            .link-button {
+                padding: 8px 12px;
+                font-size: 13px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-item.large {
+                grid-column: span 1;
+            }
+
+            table {
+                font-size: 12px;
+            }
+
+            .info-box {
+                padding: 10px;
+                font-size: 13px;
+            }
+
+            th,
+            td {
+                padding: 8px 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>🗼 Tokyo Trip 2026</h1>
+            <div class="subtitle">Complete Itinerary • March 6-13, 2026</div>
+            <img src="../images/001.jpg" alt="Tokyo city view at night with Tokyo Tower" class="header-image">
+        </div>
+
+        <!-- Flight Information -->
+        <div class="section">
+            <h2 class="section-title">✈️ Flight Information</h2>
+
+            <div class="grid-2">
+                <!-- Outbound Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛫 Outbound Flight - SL 394</h3>
+                    <img src="../images/002.jpg" alt="Airplane taking off" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>Airline</strong></td>
+                            <td>Thai Lion Air</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Date</strong></td>
+                            <td>Friday, March 6, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Time</strong></td>
+                            <td>06:15 Don Mueang (DMK) → 16:20 Narita (NRT)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terminal</strong></td>
+                            <td>Narita International Airport Terminal 2</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>MYOWFY</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Carry-on</strong></td>
+                            <td>7 kg (40×30×20 cm)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Checked Baggage</strong></td>
+                            <td>Arilek: 15 kg / Nunnaphat: None</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ Important:</strong> Arrive at Don Mueang (DMK) at 03:15 AM (3 hours before departure)
+                        | Counter F-H
+                    </div>
+                </div>
+
+                <!-- Return Flight -->
+                <div class="card">
+                    <h3 class="card-title">🛬 Return Flight - XJ 607</h3>
+                    <img src="../images/003.jpg" alt="Inside Narita Airport" class="card-image">
+                    <table>
+                        <tr>
+                            <td><strong>Airline</strong></td>
+                            <td>Thai AirAsia X</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Date</strong></td>
+                            <td>Friday, March 13, 2026</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Time</strong></td>
+                            <td>21:15 Narita (NRT) → 02:40+1 Don Mueang (DMK)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Terminal</strong></td>
+                            <td>Narita International Airport Terminal 1</td>
+                        </tr>
+                        <tr>
+                            <td><strong>PNR</strong></td>
+                            <td>G7Y6YF</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Checked Baggage</strong></td>
+                            <td>20 kg per person (purchased extra)</td>
+                        </tr>
+                    </table>
+                    <div class="info-box highlight">
+                        <strong>⚠️ Important:</strong> Arrive at Narita (NRT) at 17:15 PM (4 hours before departure) |
+                        Process Tax Refund before check-in
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Accommodation -->
+        <div class="section">
+            <h2 class="section-title">🏨 Accommodation (7 nights)</h2>
+
+            <div class="grid-3">
+                <!-- Hotel 1 -->
+                <div class="hotel-card">
+                    <img src="../images/004.jpg" alt="Lobby of APA Hotel" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🏨 APA Hotel Asakusa Tawaramachi Ekimae</h3>
+                        <p class="hotel-detail"><strong>Dates:</strong> Mar 6-8 (2 nights)</p>
+                        <p class="hotel-detail"><strong>Room:</strong> Double Room - Non-Smoking</p>
+                        <p class="hotel-detail"><strong>Address:</strong> 1-2-3 Nishi Asakusa, Taito-ku, Tokyo, 111-0035
+                        </p>
+                        <p class="hotel-detail"><strong>Phone:</strong> +81-3-5830-0611</p>
+                        <p class="hotel-detail"><strong>Check-in:</strong> 15:00 / <strong>Check-out:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>Access:</strong> 1-min walk from Tawaramachi Station (Ginza
+                            Line)</p>
+
+                        <div class="info-box success">
+                            <strong>📍 Nearby:</strong><br>
+                            • Senso-ji Temple - 740m<br>
+                            • Kaminarimon Gate - 600m<br>
+                            • Nakamise-dori Street - 650m<br>
+                            • Don Quijote Asakusa - 500m<br>
+                            • Tokyo Skytree - 1.5 km
+                        </div>
+
+                        <a href="https://maps.google.com/?q=APA+Hotel+Asakusa+Tawaramachi+Ekimae" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.apahotel.com/hotel/shutoken/tokyo/asakusa-tawaramachi-ekimae/"
+                            target="_blank" class="link-button">🌐 Website</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 2 -->
+                <div class="hotel-card">
+                    <img src="../images/005.jpg" alt="View of Mt. Fuji from the hotel" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">♨️ HOTEL MYSTAYS Fuji Onsen Resort</h3>
+                        <p class="hotel-detail"><strong>Dates:</strong> Mar 8-10 (2 nights)</p>
+                        <p class="hotel-detail"><strong>Room:</strong> Standard Double - Non-Smoking</p>
+                        <p class="hotel-detail"><strong>Address:</strong> 2654 Arakura, Fuji-Yoshida-shi, Yamanashi,
+                            403-0011</p>
+                        <p class="hotel-detail"><strong>Phone:</strong> +81-555-21-7510</p>
+                        <p class="hotel-detail"><strong>Check-in:</strong> 15:00 / <strong>Check-out:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>Access:</strong> Free shuttle/taxi from Kawaguchiko Station</p>
+
+                        <div class="info-box success">
+                            <strong>✨ Highlights:</strong><br>
+                            • Mt. Fuji view from the room!<br>
+                            • Natural Onsen<br>
+                            • Chureito Pagoda - 3 km<br>
+                            • Lake Kawaguchiko - 5 km<br>
+                            • ⚠️ Bath tax <strong>฿63 (≈ ¥300)</strong> (to be paid at the property)
+                        </div>
+
+                        <a href="https://maps.google.com/?q=HOTEL+MYSTAYS+Fuji+Onsen+Resort" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.mystays.com/hotel-mystays-fuji-onsen-resort-yamanashi/" target="_blank"
+                            class="link-button">🌐 Website</a>
+                    </div>
+                </div>
+
+                <!-- Hotel 3 -->
+                <div class="hotel-card">
+                    <img src="../images/006.jpg" alt="Night street in Shinjuku" class="hotel-image">
+                    <div class="hotel-content">
+                        <h3 class="hotel-name">🌃 Shinjuku Granbell Hotel</h3>
+                        <p class="hotel-detail"><strong>Dates:</strong> Mar 10-13 (3 nights)</p>
+                        <p class="hotel-detail"><strong>Room:</strong> Economy Double Room Non-Smoking</p>
+                        <p class="hotel-detail"><strong>Address:</strong> 2-14-5 Kabukicho, Shinjuku, Tokyo, 160-0021
+                        </p>
+                        <p class="hotel-detail"><strong>Phone:</strong> +81-3-5155-2666</p>
+                        <p class="hotel-detail"><strong>Check-in:</strong> 15:00 / <strong>Check-out:</strong> 11:00</p>
+                        <p class="hotel-detail"><strong>Access:</strong> 5-min walk from JR Shinjuku Station (East Exit)
+                        </p>
+
+                        <div class="info-box success">
+                            <strong>📍 Nearby:</strong><br>
+                            • Kabukicho - adjacent to hotel<br>
+                            • Don Quijote Shinjuku - 300m<br>
+                            • Bic Camera - 500m<br>
+                            • Sanrio World - 800m<br>
+                            • Ghibli Store - 600m
+                        </div>
+
+                        <a href="https://maps.google.com/?q=Shinjuku+Granbell+Hotel" target="_blank"
+                            class="link-button">📍 Google Maps</a>
+                        <a href="https://www.granbellhotel.jp/shinjuku/" target="_blank" class="link-button">🌐
+                            Website</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Daily Timeline -->
+        <div class="section">
+            <h2 class="section-title">📅 Daily Timeline</h2>
+
+            <!-- Day 1 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">1</div>
+                    <div class="day-info">
+                        <h3>Arrival in Narita & Start in Asakusa</h3>
+                        <div class="date">Friday, March 6, 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">02:00</div>
+                    <div class="timeline-activity">🚗 Depart for Don Mueang International Airport (DMK)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">04:30</div>
+                    <div class="timeline-activity">✈️ Arrive at DMK, check in with Thai Lion Air at Counter F-H</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:15</div>
+                    <div class="timeline-activity">🛫 Flight SL394 departs (approx. 6-hour flight)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:20</div>
+                    <div class="timeline-activity">
+                        🛬 Arrive at Narita International Airport (NRT) Terminal 2<br>
+                        • Clear immigration and customs (approx. 40 mins)<br>
+                        • Purchase Narita Express (N'EX) tickets at the JR East Travel Service Center
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00-18:30</div>
+                    <div class="timeline-activity">
+                        🚄 Take the Narita Express (N'EX) → Tokyo Station or Ueno Station<br>
+                        • Transfer to Metro Ginza Line → Tawaramachi Station
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-19:00</div>
+                    <div class="timeline-activity">🏨 Check in at APA Hotel Asakusa Tawaramachi Ekimae and drop off
+                        luggage</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00-20:00</div>
+                    <div class="timeline-activity">
+                        🍽️ Dinner in Asakusa area<br>
+                        • Recommendations: Ichiran Ramen, Sukiya, Yoshinoya (near the hotel)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">
+                        🛍️ <strong>Shop for winter clothes at Don Quijote Asakusa</strong>
+                    </div>
+                </div>
+
+                <!-- Don Quijote Detail -->
+                <div class="place-detail">
+                    <h4>🏪 Don Quijote Asakusa</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/007.jpg" alt="Front of a Don Quijote store filled with products"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>2-10-4 Kaminarimon, Taito-ku, Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>🔥 <strong>Open 24 hours!</strong></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Distance</strong></td>
+                                    <td>Approx. 10-min walk from the hotel</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🛒 Items to Buy:</strong></p>
+                            <ul>
+                                <li>Winter coats, Heattech (UNIQLO style) - Price <strong>฿420 - ฿1,050 (≈ ¥2,000 -
+                                        ¥5,000)</strong></li>
+                                <li>Thick socks, scarves, beanies - Price <strong>฿105 - ฿420 (≈ ¥500 - ¥2,000)</strong>
+                                </li>
+                                <li>Umbrellas, personal items</li>
+                                <li>Floors 3-4: Clothing | Floor 2: Cosmetics</li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ Advantages:</strong> Inexpensive, near the hotel, open 24/7, wide variety of
+                                products, Tax-Free available for purchases over <strong>฿1,050 (≈ ¥5,000)</strong>
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                            <a href="https://www.donki.com/store/shop_detail.php?shop_id=29" target="_blank"
+                                class="link-button">🌐 Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/008.jpg" alt="Inside a Don Quijote store">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/009.jpg" alt="Japanese products">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/010.jpg" alt="Asakusa area at night">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Great prices on cosmetics on the 2nd floor!</li>
+                                    <li>• Wide variety of snacks on the 1st floor.</li>
+                                    <li>• Tax-Free counter on the 1st floor.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 Rest (Prepare for tomorrow: buying cameras!)</div>
+                </div>
+            </div>
+
+            <!-- Day 2 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">2</div>
+                    <div class="day-info">
+                        <h3>Asakusa Tour & Sunset at Tokyo Skytree 🌇</h3>
+                        <div class="date">Saturday, March 7, 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-08:00</div>
+                    <div class="timeline-activity">
+                        🌅 Wake up and have breakfast at the hotel<br>
+                        • Prepare passports for Tax-Free shopping
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30-09:00</div>
+                    <div class="timeline-activity">
+                        🚇 Travel to Akihabara<br>
+                        • Metro Ginza Line: Tawaramachi Station → Suehirocho Station (5 mins)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:30-11:00</div>
+                    <div class="timeline-activity">📸 <strong>Shop for 2 cameras at Yodobashi Akiba</strong></div>
+                </div>
+
+                <!-- Yodobashi Detail -->
+                <div class="place-detail">
+                    <h4>📸 Yodobashi Akiba</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/011.jpg" alt="Shelf with various camera models at Yodobashi"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>1 Kanda Hanaokacho, Chiyoda-ku, Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>09:30-22:00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Floors</strong></td>
+                                    <td>9 floors (Camera floors: 6-7)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>📷 Cameras to Buy:</strong></p>
+                            <ul>
+                                <li><strong>Dad's Camera (Used):</strong> Canon EOS 800D/200D/77D/M50 - Price
+                                    <strong>฿3,150 - ฿4,620 (≈ ¥15,000 - ¥22,000)</strong>
+                                </li>
+                                <li><strong>Pojai's Camera (New):</strong> Ricoh WG-80 / Canon SX740 HS / Sony WX500 -
+                                    Price <strong>฿6,300 - ฿9,450 (≈ ¥30,000 - ¥45,000)</strong></li>
+                            </ul>
+
+                            <p><strong>🔋 Accessories:</strong></p>
+                            <ul>
+                                <li>Spare LP-E17 battery (for Canon) - Price <strong>฿630 (≈ ¥3,000)</strong> 🔥
+                                    Essential!</li>
+                                <li>64GB/128GB Memory Card (SanDisk) - Price <strong>฿315 - ฿630 (≈ ¥1,500 -
+                                        ¥3,000)</strong></li>
+                                <li>Small camera bag - Price <strong>฿420 - ฿840 (≈ ¥2,000 - ¥4,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ Advantages:</strong> Helpful staff, can test products, Tax-Free service
+                                available (passport required), full warranty, both new and used cameras available, all
+                                accessories in one place.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.yodobashi.com/ec/store/0018/" target="_blank" class="link-button">🌐
+                                Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/012.jpg" alt="Camera on a table">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/013.jpg" alt="Vintage camera equipment">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/014.jpg" alt="Electronics store atmosphere">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Add photos from Pinterest/Lemon8/TikTok here</li>
+                                    <li>• Add review video links</li>
+                                    <li>• Add tips from reviews</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00-12:00</div>
+                    <div class="timeline-activity">
+                        🏮 Go to Senso-ji Temple and have lunch<br>
+                        <strong>Try out the new cameras right away! 📸</strong>
+                    </div>
+                </div>
+
+                <!-- Senso-ji Detail -->
+                <div class="place-detail">
+                    <h4>⛩️ Senso-ji Temple</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/015.jpg" alt="Senso-ji Temple and its five-story pagoda at night"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>2-3-1 Asakusa, Taito-ku, Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>06:00-17:00 (Free admission)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Founded</strong></td>
+                                    <td>628 AD (Tokyo's oldest temple)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 Highlights:</strong></p>
+                            <ul>
+                                <li><strong>Kaminarimon Gate:</strong> Giant red lantern gate, a symbol of Asakusa.</li>
+                                <li><strong>Nakamise-dori Shopping Street:</strong> 250m long street with about 90
+                                    shops.</li>
+                                <li><strong>Hozomon Gate:</strong> Inner gate before the main hall.</li>
+                                <li><strong>Main Hall:</strong> Where the Kannon deity is enshrined.</li>
+                                <li><strong>Five-Story Pagoda:</strong> 53 meters tall.</li>
+                            </ul>
+
+                            <p><strong>🛍️ Must-Try Foods (on Nakamise-dori):</strong></p>
+                            <ul>
+                                <li>Ningyo-yaki - <strong>฿42 (≈ ¥200)</strong></li>
+                                <li>Senbei (rice crackers) - <strong>฿63 - ฿126 (≈ ¥300 - ¥600)</strong></li>
+                                <li>Matcha Ice Cream - <strong>฿84 (≈ ¥400)</strong></li>
+                                <li>Omamori (charms) - <strong>฿105 - ฿210 (≈ ¥500 - ¥1,000)</strong></li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Try Omikuji (paper fortunes) for <strong>฿21 (≈ ¥100)</strong>
+                                - if you get a "bad luck" fortune (凶 - kyo), tie it to the racks at the temple, don't
+                                take it home.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Senso-ji+Temple" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.senso-ji.jp/english/" target="_blank" class="link-button">🌐
+                                Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item">
+                                    <img src="../images/016.jpg" alt="Giant lantern at Kaminarimon Gate">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/017.jpg" alt="Nakamise-dori street full of shops and people">
+                                </div>
+                                <div class="gallery-item large">
+                                    <img src="../images/018.jpg" alt="Senso-ji Temple at night">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Add photos from Pinterest/Lemon8/TikTok here</li>
+                                    <li>• Good photo spots</li>
+                                    <li>• Recommended food stalls</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                                <a href="#" class="social-link lemon8">Lemon8</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30-15:00</div>
+                    <div class="timeline-activity">🚇 Travel to Tokyo Skytree (Oshiage Station)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00-18:30</div>
+                    <div class="timeline-activity">🗼 <strong>Tokyo Skytree & Sunset Viewing</strong></div>
+                </div>
+
+                <!-- Skytree Detail -->
+                <div class="place-detail">
+                    <h4>🗼 Tokyo Skytree</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/019.jpg" alt="The towering Tokyo Skytree" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>1-1-2 Oshiage, Sumida-ku, Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Height</strong></td>
+                                    <td>634 meters (world's tallest tower)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>08:00-22:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎫 Admission Fee:</strong></p>
+                            <ul>
+                                <li><strong>Tembo Deck (350m):</strong> Adult <strong>฿651 (≈ ¥3,100)</strong> / Child
+                                    <strong>฿326 (≈ ¥1,550)</strong>
+                                </li>
+                                <li><strong>Tembo Galleria (450m):</strong> Additional <strong>฿216 (≈ ¥1,030)</strong>
+                                    / Child <strong>฿172 (≈ ¥820)</strong></li>
+                                <li><strong>Total for 2 (up to Galleria):</strong> <strong>฿1,775 (≈ ¥8,450)</strong>
+                                </li>
+                            </ul>
+
+                            <div class="info-box highlight">
+                                <strong>🌅 Sunset Time:</strong> 17:45<br>
+                                <strong>📸 Golden Hour:</strong> 17:15-18:15 (Best time for photos!)<br>
+                                It's recommended to go up before 17:00 to see the view from day → sunset → night.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Skytree" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.tokyo-skytree.jp/en/" target="_blank" class="link-button">🌐
+                                Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/020.jpg" alt="Tokyo city view from above at sunset">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/021.jpg" alt="Tokyo city view with Mt. Fuji">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/022.jpg" alt="Tokyo city view at night">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Add photos from Pinterest/Lemon8/TikTok here</li>
+                                    <li>• Sunset photo spots</li>
+                                    <li>• Restaurants in Solamachi</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:30-20:00</div>
+                    <div class="timeline-activity">🍽️ Dinner at Tokyo Solamachi (mall next to Skytree)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:00-21:30</div>
+                    <div class="timeline-activity">🛍️ <strong>Tokyo Character Street</strong> (under Tokyo Station)
+                    </div>
+                </div>
+
+                <!-- Character Street Detail -->
+                <div class="place-detail">
+                    <h4>🧸 Tokyo Character Street</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/027.jpg" alt="Shop selling character dolls and toys" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>B1F Tokyo Station (Yaesu Exit)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>10:00-20:30</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>Hanzomon Line: Oshiage Station → Mitsukoshimae Station (approx. 30 mins)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 Highlight Stores (Pojai will love this!):</strong></p>
+                            <ul>
+                                <li><strong>Donguri Republic:</strong> Official Studio Ghibli store - Totoro, Kiki,
+                                    No-Face.</li>
+                                <li><strong>Sanrio Gift Gate:</strong> Hello Kitty, Cinnamoroll, My Melody.</li>
+                                <li><strong>Pokemon Store:</strong> Pikachu and all Pokemon merchandise.</li>
+                                <li><strong>Snoopy Town:</strong> Peanuts/Snoopy.</li>
+                                <li><strong>Ultraman World:</strong> For Ultraman fans.</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Tokyo+Character+Street" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                            <a href="https://www.tokyoeki-1bangai.co.jp/street/character" target="_blank"
+                                class="link-button">🌐 Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/023.jpg" alt="Japanese character dolls">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/024.jpg" alt="Sanrio merchandise">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/025.jpg" alt="Tokyo Station">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/026.jpg" alt="Tokyo Station">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/027.jpg" alt="Tokyo Station">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• The Ghibli store has limited items!</li>
+                                    <li>• Pokemon Store has long queues in the evening.</li>
+                                    <li>• Recommended to visit before 18:00.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">22:00</div>
+                    <div class="timeline-activity">😴 Back to hotel, pack for tomorrow's check-out.</div>
+                </div>
+            </div>
+
+            <!-- Day 3 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">3</div>
+                    <div class="day-info">
+                        <h3>Trip to Kawaguchiko 🏔️</h3>
+                        <div class="date">Sunday, March 8, 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-08:00</div>
+                    <div class="timeline-activity">🍳 Wake up/breakfast and check out from APA Hotel Asakusa</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:30</div>
+                    <div class="timeline-activity">
+                        🚃 Travel from Asakusa → Shinjuku<br>
+                        • Metro Ginza Line + JR Line (approx. 30-40 mins)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:30</div>
+                    <div class="timeline-activity">
+                        🚌 Take the bus to Kawaguchiko from Shinjuku Expressway Bus Terminal (Busta Shinjuku) 4th
+                        Floor<br>
+                        • Fare: Adult <strong>฿462 (≈ ¥2,200)</strong> / Child <strong>฿231 (≈ ¥1,100)</strong><br>
+                        • Travel time: approx. 2 hours
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:40</div>
+                    <div class="timeline-activity">🏔️ Arrive at Kawaguchiko Bus Terminal</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-14:30</div>
+                    <div class="timeline-activity">🍽️ Lunch and drop off luggage at hotel or station</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-activity">🏨 Check in at HOTEL MYSTAYS Fuji Onsen Resort</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-activity">🚡 <strong>Kachi-Kachi Ropeway</strong></div>
+                </div>
+
+                <!-- Kachi-Kachi Ropeway Detail -->
+                <div class="place-detail">
+                    <h4>🚡 Kachi-Kachi Ropeway</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/028.jpg" alt="Ropeway car view over Lake Kawaguchiko"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Destination</strong></td>
+                                    <td>Mt. Tenjo Observation Deck (1,075m)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Fare</strong></td>
+                                    <td><strong>฿189 (≈ ¥900)</strong> round trip per person</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Time</strong></td>
+                                    <td>Approx. 3 mins per trip</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 Highlights:</strong></p>
+                            <ul>
+                                <li>Panoramic view of Lake Kawaguchiko and Mt. Fuji.</li>
+                                <li>Learn the legend of the rabbit and raccoon (Kachi-Kachi Yama) - a Japanese folktale.
+                                </li>
+                                <li>Take photos with the rabbit and raccoon statues at the observation deck.</li>
+                                <li>Ring the Tenjo Bell for good luck.</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Kachi+Kachi+Ropeway" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                            <a href="https://www.kachikachiyama-ropeway.com/en/" target="_blank" class="link-button">🌐
+                                Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/029.jpg" alt="View of Mt. Fuji from the ropeway">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/030.jpg" alt="Lake Kawaguchiko">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/031.jpg" alt="Mt. Tenjo Observation Deck">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Shorter queues in the morning.</li>
+                                    <li>• Best views in the clear morning air.</li>
+                                    <li>• Don't forget to take a picture with the rabbit!</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-activity">
+                        🍽️ <strong>Dinner: Hoto Fudo</strong><br>
+                        • Yamanashi's local specialty - flat noodles in miso soup with vegetables.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-activity">😴 Rest and prepare for Pojai's birthday tomorrow! 🎂</div>
+                </div>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="day-card"
+                style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-left-color: #ff6b6b;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">4
+                    </div>
+                    <div class="day-info">
+                        <h3>🎂 Pojai's 11th Birthday!</h3>
+                        <div class="date">Monday, March 9, 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box"
+                    style="background: #fff5f5; border-color: #ff6b6b; text-align: center; font-size: 24px;">
+                    🎉 <strong>HAPPY 11th BIRTHDAY POJAI!</strong> ✨
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00</div>
+                    <div class="timeline-activity">
+                        🌅 Wake up to the sunrise view with Mt. Fuji from the room<br>
+                        📸 Take "Birthday girl with Mt. Fuji in the morning" photos.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:30</div>
+                    <div class="timeline-activity">
+                        🎁 <strong>Birthday Surprise</strong><br>
+                        • Sing "Happy Birthday"<br>
+                        • Give the special gift (camera)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00</div>
+                    <div class="timeline-activity">⛩️ <strong>Chureito Pagoda</strong></div>
+                </div>
+
+                <!-- Chureito Pagoda Detail -->
+                <div class="place-detail">
+                    <h4>🏯 Chureito Pagoda</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/032.jpg" alt="Chureito Pagoda with Mt. Fuji" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>Arakura, Fujiyoshida, Yamanashi</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>Local bus from Kawaguchiko Station</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Admission</strong></td>
+                                    <td>Free</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 Highlights:</strong></p>
+                            <ul>
+                                <li>Climb 398 steps to the pagoda (approx. 15 mins).</li>
+                                <li><strong>The world's most famous Mt. Fuji photo spot!</strong></li>
+                                <li>A 5-story red pagoda built in 1963 as a peace memorial.</li>
+                                <li>Especially beautiful during cherry blossom season (late March - early April).</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Arrive early to avoid crowds and get beautiful photos. Wear
+                                comfortable sneakers for the climb.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/033.jpg" alt="Chureito Pagoda with Mt. Fuji">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/034.jpg" alt="Stairs leading to the pagoda">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/035.jpg" alt="Mt. Fuji view in the morning">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Before 8:00 AM, it's less crowded!</li>
+                                    <li>• Bring water, 398 steps is tiring.</li>
+                                    <li>• The best photo spot is at the top.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">13:00</div>
+                    <div class="timeline-activity">
+                        🍽️ <strong>Special Birthday Lunch</strong><br>
+                        • Menu: Salmon Sushi and Tempura<br>
+                        • Budget: <strong>฿1,680 (≈ ¥8,000)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:30</div>
+                    <div class="timeline-activity">💧 <strong>Oshino Hakkai</strong></div>
+                </div>
+
+                <!-- Oshino Hakkai Detail -->
+                <div class="place-detail">
+                    <h4>💧 Oshino Hakkai</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/036.jpg" alt="Oshino Hakkai village with Mt. Fuji view"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>Oshino, Minamitsuru District, Yamanashi</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>Local bus from Kawaguchiko Station (approx. 20 mins)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Admission</strong></td>
+                                    <td><strong>฿63 (≈ ¥300)</strong> per person</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎯 Highlights:</strong></p>
+                            <ul>
+                                <li><strong>8 natural spring ponds</strong> from melted snow on Mt. Fuji.</li>
+                                <li>Water filtered through volcanic rock for over 80 years!</li>
+                                <li>Water is so clear you can see the bottom of the ponds.</li>
+                                <li><strong>Famous ponds:</strong> Wakuike Pond, Kagamiike Pond (Mirror Pond).</li>
+                                <li>Traditional Japanese village atmosphere.</li>
+                            </ul>
+
+                            <p><strong>🍡 Snacks:</strong></p>
+                            <ul>
+                                <li>Grilled Mochi - <strong>฿63 (≈ ¥300)</strong></li>
+                                <li>Water from Mt. Fuji - Free (you can drink it)</li>
+                            </ul>
+
+                            <a href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/037.jpg" alt="Traditional Japanese village">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/038.jpg" alt="Clear pond water">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/039.jpg" alt="Mt. Fuji view">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• The water is incredibly clear, great for photos!</li>
+                                    <li>• Try the hot grilled mochi, it's delicious.</li>
+                                    <li>• Mirror Pond is the best for photos.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:00</div>
+                    <div class="timeline-activity">
+                        ♨️ <strong>Onsen Time during Golden Hour</strong><br>
+                        Soak in the hot spring while watching the sunset over Mt. Fuji.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:00</div>
+                    <div class="timeline-activity">
+                        🎂 <strong>Special Birthday Dinner</strong><br>
+                        • A special dinner with a birthday cake.<br>
+                        • Budget: <strong>฿2,520 (≈ ¥12,000)</strong>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Day 5 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number">5</div>
+                    <div class="day-info">
+                        <h3>Back to Tokyo & Shopping 🛍️</h3>
+                        <div class="date">Tuesday, March 10, 2026</div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:00-09:00</div>
+                    <div class="timeline-activity">🍳 Wake up/breakfast and check out from HOTEL MYSTAYS Fuji</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00</div>
+                    <div class="timeline-activity">
+                        🚌 Take the bus from Kawaguchiko → Shinjuku<br>
+                        • Fare: Adult <strong>฿462 (≈ ¥2,200)</strong> / Child <strong>฿231 (≈ ¥1,100)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00</div>
+                    <div class="timeline-activity">🏙️ Arrive at Shinjuku Bus Terminal</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:00-13:00</div>
+                    <div class="timeline-activity">🍽️ Lunch</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">13:00-15:00</div>
+                    <div class="timeline-activity">🏨 Check in at Shinjuku Granbell Hotel and rest</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30-17:30</div>
+                    <div class="timeline-activity">
+                        👟 <strong>ABC-MART Outlet Gotanda</strong><br>
+                        • JR Yamanote Line: Shinjuku Station → Gotanda Station (15 mins)<br>
+                        • Shoes: Onitsuka Tiger, Skechers, Nike, Adidas<br>
+                        • Up to 50% off! Budget: <strong>฿1,050 - ฿3,150 (≈ ¥5,000 - ¥15,000)</strong>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:00-20:00</div>
+                    <div class="timeline-activity">🏢 <strong>Takeya Building (Purple Building) in Ueno</strong></div>
+                </div>
+
+                <!-- Takeya Detail -->
+                <div class="place-detail">
+                    <h4>🏢 Takeya Building (Purple Building)</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/040.jpg" alt="Inside a store with a wide variety of products"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>2-27-1 Yushima, Taito-ku, Tokyo (Ueno)</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>10:00-20:00</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>JR Yamanote Line: Gotanda Station → Ueno Station (15 mins)</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🏬 Floor Guide:</strong></p>
+                            <ul>
+                                <li><strong>1st Floor:</strong> Japanese snacks - special flavor KitKats, Tokyo Banana,
+                                    Pocky, Royce' Chocolate.</li>
+                                <li><strong>2nd-3rd Floors:</strong> Cosmetics/Skincare - Shiseido, SK-II, Canmake,
+                                    Majolica Majorca.</li>
+                                <li><strong>TAKEYA 3:</strong> Brand-name clothing.</li>
+                            </ul>
+
+                            <div class="info-box success">
+                                <strong>✅ Advantages:</strong> Cheaper than Don Quijote and Matsumoto Kiyoshi! Tax-Free
+                                available.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Takeya+Ueno" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://www.takeya.co.jp/" target="_blank" class="link-button">🌐 Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/041.jpg" alt="Takeya Building">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/042.jpg" alt="Japanese cosmetics">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/043.jpg" alt="Japanese snacks">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Cheaper than Don Quijote!</li>
+                                    <li>• Great snack selection on the 1st floor.</li>
+                                    <li>• Tax-Free available on every floor.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">20:30-21:00</div>
+                    <div class="timeline-activity">🍽️ Dinner in Ueno</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:30</div>
+                    <div class="timeline-activity">😴 Rest up, prepare for the first day of using the TWP (Tokyo Wide
+                        Pass) tomorrow (Gala Yuzawa!)</div>
+                </div>
+            </div>
+
+            <!-- Day 6 -->
+            <div class="day-card"
+                style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-left-color: #00bcd4;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);">6
+                    </div>
+                    <div class="day-info">
+                        <h3>⛷️ Snow Adventure at GALA Yuzawa</h3>
+                        <div class="date">Wednesday, March 11, 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 Tokyo Wide Pass - Day 1</strong> - Covers all Shinkansen travel to and from Gala Yuzawa!
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00</div>
+                    <div class="timeline-activity">
+                        🍳 Wake up/breakfast<br>
+                        • Prepare extreme winter clothing (Temperature 0°C to freezing!)
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:00</div>
+                    <div class="timeline-activity">
+                        🚅 <strong>Joetsu Shinkansen</strong><br>
+                        • Route: Tokyo Station / Ueno Station → Gala Yuzawa Station<br>
+                        • Travel time: approx. 77 mins
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:40</div>
+                    <div class="timeline-activity">⛷️ Arrive at <strong>GALA Yuzawa</strong></div>
+                </div>
+
+                <!-- GALA Yuzawa Detail -->
+                <div class="place-detail">
+                    <h4>⛷️ GALA Yuzawa Snow Resort</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/044.jpg" alt="Ski slope full of snow and tourists" class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>Yuzawa-machi, Minamiuonuma-gun, Niigata</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>Shinkansen station connects directly to the ski resort!</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Hours</strong></td>
+                                    <td>08:00-17:00</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎿 Activities:</strong></p>
+                            <ul>
+                                <li>Snow Play Area</li>
+                                <li>Build a snowman</li>
+                                <li>Ride the Gondola for mountain views</li>
+                                <li>Sledding</li>
+                                <li>Ski/Snowboard (for beginners)</li>
+                            </ul>
+
+                            <p><strong>💰 Costs:</strong></p>
+                            <ul>
+                                <li>Gondola Pass: <strong>฿420 (≈ ¥2,000)</strong> per person</li>
+                                <li>Snow Play Ticket: <strong>฿462 (≈ ¥2,200)</strong> per person</li>
+                                <li>Rental Set (suit+boots): <strong>฿1,155 (≈ ¥5,500)</strong> per person</li>
+                                <li><strong>Total for 2 (approx.):</strong> <strong>฿4,095 (≈ ¥19,500)</strong></li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>♨️ Special:</strong> There's an Onsen in the resort! Relax in the hot spring to
+                                warm up before heading back.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=GALA+Yuzawa" target="_blank" class="link-button">📍
+                                Google Maps</a>
+                            <a href="https://gala.co.jp/winter/en/" target="_blank" class="link-button">🌐 Website</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/045.jpg" alt="Snow play area">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/046.jpg" alt="Gondola car">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/047.jpg" alt="Snowman">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• You can rent winter clothes here.</li>
+                                    <li>• The Snow Play Area is a lot of fun!</li>
+                                    <li>• Don't forget to soak in the Onsen before leaving.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link youtube">YouTube</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">10:00-14:00</div>
+                    <div class="timeline-activity">🏂 Play in the snow! Build a snowman, ride the gondola.</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">14:00</div>
+                    <div class="timeline-activity">🍽️ Lunch (hot curry rice)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30</div>
+                    <div class="timeline-activity">♨️ Onsen time to relax and warm up</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">16:30</div>
+                    <div class="timeline-activity">🚄 Return to Shinjuku (using TWP Day 1)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:30</div>
+                    <div class="timeline-activity">🍽️ Dinner: Sukiyaki/Shabu-Shabu in Shinjuku</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:00</div>
+                    <div class="timeline-activity">😴 Rest and prepare for tomorrow (TWP Day 2).</div>
+                </div>
+            </div>
+
+            <!-- Day 7 -->
+            <div class="day-card"
+                style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); border-left-color: #e91e63;">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);">7
+                    </div>
+                    <div class="day-info">
+                        <h3>Following "Your Name" & Shopping in Harajuku 🛍️</h3>
+                        <div class="date">Thursday, March 12, 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 Tokyo Wide Pass - Day 2</strong> - Covers all JR line trains in Tokyo.
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">06:00-07:00</div>
+                    <div class="timeline-activity">🍳 Wake up/breakfast</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">07:00-08:00</div>
+                    <div class="timeline-activity">
+                        🚇 Travel to Suga Shrine<br>
+                        • JR Chuo Line: Shinjuku Station → Yotsuya Station
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:00-09:30</div>
+                    <div class="timeline-activity">⛩️ <strong>Suga Shrine</strong> - The stairs from "Your Name"! 🎬
+                    </div>
+                </div>
+
+                <!-- Suga Shrine Detail -->
+                <div class="place-detail">
+                    <h4>⛩️ Suga Shrine - Stairs from Your Name</h4>
+                    <div class="content-wrapper">
+                        <div class="content-left">
+                            <img src="../images/048.jpg" alt="Red stairs at Suga Shrine from 'Your Name'"
+                                class="card-image">
+                            <table>
+                                <tr>
+                                    <td><strong>Address</strong></td>
+                                    <td>5 Sugacho, Shinjuku-ku, Tokyo</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Access</strong></td>
+                                    <td>5-min walk from Yotsuya Station</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Admission</strong></td>
+                                    <td>Free</td>
+                                </tr>
+                            </table>
+
+                            <p><strong>🎬 Famous for:</strong></p>
+                            <ul>
+                                <li>The stairs from the key scene in the anime <strong>"Your Name" (Kimi no Na
+                                        wa)</strong>.</li>
+                                <li>The scene where Taki and Mitsuha pass each other on the stairs.</li>
+                                <li>A must-visit destination for anime fans worldwide!</li>
+                            </ul>
+
+                            <div class="info-box">
+                                <strong>💡 Tip:</strong> Arrive early (07:00-08:00) to avoid crowds and get beautiful
+                                photos without waiting.
+                            </div>
+
+                            <a href="https://maps.google.com/?q=Suga+Shrine+Yotsuya" target="_blank"
+                                class="link-button">📍 Google Maps</a>
+                        </div>
+                        <div class="content-right">
+                            <h4>📷 Photos & More Info</h4>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large">
+                                    <img src="../images/049.jpg" alt="Your Name stairs">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/050.jpg" alt="Japanese shrine">
+                                </div>
+                                <div class="gallery-item">
+                                    <img src="../images/051.jpg" alt="Tokyo in the morning">
+                                </div>
+                            </div>
+                            <div class="extra-info">
+                                <h5>💡 Tips from Social Media</h5>
+                                <ul>
+                                    <li>• Before 8:00 AM, it's less crowded!</li>
+                                    <li>• Recreate the shot from the anime.</li>
+                                    <li>• Also beautiful at sunset.</li>
+                                </ul>
+                            </div>
+                            <div class="social-links">
+                                <a href="#" class="social-link pinterest">Pinterest</a>
+                                <a href="#" class="social-link tiktok">TikTok</a>
+                                <a href="#" class="social-link instagram">Instagram</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:00-12:00</div>
+                    <div class="timeline-activity">🍽️ Lunch in Shinjuku</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">12:30-15:00</div>
+                    <div class="timeline-activity">🛍️ <strong>Harajuku & Omotesando Shopping</strong><br>• Kiddy Land,
+                        Brandy Melville, Takeshita Street</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:30-17:00</div>
+                    <div class="timeline-activity">🧸 <strong>Final Character Shopping Spree</strong><br>• Sanrio World
+                        Shinjuku, Ghibli Store</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:30</div>
+                    <div class="timeline-activity">👜 Return to hotel to drop off shopping bags</div>
+                </div>
+            </div>
+
+            <!-- Day 8 -->
+            <div class="day-card">
+                <div class="day-header">
+                    <div class="day-number" style="background: linear-gradient(135deg, #48c6ef 0%, #6f86d6 100%);">8
+                    </div>
+                    <div class="day-info">
+                        <h3>Final Shopping & Departure ✈️</h3>
+                        <div class="date">Friday, March 13, 2026</div>
+                    </div>
+                </div>
+
+                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
+                    <strong>🎫 Tokyo Wide Pass - Day 3</strong> - Covers the Narita Express (N'EX) trip to the airport!
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">08:00</div>
+                    <div class="timeline-activity">🍳 Wake up/breakfast</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">09:00-11:00</div>
+                    <div class="timeline-activity">🏨 Check out from Shinjuku Granbell Hotel, leave luggage with the
+                        front desk</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">11:30-14:30</div>
+                    <div class="timeline-activity">🛍️ <strong>Last-minute souvenir shopping in Ueno</strong><br>•
+                        Ameyoko Market (for snacks) and Takeya Building (re-visit if needed)</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-time">15:00</div>
+                    <div class="timeline-activity">👜 Return to hotel to pick up luggage</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">15:45</div>
+                    <div class="timeline-activity">🚄 Take the <strong>Narita Express (N'EX)</strong> from Shinjuku
+                        Station to Narita Airport</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">17:15</div>
+                    <div class="timeline-activity">🛃 Arrive at Narita Airport, complete Tax-Free refund procedures
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">18:15</div>
+                    <div class="timeline-activity">✈️ Check in for flight XJ 607 (Thai AirAsia X)</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">19:15</div>
+                    <div class="timeline-activity">🛂 Clear security and immigration</div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">21:15</div>
+                    <div class="timeline-activity">🛫 Flight departs for Bangkok (DMK)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="exchange-rate">Exchange Rate: ¥1 = ฿0.21 | ฿1 = ¥4.83</div>
+            <div class="update-info">Enjoy your unforgettable trip!</div>
+        </div>
+    </div>
+    <script src="../asset/js/common.js"></script>
+</body>
+
+</html>

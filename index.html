@@ -311,6 +311,46 @@
                 padding: 1.5rem 1rem;
             }
         }
+
+        /* Countdown Styles */
+        .hero-countdown {
+            margin-top: 1rem;
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s ease-out;
+        }
+
+        .countdown-text {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #fbbf24;
+            /* Amber-400 */
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        #daysLeft {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -324,6 +364,10 @@
                 <span data-i18n="hero-date">📅 6-13 มี.ค. 2026</span>
                 <span data-i18n="hero-travelers">👥 2 คน</span>
                 <span data-i18n="hero-duration">🕐 8 วัน 7 คืน</span>
+            </div>
+            <!-- Countdown -->
+            <div id="countdown" class="hero-countdown">
+                <span class="countdown-text">เหลือเวลาอีก <span id="daysLeft">0</span> วัน จะถึงวันเดินทาง</span>
             </div>
         </header>
         <section class="page-grid">
@@ -461,6 +505,23 @@
             const minutes = String(now.getMinutes()).padStart(2, '0');
             return `${date} ${hours}:${minutes}`;
         }
+
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('2026-03-06T00:00:00+09:00'); // Tokyo time
+            const now = new Date();
+            const diff = targetDate - now;
+
+            if (diff > 0) {
+                const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
+                document.getElementById('daysLeft').textContent = days;
+            } else {
+                document.getElementById('countdown').innerHTML = '<span class="countdown-text">🎉 ถึงวันเดินทางแล้ว!</span>';
+            }
+        }
+
+        updateCountdown();
+        setInterval(updateCountdown, 60000); // Update every minute
 
         // Check online/offline status
         function updateOnlineStatus() {
