@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
         initGoToTop();
         initLightbox();
         initServiceWorker();
+        initFloatingConverter();
     } catch (e) {
         console.error("Initialization failed:", e);
         // Fallback or error message if needed
@@ -73,10 +74,10 @@ function initNavigator() {
             <div class="nav-header">🗾 Tokyo Trip 2026</div>
             <ul class="nav-links">
                 <li><a href="${homePath}" data-page="index"><span class="nav-icon">🏠</span> ${t.home}</a></li>
-                <li><a href="${pagePrefix}trip-plan.html" data-page="trip-plan"><span class="nav-icon">📅</span> ${t['trip-plan']}</a></li>
                 <li><a href="${pagePrefix}cover-page.html" data-page="cover-page"><span class="nav-icon">📋</span> ${t['summary-page']}</a></li>
-                <li><a href="${pagePrefix}cover.html" data-page="cover"><span class="nav-icon">🖨️</span> ${t['printable-cover']}</a></li>
                 <li><a href="${pagePrefix}shopping-list.html" data-page="shopping-list"><span class="nav-icon">🛍️</span> ${t['shopping-list']}</a></li>
+                <li><a href="${pagePrefix}trip-plan.html" data-page="trip-plan"><span class="nav-icon">📅</span> ${t['trip-plan']}</a></li>
+                <li><a href="${pagePrefix}cover.html" data-page="cover"><span class="nav-icon">🖨️</span> ${t['printable-cover']}</a></li>
             </ul>
             <div class="nav-lang">
                 <div class="nav-lang-title">${t.language}</div>
@@ -301,3 +302,196 @@ style.textContent = `
         100% { opacity: 0; transform: translate(-50%, -20px); }
     }`;
 document.head.appendChild(style);
+// =============================================
+// Floating Currency Converter
+// =============================================
+window.exchangeRate1 = 0.21; // 1 JPY = 0.21 THB (Default)
+
+function initFloatingConverter() {
+    // Inject CSS
+    const css = `
+        #floatingConverter {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 10px 15px;
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 9998;
+            font-family: 'Segoe UI', sans-serif;
+            border: 1px solid rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        #floatingConverter:hover {
+            box-shadow: 0 6px 20px rgba(0,0,0,0.25);
+            transform: translateX(-50%) translateY(-2px);
+        }
+        .fc-group {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .fc-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: #64748b;
+        }
+        .fc-input {
+            width: 100px; /* Wider for both */
+            padding: 5px 8px;
+            border: 1px solid #cbd5e1;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            text-align: center;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #f8fafc;
+        }
+        .fc-input:focus {
+            border-color: #3b82f6;
+            background: #fff;
+        }
+        .fc-clear {
+            background: #fee2e2;
+            color: #ef4444;
+            border: none;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: all 0.2s;
+            margin-left: 5px;
+        }
+        .fc-clear:hover {
+            background: #fecaca;
+            transform: scale(1.1);
+        }
+        @media (max-width: 480px) {
+            #floatingConverter {
+                bottom: 15px;
+                padding: 8px 12px;
+                width: 90%;
+                justify-content: center;
+            }
+            .fc-input {
+                width: 80px;
+            }
+        }
+    `;
+    const style = document.createElement('style');
+    style.textContent = css;
+    document.head.appendChild(style);
+
+    // Inject HTML
+    const html = `
+        <div class="fc-group">
+            <span class="fc-label">¥</span>
+            <input type="text" id="fc-jpy" class="fc-input" placeholder="0" inputmode="decimal">
+        </div>
+        <div class="fc-group">
+            <span class="fc-label">฿</span>
+            <input type="text" id="fc-thb" class="fc-input" placeholder="0" inputmode="decimal">
+        </div>
+        <button id="fc-clear" class="fc-clear" title="Clear">✕</button>
+    `;
+    const container = document.createElement('div');
+    container.id = 'floatingConverter';
+    container.innerHTML = html;
+    document.body.appendChild(container);
+
+    // Logic
+    const jpyInput = document.getElementById('fc-jpy');
+    const thbInput = document.getElementById('fc-thb');
+    const clearBtn = document.getElementById('fc-clear');
+
+    // Helper: Format number with commas
+    function formatNumber(num, decimals = 2) {
+        if (!num && num !== 0) return '';
+        const parts = num.toFixed(decimals).split('.');
+        parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+        // Remove trailing zeros after decimal if needed, or keep fixed decimals?
+        // User asked for #,###.## which usually implies optional decimals or fixed?
+        // Let's stick to standard behavior: remove trailing zeros if they are just 0
+        if (parts[1]) {
+            parts[1] = parts[1].replace(/0+$/, '');
+            if (parts[1] === '') return parts[0];
+        }
+        return parts.join('.');
+    }
+
+    // Helper: Parse formatted number
+    function parseNumber(str) {
+        if (!str) return 0;
+        return parseFloat(str.replace(/,/g, '')) || 0;
+    }
+
+    function updateFromJpy() {
+        const jpyVal = parseNumber(jpyInput.value);
+        if (jpyVal) {
+            const thb = jpyVal * window.exchangeRate1;
+            thbInput.value = formatNumber(thb, 2);
+        } else {
+            thbInput.value = '';
+        }
+    }
+
+    function updateFromThb() {
+        const thbVal = parseNumber(thbInput.value);
+        if (thbVal) {
+            const jpy = thbVal / window.exchangeRate1;
+            jpyInput.value = formatNumber(jpy, 0); // JPY usually no decimals
+        } else {
+            jpyInput.value = '';
+        }
+    }
+
+    // Input event: just calculate, don't force format while typing (it messes up cursor)
+    // But we need to handle commas in input for calculation
+    jpyInput.addEventListener('input', () => {
+        // Allow typing, but calculation needs parsed value
+        updateFromJpy();
+    });
+
+    thbInput.addEventListener('input', () => {
+        updateFromThb();
+    });
+
+    // Blur event: format the input field itself
+    jpyInput.addEventListener('blur', () => {
+        const val = parseNumber(jpyInput.value);
+        if (val) jpyInput.value = formatNumber(val, 0);
+    });
+
+    thbInput.addEventListener('blur', () => {
+        const val = parseNumber(thbInput.value);
+        if (val) thbInput.value = formatNumber(val, 2);
+    });
+
+    // Focus event: optionally unformat? Or just let user edit with commas?
+    // Let's unformat on focus for easier editing
+    jpyInput.addEventListener('focus', () => {
+        const val = parseNumber(jpyInput.value);
+        if (val) jpyInput.value = val;
+    });
+
+    thbInput.addEventListener('focus', () => {
+        const val = parseNumber(thbInput.value);
+        if (val) thbInput.value = val;
+    });
+
+    clearBtn.addEventListener('click', () => {
+        jpyInput.value = '';
+        thbInput.value = '';
+        jpyInput.focus();
+    });
+}

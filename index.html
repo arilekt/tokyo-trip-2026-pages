@@ -508,7 +508,7 @@
 
         // Countdown Timer
         function updateCountdown() {
-            const targetDate = new Date('2026-03-06T00:00:00+09:00'); // Tokyo time
+            const targetDate = new Date('2026-03-06T00:00:00+07:00'); // Bangkok time
             const now = new Date();
             const diff = targetDate - now;
 
@@ -526,7 +526,7 @@
         // Check online/offline status
         function updateOnlineStatus() {
             const statusEl = document.getElementById('offlineStatus');
-            const timestamp = '22 พ.ย. 2568 21:43';
+            const timestamp = '24 พ.ย. 2568 08:34';
             if (navigator.onLine) {
                 statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
                 statusEl.classList.remove('offline');
