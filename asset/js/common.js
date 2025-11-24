@@ -312,17 +312,17 @@ function initFloatingConverter() {
     const css = `
         #floatingConverter {
             position: fixed;
-            bottom: 20px;
+            bottom: 30px;
             left: 50%;
             transform: translateX(-50%);
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 50px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             z-index: 9998;
             font-family: 'Segoe UI', sans-serif;
             border: 1px solid rgba(0,0,0,0.1);
@@ -335,19 +335,19 @@ function initFloatingConverter() {
         .fc-group {
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
         }
         .fc-label {
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 700;
             color: #64748b;
         }
         .fc-input {
-            width: 100px; /* Wider for both */
-            padding: 5px 8px;
+            width: 80px;
+            padding: 4px 8px;
             border: 1px solid #cbd5e1;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
             text-align: center;
             outline: none;
             transition: border-color 0.2s;
@@ -361,16 +361,16 @@ function initFloatingConverter() {
             background: #fee2e2;
             color: #ef4444;
             border: none;
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             transition: all 0.2s;
-            margin-left: 5px;
+            margin-left: 4px;
         }
         .fc-clear:hover {
             background: #fecaca;
@@ -378,13 +378,15 @@ function initFloatingConverter() {
         }
         @media (max-width: 480px) {
             #floatingConverter {
-                bottom: 15px;
-                padding: 8px 12px;
-                width: 90%;
+                bottom: 80px; /* Increased to avoid overlap with bottom buttons */
+                padding: 6px 10px;
+                width: auto;
+                min-width: 200px;
                 justify-content: center;
             }
             .fc-input {
-                width: 80px;
+                width: 70px;
+                font-size: 0.8rem;
             }
         }
     `;
