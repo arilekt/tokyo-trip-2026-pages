@@ -238,7 +238,8 @@ function initLightbox() {
     };
 
     lightbox.addEventListener('click', e => {
-        if (e.target === lightbox || e.target === closeBtn) closeLightbox();
+        // Close on any click inside the lightbox (background, image, or close btn)
+        closeLightbox();
     });
     document.addEventListener('keydown', e => {
         if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
