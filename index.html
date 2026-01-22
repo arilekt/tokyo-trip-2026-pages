@@ -11,6 +11,25 @@
     <title>Tokyo Trip 2026 - Home</title>
     <link rel="stylesheet" href="asset/css/common.css">
     <style>
+        .lang-switch {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+
+        .lang-switch a.active {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
         /* Index Page Specific Styles */
         .hero {
             background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
@@ -358,6 +377,11 @@
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
+            <div class="lang-switch">
+                <a href="index.html" class="active">🇹🇭 TH</a>
+                <a href="en/index.html">🇬🇧 EN</a>
+                <a href="jp/index.html">🇯🇵 JP</a>
+            </div>
             <h1 data-i18n="hero-title">🗾 Tokyo Trip March 2026</h1>
             <p data-i18n="hero-subtitle">คู่มือท่องเที่ยวโตเกียว สำหรับเดือนมีนาคมและฤดูใบไม้ผลิ</p>
             <div class="hero-meta">
