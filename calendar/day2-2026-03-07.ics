@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Tokyo Trip 2026//Day 2//TH
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Tokyo Trip Day 2 - วัดเซ็นโซจิ & Skytree
+X-WR-CALNAME:Tokyo Trip Day 2 - Akihabara & Skytree
 X-WR-TIMEZONE:Asia/Tokyo
 
 BEGIN:VTIMEZONE
@@ -18,263 +18,86 @@ END:STANDARD
 END:VTIMEZONE
 
 BEGIN:VEVENT
-UID:day2-event1-wakeup@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event1-breakfast@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T060000
-DTEND;TZID=Asia/Tokyo:20260307T070000
-SUMMARY:⏰ ตื่นนอน + อาบน้ำ (Wake up & Get ready)
-DESCRIPTION:เตรียมตัวเริ่มต้นวันที่ 2\n\n📝 สิ่งที่ต้องทำ:\n- อาบน้ำแต่งตัว\n- เตรียมกล้อง Canon 400D เก่า (สำหรับขาย/เทรด)\n- เช็คแบตเตอรี่/Memory Card\n\n🎯 วันนี้: ซื้อกล้อง + วัดเซ็นโซจิ + Tokyo Skytree
-LOCATION:APA Hotel Asakusa Tawaramachi
+DTEND;TZID=Asia/Tokyo:20260307T080000
+SUMMARY:🌅 ตื่นนอน & อาหารเช้า (Breakfast)
+DESCRIPTION:เตรียมตัวออกเดินทาง\n⚠️ อย่าลืมพาสปอร์ตสำหรับ Tax-Free!
+LOCATION:APA Hotel Asakusa Tawaramachi Ekimae
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event2-breakfast@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T070000
-DTEND;TZID=Asia/Tokyo:20260307T080000
-SUMMARY:🍳 อาหารเช้า (Breakfast)
-DESCRIPTION:อาหารเช้าที่โรงแรมหรือร้านใกล้ๆ\n\n📍 APA Hotel / ร้านอาหารใกล้เคียง\n💰 งบประมาณ: ¥500-800/คน
-LOCATION:APA Hotel Asakusa area
-CATEGORIES:FOOD
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event3-travel-akiba@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T080000
-DTEND;TZID=Asia/Tokyo:20260307T083000
-SUMMARY:🚃 เดินทางไปอากิฮาบาระ (Travel to Akihabara)
-DESCRIPTION:ไปซื้อกล้องที่ Yodobashi\n\n🚃 เส้นทาง:\nMetro Ginza Line: Tawaramachi → Suehirocho
-⏱️ ใช้เวลา: ~20-30 นาที
-LOCATION:Tawaramachi to Suehirocho Station
+UID:day2-event2-travel-yodobashi@tokyotrip2026
+DTSTAMP:20260122T000000Z
+DTSTART;TZID=Asia/Tokyo:20260307T083000
+DTEND;TZID=Asia/Tokyo:20260307T090000
+SUMMARY:🚇 เดินทางไป Akihabara (Travel to Akihabara)
+DESCRIPTION:Metro Ginza Line: Tawaramachi → Suehirocho (5 นาที)\nเดินไป Yodobashi Akiba
+LOCATION:Akihabara
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event4-coffee@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T083000
-DTEND;TZID=Asia/Tokyo:20260307T093000
-SUMMARY:☕ รอร้านเปิด + กาแฟ (Wait for store opening)
-DESCRIPTION:รอ Yodobashi เปิด 09:30\n\n📍 Starbucks / Doutor ใกล้ Yodobashi Akiba
-☕ กาแฟ + วางแผนกล้องที่จะซื้อ\n\n📝 รีเสิร์ชกล้อง:\n- พ่อ: Canon EOS 800D/200D/77D/M50
-- พจน์: Ricoh WG-80 / Canon SX740 HS
-LOCATION:Coffee shop near Yodobashi Akiba
-CATEGORIES:FOOD
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event5-camera-shopping@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event3-camera-shopping@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T093000
 DTEND;TZID=Asia/Tokyo:20260307T110000
-SUMMARY:📷 ซื้อกล้อง Yodobashi Akiba (Camera Shopping)
-DESCRIPTION:🎯 MISSION สำคัญ: ซื้อกล้อง 2 ตัว!\n\n📍 Yodobashi Camera Akiba
-🏢 1 Kanda Hanaokacho, Chiyoda-ku
-⏰ เปิด 09:30-22:00\n\n📷 กล้องพ่อ (มือสอง):\n- Canon EOS 800D/200D/77D/M50
-- งบ: ¥15,000-22,000\n\n📷 กล้องพจน์ (ของขวัญวันเกิด):\n- Ricoh WG-80 หรือ Canon SX740 HS
-- งบ: ¥30,000-45,000\n\n🔋 อุปกรณ์เสริม:\n- แบตเตอรี่สำรอง (LP-E17)
-- Memory Card 64GB/128GB SanDisk
-- กระเป๋ากล้อง\n\n💰 งบรวม: ¥50,000-70,000
-LOCATION:Yodobashi Camera Akiba, 1 Kanda Hanaokacho, Chiyoda-ku, Tokyo
+SUMMARY:📸 ซื้อกล้อง Yodobashi Akiba (Camera Shopping)
+DESCRIPTION:🎯 ภารกิจซื้อกล้อง 2 ตัว\n1. กล้องคุณพ่อ (Canon EOS 800D/200D มือ 2)\n2. กล้องพอใจ (Ricoh WG-80 / Canon SX740 / Sony WX500 มือ 1)\n3. ซื้อ Memory Card & อุปกรณ์เสริม
+LOCATION:Yodobashi Camera Akiba
 CATEGORIES:SHOPPING
-PRIORITY:1
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event6-travel-asakusa@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event4-sensoji@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T110000
-DTEND;TZID=Asia/Tokyo:20260307T113000
-SUMMARY:🚃 เดินทางกลับอาซากุสะ (Travel back to Asakusa)
-DESCRIPTION:กลับไปเที่ยววัดเซ็นโซจิ\n\n🚃 เส้นทาง:\nSuehirocho → Tawaramachi (Ginza Line)
-⏱️ ใช้เวลา: ~20 นาที
-LOCATION:Akihabara to Asakusa
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event7-sensoji@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T113000
-DTEND;TZID=Asia/Tokyo:20260307T123000
-SUMMARY:⛩️ วัดเซ็นโซจิ (Senso-ji Temple)
-DESCRIPTION:วัดที่เก่าแก่ที่สุดในโตเกียว\n\n📍 Senso-ji Temple, Asakusa
-⏰ เปิด 24 ชั่วโมง (Main Hall 06:00-17:00)
-💰 ฟรี\n\n📸 จุดถ่ายรูป:\n- ประตูคามินาริมง (Kaminarimon Gate) - โคมไฟยักษ์แดง
-- ถนนนากามิเซะ (Nakamise-dori)
-- ประตูโฮโซมง (Hozomon Gate)
-- ตัวอาคารหลัก (Main Hall)
-- เจดีย์ 5 ชั้น\n\n🙏 กิจกรรม:\n- สักการะพระ
-- เสี่ยงเซียมซี (Omikuji) ¥100
-- ซื้อเครื่องราง (Omamori)
-LOCATION:Senso-ji Temple, 2 Chome-3-1 Asakusa, Taito-ku, Tokyo
-CATEGORIES:ATTRACTION
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event8-nakamise@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T123000
-DTEND;TZID=Asia/Tokyo:20260307T133000
-SUMMARY:🛍️ ถนนนากามิเซะ (Nakamise Shopping Street)
-DESCRIPTION:ถนนช็อปปิ้งสู่วัดเซ็นโซจิ\n\n📍 Nakamise-dori, Asakusa
-⏰ ร้านค้าเปิด ~09:00-19:00\n\n🍡 ของกิน:\n- เซมเบ้ (ข้าวเกรียบญี่ปุ่น)
-- นินเกียวยากิ (ขนมรูปตุ๊กตา)
-- ไอศกรีมมัทฉะ
-- โมจิ\n\n🎁 ของฝาก:\n- พัดญี่ปุ่น
-- ตะเกียบ
-- ของที่ระลึก\n\n💰 งบ: ¥1,000-2,000
-LOCATION:Nakamise-dori, Asakusa, Taito-ku, Tokyo
-CATEGORIES:SHOPPING
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event9-lunch@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T133000
 DTEND;TZID=Asia/Tokyo:20260307T143000
-SUMMARY:🍜 อาหารกลางวัน (Lunch)
-DESCRIPTION:อาหารกลางวันย่านอาซากุสะ\n\n📍 Asakusa area
-🍽️ แนะนำ:\n- ราเมน
-- อุด้ง
-- เท็มปุระ
-- ข้าวหน้าต่างๆ\n\n💰 งบ: ¥1,000-1,500/คน
-LOCATION:Asakusa, Taito-ku, Tokyo
-CATEGORIES:FOOD
+SUMMARY:⛩️ ชมวัดเซ็นโซจิ & อาหารกลางวัน (Senso-ji Temple)
+DESCRIPTION:เดินทางกลับ Asakusa\n\n📸 ทดลองกล้องใหม่!\n- ประตู Kaminarimon\n- ถนน Nakamise (ขนม Ningyo-yaki, Senbei)\n- ไหว้พระขอพร
+LOCATION:Senso-ji Temple, Asakusa
+CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event10-travel-skytree@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T143000
-DTEND;TZID=Asia/Tokyo:20260307T150000
-SUMMARY:🚃 เดินทางไป Tokyo Skytree (Travel to Skytree)
-DESCRIPTION:ไปชม Sunset ที่ Tokyo Skytree\n\n🚃 เส้นทาง:\nAsakusa → Oshiage (Metro)
-⏱️ ใช้เวลา: ~15-20 นาที\n\n🌅 พระอาทิตย์ตก ~17:45
-LOCATION:Asakusa to Oshiage Station
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event11-skytree-ticket@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event5-skytree@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T150000
-DTEND;TZID=Asia/Tokyo:20260307T163000
-SUMMARY:🎫 ซื้อตั๋ว + ขึ้น Skytree (Buy tickets & Ascend)
-DESCRIPTION:ซื้อตั๋วและขึ้นลิฟต์\n\n📍 Tokyo Skytree
-🏢 1 Chome-1-2 Oshiage, Sumida-ku\n\n🎫 ราคาตั๋ว:\n- Tembo Deck (350m): ¥2,100/ผู้ใหญ่, ¥950/เด็ก
-- Tembo Galleria (450m): +¥1,000/ผู้ใหญ่, +¥500/เด็ก\n\n💡 แนะนำ: ซื้อตั๋ว Combo ทั้ง 2 ชั้น
-💰 รวม: ~¥6,000-8,000 (2 คน)
-LOCATION:Tokyo Skytree, 1 Chome-1-2 Oshiage, Sumida-ku, Tokyo
-CATEGORIES:ATTRACTION
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event12-skytree-sunset@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T163000
 DTEND;TZID=Asia/Tokyo:20260307T183000
-SUMMARY:📸 ชม Sunset & Night View - Tokyo Skytree
-DESCRIPTION:🌅 ไฮไลท์วันนี้: Golden Hour!\n\n📍 Tembo Deck (350m) / Tembo Galleria (450m)\n\n⏰ เวลาสำคัญ:\n🌅 พระอาทิตย์ตก: ~17:45
-📸 Golden Hour: 17:15-18:15
-🌃 Night View: หลัง 18:00\n\n📷 จุดถ่ายรูป:\n- วิวเมืองโตเกียว 360°
-- ภูเขาฟูจิ (ถ้าอากาศดี)
-- แม่น้ำสุมิดะ
-- วิวกลางคืนเมืองโตเกียว\n\n💡 เคล็ดลับ: มาก่อน Sunset 1 ชม. เพื่อชมทั้งกลางวันและกลางคืน
-LOCATION:Tokyo Skytree Observation Deck
-CATEGORIES:ATTRACTION
-PRIORITY:1
+SUMMARY:🗼 Tokyo Skytree (Sunset Time)
+DESCRIPTION:ชมวิวพระอาทิตย์ตกจากตึกที่สูงที่สุดในญี่ปุ่น\n\n🌅 Sunset: ~17:45\n📸 Golden Hour: 17:15-18:15
+LOCATION:Tokyo Skytree
+CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event13-solamachi@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event6-dinner-solamachi@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T183000
 DTEND;TZID=Asia/Tokyo:20260307T200000
-SUMMARY:🍽️ อาหารเย็น Solamachi (Dinner at Solamachi)
-DESCRIPTION:ทานอาหารเย็นที่ห้างใต้ Skytree\n\n📍 Tokyo Solamachi
-🏢 1 Chome-1-2 Oshiage, Sumida-ku
-⏰ ร้านอาหารเปิดถึง ~21:00-23:00\n\n🍽️ มีหลายร้านให้เลือก:\n- ราเมน
-- ซูชิ
-- อาหารญี่ปุ่นหลากหลาย
-- Food Court\n\n💰 งบ: ¥1,500-2,500/คน
-LOCATION:Tokyo Solamachi, 1 Chome-1-2 Oshiage, Sumida-ku, Tokyo
+SUMMARY:🍽️ Dinner @ Solamachi
+DESCRIPTION:ทานอาหารเย็นที่ศูนย์การค้า Tokyo Solamachi (ติด Skytree)
+LOCATION:Tokyo Solamachi
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day2-event14-travel-tokyost@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day2-event7-character-street@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T200000
-DTEND;TZID=Asia/Tokyo:20260307T203000
-SUMMARY:🚃 เดินทางไป Tokyo Station (Travel to Tokyo Station)
-DESCRIPTION:ไปช็อปปิ้ง Character Street\n\n🚃 เส้นทาง:\nHanzomon Line: Oshiage → Mitsukoshimae
-แล้วเดินไป Tokyo Station B1F
-⏱️ ใช้เวลา: ~25-30 นาที
-LOCATION:Oshiage to Tokyo Station
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event15-character-street@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T203000
 DTEND;TZID=Asia/Tokyo:20260307T213000
-SUMMARY:🛍️ Tokyo Character Street (Character Street Shopping)
-DESCRIPTION:ช็อปปิ้งของ Character\n\n📍 Tokyo Character Street
-🏢 B1F Tokyo Station Ichibangai
-⏰ เปิด 10:00-20:30\n\n🏪 ร้านที่ต้องไป:\n- Donguri Republic (Studio Ghibli)
-- Sanrio
-- Pokemon Store
-- Snoopy Town
-- Ultraman\n\n🎁 ของซื้อ:\n- ตุ๊กตา Totoro
-- ของ Sanrio
-- สินค้า Pokemon\n\n💰 งบ: ¥3,000-5,000
-LOCATION:Tokyo Character Street, B1F Tokyo Station Ichibangai, Chiyoda-ku, Tokyo
+SUMMARY:🛍️ Tokyo Character Street
+DESCRIPTION:ช้อปปิ้งของสะสมและคาแรคเตอร์\n\n📍 Tokyo Station (Yaesu Exit)\n- Donguri Republic (Ghibli)\n- Sanrio\n- Pokemon Store
+LOCATION:Tokyo Character Street
 CATEGORIES:SHOPPING
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event16-travel-back@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T213000
-DTEND;TZID=Asia/Tokyo:20260307T220000
-SUMMARY:🚃 เดินทางกลับโรงแรม (Travel back to Hotel)
-DESCRIPTION:กลับที่พัก\n\n🚃 เส้นทาง:\nTokyo → Tawaramachi (Metro Ginza Line)
-⏱️ ใช้เวลา: ~20-25 นาที
-LOCATION:Tokyo Station to Tawaramachi
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day2-event17-rest@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260307T220000
-DTEND;TZID=Asia/Tokyo:20260307T230000
-SUMMARY:😴 พักผ่อน (Rest)
-DESCRIPTION:พักผ่อนหลังวันที่ยาวนาน\n\n📝 เตรียมตัวสำหรับวันพรุ่งนี้:\n- เก็บกระเป๋า Check-out พรุ่งนี้!
-- ชาร์จกล้องใหม่
-- เช็คตารางรถบัสไป Kawaguchiko\n\n🎯 วันพรุ่งนี้: ออกเดินทางไปคาวากุจิโกะ
-LOCATION:APA Hotel Asakusa Tawaramachi
-CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
 

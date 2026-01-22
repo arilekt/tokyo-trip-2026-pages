@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tokyo Trip 2026 - รายการจัดของ (Packing List)</title>
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../asset/css/common.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00838f;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+        }
+
+        .checklist-category {
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #006064;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            background: #e0f7fa;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .category-icon {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .checklist-items {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .checklist-item {
+            background: #fafafa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .checklist-item:hover {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .item-checkbox {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            accent-color: #00838f;
+            cursor: pointer;
+        }
+
+        .item-label {
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        .item-note {
+            font-size: 0.8em;
+            color: #666;
+            margin-left: 5px;
+            display: block;
+        }
+
+        .important-tag {
+            background: #ffcdd2;
+            color: #c62828;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .winter-tag {
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .checklist-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>🎒 รายการจัดกระเป๋า (Tokyo Trip 2026)</h1>
+
+        <div class="checklist-category">
+            <div class="category-title">
+                <span class="category-icon">📄</span> เอกสารสำคัญ (Important Documents)
+            </div>
+            <ul class="checklist-items">
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="doc1">
+                    <label for="doc1" class="item-label">พาสปอร์ต (Passport) <span
+                            class="important-tag">ห้ามลืม!</span><span class="item-note">อายุเหลือ > 6
+                            เดือน</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="doc2">
+                    <label for="doc2" class="item-label">Visit Japan Web (QR Code) <span
+                            class="important-tag">สำคัญ</span><span class="item-note">แคปหน้าจอไว้ด้วย</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="doc3">
+                    <label for="doc3" class="item-label">ใบจองโรงแรม (Booking Voucher)<span
+                            class="item-note">ปริ้นท์/เซฟ PDF</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="doc4">
+                    <label for="doc4" class="item-label">ตั๋วเครื่องบิน (E-Ticket)<span class="item-note">Thai Lion Air
+                            / AirAsia X</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="doc5">
+                    <label for="doc5" class="item-label">กรมธรรม์ประกันเดินทาง<span
+                            class="item-note">ปริ้นท์/เซฟไฟล์</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-category">
+            <div class="category-title">
+                <span class="category-icon">💵</span> เงินและบัตร (Money & Cards)
+            </div>
+            <ul class="checklist-items">
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="money1">
+                    <label for="money1" class="item-label">เงินสดเยน (JPY Cash)<span
+                            class="item-note">แลกไว้พอประมาณ</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="money2">
+                    <label for="money2" class="item-label">บัตร Travel Card (YouTrip/Planet/etc.)<span
+                            class="item-note">เติมเงินให้พร้อม</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="money3">
+                    <label for="money3" class="item-label">บัตรเครดิต (Credit Card)<span
+                            class="item-note">สำรองฉุกเฉิน</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-category">
+            <div class="category-title">
+                <span class="category-icon">📱</span> อิเล็กทรอนิกส์ (Electronics)
+            </div>
+            <ul class="checklist-items">
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="elec1">
+                    <label for="elec1" class="item-label">หัวแปลงปลั๊กไฟ (Universal Adapter)<span
+                            class="item-note">ญี่ปุ่นใช้ขาแบน 2 ขา (Type A)</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="elec2">
+                    <label for="elec2" class="item-label">Power Bank<span class="item-note">ถือขึ้นเครื่องเท่านั้น
+                            (ห้ามโหลด)</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="elec3">
+                    <label for="elec3" class="item-label">สายชาร์จมือถือ (Charging Cables)</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="elec4">
+                    <label for="elec4" class="item-label">ซิมการ์ด / Pocket WiFi<span class="item-note">Sim2Fly / Sugoi
+                            SIM</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-category">
+            <div class="category-title">
+                <span class="category-icon">🧥</span> เครื่องแต่งกายฤดูหนาว (Winter Gear) <span
+                    class="winter-tag">Palcall & Fuji (0-10°C)</span>
+            </div>
+            <ul class="checklist-items">
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear1">
+                    <label for="wear1" class="item-label">เสื้อ Heattech / ลองจอน<span
+                            class="item-note">ชั้นในสุดกันหนาว</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear2">
+                    <label for="wear2" class="item-label">เสื้อไหมพรม / Fleece<span
+                            class="item-note">ชั้นกลางเพิ่มความอบอุ่น</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear3">
+                    <label for="wear3" class="item-label">เสื้อโค้ท / Down Jacket<span class="item-note">กันลม
+                            กันหนาว</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear4">
+                    <label for="wear4" class="item-label">ถุงมือ / หมวกไหมพรม / ผ้าพันคอ<span
+                            class="item-note">สำคัญมากตอนไปลานสกี</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear5">
+                    <label for="wear5" class="item-label">ถุงเท้าหนา (Wool Socks)</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="wear6">
+                    <label for="wear6" class="item-label">รองเท้าเดินสบาย (Sneakers)<span
+                            class="item-note">เดินเยอะมาก!</span></label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="checklist-category">
+            <div class="category-title">
+                <span class="category-icon">💊</span> ของใช้ส่วนตัว & ยา (Personal & Meds)
+            </div>
+            <ul class="checklist-items">
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="pers1">
+                    <label for="pers1" class="item-label">ยาประจำตัว / ยาแก้ปวด / ยาแก้แพ้</label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="pers2">
+                    <label for="pers2" class="item-label">Skincare / Lip Balm / Hand Cream<span
+                            class="item-note">อากาศแห้งมาก</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="pers3">
+                    <label for="pers3" class="item-label">แว่นกันแดด<span class="item-note">สำหรับลานสกี
+                            (แสงสะท้อนหิมะ)</span></label>
+                </li>
+                <li class="checklist-item">
+                    <input type="checkbox" class="item-checkbox" id="pers4">
+                    <label for="pers4" class="item-label">หน้ากากอนามัย (Mask)</label>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>เตรียมตัวให้พร้อม แล้วไปสนุกกัน! ✈️🇯🇵</p>
+        </div>
+    </div>
+    <script src="../asset/js/common.js"></script>
+</body>
+
+</html>

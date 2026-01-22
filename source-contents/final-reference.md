@@ -74,20 +74,39 @@
 
 ---
 
-## คืนที่ 5-7: Shinjuku Granbell Hotel
-
+## คืนที่ 5: Shinjuku Granbell Hotel
 | รายการ | ข้อมูล |
 |--------|--------|
-| **วันที่** | 10-13 มี.ค. 2026 (3 คืน) |
-| **ห้อง** | Economy Double Room Non-Smoking (1 เตียงใหญ่) |
-| **ที่อยู่** | **2 Chome-14-5 Kabukicho, Shinjuku, Tokyo, 160-0021** |
-| **โทรศัพท์** | +81-3-5155-2666 |
-| **การเดินทาง** | เดิน 5 นาที จาก JR Shinjuku (East Exit) |
-| **Booking ID** | 1963361534 (Agoda) |
-| **Confirmation** | - |
-| **PIN** | - |
-| **Check-in/out** | 10 มี.ค. 15:00 / 13 มี.ค. 11:00 |
-| **ราคา** | ฿12,161.79 ✅ จ่ายแล้ว |
+| **วันที่** | 10-11 มี.ค. 2026 (1 คืน) |
+| **ห้อง** | Economy Double Room Non-Smoking |
+| **ที่อยู่** | 2-14-5 Kabukicho, Shinjuku |
+| **Booking ID** | **1975745940** (Agoda) |
+| **Check-in/out** | 10 มี.ค. 15:00 / 11 มี.ค. 11:00 |
+| **ราคา** | **USD 132.04** (จ่ายแล้ว) |
+
+---
+
+## คืนที่ 6: Palcall Tsumagoi Resort Hotel ❄️
+| รายการ | ข้อมูล |
+|--------|--------|
+| **วันที่** | 11-12 มี.ค. 2026 (1 คืน) |
+| **ห้อง** | Standard Room |
+| **ที่อยู่** | Tsumagoi-mura, Agatsuma-gun, Gunma |
+| **Booking ID** | **1975746539** (Agoda) |
+| **Check-in/out** | 11 มี.ค. 15:00 / 12 มี.ค. 10:00 |
+| **ราคา** | **JPY 27,030** (จ่ายแล้ว) |
+| **Shuttle Bus** | **ต้องจอง:** Karuizawa St. ↔ Hotel |
+
+---
+
+## คืนที่ 7: Shinjuku Granbell Hotel
+| รายการ | ข้อมูล |
+|--------|--------|
+| **วันที่** | 12-13 มี.ค. 2026 (1 คืน) |
+| **ห้อง** | Economy Double Room Non-Smoking |
+| **Booking ID** | **1975747284** (Agoda) |
+| **Check-in/out** | 12 มี.ค. 15:00 / 13 มี.ค. 11:00 |
+| **ราคา** | **USD 148.05** (จ่ายแล้ว) |
 
 ---
 
@@ -102,8 +121,8 @@
 | **ซื้อที่** | JR East Travel Service Center (NRT/Tokyo) |
 
 **แผนการใช้:**
-- **Day 1 (11 มี.ค.)** - Shinjuku ↔ Gala Yuzawa (Shinkansen)
-- **Day 2 (12 มี.ค.)** - Suga Shrine + เดินทางในโตเกียว
+- **Day 1 (11 มี.ค.)** - Shinjuku → Karuizawa (Shinkansen)
+- **Day 2 (12 มี.ค.)** - Karuizawa → Shinjuku (Shinkansen)
 - **Day 3 (13 มี.ค.)** - Shinjuku → NRT (N'EX)
 
 ---

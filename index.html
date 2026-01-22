@@ -393,6 +393,17 @@
                     </div>
                 </div>
             </a>
+
+            <!-- Packing List -->
+            <a href="th/packing-list.html" class="page-card">
+                <div class="page-card-icon">🎒</div>
+                <div class="page-card-content">
+                    <div class="page-card-title">รายการจัดกระเป๋า</div>
+                    <div class="page-card-desc">
+                        Checklist เอกสาร เสื้อผ้ากันหนาว และของใช้จำเป็น
+                    </div>
+                </div>
+            </a>
         </section>
         <!-- Page Cards for trip plan with timeline details -->
         <section class="page-grid">
@@ -526,7 +537,7 @@
         // Check online/offline status
         function updateOnlineStatus() {
             const statusEl = document.getElementById('offlineStatus');
-            const timestamp = '18 มกราคม 2569 12:30';
+            const timestamp = '22 มกราคม 2569 21:05';
             if (navigator.onLine) {
                 statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
                 statusEl.classList.remove('offline');

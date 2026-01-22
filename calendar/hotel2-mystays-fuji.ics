@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Tokyo Trip 2026//Hotel 2//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Hotel Stay: HOTEL MYSTAYS Fuji Onsen Resort
+X-WR-CALNAME:Hotel Stay: MYSTAYS Fuji Onsen
 X-WR-TIMEZONE:Asia/Tokyo
 
 BEGIN:VTIMEZONE
@@ -19,23 +19,12 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:hotel2-mystays-fuji-stay@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T143000
-DTEND;TZID=Asia/Tokyo:20260310T100000
-SUMMARY:🏨 ที่พัก: HOTEL MYSTAYS Fuji Onsen Resort
-DESCRIPTION:ที่พัก 2 คืนที่คาวากุจิโกะ พร้อมออนเซ็นและวิวภูเขาไฟฟูจิ
-
-เช็คอิน: 8 มี.ค. 2026, 14:30
-เช็คเอาท์: 10 มี.ค. 2026, 10:00
-
-ที่อยู่: 2654-1 Arakura, Fujiyoshida, Yamanashi 403-0011, Japan
-โทร: +81 555-21-7510
-
-สิ่งอำนวยความสะดวก:
-- ออนเซ็นธรรมชาติ
-- ห้องอาหาร
-- รถรับส่งฟรี منสถานี Kawaguchiko
-LOCATION:HOTEL MYSTAYS Fuji Onsen Resort, 2654-1 Arakura, Fujiyoshida, Yamanashi 403-0011, Japan
+DTSTAMP:20260122T000000Z
+DTSTART;TZID=Asia/Tokyo:20260308T150000
+DTEND;TZID=Asia/Tokyo:20260310T090000
+SUMMARY:🏨 HOTEL MYSTAYS Fuji Onsen Resort (2 Nights)
+DESCRIPTION:เช็คอิน: 8 มี.ค. 15:00\nเช็คเอาท์: 10 มี.ค. 09:00\n\n📍 ใกล้สวนสนุก Fuji-Q และสถานี Kawaguchiko\n♨️ มีออนเซ็นชั้นบนสุด
+LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT

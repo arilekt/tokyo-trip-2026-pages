@@ -3,7 +3,7 @@ VERSION:2.0
 PRODID:-//Tokyo Trip 2026//Day 3//TH
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Tokyo Trip Day 3 - ไปคาวากุจิโกะ
+X-WR-CALNAME:Tokyo Trip Day 3 - Kawaguchiko
 X-WR-TIMEZONE:Asia/Tokyo
 
 BEGIN:VTIMEZONE
@@ -18,183 +18,84 @@ END:STANDARD
 END:VTIMEZONE
 
 BEGIN:VEVENT
-UID:day3-event1-wakeup@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event1-travel-shinjuku@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T060000
-DTEND;TZID=Asia/Tokyo:20260308T070000
-SUMMARY:⏰ ตื่นนอน + เก็บกระเป๋า (Wake up & Pack)
-DESCRIPTION:เตรียมตัว Check-out\n\n📝 สิ่งที่ต้องทำ:\n- อาบน้ำแต่งตัว\n- เก็บกระเป๋าให้เรียบร้อย\n- เช็คของในห้องไม่ให้ลืม\n\n⚠️ Check-out วันนี้!
-LOCATION:APA Hotel Asakusa Tawaramachi
-CATEGORIES:HOTEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event2-breakfast@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T070000
-DTEND;TZID=Asia/Tokyo:20260308T080000
-SUMMARY:🍳 อาหารเช้า (Breakfast)
-DESCRIPTION:อาหารเช้าก่อนออกเดินทาง\n\n📍 APA Hotel / ร้านใกล้เคียง\n💰 งบ: ¥500-800/คน
-LOCATION:APA Hotel Asakusa area
-CATEGORIES:FOOD
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event3-checkout@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T080000
 DTEND;TZID=Asia/Tokyo:20260308T083000
-SUMMARY:🏣🚶‍➡️ CHECK-OUT - APA Hotel Asakusa Tawaramachi
-DESCRIPTION:Check-out และออกเดินทาง\n\n🏨 APA Hotel Asakusa Tawaramachi Ekimae\n📍 1-2-3 Nishi Asakusa, Taito-ku\n\n📝 ขั้นตอน:\n- คืนกุญแจห้อง\n- ชำระค่าใช้จ่ายเพิ่มเติม (ถ้ามี)\n\n🎯 ต่อไป: ไปสถานีรถบัส Shinjuku
+SUMMARY:🍳 Check-out & Travel to Shinjuku
+DESCRIPTION:เช็คเอาท์จาก APA Asakusa\nเดินทางไป Shinjuku Station (Busta Shinjuku)
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae
-CATEGORIES:HOTEL
-PRIORITY:1
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event4-travel-shinjuku@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T083000
-DTEND;TZID=Asia/Tokyo:20260308T091500
-SUMMARY:🚃 เดินทางไปชินจูกุ (Travel to Shinjuku Busta)
-DESCRIPTION:ไปสถานีรถบัสชินจูกุ\n\n🚃 เส้นทาง:\nMetro Ginza Line → JR → Shinjuku\n⏱️ ใช้เวลา: ~40-50 นาที\n\n📍 ปลายทาง: Shinjuku Expressway Bus Terminal (Busta)\nชั้น 4
-LOCATION:Tawaramachi to Shinjuku Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event5-bus-kawaguchiko@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event2-bus-kawaguchiko@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T093000
 DTEND;TZID=Asia/Tokyo:20260308T114000
-SUMMARY:🚌 รถบัสด่วนไปคาวากุจิโกะ (Express Bus to Kawaguchiko)
-DESCRIPTION:เดินทางไปทะเลสาบคาวากุจิโกะ\n\n📍 ขึ้นรถ: Shinjuku Expressway Bus Terminal (Busta) Level 4\n📍 ลงรถ: Kawaguchiko Bus Terminal\n⏱️ ใช้เวลา: ~2 ชม. 10 นาที\n\n💰 ค่ารถบัส: ~¥2,000/คน\n\n🏔️ ถ้าอากาศดีจะเห็นภูเขาฟูจิระหว่างทาง!
-LOCATION:Shinjuku Busta to Kawaguchiko
-CATEGORIES:TRAVEL
-PRIORITY:1
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event6-arrive-kawaguchiko@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T114000
-DTEND;TZID=Asia/Tokyo:20260308T120000
-SUMMARY:🏔️ ถึงคาวากุจิโกะ (Arrive Kawaguchiko)
-DESCRIPTION:ถึงสถานีรถบัสคาวากุจิโกะ\n\n📍 Kawaguchiko Bus Terminal\n\n📝 สิ่งที่ต้องทำ:\n- ฝากกระเป๋าที่ Coin Locker\n- เช็คตารางรถบัสท้องถิ่น\n- หาร้านอาหารกลางวัน
-LOCATION:Kawaguchiko Bus Terminal
+SUMMARY:🚌 รถบัสไป Kawaguchiko (Highway Bus)
+DESCRIPTION:ขึ้นรถที่ Shinjuku Expressway Bus Terminal (Busta)\n\n💰 ผู้ใหญ่ 462฿ (¥2,200) / เด็ก 231฿ (¥1,100)\n🚍 ลงที่ Kawaguchiko Station
+LOCATION:Busta Shinjuku
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event7-lunch@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event3-arrival-lunch@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T120000
-DTEND;TZID=Asia/Tokyo:20260308T130000
-SUMMARY:🍜 อาหารกลางวัน คาวากุจิโกะ (Lunch at Kawaguchiko)
-DESCRIPTION:อาหารกลางวันย่านคาวากุจิโกะ\n\n📍 Kawaguchiko area\n🍽️ แนะนำ:\n- โฮโตะ (Hoto) - บะหมี่พื้นเมือง\n- อุด้ง\n- อาหารญี่ปุ่นทั่วไป\n\n💰 งบ: ¥1,000-1,500/คน
-LOCATION:Kawaguchiko area
+DTEND;TZID=Asia/Tokyo:20260308T143000
+SUMMARY:🍽️ Lunch & ฝากกระเป๋า (Kawaguchiko)
+DESCRIPTION:ทานมื้อเที่ยงแถวสถานี Kawaguchiko\nฝากกระเป๋าที่โรงแรมหรือ Locker สถานี
+LOCATION:Kawaguchiko Station
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event8-explore@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T130000
-DTEND;TZID=Asia/Tokyo:20260308T143000
-SUMMARY:🚶 เดินเล่น + รับกระเป๋า (Explore & Get luggage)
-DESCRIPTION:เดินเล่นรอเวลา Check-in\n\n📍 Kawaguchiko Station area\n\n🛒 กิจกรรม:\n- ซื้อของฝากท้องถิ่น\n- ถ่ายรูป\n- เตรียมไปโรงแรม\n\n⏰ Check-in: 15:00
-LOCATION:Kawaguchiko Station area
-CATEGORIES:ATTRACTION
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event9-travel-hotel@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event4-checkin-mystays@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T143000
-DTEND;TZID=Asia/Tokyo:20260308T150000
-SUMMARY:🚕 เดินทางไปโรงแรม (Travel to Hotel)
-DESCRIPTION:ไป HOTEL MYSTAYS Fuji Onsen Resort\n\n🚕 เส้นทาง:\n- แท็กซี่ หรือ\n- Free Shuttle จากสถานี\n⏱️ ใช้เวลา: ~15-20 นาที
-LOCATION:Kawaguchiko Station to HOTEL MYSTAYS
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event10-checkin@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T150000
 DTEND;TZID=Asia/Tokyo:20260308T153000
-SUMMARY:➡️🏢 CHECK-IN - HOTEL MYSTAYS Fuji Onsen Resort
-DESCRIPTION:เช็คอินที่พักคืนที่ 3-4\n\n🏨 HOTEL MYSTAYS Fuji Onsen Resort\n📍 2654 Arakura, Fuji-Yoshida-shi, Yamanashi 403-0011\n📞 +81-555-21-7510\n\n🛏️ ห้อง: Standard Double - Non-Smoking (Twin Beds)\n📅 พัก 2 คืน (8-10 มี.ค.)\n⏰ Check-out: 11:00 น. วันที่ 10 มี.ค.\n\n💰 Bath Tax: ~¥200 (จ่ายที่โรงแรม)\n\n♨️ โรงแรมมีออนเซ็น!
-LOCATION:HOTEL MYSTAYS Fuji Onsen Resort, 2654 Arakura, Fuji-Yoshida-shi, Yamanashi 403-0011
+SUMMARY:🏨 Check-in: HOTEL MYSTAYS Fuji Onsen Resort
+DESCRIPTION:เข้าเช็คอินและเก็บของ\n\n📍 2654 Arakura, Fujiyoshida\n📞 +81-555-21-7510
+LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
-PRIORITY:1
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event11-ropeway@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event5-ropeway@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T153000
 DTEND;TZID=Asia/Tokyo:20260308T170000
-SUMMARY:🚡 กระเช้าคาจิคาจิ (Kachi-Kachi Ropeway)
-DESCRIPTION:ขึ้นกระเช้าชมวิวภูเขาฟูจิ\n\n📍 Kachi-Kachi Ropeway\n🏢 ใกล้ทะเลสาบคาวากุจิโกะ\n\n🎫 ค่ากระเช้า: ~¥900/ผู้ใหญ่\n\n📸 จุดชมวิว:\n- Mt. Tenjo Observation Deck\n- วิวภูเขาฟูจิ\n- วิวทะเลสาบคาวากุจิโกะ\n\n🐰 มีรูปปั้นกระต่ายจากนิทานคาจิคาจิยามะ
-LOCATION:Kachi-Kachi Ropeway, Kawaguchiko
-CATEGORIES:ATTRACTION
+SUMMARY:🚡 Kachi-Kachi Ropeway
+DESCRIPTION:ขึ้นกระเช้าชมวิว Fuji & Lake Kawaguchiko\nจุดชมวิว Mt. Tenjo Observation Deck
+LOCATION:Lake Kawaguchiko Mt. Fuji Panorama Ropeway
+CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event12-dinner@tokyotrip2026
-DTSTAMP:20251122T000000Z
+UID:day3-event6-dinner@tokyotrip2026
+DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T170000
-DTEND;TZID=Asia/Tokyo:20260308T183000
-SUMMARY:🍜 อาหารเย็น - โฮโตะ (Dinner - Hoto Noodles)
-DESCRIPTION:ทานโฮโตะ อาหารพื้นเมืองยามานาชิ\n\n📍 แนะนำ: Houtou Fudou หรือ Houhouttei\n\n🍽️ โฮโตะ (Hoto):\n- บะหมี่แบนเส้นใหญ่\n- น้ำซุปมิโซะ\n- ผักและเนื้อสัตว์\n- เหมาะกับอากาศหนาว\n\n💰 งบ: ¥1,500-2,000/คน
-LOCATION:Hoto Restaurant, Kawaguchiko area
+DTEND;TZID=Asia/Tokyo:20260308T190000
+SUMMARY:🍽️ Dinner: Hoto Fudo (Hoto Noodles)
+DESCRIPTION:ทานอาหารพื้นเมือง "โฮโตะ" (Hoto)\nร้านแนะนำ: Houhouttei Hoto หรือ Hoto Fudo
+LOCATION:Kawaguchiko
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day3-event13-backhotel@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T183000
-DTEND;TZID=Asia/Tokyo:20260308T190000
-SUMMARY:🚕 กลับโรงแรม (Back to Hotel)
-DESCRIPTION:เดินทางกลับที่พัก\n\n📍 ร้านอาหาร → HOTEL MYSTAYS\n⏱️ ใช้เวลา: ~15-20 นาที
-LOCATION:Kawaguchiko to HOTEL MYSTAYS
-CATEGORIES:TRAVEL
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event14-onsen@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T190000
-DTEND;TZID=Asia/Tokyo:20260308T203000
-SUMMARY:♨️ แช่ออนเซ็น (Onsen Time)
-DESCRIPTION:แช่น้ำร้อนที่โรงแรม\n\n📍 HOTEL MYSTAYS Fuji Onsen Resort\n\n♨️ ออนเซ็นโรงแรม:\n- น้ำพุร้อนธรรมชาติ\n- วิวภูเขาฟูจิ (ถ้าอากาศดี)\n\n📝 มารยาท:\n- อาบน้ำก่อนลงแช่\n- ไม่เอาผ้าลงน้ำ\n- เงียบสงบ
-LOCATION:HOTEL MYSTAYS Fuji Onsen Resort - Onsen
-CATEGORIES:ATTRACTION
-STATUS:CONFIRMED
-END:VEVENT
-
-BEGIN:VEVENT
-UID:day3-event15-rest@tokyotrip2026
-DTSTAMP:20251122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T203000
+UID:day3-event7-rest@tokyotrip2026
+DTSTAMP:20260122T000000Z
+DTSTART;TZID=Asia/Tokyo:20260308T210000
 DTEND;TZID=Asia/Tokyo:20260308T220000
-SUMMARY:😴 พักผ่อน + เตรียมวันเกิด (Rest & Prepare Birthday)
-DESCRIPTION:พักผ่อนและเตรียมฉลองวันเกิด\n\n🎂 พรุ่งนี้วันเกิดพจน์!\n\n📝 เตรียมการ:\n- ซ่อนของขวัญ (กล้อง Ricoh/Canon)\n- วางแผน Surprise\n- ชาร์จอุปกรณ์\n- เช็คสภาพอากาศพรุ่งนี้\n\n🎯 วันพรุ่งนี้: 🎂 วันเกิดพจน์ 11 ขวบ!\n- เจดีย์ชูเรโตะ\n- หมู่บ้านโอชิโนะฮักไก\n- Birthday Dinner
+SUMMARY:😴 พักผ่อน (เตรียมวันเกิดพรุ่งนี้!)
+DESCRIPTION:พักผ่อนและเตรียม Surprise วันเกิดพอใจในวันพรุ่งนี้ 🎂
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
