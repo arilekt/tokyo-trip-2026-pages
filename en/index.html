@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="th">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Tokyo Trip March 2026 - Travel Guide">
     <meta name="theme-color" content="#1e293b">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <title>Tokyo Trip 2026 - Home</title>
-    <link rel="stylesheet" href="asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/common.css">
     <style>
         /* Index Page Specific Styles */
         .hero {
@@ -128,6 +128,7 @@
         .rate-input:focus {
             outline: none;
             border-color: #3b82f6;
+            color: #3b82f6;
         }
 
         .converter-grid {
@@ -351,6 +352,25 @@
                 transform: translateY(0);
             }
         }
+
+        .lang-switch {
+            text-align: center;
+            padding: 10px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .lang-switch a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+            opacity: 0.7;
+        }
+
+        .lang-switch a.active {
+            opacity: 1;
+            text-decoration: underline;
+        }
     </style>
 </head>
 
@@ -358,72 +378,77 @@
     <div class="container">
         <!-- Hero Section -->
         <header class="hero">
+            <div class="lang-switch">
+                <a href="../index.html">🇹🇭 TH</a>
+                <a href="index.html" class="active">🇬🇧 EN</a>
+                <a href="../jp/index.html">🇯🇵 JP</a>
+            </div>
             <h1 data-i18n="hero-title">🗾 Tokyo Trip March 2026</h1>
-            <p data-i18n="hero-subtitle">คู่มือท่องเที่ยวโตเกียว สำหรับเดือนมีนาคมและฤดูใบไม้ผลิ</p>
+            <p data-i18n="hero-subtitle">Tokyo Travel Guide for March & Spring Season</p>
             <div class="hero-meta">
-                <span data-i18n="hero-date">📅 6-13 มี.ค. 2026</span>
-                <span data-i18n="hero-travelers">👥 2 คน</span>
-                <span data-i18n="hero-duration">🕐 8 วัน 7 คืน</span>
+                <span data-i18n="hero-date">📅 Mar 6-13, 2026</span>
+                <span data-i18n="hero-travelers">👥 2 Travelers</span>
+                <span data-i18n="hero-duration">🕐 8 Days 7 Nights</span>
             </div>
             <!-- Countdown -->
             <div id="countdown" class="hero-countdown">
-                <span class="countdown-text">เหลือเวลาอีก <span id="daysLeft">0</span> วัน จะถึงวันเดินทาง</span>
+                <span class="countdown-text"><span id="daysLeft">0</span> Days left until trip!</span>
             </div>
         </header>
         <section class="page-grid">
 
             <!-- Main page for overall activity -->
-            <a href="th/cover-page.html" class="page-card">
+            <a href="../th/cover-page.html" class="page-card">
                 <div class="page-card-icon">📋</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">หน้าหลักสรุป</div>
+                    <div class="page-card-title">Summary (TH Only)</div>
                     <div class="page-card-desc">
-                        สรุปแผนรายวันพร้อมรูปภาพประกอบ
+                        Daily summary with images (Thai content)
                     </div>
                 </div>
             </a>
 
             <!-- Main page for shopping list -->
-            <a href="th/shopping-list.html" class="page-card">
+            <a href="shopping-list.html" class="page-card">
                 <div class="page-card-icon">🛍️</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">รายการซื้อของ</div>
+                    <div class="page-card-title">Shopping List</div>
                     <div class="page-card-desc">
-                        สถานที่ช็อปปิ้ง ของฝาก ขนมญี่ปุ่น พร้อมรูปภาพ
+                        Shopping spots, Souvenirs, Snacks (English)
                     </div>
                 </div>
             </a>
 
             <!-- Packing List -->
-            <a href="th/packing-list.html" class="page-card">
+            <a href="../th/packing-list.html" class="page-card">
                 <div class="page-card-icon">🎒</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">รายการจัดกระเป๋า</div>
+                    <div class="page-card-title">Packing List (TH Only)</div>
                     <div class="page-card-desc">
-                        Checklist เอกสาร เสื้อผ้ากันหนาว และของใช้จำเป็น
+                        Checklist for documents, clothes (Thai content)
                     </div>
                 </div>
             </a>
         </section>
         <!-- Page Cards for trip plan with timeline details -->
         <section class="page-grid">
-            <a href="th/trip-plan.html" class="page-card">
+            <a href="trip-plan.html" class="page-card">
                 <div class="page-card-icon">📅</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">แผนการเดินทาง</div>
+                    <div class="page-card-title">Trip Plan</div>
                     <div class="page-card-desc">
-                        Timeline รายวัน ที่พัก การเดินทาง และกิจกรรม
+                        Daily Timeline, Hotel, Activities (English)
                     </div>
                 </div>
             </a>
 
             <!-- Main page for cover printable -->
-            <a href="th/cover.html" class="page-card">
+            <a href="../th/cover.html" class="page-card">
                 <div class="page-card-icon">🖨️</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">เอกสารสำหรับพิมพ์</div>
+                    <div class="page-card-title">Printable Docs (TH Only)</div>
                     <div class="page-card-desc">
-                        เอกสารสำคัญ เที่ยวบิน ที่พัก งบประมาณ (A4)
+                        Important documents, Flights, Budget (A4)
                     </div>
                 </div>
             </a>
@@ -433,26 +458,26 @@
             <div class="page-card converter-card">
                 <div class="page-card-icon">💱</div>
                 <div class="page-card-content">
-                    <div class="page-card-title">แปลงค่าเงิน</div>
+                    <div class="page-card-title">Currency Converter</div>
 
                     <div class="converter-main">
                         <div class="converter-row">
                             <span class="currency-label">JPY</span>
                             <input type="text" id="jpyInput" class="converter-input" placeholder="0"
                                 inputmode="decimal">
-                            <button class="swap-btn" onclick="swapCurrency()" title="สลับ">⇅</button>
+                            <button class="swap-btn" onclick="swapCurrency()" title="Swap">⇅</button>
                         </div>
                         <div class="converter-row">
                             <span class="currency-label">THB</span>
                             <input type="text" id="thbInput" class="converter-input" placeholder="0"
                                 inputmode="decimal">
-                            <button class="clear-btn" onclick="clearInputs()" title="ล้าง">❌</button>
+                            <button class="clear-btn" onclick="clearInputs()" title="Clear">❌</button>
                         </div>
                     </div>
 
                     <div class="rate-divider"></div>
 
-                    <div class="rate-section-title">อัตราแลกเปลี่ยน</div>
+                    <div class="rate-section-title">Exchange Rate</div>
 
                     <div class="rate-inputs-wrapper">
                         <div class="rate-input-group">
@@ -477,7 +502,7 @@
                     </div>
 
                     <div class="rate-info">
-                        บันทึกอัตโนมัติ ข้อมูลอัตรแลกเปลี่ยน ณ วันที่ 22 พ.ย. 2568
+                        Auto-saves. Rate as of Nov 22, 2026.
                     </div>
                 </div>
             </div>
@@ -491,227 +516,84 @@
             <p>🗾 Tokyo Trip March 2026</p>
             <p>📱 Offline-ready • Responsive Design</p>
             <p style="font-size: 0.8rem; color: #64748b; text-align: center; margin-top: 1rem;">
-                Download Calendar:
-                <a href="calendar/day1-2026-03-06.ics" style="color: inherit;">Day 1</a> |
-                <a href="calendar/day2-2026-03-07.ics" style="color: inherit;">Day 2</a> |
-                <a href="calendar/day3-2026-03-08.ics" style="color: inherit;">Day 3</a> |
-                <a href="calendar/day4-2026-03-09.ics" style="color: inherit;">Day 4</a> |
-                <a href="calendar/day5-2026-03-10.ics" style="color: inherit;">Day 5</a> |
-                <a href="calendar/day6-2026-03-11.ics" style="color: inherit;">Day 6</a> |
-                <a href="calendar/day7-2026-03-12.ics" style="color: inherit;">Day 7</a> |
-                <a href="calendar/day8-2026-03-13.ics" style="color: inherit;">Day 8</a> |
-                <a href="calendar/hotel1-apa-asakusa.ics" style="color: inherit;">APA Asakusa</a> |
-                <a href="calendar/hotel2-mystays-fuji.ics" style="color: inherit;">Mystays Fuji</a> |
-                <a href="calendar/hotel3-shinjuku-granbell.ics" style="color: inherit;">Shinjuku Granbell</a>
+                <!-- Download Calendar links if needed -->
             </p>
         </footer>
     </div>
-
-    <script src="asset/js/common.js"></script>
+    <script src="../asset/js/common.js" defer></script>
     <script>
-        function getTimestamp() {
-            const now = new Date();
-            const date = now.toLocaleDateString('th-TH', { day: 'numeric', month: 'short', year: 'numeric' });
-            const hours = String(now.getHours()).padStart(2, '0');
-            const minutes = String(now.getMinutes()).padStart(2, '0');
-            return `${date} ${hours}:${minutes}`;
-        }
-
-        // Countdown Timer
+        // Countdown
         function updateCountdown() {
-            const targetDate = new Date('2026-03-06T00:00:00+07:00'); // Bangkok time
+            const tripDate = new Date('2026-03-06T00:00:00');
             const now = new Date();
-            const diff = targetDate - now;
-
-            if (diff > 0) {
-                const days = Math.ceil(diff / (1000 * 60 * 60 * 24));
-                document.getElementById('daysLeft').textContent = days;
-            } else {
-                document.getElementById('countdown').innerHTML = '<span class="countdown-text">🎉 ถึงวันเดินทางแล้ว!</span>';
-            }
+            const diffTime = tripDate - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            document.getElementById('daysLeft').innerText = diffDays > 0 ? diffDays : 0;
         }
-
-        updateCountdown();
-        setInterval(updateCountdown, 60000); // Update every minute
-
-        // Check online/offline status
-        function updateOnlineStatus() {
-            const statusEl = document.getElementById('offlineStatus');
-            const timestamp = '23 มกราคม 2569 00:00';
-            if (navigator.onLine) {
-                statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
-                statusEl.classList.remove('offline');
-            } else {
-                statusEl.textContent = `📴 กำลังใช้งาน Offline Mode updated: ${timestamp}`;
-                statusEl.classList.add('offline');
-            }
-        }
-
-        window.addEventListener('online', updateOnlineStatus);
-        window.addEventListener('offline', updateOnlineStatus);
-        updateOnlineStatus();
 
         // Currency Converter
-        const exchangeRate1Input = document.getElementById('exchangeRate1');   // 1 JPY = x THB
-        const exchangeRateInput = document.getElementById('exchangeRate');     // 1 THB = x JPY
-        const exchangeRate100Input = document.getElementById('exchangeRate100'); // 100 JPY = x THB
-        const thbInput = document.getElementById('thbInput');
         const jpyInput = document.getElementById('jpyInput');
+        const thbInput = document.getElementById('thbInput');
+        const exchangeRateInput = document.getElementById('exchangeRate'); // 1 THB = X JPY
+        const exchangeRate1Input = document.getElementById('exchangeRate1'); // 1 JPY = Y THB
+        const exchangeRate100Input = document.getElementById('exchangeRate100'); // 100 JPY = Z THB
 
-        // Format number with thousand separators
-        function formatNumber(num, decimals = 2) {
-            if (!num && num !== 0) return '';
-            const parts = num.toFixed(decimals).split('.');
-            parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-            // Remove trailing zeros after decimal
-            if (parts[1]) {
-                parts[1] = parts[1].replace(/0+$/, '');
-                if (parts[1] === '') return parts[0];
+        // Initial setup
+        const STORAGE_KEY_RATE = 'tokyo_trip_exchange_rate_thb_to_jpy';
+        const savedRate = localStorage.getItem(STORAGE_KEY_RATE);
+        if (savedRate) {
+            exchangeRateInput.value = savedRate;
+            updateRelatedRates(parseFloat(savedRate));
+        }
+
+        function updateRelatedRates(rate) {
+            // rate is 1 THB = X JPY
+            // so 1 JPY = 1/rate THB
+            const inverseRate = 1 / rate;
+            exchangeRate1Input.value = inverseRate.toFixed(4);
+            exchangeRate100Input.value = (inverseRate * 100).toFixed(2);
+        }
+
+        function convertFromJPY() {
+            const jpy = parseFloat(jpyInput.value);
+            if (isNaN(jpy)) { thbInput.value = ''; return; }
+            const rate1 = parseFloat(exchangeRate1Input.value); // 1 JPY = X THB
+            thbInput.value = (jpy * rate1).toFixed(2);
+        }
+
+        function convertFromTHB() {
+            const thb = parseFloat(thbInput.value);
+            if (isNaN(thb)) { jpyInput.value = ''; return; }
+            const rate = parseFloat(exchangeRateInput.value); // 1 THB = X JPY
+            jpyInput.value = (thb * rate).toFixed(0);
+        }
+
+        jpyInput.addEventListener('input', convertFromJPY);
+        thbInput.addEventListener('input', convertFromTHB);
+
+        // Update on rate change (Main rate 1 THB = X JPY)
+        exchangeRateInput.addEventListener('input', (e) => {
+            const rate = parseFloat(e.target.value);
+            if (!isNaN(rate) && rate > 0) {
+                localStorage.setItem(STORAGE_KEY_RATE, rate);
+                updateRelatedRates(rate);
+                convertFromJPY(); // Recalculate
             }
-            return parts.join('.');
-        }
+        });
 
-        // Parse formatted number back to float
-        function parseFormattedNumber(str) {
-            if (!str) return 0;
-            return parseFloat(str.replace(/,/g, '')) || 0;
-        }
-
-        // Load saved values from localStorage
-        function loadSavedValues() {
-            const savedRate = localStorage.getItem('exchangeRate');
-            const savedThb = localStorage.getItem('thbValue');
-            const savedJpy = localStorage.getItem('jpyValue');
-
-            if (savedRate) {
-                exchangeRateInput.value = savedRate;
-                updateOtherRatesFromMain();
-            }
-            if (savedThb) thbInput.value = formatNumber(parseFloat(savedThb));
-            if (savedJpy) jpyInput.value = formatNumber(parseFloat(savedJpy), 0);
-        }
-
-        // Save values to localStorage (save raw numbers)
-        function saveValues() {
-            localStorage.setItem('exchangeRate', exchangeRateInput.value);
-            localStorage.setItem('thbValue', parseFormattedNumber(thbInput.value));
-            localStorage.setItem('jpyValue', parseFormattedNumber(jpyInput.value));
-        }
-
-        // Update other rates from main rate (1 THB = x JPY)
-        function updateOtherRatesFromMain() {
-            const rate = parseFloat(exchangeRateInput.value) || 0;
-            if (rate > 0) {
-                exchangeRate1Input.value = (1 / rate).toFixed(3);
-                exchangeRate100Input.value = (100 / rate).toFixed(2);
-            }
-        }
-
-        // Update other rates from rate1 (1 JPY = x THB)
-        function updateOtherRatesFromRate1() {
-            const rate1 = parseFloat(exchangeRate1Input.value) || 0;
-            if (rate1 > 0) {
-                const mainRate = 1 / rate1;
-                exchangeRateInput.value = mainRate.toFixed(2);
+        // 1 JPY = X THB
+        exchangeRate1Input.addEventListener('input', (e) => {
+            const rate1 = parseFloat(e.target.value);
+            if (!isNaN(rate1) && rate1 > 0) {
+                const rate = 1 / rate1;
+                exchangeRateInput.value = rate.toFixed(4);
+                localStorage.setItem(STORAGE_KEY_RATE, rate);
                 exchangeRate100Input.value = (rate1 * 100).toFixed(2);
+                convertFromJPY();
             }
-        }
-
-        // Update other rates from rate100 (100 JPY = x THB)
-        function updateOtherRatesFromRate100() {
-            const rate100 = parseFloat(exchangeRate100Input.value) || 0;
-            if (rate100 > 0) {
-                const mainRate = 100 / rate100;
-                exchangeRateInput.value = mainRate.toFixed(2);
-                exchangeRate1Input.value = (rate100 / 100).toFixed(3);
-            }
-        }
-
-        // Convert THB to JPY
-        function convertThbToJpy() {
-            const rate = parseFloat(exchangeRateInput.value) || 0;
-            const thb = parseFormattedNumber(thbInput.value);
-            const jpy = thb * rate;
-            jpyInput.value = jpy ? formatNumber(Math.round(jpy), 0) : '';
-            saveValues();
-        }
-
-        // Convert JPY to THB
-        function convertJpyToThb() {
-            const rate = parseFloat(exchangeRateInput.value) || 0;
-            const jpy = parseFormattedNumber(jpyInput.value);
-            const thb = rate > 0 ? jpy / rate : 0;
-            thbInput.value = thb ? formatNumber(thb) : '';
-            saveValues();
-        }
-
-        // Swap currency values
-        function swapCurrency() {
-            const thbVal = parseFormattedNumber(thbInput.value);
-            const jpyVal = parseFormattedNumber(jpyInput.value);
-            thbInput.value = jpyVal ? formatNumber(jpyVal) : '';
-            jpyInput.value = thbVal ? formatNumber(thbVal, 0) : '';
-            if (jpyInput.value) convertJpyToThb();
-        }
-
-        // Clear inputs
-        function clearInputs() {
-            jpyInput.value = '';
-            thbInput.value = '';
-            saveValues();
-        }
-
-        // Format input on blur
-        function formatOnBlur(input, decimals) {
-            const val = parseFormattedNumber(input.value);
-            if (val) {
-                input.value = formatNumber(val, decimals);
-            }
-        }
-
-        // Allow only numbers and formatting chars during input
-        function cleanInput(input) {
-            input.value = input.value.replace(/[^0-9.,]/g, '');
-        }
-
-        // Recalculate conversion
-        function recalculate() {
-            if (jpyInput.value) convertJpyToThb();
-            else if (thbInput.value) convertThbToJpy();
-            saveValues();
-        }
-
-        // Event listeners for rate inputs
-        exchangeRate1Input.addEventListener('input', () => {
-            updateOtherRatesFromRate1();
-            recalculate();
         });
 
-        exchangeRateInput.addEventListener('input', () => {
-            updateOtherRatesFromMain();
-            recalculate();
-        });
-
-        exchangeRate100Input.addEventListener('input', () => {
-            updateOtherRatesFromRate100();
-            recalculate();
-        });
-
-        // Event listeners for currency inputs
-        jpyInput.addEventListener('input', () => {
-            cleanInput(jpyInput);
-            convertJpyToThb();
-        });
-        jpyInput.addEventListener('blur', () => formatOnBlur(jpyInput, 0));
-
-        thbInput.addEventListener('input', () => {
-            cleanInput(thbInput);
-            convertThbToJpy();
-        });
-        thbInput.addEventListener('blur', () => formatOnBlur(thbInput, 2));
-
-        // Initialize
-        loadSavedValues();
+        updateCountdown();
     </script>
 </body>
 
