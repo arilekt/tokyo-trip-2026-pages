@@ -708,6 +708,34 @@
                 padding: 8px 5px;
             }
         }
+
+        /* Place Detail Expand/Collapse */
+        .place-detail h4 {
+            cursor: pointer;
+            position: relative;
+            padding-right: 30px;
+            user-select: none;
+        }
+
+        .place-detail h4::after {
+            content: '▼';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 16px;
+            transition: transform 0.3s;
+        }
+
+        .place-detail.collapsed h4::after {
+            transform: translateY(-50%) rotate(-90deg);
+        }
+
+        .place-detail.collapsed .content-wrapper,
+        .place-detail.collapsed .grid-3 {
+            /* For hidden content */
+            display: none;
+        }
     </style>
 </head>
 
@@ -2062,8 +2090,15 @@
                         </div>
                         <div class="content-right">
                             <div class="gallery-grid">
-                                <div class="gallery-item large"><img src="../images/042.jpg" alt="Outlet"></div>
-                                <div class="gallery-item"><img src="../images/043.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/200.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/201.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/202.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/203.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/204.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/205.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/206.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/207.jpg" alt="Shop"></div>
+                                <div class="gallery-item"><img src="../images/208.jpg" alt="Shop"></div>
                             </div>
                         </div>
                     </div>
@@ -2135,6 +2170,12 @@
                         <div class="content-right">
                             <div class="gallery-grid">
                                 <div class="gallery-item large"><img src="../images/049.jpg" alt="Stairs"></div>
+                            </div>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large"><img src="../images/050.jpg" alt="Stairs"></div>
+                            </div>
+                            <div class="gallery-grid">
+                                <div class="gallery-item large"><img src="../images/051.jpg" alt="Stairs"></div>
                             </div>
                         </div>
                     </div>
@@ -2269,6 +2310,23 @@
             </div>
 
             <script src="../asset/js/common.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    const placeDetails = document.querySelectorAll('.place-detail');
+
+                    placeDetails.forEach(detail => {
+                        // Initialize as collapsed if intended, or just open.
+                        // Let's add the collapsed class initially to some if needed, but for now leave open.
+
+                        const header = detail.querySelector('h4');
+                        if (header) {
+                            header.addEventListener('click', () => {
+                                detail.classList.toggle('collapsed');
+                            });
+                        }
+                    });
+                });
+            </script>
 </body>
 
 </html>
