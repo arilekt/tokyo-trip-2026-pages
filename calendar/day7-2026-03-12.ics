@@ -66,12 +66,24 @@ STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day7-event5-checkin-granbell@tokyotrip2026
+UID:day7-event5-locker@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260312T180000
 DTEND;TZID=Asia/Tokyo:20260312T183000
+SUMMARY:🎒 รับกระเป๋าคืนที่ Locker Shinjuku
+DESCRIPTION:รับกระเป๋าคืนจาก Locker สถานี Shinjuku (ที่ฝากไว้ก่อนไปสกี)
+LOCATION:Shinjuku Station Locker
+CATEGORIES:TRAVEL
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day7-event6-checkin-granbell@tokyotrip2026
+DTSTAMP:20260122T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T183000
+DTEND;TZID=Asia/Tokyo:20260312T190000
 SUMMARY:🏨 Check-in: Shinjuku Granbell (Round 2)
-DESCRIPTION:รับกระเป๋าคืนจาก Locker และเช็คอินรอบ 2\nพัก 1 คืนสุดท้าย
+DESCRIPTION:เช็คอินรอบ 2\nพัก 1 คืนสุดท้าย
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED

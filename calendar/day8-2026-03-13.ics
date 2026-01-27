@@ -33,11 +33,23 @@ BEGIN:VEVENT
 UID:day8-event2-takeya@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T093000
-DTEND;TZID=Asia/Tokyo:20260313T120000
+DTEND;TZID=Asia/Tokyo:20260313T113000
 SUMMARY:🛍️ Takeya (ตึกม่วง) Ueno
-DESCRIPTION:ซื้อของฝาก ขนม KitKat ยา วิตามิน (Tax-Free)\nทานมื้อเที่ยงแถว Ueno (Sushi)
+DESCRIPTION:ซื้อของฝาก ขนม KitKat ยา วิตามิน (Tax-Free)
 LOCATION:Takeya (Purple Building)
 CATEGORIES:SHOPPING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day8-event3-lunch-ueno@tokyotrip2026
+DTSTAMP:20260122T000000Z
+DTSTART;TZID=Asia/Tokyo:20260313T113000
+DTEND;TZID=Asia/Tokyo:20260313T130000
+SUMMARY:🍽️ Lunch: Kaiten Sushi (Ueno)
+DESCRIPTION:ซูชิสายพาน (Walk-in)
+LOCATION:Ueno
+CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
 

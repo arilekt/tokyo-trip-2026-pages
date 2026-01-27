@@ -32,8 +32,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:day6-event2-shinkansen@tokyotrip2026
 DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260311T083000
-DTEND;TZID=Asia/Tokyo:20260311T094000
+DTSTART;TZID=Asia/Tokyo:20260311T080000
+DTEND;TZID=Asia/Tokyo:20260311T091000
 SUMMARY:🚅 Shinkansen to Karuizawa
 DESCRIPTION:Hokuriku Shinkansen (Hakutaka)\nShinjuku → Omiya → Karuizawa\n🎫 *ใช้ Tokyo Wide Pass Day 1*
 LOCATION:Tokyo Station / Omiya Station

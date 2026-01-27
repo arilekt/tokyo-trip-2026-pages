@@ -32,8 +32,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:day3-event2-bus-kawaguchiko@tokyotrip2026
 DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260308T093000
-DTEND;TZID=Asia/Tokyo:20260308T114000
+DTSTART;TZID=Asia/Tokyo:20260308T093500
+DTEND;TZID=Asia/Tokyo:20260308T112000
 SUMMARY:🚌 รถบัสไป Kawaguchiko (Highway Bus)
 DESCRIPTION:ขึ้นรถที่ Shinjuku Expressway Bus Terminal (Busta)\n\n💰 ผู้ใหญ่ 462฿ (¥2,200) / เด็ก 231฿ (¥1,100)\n🚍 ลงที่ Kawaguchiko Station
 LOCATION:Busta Shinjuku

@@ -44,8 +44,8 @@ END:VEVENT
 BEGIN:VEVENT
 UID:day5-event3-drop-bags@tokyotrip2026
 DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260310T123000
-DTEND;TZID=Asia/Tokyo:20260310T130000
+DTSTART;TZID=Asia/Tokyo:20260310T130000
+DTEND;TZID=Asia/Tokyo:20260310T133000
 SUMMARY:🏨 ฝากกระเป๋า Shinjuku Granbell
 DESCRIPTION:ฝากกระเป๋าที่โรงแรมก่อนไปเที่ยวต่อ (Check-in 15:00)
 LOCATION:Shinjuku Granbell Hotel
