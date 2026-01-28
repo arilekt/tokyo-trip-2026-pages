@@ -452,6 +452,17 @@
                 </div>
             </a>
 
+            <!-- Clean Print Version -->
+            <a href="th/Tokyo-Trip-v5-Clean-20251115-205317.html" class="page-card">
+                <div class="page-card-icon">✨</div>
+                <div class="page-card-content">
+                    <div class="page-card-title">แบบสะอาด (Clean v5.2)</div>
+                    <div class="page-card-desc">
+                        แผนฉบับ Clean Print ล่าสุด (แนะนำ)
+                    </div>
+                </div>
+            </a>
+
 
             <!-- Currency Converter Card -->
             <div class="page-card converter-card">
@@ -557,12 +568,12 @@
         }
 
         updateCountdown();
-        setInterval(updateCountdown, 60000); // Update every minute
+        setInterval(updateCountdown, 3600000); // Update every hour
 
         // Check online/offline status
         function updateOnlineStatus() {
             const statusEl = document.getElementById('offlineStatus');
-            const timestamp = '23 มกราคม 2569 00:00';
+            const timestamp = '28 มกราคม 2569 09:30';
             if (navigator.onLine) {
                 statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
                 statusEl.classList.remove('offline');
