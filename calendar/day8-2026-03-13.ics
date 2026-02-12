@@ -68,7 +68,7 @@ END:VEVENT
 BEGIN:VEVENT
 UID:day8-event4-nex-airport@tokyotrip2026
 DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260313T154500
+DTSTART;TZID=Asia/Tokyo:20260313T154200
 DTEND;TZID=Asia/Tokyo:20260313T171500
 SUMMARY:🚄 Narita Express (N'EX) to Airport
 DESCRIPTION:Shinjuku → Narita Airport Terminal 2\n*ใช้ Tokyo Wide Pass Day 3*
