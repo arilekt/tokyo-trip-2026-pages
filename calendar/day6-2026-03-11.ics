@@ -19,55 +19,67 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:day6-event1-checkout-locker@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260311T064500
-DTEND;TZID=Asia/Tokyo:20260311T073000
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260311T073000
+DTEND;TZID=Asia/Tokyo:20260311T081500
 SUMMARY:🎒 Checkout & ฝากกระเป๋า Locker
-DESCRIPTION:Check-out รร. Shinjuku Granbell\nฝากกระเป๋าใบใหญ่ที่ Locker สถานี Shinjuku (JR Zone)
-LOCATION:Shinjuku Station
+DESCRIPTION:Check-out รร. Shinjuku Granbell\nฝากกระเป๋าใบใหญ่ที่ Locker สถานี Ueno หรือ Shinjuku (แนะนำ Ueno เพราะขึ้นรถที่นั่น)\n*เดินทางไปสถานี Ueno*
+LOCATION:Ueno Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
 UID:day6-event2-shinkansen@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260311T080000
-DTEND;TZID=Asia/Tokyo:20260311T091000
-SUMMARY:🚅 Shinkansen to Karuizawa
-DESCRIPTION:Hokuriku Shinkansen (Hakutaka)\nShinjuku → Omiya → Karuizawa\n🎫 *ใช้ Tokyo Wide Pass Day 1*
-LOCATION:Tokyo Station / Omiya Station
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260311T084700
+DTEND;TZID=Asia/Tokyo:20260311T094300
+SUMMARY:🚅 Shinkansen (Hakutaka 555) to Karuizawa
+DESCRIPTION:Hokuriku Shinkansen (Hakutaka 555)\nเส้นทาง: Ueno → Karuizawa\n\n🆔 Booking: E90665\n💺 Seats: Car 8 - 9D, 9E\n🎫 *ใช้ Tokyo Wide Pass Day 1*
+LOCATION:Ueno Station (Shinkansen Platform)
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day6-event3-shuttle-bus@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260311T095000
-DTEND;TZID=Asia/Tokyo:20260311T113000
-SUMMARY:🚌 Shuttle Bus to Palcall
-DESCRIPTION:รถรับส่งฟรีของโรงแรม (ต้องจองล่วงหน้า!)\nKaruizawa Station → Palcall Tsumagoi
-LOCATION:Karuizawa Station
+UID:day6-event3-wait-shuttle@tokyotrip2026
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260311T094300
+DTEND;TZID=Asia/Tokyo:20260311T115000
+SUMMARY:☕ รอรถ Shuttle & เดินเล่น Outlet
+DESCRIPTION:รถไฟถึง 09:43 / รถบัสออก 11:50\n(มีเวลา 2 ชม.) เดินเล่น Karuizawa Prince Shopping Plaza (โซน East) หรือหาอะไรทานรองท้อง
+LOCATION:Karuizawa Station / Outlet
+CATEGORIES:WAITING
+STATUS:CONFIRMED
+END:VEVENT
+
+BEGIN:VEVENT
+UID:day6-event4-shuttle-bus@tokyotrip2026
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260311T115000
+DTEND;TZID=Asia/Tokyo:20260311T130000
+SUMMARY:🚌 Palcall Shuttle Bus (11:50)
+DESCRIPTION:รถรับส่งฟรีของโรงแรม (รถสีทอง/มีสติกเกอร์)\nจุดขึ้น: South Exit (หน้า Outlet/Shopping Plaza)\n\n🆔 Ref: ThuTenc8pq59jPAC\n*แจ้งชื่อ Khun Arilek กับคนขับ*
+LOCATION:Karuizawa Station (South Exit)
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day6-event4-ski-time@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260311T120000
+UID:day6-event5-ski-time@tokyotrip2026
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260311T133000
 DTEND;TZID=Asia/Tokyo:20260311T163000
-SUMMARY:⛷️ Ski & Snow Activity
-DESCRIPTION:เล่นสกี/สโนว์บอร์ด/ถาดเลื่อน\n- เช่าอุปกรณ์ที่รีสอร์ท\n- ขึ้น Gondola ชมวิว
+SUMMARY:⛷️ Check-in & Ski Time
+DESCRIPTION:เช็คอิน Palcall Tsumagoi Resort\n\n🆔 Booking: Direct Booking (Paid)\n💴 Price: ¥ 48,100\n*ราคานี้ยังไม่รวม Child Extra Charge*
 LOCATION:Palcall Tsumagoi Resort
 CATEGORIES:ACTIVITY
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day6-event5-dinner-buffet@tokyotrip2026
-DTSTAMP:20260122T000000Z
+UID:day6-event6-dinner-buffet@tokyotrip2026
+DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T180000
 DTEND;TZID=Asia/Tokyo:20260311T193000
 SUMMARY:🍽️ Dinner Buffet @ Resort
@@ -78,8 +90,8 @@ STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day6-event6-onsen@tokyotrip2026
-DTSTAMP:20260122T000000Z
+UID:day6-event7-onsen@tokyotrip2026
+DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T200000
 DTEND;TZID=Asia/Tokyo:20260311T213000
 SUMMARY:♨️ Onsen & Relax

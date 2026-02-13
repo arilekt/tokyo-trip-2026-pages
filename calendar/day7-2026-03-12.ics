@@ -19,7 +19,7 @@ END:VTIMEZONE
 
 BEGIN:VEVENT
 UID:day7-event1-checkout@tokyotrip2026
-DTSTAMP:20260122T000000Z
+DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260312T090000
 DTEND;TZID=Asia/Tokyo:20260312T100000
 SUMMARY:🍳 Check-out Palcall
@@ -31,11 +31,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day7-event2-bus-karuizawa@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260312T101500
-DTEND;TZID=Asia/Tokyo:20260312T113000
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T100000
+DTEND;TZID=Asia/Tokyo:20260312T111500
 SUMMARY:🚌 Shuttle Bus to Karuizawa Station
-DESCRIPTION:รถรับส่งกลับสถานี Karuizawa\n(ต้องจองล่วงหน้า)
+DESCRIPTION:รถรับส่งกลับสถานี Karuizawa\n(ตามรอบรถ Check-out)
 LOCATION:Palcall Tsumagoi Resort
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -43,7 +43,7 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day7-event3-outlet@tokyotrip2026
-DTSTAMP:20260122T000000Z
+DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260312T113000
 DTEND;TZID=Asia/Tokyo:20260312T160000
 SUMMARY:🛍️ Karuizawa Prince Shopping Plaza (Outlet)
@@ -55,11 +55,11 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day7-event4-shinkansen-tokyo@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260312T163000
-DTEND;TZID=Asia/Tokyo:20260312T173000
-SUMMARY:🚅 Shinkansen to Tokyo/Shinjuku
-DESCRIPTION:Karuizawa → Ueno/Tokyo → Shinjuku\n*ใช้ Tokyo Wide Pass Day 2*
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T164800
+DTEND;TZID=Asia/Tokyo:20260312T174600
+SUMMARY:🚅 Shinkansen (Hakutaka 568) to Ueno
+DESCRIPTION:Hokuriku Shinkansen (Hakutaka 568)\nเส้นทาง: Karuizawa → Ueno (แล้วต่อรถไฟไป Shinjuku)\n\n🆔 Booking: E90665\n💺 Seats: Car 10 - 9D, 9E\n🎫 *ใช้ Tokyo Wide Pass Day 2*
 LOCATION:Karuizawa Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
@@ -67,33 +67,33 @@ END:VEVENT
 
 BEGIN:VEVENT
 UID:day7-event5-locker@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260312T180000
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T181500
 DTEND;TZID=Asia/Tokyo:20260312T183000
-SUMMARY:🎒 รับกระเป๋าคืนที่ Locker Shinjuku
-DESCRIPTION:รับกระเป๋าคืนจาก Locker สถานี Shinjuku (ที่ฝากไว้ก่อนไปสกี)
-LOCATION:Shinjuku Station Locker
+SUMMARY:🎒 รับกระเป๋าคืนที่ Locker Ueno/Shinjuku
+DESCRIPTION:รับกระเป๋าคืนจาก Locker (Ueno หรือ Shinjuku ตามที่ฝากไว้)
+LOCATION:Ueno Station / Shinjuku Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
 UID:day7-event6-checkin-granbell@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260312T183000
-DTEND;TZID=Asia/Tokyo:20260312T190000
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T190000
+DTEND;TZID=Asia/Tokyo:20260312T193000
 SUMMARY:🏨 Check-in: Shinjuku Granbell (Round 2)
-DESCRIPTION:เช็คอินรอบ 2\nพัก 1 คืนสุดท้าย
+DESCRIPTION:เช็คอินรอบ 2\nพัก 1 คืนสุดท้าย\n🆔 Booking: 1622922994334956 (Trip.com)
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
 
 BEGIN:VEVENT
-UID:day7-event6-farewell-dinner@tokyotrip2026
-DTSTAMP:20260122T000000Z
-DTSTART;TZID=Asia/Tokyo:20260312T190000
-DTEND;TZID=Asia/Tokyo:20260312T210000
+UID:day7-event7-farewell-dinner@tokyotrip2026
+DTSTAMP:20260213T000000Z
+DTSTART;TZID=Asia/Tokyo:20260312T193000
+DTEND;TZID=Asia/Tokyo:20260312T213000
 SUMMARY:🥩 Farewell Dinner (Yakiniku/Steak)
 DESCRIPTION:ฉลองคืนสุดท้าย!\nร้านแนะนำ: Toraji (Yakiniku) หรือ Rokkasen หรือ Ikinari Steak
 LOCATION:Shinjuku
