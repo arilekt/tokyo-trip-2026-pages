@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Tokyo Trip Day 2 - Akihabara & Skytree
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,89 +15,95 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:day2-event1-breakfast@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T060000
 DTEND;TZID=Asia/Tokyo:20260307T080000
-SUMMARY:🌅 ตื่นนอน & อาหารเช้า (Breakfast)
-DESCRIPTION:เตรียมตัวออกเดินทาง\n⚠️ อย่าลืมพาสปอร์ตสำหรับ Tax-Free!
+SUMMARY:🌅 ตื่นนอน & อาหารเช้า (Breakfast
+ )
+DESCRIPTION:เตรียมตัวออกเดินทาง\n⚠
+ ️ อย่าลืมพาสปอร์ตสำหรับ Tax-Fr
+ ee!
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event2-travel-yodobashi@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T083000
 DTEND;TZID=Asia/Tokyo:20260307T090000
 SUMMARY:🚇 เดินทางไป Akihabara (Travel to Akihabara)
-DESCRIPTION:Metro Ginza Line: Tawaramachi → Suehirocho (5 นาที)\nเดินไป Yodobashi Akiba
+DESCRIPTION:Metro Ginza Line: Tawaramachi → Suehirocho (5 นาที)\n
+ เดินไป Yodobashi Akiba
 LOCATION:Akihabara
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event3-camera-shopping@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T093000
 DTEND;TZID=Asia/Tokyo:20260307T110000
 SUMMARY:🛍️ เดินเล่น Yodobashi Akiba (Window Shopping)
-DESCRIPTION:🎯 เดินเล่นดูของเล่น Games และ Gadget\n1. Toys & Hobbies (ชั้น 6)\n2. Gachapon Hall
+DESCRIPTION:🎯 เดินเล่นดูของเล่น Games 
+ และ Gadget\n1. Toys & Hobbies (ชั้น 6)\n2. Gachapon Hall
 LOCATION:Yodobashi Camera Akiba
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event4-sensoji@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T110000
 DTEND;TZID=Asia/Tokyo:20260307T143000
-SUMMARY:⛩️ ชมวัดเซ็นโซจิ & อาหารกลางวัน (Senso-ji Temple)
-DESCRIPTION:เดินทางกลับ Asakusa\n\n📸 ทดลองกล้องใหม่!\n- ประตู Kaminarimon\n- ถนน Nakamise (ขนม Ningyo-yaki, Senbei)\n- ไหว้พระขอพร
+SUMMARY:⛩️ ชมวัดเซ็นโซจิ & อาหารก
+ ลางวัน (Senso-ji Temple)
+DESCRIPTION:เดินทางกลับ Asakusa\n\n📸 ทดลอ
+ งกล้องใหม่!\n- ประตู Kaminarimon\n- ถน
+ น Nakamise (ขนม Ningyo-yaki, Senbei)\n- ไหว้พระข
+ อพร
 LOCATION:Senso-ji Temple, Asakusa
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event5-skytree@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T150000
 DTEND;TZID=Asia/Tokyo:20260307T183000
 SUMMARY:🗼 Tokyo Skytree (Sunset Time)
-DESCRIPTION:ชมวิวพระอาทิตย์ตกจากตึกที่สูงที่สุดในญี่ปุ่น\n\n🌅 Sunset: ~17:45\n📸 Golden Hour: 17:15-18:15
+DESCRIPTION:ชมวิวพระอาทิตย์ตกจากต
+ ึกที่สูงที่สุดในญี่ปุ่น\n\n
+ 🌅 Sunset: ~17:45\n📸 Golden Hour: 17:15-18:15
 LOCATION:Tokyo Skytree
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event6-dinner-solamachi@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T183000
 DTEND;TZID=Asia/Tokyo:20260307T200000
 SUMMARY:🍽️ Dinner @ Solamachi
-DESCRIPTION:ทานอาหารเย็นที่ศูนย์การค้า Tokyo Solamachi (ติด Skytree)
+DESCRIPTION:ทานอาหารเย็นที่ศูนย์ก
+ ารค้า Tokyo Solamachi (ติด Skytree)
 LOCATION:Tokyo Solamachi
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day2-event7-character-street@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260307T200000
 DTEND;TZID=Asia/Tokyo:20260307T213000
 SUMMARY:🛍️ Tokyo Character Street
-DESCRIPTION:ช้อปปิ้งของสะสมและคาแรคเตอร์\n\n📍 Tokyo Station (Yaesu Exit)\n- Donguri Republic (Ghibli)\n- Sanrio\n- Pokemon Store
+DESCRIPTION:ช้อปปิ้งของสะสมและคาแ
+ รคเตอร์\n\n📍 Tokyo Station (Yaesu Exit)\n- Donguri Republ
+ ic (Ghibli)\n- Sanrio\n- Pokemon Store
 LOCATION:Tokyo Character Street
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

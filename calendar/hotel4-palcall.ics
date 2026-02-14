@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hotel Stay: Palcall Tsumagoi Resort
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,17 +15,16 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:hotel4-palcall-stay@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T120000
 DTEND;TZID=Asia/Tokyo:20260312T090000
 SUMMARY:🏨 Palcall Tsumagoi Resort (Ski)
-DESCRIPTION:เช็คอิน: 11 มี.ค. 12:00\nเช็คเอาท์: 12 มี.ค. 09:00\n\n📍 Gunma, Tsumagoi (Ski Resort)
+DESCRIPTION:เช็คอิน: 11 มี.ค. 12:00\nเช็คเอ
+ าท์: 12 มี.ค. 09:00\n\n📍 Gunma, Tsumagoi (Ski Resort)
 LOCATION:Palcall Tsumagoi Resort Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

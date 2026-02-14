@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Tokyo Trip Day 3 - Kawaguchiko
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,89 +15,93 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:day3-event1-travel-shinjuku@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T060000
 DTEND;TZID=Asia/Tokyo:20260308T083000
 SUMMARY:🍳 Check-out & Travel to Shinjuku
-DESCRIPTION:เช็คเอาท์จาก APA Asakusa\nเดินทางไป Shinjuku Station (Busta Shinjuku)
+DESCRIPTION:เช็คเอาท์จาก APA Asakusa\nเดิน
+ ทางไป Shinjuku Station (Busta Shinjuku)
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event2-bus-kawaguchiko@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T093500
 DTEND;TZID=Asia/Tokyo:20260308T112000
 SUMMARY:🚌 Highway Bus to Kawaguchiko (Bus 1407)
-DESCRIPTION:เส้นทาง: Shinjuku Expressway Bus Terminal (Busta) → Kawaguchiko Station\n\n🆔 Booking Ref: 176991625\n🚌 Bus No: 1407\n💺 Seats: 02A, 02B\n💰 Status: Paid
+DESCRIPTION:เส้นทาง: Shinjuku Expressway Bus Terminal (Busta)
+  → Kawaguchiko Station\n\n🆔 Booking Ref: 176991625\n🚌 Bus No: 1407
+ \n💺 Seats: 02A, 02B\n💰 Status: Paid
 LOCATION:Busta Shinjuku
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event3-arrival-lunch@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T120000
 DTEND;TZID=Asia/Tokyo:20260308T143000
 SUMMARY:🍽️ Lunch & ฝากกระเป๋า (Kawaguchiko)
-DESCRIPTION:ทานมื้อเที่ยงแถวสถานี Kawaguchiko\nฝากกระเป๋าที่โรงแรมหรือ Locker สถานี
+DESCRIPTION:ทานมื้อเที่ยงแถวสถานี
+  Kawaguchiko\nฝากกระเป๋าที่โรงแรมห
+ รือ Locker สถานี
 LOCATION:Kawaguchiko Station
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event4-checkin-mystays@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T143000
 DTEND;TZID=Asia/Tokyo:20260308T153000
 SUMMARY:🏨 Check-in: HOTEL MYSTAYS Fuji Onsen Resort
-DESCRIPTION:เข้าเช็คอินและเก็บของ\n\n📍 2654 Arakura, Fujiyoshida\n📞 +81-555-21-7510\n🆔 Booking: 1891021791
+DESCRIPTION:เข้าเช็คอินและเก็บของ
+ \n\n📍 2654 Arakura, Fujiyoshida\n📞 +81-555-21-7510\n🆔 Booking: 18
+ 91021791
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event5-ropeway@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T153000
 DTEND;TZID=Asia/Tokyo:20260308T170000
 SUMMARY:🚡 Kachi-Kachi Ropeway
-DESCRIPTION:ขึ้นกระเช้าชมวิว Fuji & Lake Kawaguchiko\nจุดชมวิว Mt. Tenjo Observation Deck
+DESCRIPTION:ขึ้นกระเช้าชมวิว Fuji & Lake Ka
+ waguchiko\nจุดชมวิว Mt. Tenjo Observation Deck
 LOCATION:Lake Kawaguchiko Mt. Fuji Panorama Ropeway
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event6-dinner@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T170000
 DTEND;TZID=Asia/Tokyo:20260308T190000
 SUMMARY:🍽️ Dinner: Hoto Fudo (Hoto Noodles)
-DESCRIPTION:ทานอาหารพื้นเมือง "โฮโตะ" (Hoto)\nร้านแนะนำ: Houhouttei Hoto หรือ Hoto Fudo
+DESCRIPTION:ทานอาหารพื้นเมือง "โฮโ
+ ตะ" (Hoto)\nร้านแนะนำ: Houhouttei Hoto หรือ 
+ Hoto Fudo
 LOCATION:Kawaguchiko
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day3-event7-rest@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260308T210000
 DTEND;TZID=Asia/Tokyo:20260308T220000
-SUMMARY:😴 พักผ่อน (เตรียมวันเกิดพรุ่งนี้!)
-DESCRIPTION:พักผ่อนและเตรียม Surprise วันเกิดพอใจในวันพรุ่งนี้ 🎂
+SUMMARY:😴 พักผ่อน (เตรียมวันเกิด
+ พรุ่งนี้!)
+DESCRIPTION:พักผ่อนและเตรียม Surprise ว
+ ันเกิดพอใจในวันพรุ่งนี้ 🎂
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

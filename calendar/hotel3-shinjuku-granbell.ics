@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hotel Stay: Shinjuku Granbell
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,29 +15,30 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:hotel3-granbell-stay1@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260310T173000
 DTEND;TZID=Asia/Tokyo:20260311T070000
 SUMMARY:🏨 Shinjuku Granbell Hotel (Stay 1)
-DESCRIPTION:คืนแรกที่ชินจูกุ\nเช็คอิน: 10 มี.ค. 15:00\nเช็คเอาท์: 11 มี.ค. 07:00 (ฝากกระเป๋าไปสกี)
+DESCRIPTION:คืนแรกที่ชินจูกุ\nเช็ค
+ อิน: 10 มี.ค. 15:00\nเช็คเอาท์: 11 มี.
+ ค. 07:00 (ฝากกระเป๋าไปสกี)
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:hotel3-granbell-stay2@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260312T183000
 DTEND;TZID=Asia/Tokyo:20260313T090000
 SUMMARY:🏨 Shinjuku Granbell Hotel (Stay 2)
-DESCRIPTION:คืนสุดท้าย (รับกระเป๋าคืน)\nเช็คอิน: 12 มี.ค. 18:00\nเช็คเอาท์: 13 มี.ค. 09:00
+DESCRIPTION:คืนสุดท้าย (รับกระเป๋า
+ คืน)\nเช็คอิน: 12 มี.ค. 18:00\nเช็คเ
+ อาท์: 13 มี.ค. 09:00
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

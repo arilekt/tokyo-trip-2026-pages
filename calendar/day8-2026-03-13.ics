@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Tokyo Trip Day 8 - Return Home
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,31 +15,30 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:day8-event1-suga-shrine@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T083000
 DTEND;TZID=Asia/Tokyo:20260313T093000
 SUMMARY:⛩️ Suga Shrine (Your Name Staircase) - Optional
-DESCRIPTION:ตามรอยอนิเมะ Your Name ที่บันไดศาลเจ้า Suga\n(ไปสถานี Yotsuya)
+DESCRIPTION:ตามรอยอนิเมะ Your Name ที่บั
+ นไดศาลเจ้า Suga\n(ไปสถานี Yotsuya)
 LOCATION:Suga Shrine
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event2-takeya@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T093000
 DTEND;TZID=Asia/Tokyo:20260313T113000
 SUMMARY:🛍️ Takeya (ตึกม่วง) Ueno
-DESCRIPTION:ซื้อของฝาก ขนม KitKat ยา วิตามิน (Tax-Free)
+DESCRIPTION:ซื้อของฝาก ขนม KitKat ยา วิ
+ ตามิน (Tax-Free)
 LOCATION:Takeya (Purple Building)
 CATEGORIES:SHOPPING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event3-lunch-ueno@tokyotrip2026
 DTSTAMP:20260213T000000Z
@@ -52,53 +50,56 @@ LOCATION:Ueno
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event4-pack-bags@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T133000
 DTEND;TZID=Asia/Tokyo:20260313T150000
 SUMMARY:🛍️ Last Minute Shop & Pack Bags
-DESCRIPTION:กลับ Shinjuku เก็บตกและแพ็คกระเป๋า\nเตรียมตัวไปสนามบิน
+DESCRIPTION:กลับ Shinjuku เก็บตกและแพ็ค
+ กระเป๋า\nเตรียมตัวไปสนามบิ
+ น
 LOCATION:Shinjuku Granbell Hotel
 CATEGORIES:PREPARATION
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event5-nex-airport@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T160800
 DTEND;TZID=Asia/Tokyo:20260313T172500
 SUMMARY:🚄 Narita Express (N'EX 41) to Airport
-DESCRIPTION:รถไฟด่วนไปสนามบิน นาริตะ (N'EX 41)\nเส้นทาง: Shinjuku → Narita Airport Terminal 2\n\n🆔 Booking: E90665\n💺 Seats: Car 9 - 1A, 1B\n🎫 *ใช้ Tokyo Wide Pass Day 3*
+DESCRIPTION:รถไฟด่วนไปสนามบิน นาร
+ ิตะ (N'EX 41)\nเส้นทาง: Shinjuku → Narita Airport Te
+ rminal 2\n\n🆔 Booking: E90665\n💺 Seats: Car 9 - 1A, 1B\n🎫 *ใช
+ ้ Tokyo Wide Pass Day 3*
 LOCATION:Shinjuku Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event6-airport-proc@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T172500
 DTEND;TZID=Asia/Tokyo:20260313T204500
 SUMMARY:🛬 Check-in & Tax Refund
-DESCRIPTION:ขั้นตอนสนามบิน:\n1. Tax Refund (ก่อน Check-in)\n2. Check-in Thai AirAsia X (XJ 607)\n3. Immigration & Security\n4. Duty Free Shopping
+DESCRIPTION:ขั้นตอนสนามบิน:\n1. Tax Refund (ก
+ ่อน Check-in)\n2. Check-in Thai AirAsia X (XJ 607)\n3. Immigration &
+  Security\n4. Duty Free Shopping
 LOCATION:Narita International Airport Terminal 2
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day8-event7-flight-home@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260313T211500
 DTEND;TZID=Asia/Asia/Bangkok:20260314T024000
 SUMMARY:🛫 Flight Home (NRT → DMK)
-DESCRIPTION:Thai AirAsia X เที่ยวบิน XJ 607\nNRT 21:15 → DMK 02:40 (+1)
+DESCRIPTION:Thai AirAsia X เที่ยวบิน XJ 607\nNRT 21:15 
+ → DMK 02:40 (+1)
 LOCATION:Thai AirAsia X Flight XJ 607
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

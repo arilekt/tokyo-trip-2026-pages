@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Tokyo Trip Day 6 - Palcall Ski Resort
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,79 +15,87 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:day6-event1-checkout-locker@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T073000
 DTEND;TZID=Asia/Tokyo:20260311T081500
 SUMMARY:🎒 Checkout & ฝากกระเป๋า Locker
-DESCRIPTION:Check-out รร. Shinjuku Granbell\nฝากกระเป๋าใบใหญ่ที่ Locker สถานี Ueno หรือ Shinjuku (แนะนำ Ueno เพราะขึ้นรถที่นั่น)\n*เดินทางไปสถานี Ueno*
+DESCRIPTION:Check-out รร. Shinjuku Granbell\nฝากกระเป
+ ๋าใบใหญ่ที่ Locker สถานี Ueno หรือ
+  Shinjuku (แนะนำ Ueno เพราะขึ้นรถที่
+ นั่น)\n*เดินทางไปสถานี Ueno*
 LOCATION:Ueno Station
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event2-shinkansen@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T084700
 DTEND;TZID=Asia/Tokyo:20260311T094300
 SUMMARY:🚅 Shinkansen (Hakutaka 555) to Karuizawa
-DESCRIPTION:Hokuriku Shinkansen (Hakutaka 555)\nเส้นทาง: Ueno → Karuizawa\n\n🆔 Booking: E90665\n💺 Seats: Car 8 - 9D, 9E\n🎫 *ใช้ Tokyo Wide Pass Day 1*
+DESCRIPTION:Hokuriku Shinkansen (Hakutaka 555)\nเส้นทาง: Ueno
+  → Karuizawa\n\n🆔 Booking: E90665\n💺 Seats: Car 8 - 9D, 9E\n🎫 *
+ ใช้ Tokyo Wide Pass Day 1*
 LOCATION:Ueno Station (Shinkansen Platform)
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event3-wait-shuttle@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T094300
 DTEND;TZID=Asia/Tokyo:20260311T115000
 SUMMARY:☕ รอรถ Shuttle & เดินเล่น Outlet
-DESCRIPTION:รถไฟถึง 09:43 / รถบัสออก 11:50\n(มีเวลา 2 ชม.) เดินเล่น Karuizawa Prince Shopping Plaza (โซน East) หรือหาอะไรทานรองท้อง
+DESCRIPTION:รถไฟถึง 09:43 / รถบัสออก 11:50\n(
+ มีเวลา 2 ชม.) เดินเล่น Karuizawa Prince Sh
+ opping Plaza (โซน East) หรือหาอะไรทานร
+ องท้อง
 LOCATION:Karuizawa Station / Outlet
 CATEGORIES:WAITING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event4-shuttle-bus@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T115000
 DTEND;TZID=Asia/Tokyo:20260311T130000
 SUMMARY:🚌 Palcall Shuttle Bus (11:50)
-DESCRIPTION:รถรับส่งฟรีของโรงแรม (รถสีทอง/มีสติกเกอร์)\nจุดขึ้น: South Exit (หน้า Outlet/Shopping Plaza)\n\n🆔 Ref: ThuTenc8pq59jPAC\n*แจ้งชื่อ Khun Arilek กับคนขับ*
+DESCRIPTION:รถรับส่งฟรีของโรงแรม (
+ รถสีทอง/มีสติกเกอร์)\nจุดขึ
+ ้น: South Exit (หน้า Outlet/Shopping Plaza)\n\n🆔 Ref: ThuTe
+ nc8pq59jPAC\n*แจ้งชื่อ Khun Arilek กับคนขั
+ บ*
 LOCATION:Karuizawa Station (South Exit)
 CATEGORIES:TRAVEL
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event5-ski-time@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T133000
 DTEND;TZID=Asia/Tokyo:20260311T163000
 SUMMARY:⛷️ Check-in & Ski Time
-DESCRIPTION:เช็คอิน Palcall Tsumagoi Resort\n\n🆔 Booking: Direct Booking (Paid)\n💴 Price: ¥ 48,100\n*ราคานี้ยังไม่รวม Child Extra Charge*
+DESCRIPTION:เช็คอิน Palcall Tsumagoi Resort\n\n🆔 Booking: 
+ Direct Booking (Paid)\n💴 Price: ¥ 48,100\n*ราคานี้ยั
+ งไม่รวม Child Extra Charge*
 LOCATION:Palcall Tsumagoi Resort
 CATEGORIES:ACTIVITY
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event6-dinner-buffet@tokyotrip2026
 DTSTAMP:20260213T000000Z
 DTSTART;TZID=Asia/Tokyo:20260311T180000
 DTEND;TZID=Asia/Tokyo:20260311T193000
 SUMMARY:🍽️ Dinner Buffet @ Resort
-DESCRIPTION:บุฟเฟต์มื้อเย็นที่โรงแรม (รวมในแพ็กเกจ)
+DESCRIPTION:บุฟเฟต์มื้อเย็นที่โรง
+ แรม (รวมในแพ็กเกจ)
 LOCATION:Palcall Tsumagoi Resort
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day6-event7-onsen@tokyotrip2026
 DTSTAMP:20260213T000000Z
@@ -100,5 +107,4 @@ LOCATION:Palcall Tsumagoi Resort
 CATEGORIES:RELAX
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

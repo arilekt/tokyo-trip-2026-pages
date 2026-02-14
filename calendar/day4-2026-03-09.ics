@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Tokyo Trip Day 4 - Birthday Pojai!
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,89 +15,92 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:day4-event1-sunrise@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T060000
 DTEND;TZID=Asia/Tokyo:20260309T073000
 SUMMARY:🌅 Sunrise & Fuji View
-DESCRIPTION:ตื่นนอนชมพระอาทิตย์ขึ้นพร้อมวิวฟูจิซังจากห้องพัก 📸
+DESCRIPTION:ตื่นนอนชมพระอาทิตย์ขึ
+ ้นพร้อมวิวฟูจิซังจากห้อง
+ พัก 📸
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event2-surprise@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T073000
 DTEND;TZID=Asia/Tokyo:20260309T083000
 SUMMARY:🎂 Happy Birthday Pojai! (Surprise)
-DESCRIPTION:🎉 เซอร์ไพรส์วันเกิดครบ 11 ปี!\n🎁 เป่าเค้ก & ถ่ายรูปครอบครัว
+DESCRIPTION:🎉 เซอร์ไพรส์วันเกิดคร
+ บ 11 ปี!\n🎁 เป่าเค้ก & ถ่ายรูปค
+ รอบครัว
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:CELEBRATION
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event3-chureito@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T090000
 DTEND;TZID=Asia/Tokyo:20260309T113000
 SUMMARY:⛩️ Chureito Pagoda
-DESCRIPTION:เจดีย์ชูเรโตะ\n- จุดถ่ายรูปฟูจิยอดฮิต 📸\n- เดินขึ้นบันได 398 ขั้น
+DESCRIPTION:เจดีย์ชูเรโตะ\n- จุดถ่า
+ ยรูปฟูจิยอดฮิต 📸\n- เดินขึ้
+ นบันได 398 ขั้น
 LOCATION:Chureito Pagoda
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event4-lunch@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T130000
 DTEND;TZID=Asia/Tokyo:20260309T143000
 SUMMARY:🍽️ Birthday Lunch Special
-DESCRIPTION:มื้อเที่ยงฉลองวันเกิด ❤️\n🍣 Sushi Salmon & Tempura\n💰 งบ: 1,680฿ (¥8,000)
+DESCRIPTION:มื้อเที่ยงฉลองวันเกิด
+  ❤️\n🍣 Sushi Salmon & Tempura\n💰 งบ: 1,680฿ (¥8,000)
 LOCATION:Kawaguchiko
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event5-oshino@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T143000
 DTEND;TZID=Asia/Tokyo:20260309T163000
 SUMMARY:💧 Oshino Hakkai (Village)
-DESCRIPTION:หมู่บ้านน้ำใส โอชิโนะ ฮักไค\n- ชมบ่อน้ำศักดิ์สิทธิ์ 8 บ่อ\n- วิวฟูจิ
+DESCRIPTION:หมู่บ้านน้ำใส โอชิโนะ 
+ ฮักไค\n- ชมบ่อน้ำศักดิ์สิทธ
+ ิ์ 8 บ่อ\n- วิวฟูจิ
 LOCATION:Oshino Hakkai
 CATEGORIES:SIGHTSEEING
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event6-onsen@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T170000
 DTEND;TZID=Asia/Tokyo:20260309T190000
 SUMMARY:♨️ Onsen Time (Golden Hour)
-DESCRIPTION:แช่ออนเซ็นชมวิวพระอาทิตย์ตก 🌅
+DESCRIPTION:แช่ออนเซ็นชมวิวพระอาท
+ ิตย์ตก 🌅
 LOCATION:HOTEL MYSTAYS Fuji Onsen Resort
 CATEGORIES:RELAX
 STATUS:CONFIRMED
 END:VEVENT
-
 BEGIN:VEVENT
 UID:day4-event7-dinner@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260309T210000
 DTEND;TZID=Asia/Tokyo:20260309T223000
 SUMMARY:🎂 Birthday Dinner Special
-DESCRIPTION:มื้อค่ำฉลองวันเกิดมื้อใหญ่!\n💰 งบ: 2,520฿ (¥12,000)
+DESCRIPTION:มื้อค่ำฉลองวันเกิดมื้
+ อใหญ่!\n💰 งบ: 2,520฿ (¥12,000)
 LOCATION:Kawaguchiko
 CATEGORIES:FOOD
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR

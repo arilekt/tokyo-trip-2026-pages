@@ -5,7 +5,6 @@ CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Hotel Stay: APA Hotel Asakusa
 X-WR-TIMEZONE:Asia/Tokyo
-
 BEGIN:VTIMEZONE
 TZID:Asia/Tokyo
 X-LIC-LOCATION:Asia/Tokyo
@@ -16,17 +15,17 @@ TZNAME:JST
 DTSTART:19700101T000000
 END:STANDARD
 END:VTIMEZONE
-
 BEGIN:VEVENT
 UID:hotel1-apa-asakusa-stay@tokyotrip2026
 DTSTAMP:20260122T000000Z
 DTSTART;TZID=Asia/Tokyo:20260306T183000
 DTEND;TZID=Asia/Tokyo:20260308T080000
 SUMMARY:🏨 APA Hotel Asakusa Tawaramachi Ekimae (2 Nights)
-DESCRIPTION:เช็คอิน: 6 มี.ค. 18:30\nเช็คเอาท์: 8 มี.ค. 08:00\n\n📍 ใกล้สถานี Tawaramachi (Ginza Line)
+DESCRIPTION:เช็คอิน: 6 มี.ค. 18:30\nเช็คเอ
+ าท์: 8 มี.ค. 08:00\n\n📍 ใกล้สถานี Tawaram
+ achi (Ginza Line)
 LOCATION:APA Hotel Asakusa Tawaramachi Ekimae
 CATEGORIES:HOTEL
 STATUS:CONFIRMED
 END:VEVENT
-
 END:VCALENDAR
