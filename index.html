@@ -475,27 +475,27 @@
                     <div class="rate-inputs-wrapper">
                         <div class="rate-input-group">
                             <label>1 JPY =</label>
-                            <input type="number" id="exchangeRate1" class="rate-input" value="0.21" step="0.001"
+                            <input type="number" id="exchangeRate1" class="rate-input" value="0.199" step="0.001"
                                 min="0">
                             <label>THB</label>
                         </div>
 
                         <div class="rate-input-group">
                             <label>1 THB =</label>
-                            <input type="number" id="exchangeRate" class="rate-input" value="4.83" step="0.01" min="0">
+                            <input type="number" id="exchangeRate" class="rate-input" value="5.02" step="0.01" min="0">
                             <label>JPY</label>
                         </div>
 
                         <div class="rate-input-group">
                             <label>100 JPY =</label>
-                            <input type="number" id="exchangeRate100" class="rate-input" value="20.71" step="0.01"
+                            <input type="number" id="exchangeRate100" class="rate-input" value="19.93" step="0.01"
                                 min="0">
                             <label>THB</label>
                         </div>
                     </div>
 
                     <div class="rate-info">
-                        บันทึกอัตโนมัติ ข้อมูลอัตรแลกเปลี่ยน ณ วันที่ 22 พ.ย. 2568
+                        บันทึกอัตโนมัติ ข้อมูลอัตรแลกเปลี่ยน ณ วันที่ 26 ก.พ. 2569
                     </div>
                 </div>
             </div>
@@ -556,7 +556,7 @@
         // Check online/offline status
         function updateOnlineStatus() {
             const statusEl = document.getElementById('offlineStatus');
-            const timestamp = '14 กุมภาพันธ์ 2569 12:00';
+            const timestamp = '26 กุมภาพันธ์ 2569 12:00';
             if (navigator.onLine) {
                 statusEl.textContent = `✅ พร้อมใช้งาน Offline updated: ${timestamp}`;
                 statusEl.classList.remove('offline');
