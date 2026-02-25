@@ -43,7 +43,7 @@
 
 # วันที่ 2 • 7 มีนาคม 2026 (เสาร์)
 
-## Akihabara (ซื้อกล้อง), Asakusa & Sunset @ Skytree 🌇
+## Akihabara (Accessories Shopping), Asakusa & Sunset @ Skytree 🌇
 
 **โรงแรม:** APA Hotel Asakusa Tawaramachi Ekimae (คืนที่ 2)
 
@@ -58,15 +58,15 @@
   - Metro Ginza Line: Tawaramachi → Suehirocho (5 นาที)
   - เดินไป Yodobashi Akiba
 
-- **09:30-11:00** - 📸 **ช้อปปิ้งกล้อง 2 ตัว @ Yodobashi Akiba**
-  - **กล้องคุณพ่อ (มือ 2):** Canon EOS 800D/200D/77D/M50
-  - **กล้องพอใจ (มือ 1):** Ricoh WG-80 / Canon SX740 HS / Sony WX500
-  - **อุปกรณ์เสริม:** แบตสำรอง (LP-E17), Memory Card, กระเป๋ากล้อง
+- **09:30-11:00** - 📸 **ช้อปปิ้งอุปกรณ์เสริมกล้อง @ Yodobashi Akiba**
+  - **ภารกิจหลัก:** ซื้อ CPL Filter (62mm) สำหรับถ่าย Landscape
+  - **ของอื่นๆ:** แบตสำรอง (LP-E17), Memory Card, กระเป๋ากล้อง
+  - *หมายเหตุ: กล้องทั้ง 2 ตัวซื้อเรียบร้อยแล้ว ไม่ต้องดูเพิ่ม*
 
 **🏮 เที่ยง - อาซากุสะ (Asakusa)**
 
 - **11:00-12:00** - 🚇 เดินทางไป Senso-ji + 🍽️ อาหารกลางวัน
-  - **ทดลองถ่ายรูปด้วยกล้องใหม่ทันที!** 📸
+  - **ทดลองถ่ายรูปด้วยกล้องและฟิลเตอร์ใหม่ทันที!** 📸
 
 - **12:00-14:30** - ⛩️ **ชมวัดเซ็นโซจิ (Senso-ji Temple)**
   - Kaminarimon Gate (ประตูโคมไฟยักษ์)
