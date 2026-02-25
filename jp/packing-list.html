@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+
+<html lang="jp">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>โตเกียว ทริป 2026 (Tokyo Trip 2026) - รายการจัดของ (Packing List)</title>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../asset/css/common.css" rel="stylesheet"/>
+<link href="../asset/css/professional-v2.css" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #00838f;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #b2ebf2;
+            padding-bottom: 10px;
+        }
+
+        .checklist-category {
+            margin-bottom: 30px;
+        }
+
+        .category-title {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #006064;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            background: #e0f7fa;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .category-icon {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        .checklist-items {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .checklist-item {
+            background: #fafafa;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .checklist-item:hover {
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transform: translateY(-2px);
+        }
+
+        .item-checkbox {
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            accent-color: #00838f;
+            cursor: pointer;
+        }
+
+        .item-label {
+            flex-grow: 1;
+            cursor: pointer;
+        }
+
+        .item-note {
+            font-size: 0.8em;
+            color: #666;
+            margin-left: 5px;
+            display: block;
+        }
+
+        .important-tag {
+            background: #ffcdd2;
+            color: #c62828;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .winter-tag {
+            background: #e1f5fe;
+            color: #0277bd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 0.7em;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 600px) {
+            .checklist-items {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+<h1>🎒 荷物リスト（東京旅行2026）</h1>
+<div class="checklist-category">
+<div class="category-title">
+<span class="category-icon">📄</span> 重要な書類
+            </div>
+<ul class="checklist-items">
+<li class="checklist-item">
+<input class="item-checkbox" id="doc1" type="checkbox"/>
+<label class="item-label" for="doc1">パスポート <span class="important-tag">忘れないで！</span><span class="item-note">残り年齢 &gt; 6
+                            月</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="doc2" type="checkbox"/>
+<label class="item-label" for="doc2">Visit Japan Web (QR Code) <span class="important-tag">重要</span><span class="item-note">画面もキャプチャします。</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="doc3" type="checkbox"/>
+<label class="item-label" for="doc3">ホテル予約（予約券）<span class="item-note">PDFの印刷/保存</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="doc4" type="checkbox"/>
+<label class="item-label" for="doc4">航空券（Eチケット）<span class="item-note">Thai Lion Air
+                            / AirAsia X</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="doc5" type="checkbox"/>
+<label class="item-label" for="doc5">旅行保険証書<span class="item-note">ファイルの印刷/保存</span></label>
+</li>
+</ul>
+</div>
+<div class="checklist-category">
+<div class="category-title">
+<span class="category-icon">💵</span> お金とカード
+            </div>
+<ul class="checklist-items">
+<li class="checklist-item">
+<input class="item-checkbox" id="money1" type="checkbox"/>
+<label class="item-label" for="money1">日本円 現金<span class="item-note">適度に交換しましょう。</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="money2" type="checkbox"/>
+<label class="item-label" for="money2">トラベルカード (YouTrip/Planet/etc)<span class="item-note">補充する準備ができました</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="money3" type="checkbox"/>
+<label class="item-label" for="money3">クレジットカード<span class="item-note">緊急予備</span></label>
+</li>
+</ul>
+</div>
+<div class="checklist-category">
+<div class="category-title">
+<span class="category-icon">📱</span> エレクトロニクス (エレクトロニクス)
+            </div>
+<ul class="checklist-items">
+<li class="checklist-item">
+<input class="item-checkbox" id="elec1" type="checkbox"/>
+<label class="item-label" for="elec1">ユニバーサルアダプター<span class="item-note">日本は平脚2本（タイプA）を使用しています。</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="elec2" type="checkbox"/>
+<label class="item-label" for="elec2">Power Bank<span class="item-note">機内持ち込みのみ
+                            (ダウンロードしないでください)</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="elec3" type="checkbox"/>
+<label class="item-label" for="elec3">モバイル充電ケーブル（充電ケーブル）</label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="elec4" type="checkbox"/>
+<label class="item-label" for="elec4">SIMカード / ポケットWiFi<span class="item-note">Sim2Fly / Sugoi
+                            SIM</span></label>
+</li>
+</ul>
+</div>
+<div class="checklist-category">
+<div class="category-title">
+<span class="category-icon">🧥</span> ウィンターギア <span class="winter-tag">Palcall &amp; Fuji (0-10°C)</span>
+</div>
+<ul class="checklist-items">
+<li class="checklist-item">
+<input class="item-checkbox" id="wear1" type="checkbox"/>
+<label class="item-label" for="wear1">ヒートテックシャツ/ロングジョンズ<span class="item-note">防寒インナーレイヤー</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="wear2" type="checkbox"/>
+<label class="item-label" for="wear2">ニットシャツ/フリース<span class="item-note">中間層は暖かさを追加します。</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="wear3" type="checkbox"/>
+<label class="item-label" for="wear3">コート/ダウンジャケット<span class="item-note">防風性
+                            防寒対策</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="wear4" type="checkbox"/>
+<label class="item-label" for="wear4">手袋 / 毛糸の帽子 / スカーフ<span class="item-note">スキー場に行くときにとても重要です</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="wear5" type="checkbox"/>
+<label class="item-label" for="wear5">厚手の靴下（ウールソックス）</label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="wear6" type="checkbox"/>
+<label class="item-label" for="wear6">歩きやすい靴（スニーカー）<span class="item-note">たくさん歩きましょう！</span></label>
+</li>
+</ul>
+</div>
+<div class="checklist-category">
+<div class="category-title">
+<span class="category-icon">💊</span> 身の回り品と医薬品 (Personal &amp; Meds)
+            </div>
+<ul class="checklist-items">
+<li class="checklist-item">
+<input class="item-checkbox" id="pers1" type="checkbox"/>
+<label class="item-label" for="pers1">個人薬 / 鎮痛剤 / 抗ヒスタミン剤</label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="pers2" type="checkbox"/>
+<label class="item-label" for="pers2">Skincare / Lip Balm / Hand Cream<span class="item-note">空気はとても乾燥しています。</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="pers3" type="checkbox"/>
+<label class="item-label" for="pers3">サングラス<span class="item-note">スキー場用
+                            (雪の反射)</span></label>
+</li>
+<li class="checklist-item">
+<input class="item-checkbox" id="pers4" type="checkbox"/>
+<label class="item-label" for="pers4">マスク</label>
+</li>
+</ul>
+</div>
+<div class="footer">
+<p>準備をしてから楽しんでください！ ✈️🇯🇵</p>
+</div>
+</div>
+<script src="../asset/js/common.js"></script>
+</body>
+</html>

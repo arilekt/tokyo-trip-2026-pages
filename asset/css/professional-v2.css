@@ -1,0 +1,193 @@
+/* =============================================
+   Tokyo Trip 2026 - Professional V2 Theme
+   Aesthetics for high-end travel dashboard
+   ============================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Sarabun:wght@400;700&display=swap');
+
+:root {
+    --p-primary: #0f172a;
+    --p-primary-light: #1e293b;
+    --p-accent: #f59e0b;
+    --p-accent-dark: #d97706;
+    --p-success: #10b981;
+    --p-bg: #f8fafc;
+    --p-card: #ffffff;
+    --p-text: #1e293b;
+    --p-muted: #64748b;
+    --p-border: #e2e8f0;
+    --radius-lg: 16px;
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+body {
+    background-color: var(--p-bg);
+    color: var(--p-text);
+    font-family: 'Inter', 'Sarabun', sans-serif;
+    line-height: 1.6;
+}
+
+/* Global Container Override */
+.container {
+    max-width: 1000px !important;
+    margin: 0 auto;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 20px;
+}
+
+/* Dashboard Style Hero/Header */
+.trip-header, .header, .hero {
+    background: linear-gradient(135deg, var(--p-primary) 0%, var(--p-primary-light) 100%) !important;
+    border-radius: var(--radius-lg);
+    padding: 3rem 2rem !important;
+    text-align: center;
+    color: white !important;
+    margin-bottom: 2rem;
+    box-shadow: var(--shadow-md);
+    position: relative;
+    overflow: hidden;
+}
+
+.trip-header h1, .header h1, .hero h1 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.02em;
+    text-shadow: none !important;
+}
+
+/* Consistent Card Styling */
+.card, .shop-card, .day-section, .page-card {
+    background: var(--p-card) !important;
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--p-border) !important;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1) !important;
+    margin-bottom: 1.5rem !important;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover, .shop-card:hover, .page-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md) !important;
+}
+
+.card-header, .section-header, .shop-header {
+    background: #f1f5f9 !important;
+    padding: 1.25rem !important;
+    border-bottom: 1px solid var(--p-border) !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.card-title, .section-title, .shop-info h3 {
+    font-size: 1.25rem !important;
+    font-weight: 800 !important;
+    color: var(--p-primary) !important;
+    margin: 0 !important;
+    border: none !important;
+    padding: 0 !important;
+}
+
+/* Timeline Continuity */
+.timeline-item {
+    border-left: 3px solid var(--p-accent) !important;
+    padding-left: 1.5rem !important;
+    margin-left: 1.2rem !important;
+    position: relative;
+    padding-bottom: 1.5rem;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0.25rem;
+    width: 14px;
+    height: 14px;
+    background: white !important;
+    border: 3px solid var(--p-accent) !important;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline-time {
+    font-weight: 800 !important;
+    color: var(--p-primary) !important;
+    font-size: 1rem !important;
+    margin-bottom: 0.25rem;
+}
+
+/* Navigation FABs */
+#p-nav-container {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.nav-fab {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--p-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.nav-fab:hover {
+    background: var(--p-accent);
+    transform: scale(1.1);
+}
+
+/* Expandable Content Style */
+.details-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.details-wrapper.active {
+    max-height: 2000px; /* Large enough for any content */
+}
+
+.expand-toggle {
+    width: 100%;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border: 1px dashed var(--p-border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    color: var(--p-muted);
+    text-align: center;
+    margin-top: 1rem;
+    transition: all 0.2s;
+}
+
+.expand-toggle:hover {
+    background: #eff6ff;
+    color: var(--p-primary);
+}
+
+/* Naming Convention Styling */
+.name-th { font-weight: 700; color: var(--p-primary); }
+.name-en { color: var(--p-muted); font-size: 0.9em; font-weight: 400; }
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .trip-header h1 { font-size: 1.8rem !important; }
+    .day-block { padding: 1.5rem !important; }
+}

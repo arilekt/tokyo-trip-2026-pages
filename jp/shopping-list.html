@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="ja">
 
+<html lang="jp">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>東京ショッピングガイド 2026 - 買い物＆観光ハンドブック</title>
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../asset/css/common.css">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>โตเกียว ทริป 2026 (Tokyo Trip 2026) - รายละเอียดเชิงลึก (Detailed Guide)</title>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../asset/css/common.css" rel="stylesheet"/>
+<link href="../asset/css/professional-v2.css" rel="stylesheet"/>
+<style>
         * {
             margin: 0;
             padding: 0;
@@ -15,88 +16,116 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            min-height: 100vh;
+            background: var(--p-bg);
             padding: 15px;
         }
 
         .container {
             width: 100%;
-            max-width: 100%;
+            max-width: 1000px !important;
             margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: transparent;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
         }
 
-        /* Header */
+        /* Header V2 Professional */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--p-primary) !important;
             color: white;
-            padding: 30px;
+            padding: 4rem 2rem !important;
             text-align: center;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
         }
 
         .header h1 {
-            font-size: 48px;
+            font-size: 2.5rem !important;
+            font-weight: 800 !important;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
         }
 
         .header .subtitle {
-            font-size: 24px;
-            opacity: 0.9;
-        }
-
-        .header-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            margin-top: 20px;
-            border-radius: 10px;
+            font-size: 1.1rem;
+            opacity: 0.8;
         }
 
         /* Section */
         .section {
-            padding: 30px;
-            border-bottom: 3px solid #f0f0f0;
-        }
-
-        .section:last-child {
-            border-bottom: none;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--p-border);
         }
 
         .section-title {
-            font-size: 32px;
-            color: #764ba2;
+            font-size: 1.5rem;
+            color: var(--p-primary);
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 4px solid #f093fb;
+            border-bottom: 3px solid var(--p-accent);
             display: inline-block;
+            font-weight: 800;
         }
 
-        /* Shop Card */
+        /* Shop Card Professional */
         .shop-card {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-left: 8px solid #f093fb;
+            background: var(--p-card) !important;
+            border-radius: var(--radius-lg) !important;
+            padding: 25px !important;
+            margin-bottom: 20px !important;
+            box-shadow: var(--shadow-sm) !important;
+            border: 1px solid var(--p-border) !important;
+            border-left: 6px solid var(--p-primary) !important;
         }
 
         .shop-card.highlight {
-            border-left-color: #ff6b6b;
-            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border-left-color: var(--p-accent) !important;
         }
 
         .shop-card.character {
-            border-left-color: #ffd93d;
-            background: linear-gradient(135deg, #fffbeb 0%, #fff8dc 100%);
+            border-left-color: #f43f5e !important;
+        }
+
+        .shop-card.fashion {
+            border-left-color: #10b981 !important;
+        }
+
+        .shop-card.food {
+            border-left-color: #3b82f6 !important;
+        }
+
+        .shop-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .shop-info h3 {
+            font-size: 1.4rem;
+            color: var(--p-primary);
+            font-weight: 800;
+        }
+
+        /* Detail Toggle UI */
+        .expand-btn {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            background: #f1f5f9 !important;
+            color: var(--p-primary) !important;
+            border: 1px solid var(--p-border) !important;
+            padding: 10px !important;
+            font-weight: 700 !important;
+            border-radius: 8px !important;
+        }
+
+        .details-content.active {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--p-border);
         }
 
         .shop-card.fashion {
@@ -145,6 +174,7 @@
             margin: 20px 0;
         }
 
+        /* 2 Column Content Layout */
         .shop-content-wrapper {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -152,7 +182,9 @@
             margin-top: 15px;
         }
 
+
         .shop-content-right {
+            /* พื้นที่สำหรับรูป/ข้อมูลเพิ่มเติม */
             background: #fff;
             border-radius: 15px;
             padding: 15px;
@@ -166,6 +198,7 @@
             font-size: 20px;
         }
 
+        /* Gallery Grid for Right Column */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -190,6 +223,7 @@
             aspect-ratio: 16/9;
         }
 
+        /* Extra Info Box in Right Column */
         .extra-info {
             background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
             border-radius: 10px;
@@ -219,6 +253,44 @@
             position: absolute;
             left: 0;
             color: #f093fb;
+        }
+
+        /* Social Links */
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .social-link {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-link.pinterest {
+            background: #e60023;
+        }
+
+        .social-link.tiktok {
+            background: #000;
+        }
+
+        .social-link.facebook {
+            background: #1877f2;
+        }
+
+        .social-link.lemon8 {
+            background: #ffeb3b;
+            color: #333;
+        }
+
+        .social-link.instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
         }
 
         @media (max-width: 1024px) {
@@ -283,6 +355,7 @@
             margin-left: 10px;
         }
 
+        /* Floor Guide */
         .floor-guide {
             background: white;
             border-radius: 10px;
@@ -346,6 +419,7 @@
             border-color: #f5c6cb;
         }
 
+        /* Links */
         a {
             color: #764ba2;
             text-decoration: none;
@@ -368,6 +442,13 @@
             transition: all 0.3s ease;
         }
 
+        .link-button:hover {
+            background: #f093fb;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* Day Badge */
         .day-badge {
             display: inline-block;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -379,6 +460,7 @@
             margin-bottom: 15px;
         }
 
+        /* Must Buy Tag */
         .must-buy {
             display: inline-block;
             background: #ff6b6b;
@@ -390,6 +472,7 @@
             margin-left: 10px;
         }
 
+        /* Footer */
         .footer {
             background: #764ba2;
             color: white;
@@ -397,815 +480,969 @@
             text-align: center;
         }
 
-        /* Mobile */
+        .footer .exchange-rate {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .footer .update-info {
+            opacity: 0.8;
+            font-size: 16px;
+        }
+
+        /* Summary Table */
+        .summary-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 16px;
+        }
+
+        .summary-table th {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+
+        .summary-table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .summary-table tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        /* Mobile Responsive */
         @media (max-width: 768px) {
             body {
+                padding: 0;
                 font-size: 16px;
+            }
+
+            .container {
+                border-radius: 0;
+                width: 100%;
+                max-width: 100%;
+            }
+
+            .header {
+                padding: 20px 15px;
             }
 
             .header h1 {
                 font-size: 26px;
             }
 
+            .header .subtitle {
+                font-size: 16px;
+            }
+
+            .section {
+                padding: 20px 15px;
+            }
+
             .section-title {
                 font-size: 22px;
+                margin-bottom: 15px;
+                padding-bottom: 8px;
+            }
+
+            .shop-card {
+                padding: 15px;
+                margin-bottom: 20px;
             }
 
             .shop-header {
                 flex-direction: column;
                 align-items: flex-start;
+                margin-bottom: 15px;
             }
 
             .shop-icon {
                 font-size: 40px;
+                margin-right: 0;
                 margin-bottom: 10px;
+            }
+
+            .shop-info h3 {
+                font-size: 18px;
+            }
+
+            .shop-info .english-name {
+                font-size: 14px;
             }
 
             .shop-content-wrapper {
                 grid-template-columns: 1fr;
+                gap: 15px;
+                margin-top: 15px;
             }
 
-            .info-table td {
+            .shop-content-right {
+                padding: 15px;
+            }
+
+            .shop-content-right h4 {
+                font-size: 17px;
+                margin-bottom: 10px;
+            }
+
+            .info-box {
+                padding: 12px;
+                font-size: 13px;
+                margin: 10px 0;
+            }
+
+            .info-table,
+            .summary-table {
+                font-size: 13px;
+                margin: 10px 0;
+            }
+
+            .info-table td,
+            .summary-table td,
+            .summary-table th {
                 padding: 8px 6px;
+            }
+
+            .product-list li {
+                padding: 6px 0;
+                font-size: 14px;
+            }
+
+            .product-list li::before {
+                font-size: 16px;
+            }
+
+            .floor-guide {
+                padding: 10px;
+                margin: 8px 0;
+            }
+
+            .floor-guide h4 {
+                font-size: 16px;
+                margin-bottom: 8px;
+            }
+
+            .floor-item {
+                padding: 5px 0;
+                font-size: 13px;
+                /* Explicitly set font size */
+            }
+
+            .floor-number {
+                width: 35px;
+                height: 35px;
+                font-size: 13px;
+                margin-right: 10px;
+            }
+
+            .link-button {
+                padding: 6px 12px;
+                font-size: 13px;
+            }
+
+            .extra-info {
+                padding: 12px;
+                margin-top: 10px;
+                font-size: 13px;
+            }
+
+            .extra-info h5 {
+                font-size: 14px;
+                margin-bottom: 8px;
+            }
+
+            .extra-info li {
+                padding: 4px 0;
+                padding-left: 15px;
+            }
+
+            .social-link {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            .footer {
+                padding: 15px 20px;
+            }
+
+            .footer .exchange-rate {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            .footer .update-info {
+                font-size: 13px;
+            }
+
+            .day-badge {
+                padding: 6px 15px;
+                font-size: 13px;
+                margin-bottom: 10px;
+            }
+
+            .must-buy {
+                padding: 2px 8px;
+                font-size: 12px;
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            .header {
+                padding: 15px;
+            }
+
+            .header h1 {
+                font-size: 22px;
+            }
+
+            .header .subtitle {
+                font-size: 14px;
+            }
+
+            .section {
+                padding: 15px 10px;
+            }
+
+            .section-title {
+                font-size: 19px;
+            }
+
+            .shop-card {
+                padding: 10px;
+                margin-bottom: 15px;
+            }
+
+            .shop-icon {
+                font-size: 32px;
+                margin-bottom: 8px;
+            }
+
+            .shop-info h3 {
+                font-size: 16px;
+            }
+
+            .shop-info .english-name {
+                font-size: 12px;
+            }
+
+            .shop-content-right h4 {
+                font-size: 15px;
+            }
+
+            .info-box {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .info-table,
+            .summary-table {
+                font-size: 12px;
+            }
+
+            .info-table td,
+            .summary-table td,
+            .summary-table th {
+                padding: 6px 4px;
+            }
+
+            .product-list li {
+                font-size: 12px;
+                padding-left: 20px;
+            }
+
+            .product-list li::before {
+                font-size: 14px;
+            }
+
+            .floor-guide {
+                padding: 8px;
+            }
+
+            .floor-guide h4 {
+                font-size: 15px;
+                margin-bottom: 6px;
+            }
+
+            .floor-item {
+                padding: 4px 0;
+                font-size: 12px;
+            }
+
+            .floor-number {
+                width: 30px;
+                height: 30px;
+                font-size: 12px;
+                margin-right: 8px;
+            }
+
+            .link-button {
+                padding: 5px 10px;
+                font-size: 12px;
+            }
+
+            .extra-info {
+                padding: 10px;
+                font-size: 12px;
+            }
+
+            .extra-info h5 {
+                font-size: 13px;
+            }
+
+            .extra-info li {
+                padding: 3px 0;
+                padding-left: 12px;
+            }
+
+            .social-link {
+                padding: 4px 8px;
+                font-size: 11px;
+            }
+
+            .footer {
+                padding: 12px 15px;
+            }
+
+            .footer .exchange-rate {
+                font-size: 18px;
+            }
+
+            .footer .update-info {
+                font-size: 12px;
+            }
+
+            .day-badge {
+                padding: 5px 12px;
+                font-size: 12px;
+            }
+
+            .must-buy {
+                padding: 1px 6px;
+                font-size: 11px;
             }
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🛍️ 東京ショッピングガイド 2026</h1>
-            <div class="subtitle">完全お買い物＆観光・お出かけガイド</div>
-            <img src="../images/183.jpg" alt="Tokyo Shopping" class="header-image">
-        </div>
-
-        <!-- DAY 1: Asakusa (Fri, Mar 6) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 1: 浅草到着 (3/6)</h2>
-
-            <!-- Don Quijote -->
-            <div class="shop-card fashion">
-                <div class="day-badge">📅 Day 1 - 3/6 (20:00-21:30)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏪</div>
-                    <div class="shop-info">
-                        <h3>ドン・キホーテ 浅草店 <span class="must-buy">24時間営業!</span></h3>
-                    </div>
-                </div>
-
-                <img src="../images/132.jpg" alt="Don Quijote" class="shop-image">
-
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>東京都台東区浅草2-10-14</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>🔥 <strong>24時間営業！</strong></td>
-                            </tr>
-                            <tr>
-                                <td>🚶 アクセス</td>
-                                <td>APAホテルから徒歩10分</td>
-                            </tr>
-                            <tr>
-                                <td>💳 免税</td>
-                                <td>✅ 5,000円以上 (パスポート必須)</td>
-                            </tr>
-                        </table>
-
-                        <div class="floor-guide">
-                            <h4>🏬 フロアガイド</h4>
-                            <div class="floor-item">
-                                <div class="floor-number">1F</div>
-                                <div>食品, お菓子, 日用品</div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">2F</div>
-                                <div><strong>化粧品, カラコン</strong>, スキンケア</div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">3-4F</div>
-                                <div><strong>衣料品</strong> - 防寒着, ヒートテック, 靴下</div>
-                            </div>
-                        </div>
-
-                        <p><strong>🛒 Day 1 必須購入アイテム:</strong></p>
-                        <ul class="product-list">
-                            <li>ウインタージャケット/コート <span class="product-price">¥3,000-5,000</span></li>
-                            <li>ヒートテック (インナー) <span class="product-price">¥1,500-2,500</span></li>
-                            <li>厚手の靴下 (3-5足パック) <span class="product-price">¥500-1,000</span></li>
-                            <li>マフラー <span class="product-price">¥1,000-2,000</span></li>
-                            <li>ニット帽 <span class="product-price">¥1,000-1,500</span></li>
-                        </ul>
-
-                        <div class="info-box success">
-                            <strong>✅ おすすめポイント</strong>
-                            <ul>
-                                <li>24時間営業なので時間を気にせず買い物可能</li>
-                                <li>デパートより圧倒的に安い</li>
-                                <li>ホテルから近いため、荷物をすぐ置きに帰れる</li>
-                            </ul>
-                        </div>
-
-                        <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/133.jpg" alt="Don Quijote Store"></div>
-                            <div class="gallery-item"><img src="../images/134.jpg" alt="Asakusa Temple"></div>
-                            <div class="gallery-item"><img src="../images/135.jpg" alt="Winter Jacket"></div>
-                            <div class="gallery-item"><img src="../images/136.jpg" alt="Warm Socks"></div>
-                            <div class="gallery-item large"><img src="../images/137.jpg" alt="Tokyo Night Shopping">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>深夜に行くと空いていて快適！</li>
-                                <li>免税カウンターは1F (比較的空いてる)</li>
-                                <li>カゴは入り口でピックアップ</li>
-                                <li>ユニクロやビックカメラより安いものが多い</li>
-                                <li>店内BGM「ドンドン・ドン・キホーテ」が耳に残ります笑</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 2: Akihabara (Sat, Mar 7) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 2: 秋葉原 (3/7)</h2>
-
-            <!-- Yodobashi Akiba -->
-            <div class="shop-card highlight">
-                <div class="day-badge">📅 Day 2 - 3/7 (午前)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏢</div>
-                    <div class="shop-info">
-                        <h3>ヨドバシカメラ Akiba <span class="must-buy">おもちゃ/カメラ</span></h3>
-                    </div>
-                </div>
-
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>千代田区神田花岡町1-1 (秋葉原駅直結)</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>09:30 - 22:00</td>
-                            </tr>
-                            <tr>
-                                <td>💳 免税</td>
-                                <td>✅ 5,000円以上 (専用レジあり)</td>
-                            </tr>
-                        </table>
-                        <div class="floor-guide">
-                            <h4>🏬 フロアガイド (見どころ)</h4>
-                            <div class="floor-item">
-                                <div class="floor-number">7F</div>
-                                <div><strong>ファッション & 靴:</strong> ABC-MART Mega Stage, 本屋, メガネ</div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">6F</div>
-                                <div><strong>おもちゃ & ホビー:</strong> ガンダム, トミカ, レゴ (品揃え最大級!)</div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">8F</div>
-                                <div><strong>レストラン街:</strong> すしざんまい、牛カツなど多数</div>
-                            </div>
-                        </div>
-                        <p><strong>👟 靴購入のアドバイス:</strong></p>
-                        <div class="info-box warning">
-                            <ul>
-                                <li><strong>ヨドバシ (7F):</strong> 最新モデルが定価で買える。サイズ豊富。ポイントもつく。</li>
-                                <li><strong>軽井沢アウトレット (Day 7):</strong> 型落ち品が30-70%OFFだが、サイズがないことが多い。</li>
-                                <li><em>結論: ここで気に入った靴があれば買っておくのが無難！</em></li>
-                            </ul>
-                        </div>
-                        <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item large">
-                                <img src="../images/101.jpg" alt="Yodobashi Interior">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/187.jpg" alt="Sneakers">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/184.jpg" alt="Toys">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>7F ファッションフロアは家電フロアより静かでのんびりできる</li>
-                                <li>Zoff (メガネ) は最短30分で作成可能</li>
-                                <li>ここのABC-MARTは「メガステージ」なので品揃えが良い</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- DAY 4: Kawaguchiko (Mon, Mar 9) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 4: 河口湖 (3/9)</h2>
-
-            <!-- Chureito Pagoda -->
-            <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 4 - 3/9 (Pojai's Birthday!)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏯</div>
-                    <div class="shop-info">
-                        <h3>新倉山浅間公園（忠霊塔） 🗻</h3>
-                    </div>
-                </div>
-                <img src="../images/172.jpg" alt="Chureito Pagoda" class="shop-image">
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>山梨県富士吉田市新倉3353</td>
-                            </tr>
-                            <tr>
-                                <td>🚌 アクセス</td>
-                                <td>河口湖駅からローカルバス、または下吉田駅から徒歩</td>
-                            </tr>
-                            <tr>
-                                <td>💰 入場料</td>
-                                <td>無料</td>
-                            </tr>
-                        </table>
-                        <p><strong>🎯 ハイライト:</strong></p>
-                        <ul class="product-list">
-                            <li><strong>398段の階段</strong>を登ると絶景が！ (約15分)</li>
-                            <li><strong>世界で最も有名な富士山の写真撮影スポット！</strong></li>
-                            <li>五重塔（忠霊塔）と富士山を同時に撮れる</li>
-                        </ul>
-                        <div class="info-box"><strong>💡 Tips:</strong> 混雑を避けるため早朝（7:00頃）がおすすめ。歩きやすい靴で！</div>
-                        <a href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/173.jpg" alt="Chureito Pagoda"></div>
-                            <div class="gallery-item"><img src="../images/174.jpg" alt="Mt Fuji View"></div>
-                            <div class="gallery-item large"><img src="../images/177.jpg" alt="Japanese Temple"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>階段は少しきついですが、途中休憩スポットあり</li>
-                                <li>展望デッキからの眺めが最高</li>
-                                <li>桜の時期（3月下旬〜）は特に美しい（今回は少し早いかも？）</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Oshino Hakkai -->
-            <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 4 - 3/9</div>
-                <div class="shop-header">
-                    <div class="shop-icon">💧</div>
-                    <div class="shop-info">
-                        <h3>忍野八海 (Oshino Hakkai)</h3>
-                    </div>
-                </div>
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>山梨県南都留郡忍野村</td>
-                            </tr>
-                            <tr>
-                                <td>🚌 アクセス</td>
-                                <td>河口湖駅からバスで約20分</td>
-                            </tr>
-                            <tr>
-                                <td>💰 入場料</td>
-                                <td>無料 (一部有料エリアあり)</td>
-                            </tr>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 5: Harajuku Shopping (Tue, Mar 10) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 5: 原宿 (3/10)</h2>
-
-            <!-- Brandy Melville -->
-            <div class="shop-card fashion">
-                <div class="day-badge">📅 Day 5 - 3/10 (午後)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">👗</div>
-                    <div class="shop-info">
-                        <h3>Brandy Melville Harajuku</h3>
-                    </div>
-                </div>
-                <!-- <img src="../images/144.jpg" alt="Brandy Melville" class="shop-image"> -->
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>渋谷区神宮前3-29-5</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>11:00 - 19:00 ⚠️ <strong>閉店早い！</strong></td>
-                            </tr>
-                            <tr>
-                                <td>🚇 アクセス</td>
-                                <td>JR原宿駅から徒歩8分</td>
-                            </tr>
-                        </table>
-                        <p><strong>👚 スタイル:</strong></p>
-                        <ul class="product-list">
-                            <li>海外ティーンに大人気のトレンディカジュアル</li>
-                            <li>ベーシックでパステルカラー中心</li>
-                            <li><strong>ワンサイズ (One size fits most)</strong></li>
-                        </ul>
-                        <div class="info-box warning"><strong>⚠️ 注意:</strong> 19:00に閉まるので早めに行きましょう！</div>
-                        <a href="https://maps.google.com/?q=Brandy+Melville+Harajuku" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item large">
-                                <img src="../images/144.jpg" alt="Harajuku Shop">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/141.jpg" alt="Harajuku Shop">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>アメリカ西海岸風のバイブス</li>
-                                <li>TikTokで超人気</li>
-                                <li>試着室が可愛い</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kiddy Land -->
-            <div class="shop-card character">
-                <div class="day-badge">📅 Day 5 - 3/10 (午後)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🧸</div>
-                    <div class="shop-info">
-                        <h3>キデイランド 原宿店 <span class="must-buy">キャラグッズの聖地！</span></h3>
-                    </div>
-                </div>
-                <img src="../images/114.jpg" alt="Toy Store" class="shop-image">
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>渋谷区神宮前6-1-9</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>11:00 - 21:00</td>
-                            </tr>
-                            <tr>
-                                <td>🚇 アクセス</td>
-                                <td>明治神宮前駅すぐ / 原宿駅から徒歩5分</td>
-                            </tr>
-                        </table>
-                        <div class="floor-guide">
-                            <h4>🏬 フロアガイド (必見！)</h4>
-                            <div class="floor-item">
-                                <div class="floor-number">B1F</div>
-                                <div><strong>スヌーピータウン</strong></div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">1F</div>
-                                <div><strong>ちいかわ / ジブリ (トトロ)</strong> / その他旬のキャラ</div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">2F</div>
-                                <div><strong>ディズニー / ミッフィー</strong></div>
-                            </div>
-                            <div class="floor-item">
-                                <div class="floor-number">4F</div>
-                                <div><strong>リラックマ / サンリオ (キティ含む)</strong> <span class="must-buy">人気！</span></div>
-                            </div>
-                        </div>
-                        <a href="https://maps.google.com/?q=Kiddy+Land+Harajuku" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item large"><img src="../images/119.jpg" alt="Character Store"></div>
-                            <div class="gallery-item"><img src="../images/115.jpg" alt="Hello Kitty Merchandise"></div>
-                            <div class="gallery-item"><img src="../images/116.jpg" alt="Totoro Plush"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>4階のサンリオコーナーは激混み注意！</li>
-                                <li>1階のジブリグッズも見逃せない</li>
-                                <li>免税カウンターあり</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 6: Palcall Tsumagoi (Wed, Mar 11) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 6: パルコール嬬恋スキーリゾート (3/11)</h2>
-
-            <!-- Palcall Tsumagoi -->
-            <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 6 - 3/11</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🎿</div>
-                    <div class="shop-info">
-                        <h3>パルコール嬬恋リゾート <span class="must-buy">Ski Trip!</span></h3>
-                    </div>
-                </div>
-                <img src="../images/045.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>群馬県吾妻郡嬬恋村</td>
-                            </tr>
-                            <tr>
-                                <td>🚄 アクセス</td>
-                                <td>新幹線: 上野→軽井沢 (TWP利用) その後送迎バス</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 時間</td>
-                                <td>スキー場: 08:30 - 16:30</td>
-                            </tr>
-                            <tr>
-                                <td>🎫 チケット</td>
-                                <td>宿泊プランにリフト券込み</td>
-                            </tr>
-                        </table>
-                        <p><strong>❄️ ハイライト:</strong></p>
-                        <ul class="product-list">
-                            <li><strong>3.2km ゴンドラ:</strong> 関東最長！長距離クルージングが楽しめる</li>
-                            <li><strong>サンライズゴンドラ:</strong> 早朝の雲海や日の出が見られる（天候次第）</li>
-                            <li><strong>キッズパーク:</strong> ソリやチュービングで遊べる</li>
-                            <li><strong>マジックアワー:</strong> 夕暮れ時の景色が幻想的</li>
-                        </ul>
-                        <div class="info-box success">
-                            <strong>♨️ 温泉 & ビュッフェ:</strong>
-                            <ul>
-                                <li>星空が見える温泉「四阿山の湯」</li>
-                                <li>夕食はカニ食べ放題付きビュッフェ！</li>
-                            </ul>
-                        </div>
-                        <a href="https://maps.google.com/?q=Palcall+Tsumagoi+Resort" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://palcall.co.jp/" target="_blank" class="link-button">🌐 公式サイト</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item large">
-                                <img src="../images/158.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/162.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li><strong>送迎バス:</strong> 軽井沢駅からのバスは予約必須</li>
-                                <li><strong>スキーウェア:</strong> ホテルでレンタル可能（手袋・ゴーグルは持参推奨）</li>
-                                <li><strong>ロッカー:</strong> 大きな荷物は軽井沢駅か新宿駅に預けるのが吉</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- DAY 7: Karuizawa Outlet (Thu, Mar 12) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 7: 軽井沢アウトレット & 焼肉 (3/12)</h2>
-
-            <!-- Karuizawa Prince Shopping Plaza -->
-            <div class="shop-card highlight">
-                <div class="day-badge">📅 Day 7 - 3/12 (11:30-16:00)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🛍️</div>
-                    <div class="shop-info">
-                        <h3>軽井沢・プリンスショッピングプラザ <span class="must-buy">巨大アウトレット！</span></h3>
-                    </div>
-                </div>
-                <!-- <img src="../images/041.jpg" alt="Outlet" class="shop-image"> -->
-
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>長野県北佐久郡軽井沢町 (西武系、駅直結)</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>10:00 - 19:00</td>
-                            </tr>
-                            <tr>
-                                <td>🚇 アクセス</td>
-                                <td>パルコールから送迎バスで軽井沢駅へ</td>
-                            </tr>
-                        </table>
-
-                        <div class="info-box highlight">
-                            <strong>🚶 おすすめルート (とにかく広い！):</strong>
-                            <ol>
-                                <li>駅前からアウトレットへ入場</li>
-                                <li>まず <strong>East / New East</strong> ゾーン (スポーツブランド)</li>
-                                <li><strong>フードコート</strong>でランチ (中央エリア)</li>
-                                <li><strong>West / New West</strong> ゾーンへ (ファッション/お土産)</li>
-                            </ol>
-                        </div>
-
-                        <p><strong>👟 スニーカー (East Zone):</strong></p>
-                        <ul class="product-list">
-                            <li><strong>Nike, Adidas, Puma</strong> - 店舗がデカい、品揃え豊富</li>
-                            <li><strong>New Balance</strong> - 人気すぎてサイズ欠け多め。見つけたら即買い</li>
-                            <li><strong>Onitsuka Tiger</strong> - 欧米観光客にも大人気。安い。</li>
-                            <li><strong>Skechers, Crocs, Asics, HOKA</strong> - なんでもあります</li>
-                        </ul>
-
-                        <p><strong>👕 カジュアルウェア (West Zone):</strong></p>
-                        <ul class="product-list">
-                            <li><strong>GAP Outlet</strong> - パーカー激安</li>
-                            <li><strong>BEAMS, United Arrows, SHIPS</strong> - 日本のセレクトショップ。質が良い。</li>
-                            <li><strong>Levi's, Champion, Diesel, Tommy Hilfiger</strong></li>
-                            <li><strong>WEGO</strong> - ティーン向け激安ショップ</li>
-                        </ul>
-
-                        <div class="info-box warning">
-                            <strong>⚠️ 注意 (このアウトレットに無いブランド):</strong>
-                            <ul>
-                                <li>❌ <strong>Uniqlo, GU</strong> (街中やホテル近くで買いましょう)</li>
-                                <li>❌ <strong>Zara, H&M</strong> (アウトレット展開なし)</li>
-                                <li>❌ <strong>MLB, Pandora</strong> (新宿や原宿で！)</li>
-                            </ul>
-                        </div>
-
-                        <a href="https://maps.google.com/?q=Karuizawa+Prince+Shopping+Plaza" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://travel.marumura.com/karuizawa-outlet/" target="_blank" class="link-button">🗺️
-                            フロアマップ</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー & 情報</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item large">
-                                <img src="../images/041.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/200.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/201.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="extra-info">
-                        <h5>💡 Tips</h5>
-                        <ul>
-                            <li>インフォメーションセンターでクーポンブックをもらおう</li>
-                            <li>とにかく歩くのでスニーカー必須</li>
-                            <li>コインロッカーは駅に多数あり</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Premium Yakiniku -->
-        <div class="shop-card food">
-            <div class="day-badge">📅 Day 7 - 3/12 (18:30)</div>
-            <div class="shop-header">
-                <div class="shop-icon">🥩</div>
-                <div class="shop-info">
-                    <h3>高級焼肉 / しゃぶしゃぶ <span class="must-buy">スペシャルディナー！</span>
-                    </h3>
-                </div>
-            </div>
-            <img src="../images/206.jpg" alt="Yakiniku" class="shop-image">
-            <div class="shop-content-wrapper">
-                <div class="shop-content-left">
-                    <p><strong>🍽️ おすすめメニュー:</strong></p>
-                    <ul class="product-list">
-                        <li>黒毛和牛 A5ランク (とろける！)</li>
-                        <li>牛タン (厚切りが最高)</li>
-                        <li>しゃぶしゃぶ / すき焼き食べ放題もアリ</li>
-                    </ul>
-                    <div class="info-box success">
-                        <strong>新宿エリアのおすすめ店:</strong> 六歌仙, 叙々苑, 鍋ぞう(Premium)
-                    </div>
-                </div>
-                <div class="shop-content-right">
-                    <h4>📷 ギャラリー</h4>
-                    <div class="gallery-grid">
-                        <div class="gallery-item large">
-                            <img src="../images/206.jpg" alt="Yakiniku" class="shop-image">
-                        </div>
-                        <div class="gallery-item">
-                            <img src="../images/207.jpg" alt="Yakiniku" class="shop-image">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- DAY 8: Last Day - Suga Shrine & Ueno (Fri, Mar 13) -->
-        <div class="section">
-            <h2 class="section-title">📅 Day 8: 須賀神社 & 上野 (3/13)</h2>
-
-            <!-- Suga Shrine -->
-            <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 8 - 3/13 (早朝 08:30)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">⛩️</div>
-                    <div class="shop-info">
-                        <h3>須賀神社 (四谷) 🎬</h3>
-                    </div>
-                </div>
-                <img src="../images/198.jpg" alt="Suga Shrine" class="shop-image">
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>新宿区須賀町5</td>
-                            </tr>
-                            <tr>
-                                <td>🚇 アクセス</td>
-                                <td>JR中央線: 新宿→四ツ谷(5分) その後徒歩5分</td>
-                            </tr>
-                            <tr>
-                                <td>💰 入場料</td>
-                                <td>無料</td>
-                            </tr>
-                        </table>
-                        <p><strong>🎬 聖地巡礼:</strong></p>
-                        <ul class="product-list">
-                            <li><strong>映画「君の名は。」</strong>のラストシーンの階段</li>
-                            <li>瀧と三葉がすれ違うあの場所！</li>
-                            <li>世界中のアニメファンが訪れる撮影スポット</li>
-                        </ul>
-                        <div class="info-box"><strong>💡 Tips:</strong> 人がいない写真を撮るなら朝8:30までに行きましょう。</div>
-                        <a href="https://maps.google.com/?q=Suga+Shrine+Yotsuya" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/167.jpg" alt="Tokyo Shrine"></div>
-                            <div class="gallery-item large"><img src="../images/171.jpg" alt="Japanese Steps"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>階段は思ってるより急です (36段？)</li>
-                                <li>キービジュアルの再現に挑戦！</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Takeya (Ueno) -->
-            <div class="shop-card food">
-                <div class="day-badge">📅 Day 8 - 3/13 (09:30-11:30)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏢</div>
-                    <div class="shop-info">
-                        <h3>多慶屋 (Takeya) 上野 <span class="must-buy">激安お土産！</span></h3>
-                    </div>
-                </div>
-                <img src="../images/145.jpg" alt="Shopping" class="shop-image">
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>台東区台東4-33-2 (紫色のビル)</td>
-                            </tr>
-                            <tr>
-                                <td>⏰ 営業時間</td>
-                                <td>10:00 - 20:00</td>
-                            </tr>
-                            <tr>
-                                <td>🚇 アクセス</td>
-                                <td>御徒町駅 / 上野駅から徒歩</td>
-                            </tr>
-                            <tr>
-                                <td>💳 免税</td>
-                                <td>✅ 5,000円以上 (1Fカウンター)</td>
-                            </tr>
-                        </table>
-                        <p><strong>🍫 人気のお土産:</strong></p>
-                        <ul class="product-list">
-                            <li>ご当地キットカット</li>
-                            <li>東京ばな奈</li>
-                            <li>ビタミン剤 / ドラッグストアコスメ / スキンケア</li>
-                        </ul>
-                        <div class="info-box success"><strong>✅ 多慶屋のいいところ:</strong> ドンキより安くて、通路が広くて見やすい！穴場。</div>
-                        <a href="https://maps.google.com/?q=Takeya+Ueno" target="_blank" class="link-button">📍 Google
-                            Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 ギャラリー</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/146.jpg" alt="Shopping Store"></div>
-                            <div class="gallery-item"><img src="../images/150.jpg" alt="Ueno Shopping District"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>本館(食品)とレディス館(化粧品)が隣接</li>
-                                <li>紫色のビルを目印に！</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ameyoko Market -->
-            <div class="shop-card food">
-                <div class="day-badge">📅 Day 8 - 3/13 (11:30-12:30)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏪</div>
-                    <div class="shop-info">
-                        <h3>アメ横商店街 <span class="must-buy">食べ歩き</span></h3>
-                    </div>
-                </div>
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 住所</td>
-                                <td>上野駅〜御徒町駅の高架下</td>
-                            </tr>
-                        </table>
-                        <p><strong>🍡 おすすめグルメ:</strong></p>
-                        <ul class="product-list">
-                            <li>海鮮丼 (みなとや、など)</li>
-                            <li>フルーツ串 (いちご、メロン)</li>
-                            <li>多国籍な屋台料理</li>
-                        </ul>
-                        <a href="https://maps.google.com/?q=Ameyoko+Market+Ueno" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/153.jpg" alt="Ameyoko Market"></div>
-                            <div class="gallery-item"><img src="../images/156.jpg" alt="Fresh Fruits"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <script src="../asset/js/common.js" defer></script>
-</body>
-
-</html>
+<div class="container">
+<!-- Header -->
+<div class="header">
+<h1>🛍️ 東京ショッピング＆詳細ガイド 2026</h1>
+<div class="subtitle">座標、フロアプラン、完全な移動方法を含む（完全な情報）</div>
+<img alt="Tokyo Shopping" class="header-image" src="../images/183.jpg"/>
 </div>
-<script src="../asset/js/common.js" defer></script>
+<!-- DAY 1: Arrival & Asakusa (Fri, Mar 6) -->
+<div class="section">
+<h2 class="section-title">📅 1日目（1日目）：浅草エリア（浅草） - 3月6日</h2>
+<!-- Don Quijote -->
+<div class="shop-card fashion">
+<div class="day-badge">📅 1日目 (1日目) - 3月6日 (20:00-21:30)</div>
+<div class="shop-header">
+<div class="shop-icon">🏪</div>
+<div class="shop-info">
+<h3>ドン・キホーテ浅草店 <span class="must-buy">２４時間営業！ (24
+                                時間）</span></h3>
+</div>
+</div>
+<img alt="Don Quijote" class="shop-image" src="../images/132.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>東京都台東区雷門2-10-4（台東区雷門）</td>
+</tr>
+<tr>
+<td>⏰ 時間 (時間)</td>
+<td>🔥 <strong>２４時間営業！</strong></td>
+</tr>
+<tr>
+<td>🚶距離（徒歩）</td>
+<td>アパホテルより徒歩10分。</td>
+</tr>
+<tr>
+<td>💳 税金（免税）</td>
+<td>✅5,000円以上お買い上げの場合</td>
+</tr>
+</table>
+<div class="floor-guide">
+<h4>🏬フロアプラン（フロアガイド）</h4>
+<div class="floor-item">
+<div class="floor-number">1F</div>
+<div>食品、スナック、消耗品（食品＆スナック）</div>
+</div>
+<div class="floor-item">
+<div class="floor-number">2F</div>
+<div><strong>化粧品</strong>、スキンケア（化粧品＆スキンケア）</div>
+</div>
+<div class="floor-item">
+<div class="floor-number">3-4F</div>
+<div><strong>服</strong> - 冬服＆ヒートテック</div>
+</div>
+</div>
+<p><strong>🛒 購入するアイテム (1 日目のショッピング):</strong></p>
+<ul class="product-list">
+<li>セーター/ジャケット(ジャケット) <span class="product-price">630-1,050฿
+                                    (3,000円～5,000円)</span></li>
+<li>ヒートテックシャツ（ヒートテック） <span class="product-price">315-525฿ (¥1,500-2,500)</span></li>
+<li>厚手の靴下（暖かい靴下） <span class="product-price">105-210฿ (¥500-1,000)</span></li>
+<li>スカーフ（スカーフ） <span class="product-price">210-420฿ (¥1,000-2,000)</span></li>
+<li>ニット帽 <span class="product-price">210-315฿ (¥1,000-1,500)</span>
+</li>
+</ul>
+<div class="info-box success">
+<strong>✅なぜドン・キホーテなのか？</strong>
+<ul>
+<li>24時間営業なのでとても便利です</li>
+<li>価格も大手デパートよりもリーズナブルです。</li>
+<li>近くにあり、歩いて簡単に行けます。</li>
+</ul>
+</div>
+<a class="link-button" href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+<a class="social-link lemon8" href="https://s.lemon8-app.com/al/GgkeSdppTN" target="_blank">Lemon8（レモンエイト）の口コミ</a>
+<a class="social-link tiktok" href="https://www.tiktok.com/@bhamstoryy/video/7516164465394765063" target="_blank">TikTok (ティックトック)</a>
+</div>
+<div class="shop-content-right">
+<h4>📷 写真と追加情報 (写真と情報)</h4>
+<div class="gallery-grid">
+<div class="gallery-item"><img alt="Don Quijote Store" src="../images/133.jpg"/></div>
+<div class="gallery-item"><img alt="Asakusa Temple" src="../images/134.jpg"/></div>
+<div class="gallery-item"><img alt="Winter Jacket" src="../images/135.jpg"/></div>
+<div class="gallery-item"><img alt="Warm Socks" src="../images/136.jpg"/></div>
+<div class="gallery-item large"><img alt="Tokyo Night Shopping" src="../images/137.jpg"/>
+</div>
+<div class="gallery-item"><img alt="Winter Clothes" src="../images/138.jpg"/></div>
+<div class="gallery-item"><img alt="Scarves" src="../images/139.jpg"/></div>
+</div>
+<div class="extra-info">
+<h5>💡 ヒント (ヒント)</h5>
+<ul>
+<li>夜遅くに行きましたが、人は多くありませんでした（24時間営業）</li>
+<li>1階にて税金還付（Tax-Free）を行っております。</li>
+<li>インターネット上には割引クーポン（割引クーポン）があります。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 2: Akihabara & Odaiba (Sat, Mar 7) -->
+<div class="section">
+<h2 class="section-title">📅 2日目 (2日目): 秋葉原エリア - 3月7日</h2>
+<!-- Yodobashi Akiba -->
+<div class="shop-card highlight">
+<div class="day-badge">📅 2日目 (2日目) - 3月7日 (午前)</div>
+<div class="shop-header">
+<div class="shop-icon">🏢</div>
+<div class="shop-info">
+<h3>ヨドバシAkiba（ヨドバシアキバ） <span class="must-buy">付属品（アクセサリー）</span>
+</h3>
+</div>
+</div>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>千代田区神田花岡町1（JR秋葉原駅隣）</td>
+</tr>
+<tr>
+<td>⏰ 時間 (時間)</td>
+<td>09:30 - 22:00</td>
+</tr>
+<tr>
+<td>💳 税金（免税）</td>
+<td>✅5,000円以上お買い上げの場合</td>
+</tr>
+</table>
+<div class="floor-guide">
+<h4>🏬 面白い間取り図（フロアガイド）</h4>
+<div class="floor-item">
+<div class="floor-number">7F</div>
+<div><strong>靴とファッション：</strong> ABC-MART メガステージ、書店
+                                </div>
+</div>
+<div class="floor-item">
+<div class="floor-number">6F</div>
+<div><strong>おもちゃ (おもちゃ):</strong> ガンダム、トミカ、レゴ
+                                </div>
+</div>
+<div class="floor-item">
+<div class="floor-number">3F</div>
+<div><strong>カメラ：</strong> 付属品（アクセサリー）</div>
+</div>
+</div>
+<p><strong>📷 アクセサリーを購入するミッション (カメラタスク):</strong></p>
+<ul class="product-list">
+<li><strong>CPLフィルター (CPLフィルター - 62mm):</strong> ギラつきカット用（約5,000円）</li>
+<li><strong>予備バッテリー（バッテリーLP-E17）：</strong> キヤノン製カメラの場合</li>
+</ul>
+<a class="link-button" href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<h4>📷写真と雰囲気（写真）</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Yodobashi Interior" src="../images/101.jpg"/>
+</div>
+<div class="gallery-item">
+<img alt="Sneakers" src="../images/187.jpg"/>
+</div>
+<div class="gallery-item">
+<img alt="Toys" src="../images/188.jpg"/>
+</div>
+</div>
+<div class="extra-info">
+<h5>💡 ヒント (ヒント)</h5>
+<ul>
+<li>7階には地域最大級の靴売場がございます。</li>
+<li>6階にはガチャポンがたくさんあります。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 4: Kawaguchiko (Mon, Mar 9) -->
+<div class="section">
+<h2 class="section-title">📅 4日目（4日目）：河口湖エリア（河口湖） - 3月9日</h2>
+<!-- Chureito Pagoda -->
+<div class="shop-card attraction">
+<div class="day-badge">📅 4日目 (4日目) - 3月9日 (満足な誕生日 - 誕生日!)</div>
+<div class="shop-header">
+<div class="shop-icon">🏯</div>
+<div class="shop-info">
+<h3>忠霊塔 🗻</h3>
+</div>
+</div>
+<img alt="Chureito Pagoda" class="shop-image" src="../images/172.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>山梨県富士吉田市新倉（富士吉田市新倉）</td>
+</tr>
+<tr>
+<td>🚌 旅行 (交通機関)</td>
+<td>河口湖駅から路線バスに乗ります。</td>
+</tr>
+<tr>
+<td>💰入場料（有料）</td>
+<td>無料（無料）</td>
+</tr>
+</table>
+<p><strong>🎯 ハイライト:</strong></p>
+<ul class="product-list">
+<li>階段を上ります <strong>398歩</strong> 景色を眺める（約15分）</li>
+<li><strong>富士山の最高に美しい撮影スポット！</strong></li>
+</ul>
+<div class="info-box"><strong>💡 ヒント (ヒント):</strong> 人が少ないので早朝に行くと良いでしょう。
+                            そして歩きやすい靴を履いてください。</div>
+<a class="link-button" href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<h4>📷 写真と追加情報 (写真)</h4>
+<div class="gallery-grid">
+<div class="gallery-item"><img alt="Chureito Pagoda" src="../images/173.jpg"/></div>
+<div class="gallery-item"><img alt="Mt Fuji View" src="../images/174.jpg"/></div>
+</div>
+<div class="extra-info">
+<h5>🏯 パゴダについて (About)</h5>
+<ul>
+<li>五重の赤い塔は、戦争で亡くなった人々を追悼するために建てられました。</li>
+<li>新倉浅間神社の境内にあります。</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Oshino Hakkai -->
+<div class="shop-card attraction">
+<div class="day-badge">📅 4日目 (4日目) - 3月9日</div>
+<div class="shop-header">
+<div class="shop-icon">💧</div>
+<div class="shop-info">
+<h3>忍野八海村</h3>
+</div>
+</div>
+<img alt="Oshino Hakkai" class="shop-image" src="../images/037.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>山梨県南都留郡忍野町</td>
+</tr>
+<tr>
+<td>🚌 旅行 (交通機関)</td>
+<td>河口湖駅から路線バスに乗車（約20分）</td>
+</tr>
+<tr>
+<td>💰入場料（有料）</td>
+<td>無料（博物館部門300円）</td>
+</tr>
+</table>
+<p><strong>💧 ハイライト (ハイライト):</strong></p>
+<ul class="product-list">
+<li>非常に透明度が高く、きれいな水が流れる8つの聖なる池のある村。</li>
+<li>この水は富士山の雪解け水です。</li>
+</ul>
+<div class="info-box success">
+<strong>🍡おすすめスナック:</strong>
+<ul>
+<li>焼き餅</li>
+<li>冷奴のソース添え</li>
+</ul>
+</div>
+<a class="link-button" href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<h4>📷 写真と追加情報 (写真)</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Oshino Hakkai Pond" src="../images/038.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 5: Harajuku Shopping (Tue, Mar 10) -->
+<div class="section">
+<h2 class="section-title">📅 5日目 (5日目): 原宿エリア - 3月10日</h2>
+<!-- Brandy Melville -->
+<div class="shop-card fashion">
+<div class="day-badge">📅 5日目 (5日目) - 3月10日 (午後)</div>
+<div class="shop-header">
+<div class="shop-icon">👗</div>
+<div class="shop-info">
+<h3>ブランデーメルヴィル原宿</h3>
+</div>
+</div>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>東京都渋谷区神宮前3-29-5（渋谷区神宮前）</td>
+</tr>
+<tr>
+<td>⏰ 時間 (時間)</td>
+<td>11:00 - 19:00 ⚠️ <strong>早く閉めて！ (早めに閉店します)</strong></td>
+</tr>
+<tr>
+<td>🚇 旅行 (交通機関)</td>
+<td>JR原宿駅より徒歩8分。</td>
+</tr>
+</table>
+<p><strong>👚製品スタイル(スタイル):</strong></p>
+<ul class="product-list">
+<li>10 代の女の子のためのファッション、カリフォルニア スタイル (California Vibe)</li>
+<li>フリーサイズ (フリーサイズ)</li>
+</ul>
+<div class="info-box warning"><strong>⚠️注意:</strong> 閉店時間の午後7時までに行くべきです。</div>
+<a class="link-button" href="https://maps.google.com/?q=Brandy+Melville+Harajuku" target="_blank">📍 地図を開く (Google マップ)</a>
+</div>
+<div class="shop-content-right">
+<h4>📷写真と雰囲気（写真）</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Harajuku Shop" src="../images/144.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Kiddy Land -->
+<div class="shop-card character">
+<div class="day-badge">📅 5日目 (5日目) - 3月10日 (午後)</div>
+<div class="shop-header">
+<div class="shop-icon">🧸</div>
+<div class="shop-info">
+<h3>キディランド原宿店 <span class="must-buy">人気のある！</span></h3>
+</div>
+</div>
+<img alt="Toy Store" class="shop-image" src="../images/114.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>東京都渋谷区神宮前6-1-9（渋谷区神宮前）</td>
+</tr>
+<tr>
+<td>⏰ 時間 (時間)</td>
+<td>11:00 - 21:00</td>
+</tr>
+<tr>
+<td>🚇 旅行 (交通機関)</td>
+<td>JR原宿駅より徒歩5分。</td>
+</tr>
+</table>
+<div class="floor-guide">
+<h4>🏬フロアプラン（フロアガイド）</h4>
+<div class="floor-item">
+<div class="floor-number">B1F</div>
+<div><strong>サンリオ（サンリオ）：</strong> ハローキティ、シナモンロール</div>
+</div>
+<div class="floor-item">
+<div class="floor-number">1F</div>
+<div><strong>スタジオジブリ：</strong> トトロ（トトロ）</div>
+</div>
+<div class="floor-item">
+<div class="floor-number">2F</div>
+<div><strong>スヌーピーとムーミン</strong></div>
+</div>
+</div>
+<a class="link-button" href="https://maps.google.com/?q=Kiddy+Land+Harajuku" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<div class="gallery-grid">
+<div class="gallery-item large"><img alt="Character Store" src="../images/119.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 6: Palcall Tsumagoi (Wed, Mar 11) -->
+<div class="section">
+<h2 class="section-title">📅 6日目（6日目）：パルコール嬬恋（パルコール嬬恋） - 3月11日</h2>
+<!-- Palcall Tsumagoi -->
+<div class="shop-card attraction">
+<div class="day-badge">📅 6日目 (6日目) - 3月11日 (スキー旅行!)</div>
+<div class="shop-header">
+<div class="shop-icon">🎿</div>
+<div class="shop-info">
+<h3>パルコール嬬恋リゾート</h3>
+</div>
+</div>
+<img alt="Palcall Tsumagoi Resort" class="shop-image" src="../images/045.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>群馬県嬬恋村</td>
+</tr>
+<tr>
+<td>🚄 旅行 (交通機関)</td>
+<td>新幹線→軽井沢駅、ホテルバスに乗り換え。</td>
+</tr>
+<tr>
+<td>🎫チケット（チケット）</td>
+<td>宿泊パックに含まれるもの（スキーリフト・リフト券）</td>
+</tr>
+</table>
+<p><strong>❄️ ハイライトアクティビティ (ハイライト):</strong></p>
+<ul class="product-list">
+<li>全長 3.2 km のゴンドラに乗って、雪山を眺めましょう。</li>
+<li>子ども向け雪遊びゾーン（キッズパーク）：滑り台、チューブ（チュービング）</li>
+</ul>
+<div class="info-box success">
+<strong>♨️ 温泉と食事（温泉とビュッフェ）：</strong>
+<ul>
+<li>星空を眺める温泉（星夜温泉）に浸かる</li>
+<li>ホテルでディナービュッフェを食べる（ディナービュッフェ）</li>
+</ul>
+</div>
+<a class="link-button" href="https://maps.google.com/?q=Palcall+Tsumagoi+Resort" target="_blank">📍 地図を開く (Google マップ)</a>
+</div>
+<div class="shop-content-right">
+<h4>📷写真と雰囲気（写真）</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Palcall Tsumagoi Resort" class="shop-image" src="../images/158.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 7: Karuizawa Outlet (Thu, Mar 12) -->
+<div class="section">
+<h2 class="section-title">📅 7日目 (7日目): 軽井沢アウトレット - 3月12日</h2>
+<!-- Karuizawa Prince Shopping Plaza -->
+<div class="shop-card highlight">
+<div class="day-badge">📅 7日目 (7日目) - 3月12日 (11:30-16:00)</div>
+<div class="shop-header">
+<div class="shop-icon">🛍️</div>
+<div class="shop-info">
+<h3>軽井沢プリンスショッピングプラザ（軽井沢アウトレット） <span class="must-buy">一番大きい！</span></h3>
+</div>
+</div>
+<img alt="Outlet" class="shop-image" src="../images/041.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>長野県軽井沢（長野県軽井沢）</td>
+</tr>
+<tr>
+<td>⏰ 時間 (時間)</td>
+<td>10:00 - 19:00</td>
+</tr>
+<tr>
+<td>🚇 旅行 (交通機関)</td>
+<td>JR軽井沢駅すぐそば。</td>
+</tr>
+</table>
+<div class="info-box highlight">
+<strong>🚶散歩計画:</strong>
+<ol>
+<li>東ゾーン：スポーツウェアとシューズ（スポーツ＆スニーカー）を中心に展開。</li>
+<li>ウエストゾーン：ファッション全般・お土産中心（カジュアル＆ファッション）</li>
+</ol>
+</div>
+<p><strong>👟 スニーカー (スニーカー):</strong> ナイキ(Nike)、アディダス(Adidas)、ニューバランス(NB)、
+                            オニツカタイガー</p>
+<p><strong>👕 おすすめブランド:</strong> ギャップ（GAP）、ビームス（ビームス）、ヴィゴ（WEGO）</p>
+<a class="link-button" href="https://maps.google.com/?q=Karuizawa+Prince+Shopping+Plaza" target="_blank">📍 地図を開く (Google マップ)</a>
+</div>
+<div class="shop-content-right">
+<h4>📷写真と雰囲気（写真）</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Outlet" class="shop-image" src="../images/041.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Premium Yakiniku -->
+<div class="shop-card food">
+<div class="day-badge">📅 7日目 - 3月12日 (18:30)</div>
+<div class="shop-header">
+<div class="shop-icon">🥩</div>
+<div class="shop-info">
+<h3>プレミアム焼肉・しゃぶ (プレミアム焼肉・しゃぶ) <span class="must-buy">特別なお食事！</span>
+</h3>
+</div>
+</div>
+<img alt="Yakiniku" class="shop-image" src="../images/206.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<p><strong>🍽️おすすめメニュー：</strong></p>
+<ul class="product-list">
+<li>A5和牛（口の中でとろける）</li>
+<li>牛タン焼き</li>
+<li>しゃぶしゃぶ・すき焼きバイキング</li>
+</ul>
+<div class="info-box success">
+<strong>新宿エリアのおすすめショップ：</strong> 六歌仙、叙々苑、鍋蔵（プレミアム）
+                    </div>
+</div>
+<div class="shop-content-right">
+<h4>📷 写真と追加情報</h4>
+<div class="gallery-grid">
+<div class="gallery-item large">
+<img alt="Outlet" class="shop-image" src="../images/206.jpg"/>
+</div>
+<div class="gallery-item">
+<img alt="Outlet" class="shop-image" src="../images/207.jpg"/>
+</div>
+<div class="gallery-item">
+<img alt="Outlet" class="shop-image" src="../images/208.jpg"/>
+</div>
+<div class="gallery-item">
+<img alt="Outlet" class="shop-image" src="../images/209.jpg"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 8: Last Day - Suga Shrine & Ueno (Fri, Mar 13) -->
+<div class="section">
+<h2 class="section-title">📅 8日目（8日目）： 須賀神社＆上野エリア（須賀神社＆上野） - 3月13日
+            </h2>
+<!-- Suga Shrine -->
+<div class="shop-card attraction">
+<div class="day-badge">📅 8日目 (8日目) - 3月13日 (早朝)</div>
+<div class="shop-header">
+<div class="shop-icon">⛩️</div>
+<div class="shop-info">
+<h3>須賀神社・四谷エリア (須賀神社～四谷) 🎬</h3>
+</div>
+</div>
+<img alt="Suga Shrine" class="shop-image" src="../images/198.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>東京都新宿区四谷</td>
+</tr>
+<tr>
+<td>🚇 旅行 (交通機関)</td>
+<td>JR：新宿駅→四ツ谷駅</td>
+</tr>
+</table>
+<p><strong>🎬重要な写真スポット（アニメスポット）：</strong></p>
+<ul class="product-list">
+<li>アニメの最後にある階段 <strong>「目を閉じて、あなたの名前を夢見てください」 (あなたの名前)</strong></li>
+</ul>
+<a class="link-button" href="https://maps.google.com/?q=Suga+Shrine+Yotsuya" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<div class="gallery-grid">
+<div class="gallery-item large"><img alt="Japanese Steps" src="../images/171.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Takeya (Ueno) -->
+<div class="shop-card food">
+<div class="day-badge">📅 8日目 (8日目) - 3月13日 (午前)</div>
+<div class="shop-header">
+<div class="shop-icon">🏢</div>
+<div class="shop-info">
+<h3>多慶屋ムアンビル（多慶屋～上野） <span class="must-buy">お土産（お土産）</span></h3>
+</div>
+</div>
+<img alt="Shopping" class="shop-image" src="../images/145.jpg"/>
+<div class="shop-content-wrapper">
+<div class="shop-content-left">
+<table class="info-table">
+<tr>
+<td>📍 住所（住所）</td>
+<td>東京・上野エリア</td>
+</tr>
+<tr>
+<td>🕒 時間 (時間)</td>
+<td>10:00 - 20:00</td>
+</tr>
+<tr>
+<td>💳 税金（免税）</td>
+<td>✅ 確定申告は1階で簡単に行えます。</td>
+</tr>
+</table>
+<p><strong>🍫 お土産リスト（絶対買うべきもの）：</strong> キットカットスナック、東京ばな奈、スキンケア製品
+                        </p>
+<a class="link-button" href="https://maps.google.com/?q=Takeya+Ueno" target="_blank">📍
+                            地図を開く（Googleマップ）</a>
+</div>
+<div class="shop-content-right">
+<div class="gallery-grid">
+<div class="gallery-item large"><img alt="Shopping Store" src="../images/146.jpg"/></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script defer="" src="../asset/js/common.js"></script>
 </body>
-
 </html>

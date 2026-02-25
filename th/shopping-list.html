@@ -4,9 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tokyo Shopping Guide 2026 - คู่มือช้อปปิ้ง</title>
+    <title>โตเกียว ทริป 2026 (Tokyo Trip 2026) - รายละเอียดเชิงลึก (Detailed Guide)</title>
     <link rel="icon" href="../favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="../asset/css/common.css">
+    <link rel="stylesheet" href="../asset/css/professional-v2.css">
     <style>
         * {
             margin: 0;
@@ -15,88 +16,116 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-            min-height: 100vh;
+            background: var(--p-bg);
             padding: 15px;
         }
 
         .container {
             width: 100%;
-            max-width: 100%;
+            max-width: 1000px !important;
             margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            background: transparent;
+            border-radius: 0;
+            overflow: visible;
+            box-shadow: none;
         }
 
-        /* Header */
+        /* Header V2 Professional */
         .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: var(--p-primary) !important;
             color: white;
-            padding: 30px;
+            padding: 4rem 2rem !important;
             text-align: center;
+            border-radius: var(--radius-lg);
+            margin-bottom: 2rem;
+            box-shadow: var(--shadow-md);
         }
 
         .header h1 {
-            font-size: 48px;
+            font-size: 2.5rem !important;
+            font-weight: 800 !important;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: none;
         }
 
         .header .subtitle {
-            font-size: 24px;
-            opacity: 0.9;
-        }
-
-        .header-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            margin-top: 20px;
-            border-radius: 10px;
+            font-size: 1.1rem;
+            opacity: 0.8;
         }
 
         /* Section */
         .section {
-            padding: 30px;
-            border-bottom: 3px solid #f0f0f0;
-        }
-
-        .section:last-child {
-            border-bottom: none;
+            padding: 20px 0;
+            border-bottom: 1px solid var(--p-border);
         }
 
         .section-title {
-            font-size: 32px;
-            color: #764ba2;
+            font-size: 1.5rem;
+            color: var(--p-primary);
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 4px solid #f093fb;
+            border-bottom: 3px solid var(--p-accent);
             display: inline-block;
+            font-weight: 800;
         }
 
-        /* Shop Card - 2 Column Layout */
+        /* Shop Card Professional */
         .shop-card {
-            background: #f8f9fa;
-            border-radius: 20px;
-            padding: 20px;
-            margin-bottom: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            border-left: 8px solid #f093fb;
+            background: var(--p-card) !important;
+            border-radius: var(--radius-lg) !important;
+            padding: 25px !important;
+            margin-bottom: 20px !important;
+            box-shadow: var(--shadow-sm) !important;
+            border: 1px solid var(--p-border) !important;
+            border-left: 6px solid var(--p-primary) !important;
         }
 
         .shop-card.highlight {
-            border-left-color: #ff6b6b;
-            background: linear-gradient(135deg, #fff5f5 0%, #fff0f0 100%);
+            border-left-color: var(--p-accent) !important;
         }
 
         .shop-card.character {
-            border-left-color: #ffd93d;
-            background: linear-gradient(135deg, #fffbeb 0%, #fff8dc 100%);
+            border-left-color: #f43f5e !important;
+        }
+
+        .shop-card.fashion {
+            border-left-color: #10b981 !important;
+        }
+
+        .shop-card.food {
+            border-left-color: #3b82f6 !important;
+        }
+
+        .shop-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .shop-info h3 {
+            font-size: 1.4rem;
+            color: var(--p-primary);
+            font-weight: 800;
+        }
+
+        /* Detail Toggle UI */
+        .expand-btn {
+            margin-top: 10px;
+            width: 100%;
+            text-align: center;
+            background: #f1f5f9 !important;
+            color: var(--p-primary) !important;
+            border: 1px solid var(--p-border) !important;
+            padding: 10px !important;
+            font-weight: 700 !important;
+            border-radius: 8px !important;
+        }
+
+        .details-content.active {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--p-border);
         }
 
         .shop-card.fashion {
@@ -153,9 +182,6 @@
             margin-top: 15px;
         }
 
-        .shop-content-left {
-            /* ข้อมูลหลัก */
-        }
 
         .shop-content-right {
             /* พื้นที่สำหรับรูป/ข้อมูลเพิ่มเติม */
@@ -807,22 +833,23 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>🛍️ Tokyo Shopping Guide 2026</h1>
-            <div class="subtitle">คู่มือช้อปปิ้งและสถานที่ท่องเที่ยวฉบับสมบูรณ์</div>
+            <h1>🛍️ คู่มือช้อปปิ้งและข้อมูลละเอียด (Tokyo Shopping & Detailed Guide) 2026</h1>
+            <div class="subtitle">รวมพิกัด แผนผังชั้น และวิธีการเดินทางฉบับสมบูรณ์ (Complete Information)</div>
             <img src="../images/183.jpg" alt="Tokyo Shopping" class="header-image">
         </div>
 
         <!-- DAY 1: Arrival & Asakusa (Fri, Mar 6) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 1: Asakusa (6 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 1 (Day 1): ย่านอาซากุสะ (Asakusa) - 6 มี.ค.</h2>
 
             <!-- Don Quijote -->
             <div class="shop-card fashion">
-                <div class="day-badge">📅 Day 1 - 6 มี.ค. (20:00-21:30)</div>
+                <div class="day-badge">📅 วันที่ 1 (Day 1) - 6 มี.ค. (20:00-21:30)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🏪</div>
                     <div class="shop-info">
-                        <h3>ดองกิโฮเต้ อาซากุสะ (Don Quijote Asakusa) <span class="must-buy">เปิด 24 ชม.!</span></h3>
+                        <h3>ดองกิโฮเต้ อาซากุสะ (Don Quijote Asakusa) <span class="must-buy">เปิด 24 ชม.! (24
+                                Hours)</span></h3>
                     </div>
                 </div>
 
@@ -832,68 +859,68 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>2-10-4 Kaminarimon, Taito-ku, Tokyo</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>2-10-4 คามินาริมง, ไทโต-คุ (Kaminarimon, Taito-ku), โตเกียว</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
-                                <td>🔥 <strong>24 ชั่วโมง!</strong></td>
+                                <td>⏰ เวลา (Hours)</td>
+                                <td>🔥 <strong>เปิด 24 ชั่วโมง!</strong></td>
                             </tr>
                             <tr>
-                                <td>🚶 ระยะทาง</td>
-                                <td>เดินจาก APA Hotel 10 นาที</td>
+                                <td>🚶 ระยะทาง (Walk)</td>
+                                <td>เดินจากโรงแรม เอพีเอ (APA Hotel) 10 นาที</td>
                             </tr>
                             <tr>
-                                <td>💳 Tax-Free</td>
-                                <td>✅ ซื้อเกิน ¥5,000</td>
+                                <td>💳 ภาษี (Tax-Free)</td>
+                                <td>✅ เมื่อซื้อเกิน 5,000 เยน (Yen)</td>
                             </tr>
                         </table>
 
                         <div class="floor-guide">
-                            <h4>🏬 แผนผังชั้น</h4>
+                            <h4>🏬 แผนผังชั้น (Floor Guide)</h4>
                             <div class="floor-item">
                                 <div class="floor-number">1F</div>
-                                <div>อาหาร, ขนม, ของใช้</div>
+                                <div>อาหาร, ขนม, ของใช้ (Food & Snacks)</div>
                             </div>
                             <div class="floor-item">
                                 <div class="floor-number">2F</div>
-                                <div><strong>เครื่องสำอาง, สกินแคร์</strong></div>
+                                <div><strong>เครื่องสำอาง</strong>, สกินแคร์ (Cosmetics & Skincare)</div>
                             </div>
                             <div class="floor-item">
                                 <div class="floor-number">3-4F</div>
-                                <div><strong>เสื้อผ้า</strong> - เสื้อกันหนาว, ฮีตเทค, ถุงเท้า</div>
+                                <div><strong>เสื้อผ้า</strong> - เสื้อกันหนาว, ฮีตเทค (Winter Clothes & Heattech)</div>
                             </div>
                         </div>
 
-                        <p><strong>🛒 สินค้าที่ต้องซื้อ (Day 1):</strong></p>
+                        <p><strong>🛒 รายการที่ต้องซื้อ (Day 1 Shopping):</strong></p>
                         <ul class="product-list">
-                            <li>เสื้อกันหนาว/แจ็คเก็ต <span class="product-price">630-1,050฿ (¥3,000-5,000)</span></li>
-                            <li>เสื้อฮีตเทค <span class="product-price">315-525฿ (¥1,500-2,500)</span></li>
-                            <li>ถุงเท้าหนา (แพ็ค 3-5 คู่) <span class="product-price">105-210฿ (¥500-1,000)</span></li>
-                            <li>ผ้าพันคอ <span class="product-price">210-420฿ (¥1,000-2,000)</span></li>
-                            <li>หมวกไหมพรม <span class="product-price">210-315฿ (¥1,000-1,500)</span></li>
+                            <li>เสื้อกันหนาว/แจ็คเก็ต (Jackets) <span class="product-price">630-1,050฿
+                                    (¥3,000-5,000)</span></li>
+                            <li>เสื้อฮีตเทค (Heattech) <span class="product-price">315-525฿ (¥1,500-2,500)</span></li>
+                            <li>ถุงเท้าหนา (Warm Socks) <span class="product-price">105-210฿ (¥500-1,000)</span></li>
+                            <li>ผ้าพันคอ (Scarves) <span class="product-price">210-420฿ (¥1,000-2,000)</span></li>
+                            <li>หมวกไหมพรม (Knitted Hats) <span class="product-price">210-315฿ (¥1,000-1,500)</span>
+                            </li>
                         </ul>
 
                         <div class="info-box success">
-                            <strong>✅ ทำไมต้อง Don Quijote?</strong>
+                            <strong>✅ ทำไมต้อง ดองกิโฮเต้ (Don Quijote)?</strong>
                             <ul>
-                                <li>เปิด 24 ชม. - ไม่ต้องกังวลเรื่องเวลา</li>
-                                <li>ราคาถูกกว่า Department Store</li>
-                                <li>ใกล้โรงแรม - เดินได้สบาย</li>
+                                <li>เปิดตลอด 24 ชั่วโมง - สะดวกมาก</li>
+                                <li>ราคาประหยัดกว่าห้างใหญ่</li>
+                                <li>ใกล้ที่พัก - เดินไปได้ง่าย</li>
                             </ul>
                         </div>
 
                         <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank" class="link-button">📍
-                            Google Maps</a>
+                            เปิดแผนที่ (Google Maps)</a>
                         <a href="https://s.lemon8-app.com/al/GgkeSdppTN" target="_blank"
-                            class="social-link lemon8">Lemon8</a>
-                        <a href="https://www.tiktok.com/@bhamstoryy/video/7516164465394765063?is_from_webapp=1&sender_device=pc&web_id=7530619447674930696"
-                            target="_blank" class="social-link tiktok">Tiktok</a>
-                        <a href="https://www.gographjapan.com/tag/%e0%b8%84%e0%b8%b9%e0%b8%9b%e0%b8%ad%e0%b8%87%e0%b8%aa%e0%b9%88%e0%b8%a7%e0%b8%99%e0%b8%a5%e0%b8%94/"
-                            target="_blank" class="social-link instagram">คูปองส่วนลด</a>
+                            class="social-link lemon8">รีวิวเลมอน8 (Lemon8)</a>
+                        <a href="https://www.tiktok.com/@bhamstoryy/video/7516164465394765063" target="_blank"
+                            class="social-link tiktok">ติ๊กต็อก (TikTok)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม (Photos & Info)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item"><img src="../images/133.jpg" alt="Don Quijote Store"></div>
                             <div class="gallery-item"><img src="../images/134.jpg" alt="Asakusa Temple"></div>
@@ -905,32 +932,11 @@
                             <div class="gallery-item"><img src="../images/139.jpg" alt="Scarves"></div>
                         </div>
                         <div class="extra-info">
-                            <h5>💡 Tips</h5>
+                            <h5>💡 เคล็ดลับ (Tips)</h5>
                             <ul>
-                                <li>เปิด 24 ชม. ไปดึกได้!</li>
-                                <li>Tax-Free Counter ชั้น 1 (ต่อแถวสั้น)</li>
-                                <li>มีตะกร้าให้หยิบของได้เลย</li>
-                                <li>ราคาถูกกว่า Uniqlo และ Bic Camera</li>
-                                <li>เสียงเพลงดังมาก เตรียมหูฟัง 😅</li>
-                            </ul>
-                        </div>
-                        <div class="extra-info">
-                            <h5>🧥 เสื้อกันหนาวแนะนำ</h5>
-                            <ul>
-                                <li><strong>Down Jacket</strong> - บางเบา อุ่นมาก</li>
-                                <li><strong>Heat Tech</strong> - เสื้อตัวในเก็บความอุ่น</li>
-                                <li>ถุงเท้าหนา แพ็ค 3-5 คู่ คุ้มมาก</li>
-                                <li>ผ้าพันคอขนสัตว์เทียม นุ่มอุ่น</li>
-                                <li>หมวกไหมพรมราคาถูก</li>
-                            </ul>
-                        </div>
-                        <div class="extra-info">
-                            <h5>🛒 สินค้าอื่นที่น่าสนใจ</h5>
-                            <ul>
-                                <li>เครื่องสำอาง ชั้น 2 (Canmake, Kate)</li>
-                                <li>ขนมญี่ปุ่น ชั้น 1</li>
-                                <li>ของใช้ ยา ชั้น 1</li>
-                                <li>ของเล่น/ของที่ระลึก</li>
+                                <li>ไปตอนดึกคนไม่เยอะ (Open 24 hrs)</li>
+                                <li>ทำคืนภาษี (Tax-Free) ที่ชั้น 1</li>
+                                <li>มีคูปองส่วนลดในออนไลน์ (Discount Coupons)</li>
                             </ul>
                         </div>
                     </div>
@@ -940,73 +946,61 @@
 
         <!-- DAY 2: Akihabara & Odaiba (Sat, Mar 7) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 2: Akihabara (7 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 2 (Day 2): ย่านอากิฮาบาระ (Akihabara) - 7 มี.ค.</h2>
 
             <!-- Yodobashi Akiba -->
-            <!-- Yodobashi Akiba -->
             <div class="shop-card highlight">
-                <div class="day-badge">📅 Day 2 - 7 มี.ค. (เช้า)</div>
+                <div class="day-badge">📅 วันที่ 2 (Day 2) - 7 มี.ค. (เช้า - Morning)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🏢</div>
                     <div class="shop-info">
-                        <h3>โยโดบาชิ อากิบะ (Yodobashi Akiba) <span class="must-buy">ของเล่น/Accessories</span></h3>
+                        <h3>โยโดบาชิ อากิบะ (Yodobashi Akiba) <span class="must-buy">อุปกรณ์เสริม (Accessories)</span>
+                        </h3>
                     </div>
                 </div>
-                <!-- <img src="../images/011.jpg" alt="Yodobashi Akiba" class="shop-image"> -->
                 <div class="shop-content-wrapper">
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>1 Kanda Hanaokacho, Chiyoda-ku (ติดสถานี Akihabara)</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>1 Kanda Hanaokacho, Chiyoda-ku (ติดสถานี JR Akihabara)</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
+                                <td>⏰ เวลา (Hours)</td>
                                 <td>09:30 - 22:00</td>
                             </tr>
                             <tr>
-                                <td>💳 Tax-Free</td>
-                                <td>✅ ซื้อเกิน ¥5,000 (Counter แยก)</td>
+                                <td>💳 ภาษี (Tax-Free)</td>
+                                <td>✅ เมื่อซื้อเกิน 5,000 เยน (Yen)</td>
                             </tr>
                         </table>
                         <div class="floor-guide">
-                            <h4>🏬 Floor Guide (ไฮไลต์)</h4>
+                            <h4>🏬 แผนผังชั้นที่น่าสนใจ (Floor Guide)</h4>
                             <div class="floor-item">
                                 <div class="floor-number">7F</div>
-                                <div><strong>Fashion & Shoes:</strong> ABC-MART Mega Stage (รุ่นใหม่), ร้านเสื้อผ้า,
-                                    ร้านหนังสือ</div>
+                                <div><strong>รองเท้าและแฟชั่น:</strong> เอบีซี มาร์ท (ABC-MART Mega Stage), ร้านหนังสือ
+                                </div>
                             </div>
                             <div class="floor-item">
                                 <div class="floor-number">6F</div>
-                                <div><strong>Toys & Hobby:</strong> Gundam, Tomica, Lego เยอะมาก!</div>
+                                <div><strong>ของเล่น (Toys):</strong> กันดั้ม (Gundam), โทมิก้า (Tomica), เลโก้ (Lego)
+                                </div>
                             </div>
                             <div class="floor-item">
-                                <div class="floor-number">8F</div>
-                                <div><strong>Restaurants:</strong> ร้านอาหารเยอะมาก (แนะนำ Sushi Zanmai)</div>
+                                <div class="floor-number">3F</div>
+                                <div><strong>กล้อง (Camera):</strong> อุปกรณ์เสริม (Accessories)</div>
                             </div>
                         </div>
-                        <p><strong>📷 Camera Accessories (Photography):</strong></p>
+                        <p><strong>📷 ภารกิจซื้ออุปกรณ์เสริม (Camera Task):</strong></p>
                         <ul class="product-list">
-                            <li><strong>CPL Filter (62mm):</strong> สำหรับเลนส์กล้อง (ประมาณ ¥5,000) -
-                                <em>จำเป็นสำหรับตัดแสงสะท้อนถ่ายน้ำ/ใบไม้</em>
-                            </li>
+                            <li><strong>ฟิลเตอร์ ซีพีแอล (CPL Filter - 62mm):</strong> สำหรับตัดแสงสะท้อน (≈¥5,000)</li>
+                            <li><strong>แบตเตอรี่สำรอง (Battery LP-E17):</strong> สำหรับกล้องแคนนอน (Canon)</li>
                         </ul>
-                        <p><strong>👟 ABC-MART vs Outlet (Tips):</strong></p>
-                        <div class="info-box warning">
-                            <ul>
-                                <li><strong>Yodobashi (7F):</strong> เน้นรุ่นใหม่ (New Arrival) ราคาปกติ แต่ได้ Point /
-                                    Tax-Free (สะดวก ไม่ต้องเดินทางไกล)</li>
-                                <li><strong>Outlet (Day 7):</strong> เน้นของตกรุ่น (Clearance) ราคาถูกกว่า 30-70%
-                                    แต่ไซส์อาจไม่ครบ</li>
-                                <li><em>แนะนำ: ถ้าเจอรุ่นถูกใจที่นี่ ให้ซื้อเลย!</em></li>
-                            </ul>
-                        </div>
                         <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍
-                            Google
-                            Maps</a>
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและบรรยากาศ</h4>
+                        <h4>📷 รูปภาพและบรรยากาศ (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large">
                                 <img src="../images/101.jpg" alt="Yodobashi Interior">
@@ -1017,16 +1011,12 @@
                             <div class="gallery-item">
                                 <img src="../images/188.jpg" alt="Toys">
                             </div>
-                            <div class="gallery-item">
-                                <img src="../images/184.jpg" alt="Toys">
-                            </div>
                         </div>
                         <div class="extra-info">
-                            <h5>💡 Tips</h5>
+                            <h5>💡 เคล็ดลับ (Tips)</h5>
                             <ul>
-                                <li>ชั้น 7 บรรยากาศเงียบกว่าชั้นเครื่องใช้ไฟฟ้า เดินสบาย</li>
-                                <li>มีร้านแว่น Zoff (ตัดแว่นด่วน 30 นาที)</li>
-                                <li>ABC-MART ที่นี่ของเยอะมาก (Mega Stage)</li>
+                                <li>ชั้น 7 มีร้านรองเท้าที่ใหญ่ที่สุดในย่านนี้</li>
+                                <li>มีตู้กาชาปอง (Gachapon) เยอะมากที่ชั้น 6</li>
                             </ul>
                         </div>
                     </div>
@@ -1036,11 +1026,11 @@
 
         <!-- DAY 4: Kawaguchiko (Mon, Mar 9) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 4: Kawaguchiko (9 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 4 (Day 4): ย่านคาวากุจิโกะ (Kawaguchiko) - 9 มี.ค.</h2>
 
             <!-- Chureito Pagoda -->
             <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 4 - 9 มี.ค. (วันเกิดพอใจ!)</div>
+                <div class="day-badge">📅 วันที่ 4 (Day 4) - 9 มี.ค. (วันเกิดพอใจ - Birthday!)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🏯</div>
                     <div class="shop-info">
@@ -1052,67 +1042,39 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>Arakura, Fujiyoshida, Yamanashi</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>อาราคุระ, ฟูจิโยชิดะ (Arakura, Fujiyoshida), ยามานาชิ</td>
                             </tr>
                             <tr>
-                                <td>🚌 การเดินทาง</td>
-                                <td>Local Bus จาก Kawaguchiko Station</td>
+                                <td>🚌 การเดินทาง (Transport)</td>
+                                <td>นั่งรถบัสท้องถิ่น (Local Bus) จากสถานี คาวากุจิโกะ (Kawaguchiko Station)</td>
                             </tr>
                             <tr>
-                                <td>💰 ค่าเข้า</td>
-                                <td>ฟรี</td>
+                                <td>💰 ค่าเข้า (Fee)</td>
+                                <td>ฟรี (Free)</td>
                             </tr>
                         </table>
-                        <p><strong>🎯 ไฮไลท์:</strong></p>
+                        <p><strong>🎯 จุดไฮไลท์ (Highlights):</strong></p>
                         <ul class="product-list">
-                            <li>เดิน <strong>398 ขั้น</strong> ขึ้นไปยังเจดีย์ (~15 นาที)</li>
-                            <li><strong>จุดถ่ายรูป Mt. Fuji ที่ดังที่สุดในโลก!</strong></li>
-                            <li>เจดีย์แดง 5 ชั้น สร้างปี 1963</li>
+                            <li>เดินขึ้นบันได <strong>398 ขั้น</strong> เพื่อชมวิว (~15 นาที)</li>
+                            <li><strong>จุดถ่ายรูปภูเขาไฟฟูจิ (Mt. Fuji) ที่สวยที่สุด!</strong></li>
                         </ul>
-                        <div class="info-box"><strong>💡 Tips:</strong> ไปเช้าตรู่คนน้อย | ใส่รองเท้าผ้าใบ</div>
+                        <div class="info-box"><strong>💡 เคล็ดลับ (Tips):</strong> ควรไปแต่เช้าคนจะน้อย
+                            และใส่รองเท้าที่เดินสบาย</div>
                         <a href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                        <a href="https://www.lemon8-app.com?region=th&pid=website_seo_share" target="_blank"
-                            class="social-link lemon8">Lemon8</a>
-                        <a href="https://www.tiktok.com/@teawchargbatt/video/7370212452648111368?is_from_webapp=1&sender_device=pc&web_id=7530619447674930696"
-                            target="_blank" class="social-link tiktok">Tiktok</a>
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item"><img src="../images/173.jpg" alt="Chureito Pagoda"></div>
                             <div class="gallery-item"><img src="../images/174.jpg" alt="Mt Fuji View"></div>
-                            <div class="gallery-item"><img src="../images/175.jpg" alt="Japanese Scenery"></div>
-                            <div class="gallery-item"><img src="../images/176.jpg" alt="Pagoda Steps"></div>
-                            <div class="gallery-item large"><img src="../images/177.jpg" alt="Japanese Temple"></div>
                         </div>
                         <div class="extra-info">
-                            <h5>💡 Tips</h5>
+                            <h5>🏯 เกี่ยวกับเจดีย์ (About)</h5>
                             <ul>
-                                <li>ไปเช้าตรู่ 07:00 คนน้อย!</li>
-                                <li>ใส่รองเท้าผ้าใบ (398 ขั้น ~15 นาที)</li>
-                                <li>ช่วงซากุระ (ปลายมี.ค.-เม.ย.) สวยมาก!</li>
-                                <li>มีจุดพักระหว่างทาง</li>
-                                <li>ฟูจิซังเห็นชัดตอนอากาศดี</li>
-                            </ul>
-                        </div>
-                        <div class="extra-info">
-                            <h5>🏯 เกี่ยวกับเจดีย์ชูเรโตะ</h5>
-                            <ul>
-                                <li>เจดีย์แดง 5 ชั้น สร้างปี 1963</li>
-                                <li>รำลึกถึงผู้เสียชีวิตในสงคราม</li>
-                                <li><strong>จุดถ่ายรูป Mt. Fuji ดังที่สุดในโลก!</strong></li>
-                                <li>อยู่ในเขต Arakura Sengen Shrine</li>
-                            </ul>
-                        </div>
-                        <div class="extra-info">
-                            <h5>📸 เทคนิคถ่ายรูป</h5>
-                            <ul>
-                                <li>ตั้งกล้องที่จุด Observation Deck</li>
-                                <li>ใช้ Wide Lens จะได้ทั้งเจดีย์และฟูจิ</li>
-                                <li>ช่วงเช้าแสงสวย ไม่มีเงา</li>
-                                <li>มี Tripod Stand ให้ใช้</li>
+                                <li>เจดีย์แดง 5 ชั้น สร้างเพื่อรำลึกถึงผู้เสียชีวิตในสงคราม</li>
+                                <li>ตั้งอยู่ในเขตศาลเจ้า อาราคุระ เซ็นเก็น (Arakura Sengen Shrine)</li>
                             </ul>
                         </div>
                     </div>
@@ -1121,7 +1083,7 @@
 
             <!-- Oshino Hakkai -->
             <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 4 - 9 มี.ค.</div>
+                <div class="day-badge">📅 วันที่ 4 (Day 4) - 9 มี.ค.</div>
                 <div class="shop-header">
                     <div class="shop-icon">💧</div>
                     <div class="shop-info">
@@ -1133,55 +1095,39 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>Oshino, Minamitsuru District, Yamanashi</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>โอชิโนะ (Oshino), เขตมินามิซึรุ, ยามานาชิ</td>
                             </tr>
                             <tr>
-                                <td>🚌 การเดินทาง</td>
-                                <td>Local Bus จาก Kawaguchiko Station (~20 นาที)</td>
+                                <td>🚌 การเดินทาง (Transport)</td>
+                                <td>นั่งรถบัสท้องถิ่นจากสถานี คาวากุจิโกะ (~20 นาที)</td>
                             </tr>
                             <tr>
-                                <td>💰 ค่าเข้า</td>
+                                <td>💰 ค่าเข้า (Fee)</td>
                                 <td>ฟรี (ส่วนพิพิธภัณฑ์ ¥300)</td>
                             </tr>
                         </table>
-                        <p><strong>💧 ไฮไลท์:</strong></p>
+                        <p><strong>💧 จุดไฮไลท์ (Highlights):</strong></p>
                         <ul class="product-list">
-                            <li>หมู่บ้านบ่อน้ำศักดิ์สิทธิ์ 8 บ่อ (น้ำใสมาก!)</li>
-                            <li>น้ำเกิดจากการละลายของหิมะภูเขาไฟฟูจิ</li>
-                            <li>วิวบ้านมุงจากแบบโบราณคู่กับฟูจิซัง</li>
+                            <li>หมู่บ้านบ่อน้ำศักดิ์สิทธิ์ 8 บ่อ ที่น้ำใสสะอาดมาก</li>
+                            <li>น้ำเกิดจากหิมะที่ละลายจาก ภูเขาไฟฟูจิ (Mt. Fuji)</li>
                         </ul>
                         <div class="info-box success">
-                            <strong>🍡 ของกินห้ามพลาด:</strong>
+                            <strong>🍡 ของกินแนะนำ (Recommended Snacks):</strong>
                             <ul>
-                                <li>โมจิย่าง (Kusa Mochi) ไส้ถั่วแดง</li>
+                                <li>โมจิย่าง (Grilled Mochi)</li>
                                 <li>เต้าหู้เย็นราดซอส</li>
-                                <li>ปลาย่างเสียบไม้</li>
                             </ul>
                         </div>
-                        <a href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank" class="link-button">📍 Google
-                            Maps</a>
+                        <a href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank" class="link-button">📍
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large">
                                 <img src="../images/038.jpg" alt="Oshino Hakkai Pond">
                             </div>
-                            <div class="gallery-item">
-                                <img src="../images/036.jpg" alt="Traditional Houses">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/039.jpg" alt="Clear Water">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>น้ำในบ่อใสจนเห็นปลาว่าย (ความลึก 8 เมตร)</li>
-                                <li>มีบ่อน้ำศักดิ์สิทธิ์ให้รองน้ำกลับบ้านได้ (เตรียมขวดเปล่าไป)</li>
-                                <li>คนเยอะมาก แนะนำไปเช้าหรือเย็น</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1190,74 +1136,48 @@
 
         <!-- DAY 5: Harajuku Shopping (Tue, Mar 10) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 5: Harajuku (10 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 5 (Day 5): ย่านฮาราจูกุ (Harajuku) - 10 มี.ค.</h2>
 
             <!-- Brandy Melville -->
             <div class="shop-card fashion">
-                <div class="day-badge">📅 Day 5 - 10 มี.ค. (บ่าย)</div>
+                <div class="day-badge">📅 วันที่ 5 (Day 5) - 10 มี.ค. (บ่าย - Afternoon)</div>
                 <div class="shop-header">
                     <div class="shop-icon">👗</div>
                     <div class="shop-info">
                         <h3>แบรนดี้ เมลวิลล์ (Brandy Melville Harajuku)</h3>
                     </div>
                 </div>
-                <!-- <img src="../images/144.jpg" alt="Brandy Melville" class="shop-image"> -->
                 <div class="shop-content-wrapper">
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>3-29-5 Jingumae, Shibuya-ku, Tokyo</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>3-29-5 จิงกูมาเอะ, ชิบูย่า (Jingumae, Shibuya-ku), โตเกียว</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
-                                <td>11:00 - 19:00 ⚠️ <strong>ปิดเร็ว!</strong></td>
+                                <td>⏰ เวลา (Hours)</td>
+                                <td>11:00 - 19:00 ⚠️ <strong>ปิดเร็ว! (Closing early)</strong></td>
                             </tr>
                             <tr>
-                                <td>🚇 การเดินทาง</td>
-                                <td>เดิน 8 นาที จาก JR Harajuku Station</td>
+                                <td>🚇 การเดินทาง (Transport)</td>
+                                <td>เดิน 8 นาที จากสถานี ฮาราจูกุ (JR Harajuku Station)</td>
                             </tr>
                         </table>
-                        <p><strong>👚 สไตล์:</strong></p>
+                        <p><strong>👚 สไตล์สินค้า (Style):</strong></p>
                         <ul class="product-list">
-                            <li>แฟชั่นวัยรุ่นหญิงสไตล์ Casual/Trendy</li>
-                            <li>เสื้อผ้าสีพื้น โทนสีนุ่มนวล</li>
-                            <li><strong>One size fits most</strong></li>
+                            <li>แฟชั่นวัยรุ่นหญิงสไตล์ แคลิฟอร์เนีย (California Vibe)</li>
+                            <li>เสื้อผ้าขนาดเดียว (One size fits most)</li>
                         </ul>
-                        <div class="info-box warning"><strong>⚠️ หมายเหตุ:</strong> ร้านปิด 19:00 น. ต้องไปก่อน!</div>
+                        <div class="info-box warning"><strong>⚠️ หมายเหตุ:</strong> ควรไปก่อนเวลาปิด 19:00 น.</div>
                         <a href="https://maps.google.com/?q=Brandy+Melville+Harajuku" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.lemon8-app.com/discover/brandymelvilleharajuku?region=th&pid=website_seo_from_sug"
-                            target="_blank" class="social-link lemon8">Lemon8</a>
-                        <a href="https://www.tiktok.com/@ggumpoongg/video/7426030010600918280?is_from_webapp=1&sender_device=pc&web_id=7530619447674930696"
-                            target="_blank" class="social-link tiktok">Tiktok</a>
+                            class="link-button">📍 เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและบรรยากาศ (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large">
                                 <img src="../images/144.jpg" alt="Harajuku Shop">
                             </div>
-                            <div class="gallery-item">
-                                <img src="../images/141.jpg" alt="Harajuku Shop">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/142.jpg" alt="Harajuku Shop">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/143.jpg" alt="Harajuku Shop">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/140.jpg" alt="Harajuku Shop">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>ร้านปิดเร็ว 19:00! ต้องไปก่อน</li>
-                                <li>One size fits most - ลองก่อนซื้อ</li>
-                                <li>สไตล์ California casual vibe</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1265,11 +1185,11 @@
 
             <!-- Kiddy Land -->
             <div class="shop-card character">
-                <div class="day-badge">📅 Day 5 - 10 มี.ค. (บ่าย)</div>
+                <div class="day-badge">📅 วันที่ 5 (Day 5) - 10 มี.ค. (บ่าย - Afternoon)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🧸</div>
                     <div class="shop-info">
-                        <h3>คิดดี้ แลนด์ ฮาราจุกุ (Kiddy Land Harajuku) <span class="must-buy">ไฮไลท์!</span></h3>
+                        <h3>คิดดี้ แลนด์ ฮาราจุกุ (Kiddy Land Harajuku) <span class="must-buy">ยอดนิยม!</span></h3>
                     </div>
                 </div>
                 <img src="../images/114.jpg" alt="Toy Store" class="shop-image">
@@ -1277,52 +1197,39 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>6-1-9 Jingumae, Shibuya-ku, Tokyo</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>6-1-9 จิงกูมาเอะ, ชิบูย่า (Jingumae, Shibuya-ku), โตเกียว</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
+                                <td>⏰ เวลา (Hours)</td>
                                 <td>11:00 - 21:00</td>
                             </tr>
                             <tr>
-                                <td>🚇 การเดินทาง</td>
-                                <td>เดิน 5 นาที จาก JR Harajuku Station</td>
+                                <td>🚇 การเดินทาง (Transport)</td>
+                                <td>เดิน 5 นาที จากสถานี ฮาราจูกุ (JR Harajuku Station)</td>
                             </tr>
                         </table>
                         <div class="floor-guide">
-                            <h4>🏬 แผนผังชั้น (พอใจต้องชอบ!)</h4>
+                            <h4>🏬 แผนผังชั้น (Floor Guide)</h4>
                             <div class="floor-item">
                                 <div class="floor-number">B1F</div>
-                                <div><strong>Sanrio</strong> - Hello Kitty, Cinnamoroll, My Melody</div>
+                                <div><strong>ซานริโอ (Sanrio):</strong> คิตตี้ (Hello Kitty), ชินนามอนโรล</div>
                             </div>
                             <div class="floor-item">
                                 <div class="floor-number">1F</div>
-                                <div><strong>Studio Ghibli Store</strong> - Totoro, Kiki</div>
+                                <div><strong>สตูดิโอ จิบลิ (Studio Ghibli):</strong> โทโทโร่ (Totoro)</div>
                             </div>
                             <div class="floor-item">
                                 <div class="floor-number">2F</div>
-                                <div><strong>Snoopy Town & Moomin</strong></div>
+                                <div><strong>สนูปปี้ (Snoopy) และ มูมิน (Moomin)</strong></div>
                             </div>
                         </div>
                         <a href="https://maps.google.com/?q=Kiddy+Land+Harajuku" target="_blank" class="link-button">📍
-                            Google Maps</a>
-                        <a href="https://www.lemon8-app.com/discover/kiddy%20land%20harajuku?region=th&pid=website_seo_from_sug"
-                            target="_blank" class="social-link lemon8">Lemon8</a>
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large"><img src="../images/119.jpg" alt="Character Store"></div>
-                            <div class="gallery-item"><img src="../images/115.jpg" alt="Hello Kitty Merchandise"></div>
-                            <div class="gallery-item"><img src="../images/116.jpg" alt="Totoro Plush"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>ชั้น B1F (Sanrio) คนเยอะสุด ไปก่อน!</li>
-                                <li>ห้ามพลาด Ghibli Store ชั้น 1!</li>
-                                <li>มีสินค้า Exclusive Japan Only</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1331,15 +1238,15 @@
 
         <!-- DAY 6: Palcall Tsumagoi (Wed, Mar 11) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 6: Palcall Tsumagoi Ski Resort (11 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 6 (Day 6): ปาลคอล สึมาโกอิ (Palcall Tsumagoi) - 11 มี.ค.</h2>
 
             <!-- Palcall Tsumagoi -->
             <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 6 - 11 มี.ค.</div>
+                <div class="day-badge">📅 วันที่ 6 (Day 6) - 11 มี.ค. (ทริปสกี - Ski Trip!)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🎿</div>
                     <div class="shop-info">
-                        <h3>ปาลคอล สึมาโกอิ รีสอร์ท (Palcall Ski Resort) <span class="must-buy">Ski Trip!</span></h3>
+                        <h3>ปาลคอล สึมาโกอิ รีสอร์ท (Palcall Tsumagoi Resort)</h3>
                     </div>
                 </div>
                 <img src="../images/045.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
@@ -1348,77 +1255,39 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>Tsumagoi-mura, Agatsuma-gun, Gunma</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>หมู่บ้าน สึมาโกอิ (Tsumagoi), กุนมะ (Gunma)</td>
                             </tr>
                             <tr>
-                                <td>🚄 การเดินทาง</td>
-                                <td>Shinkansen: Tokyo/Ueno → Karuizawa (ใช้ TWP) ต่อ Shuttle Bus โรงแรม</td>
+                                <td>🚄 การเดินทาง (Transport)</td>
+                                <td>นั่งรถไฟ ชินคันเซ็น (Shinkansen) → สถานี คารุอิซาวะ (Karuizawa) ต่อรถบัสโรงแรม</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
-                                <td>Ski Field: 08:30 - 16:30</td>
-                            </tr>
-                            <tr>
-                                <td>🎫 ตั๋ว</td>
-                                <td>รวมในแพ็คเกจที่พัก (Lift Ticket)</td>
+                                <td>🎫 ตั๋ว (Ticket)</td>
+                                <td>รวมในแพ็กเกจที่พัก (ลิฟต์สกี - Lift Ticket)</td>
                             </tr>
                         </table>
-                        <p><strong>❄️ กิจกรรมไฮไลต์:</strong></p>
+                        <p><strong>❄️ กิจกรรมไฮไลต์ (Highlights):</strong></p>
                         <ul class="product-list">
-                            <li><strong>Gondola 3.2km:</strong> ยาวที่สุดใน Kanto ชมวิวภูเขาหิมะสวยมาก</li>
-                            <li><strong>Sunrise Gondola:</strong> ชมพระอาทิตย์ขึ้น (ถ้าอากาศดี)</li>
-                            <li><strong>Kids Park:</strong> โซนเล่นหิมะสำหรับเด็ก (Sled, Tubing)</li>
-                            <li><strong>Magic Hour:</strong> ถ่ายรูปช่วงพระอาทิตย์ตกสวยมาก</li>
+                            <li>ขึ้นกระเช้า กอนโดล่า (Gondola) ยาว 3.2 กม. ชมวิวภูเขาหิมะ</li>
+                            <li>โซนเล่นหิมะสำหรับเด็ก (Kids Park): ถาดเลื่อน, ทูบวิ่ง (Tubing)</li>
                         </ul>
                         <div class="info-box success">
-                            <strong>♨️ Onsen & Buffet:</strong>
+                            <strong>♨️ ออนเซ็นและอาหาร (Onsen & Buffet):</strong>
                             <ul>
-                                <li>แช่ออนเซ็นดูดาว (Four Seasons no Yu)</li>
-                                <li>บุฟเฟต์ขาปูและอาหารนานาชาติมื้อเย็น</li>
+                                <li>แช่ออนเซ็นดูดาว (Starry Night Onsen)</li>
+                                <li>ทานบุฟเฟต์มื้อเย็นที่โรงแรม (Dinner Buffet)</li>
                             </ul>
                         </div>
                         <a href="https://maps.google.com/?q=Palcall+Tsumagoi+Resort" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://palcall.co.jp/" target="_blank" class="link-button">🌐 เว็บไซต์</a>
+                            class="link-button">📍 เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและบรรยากาศ (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large">
                                 <img src="../images/158.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
                             </div>
-                            <div class="gallery-item">
-                                <img src="../images/159.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/160.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/161.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/162.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/163.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/164.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/165.jpg" alt="Palcall Tsumagoi Resort" class="shop-image">
-                            </div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li><strong>Shuttle Bus:</strong> ต้องจองล่วงหน้า (ขึ้นที่สถานี Karuizawa)</li>
-                                <li><strong>ชุดสกี:</strong> เช่าที่โรงแรมได้เลย (เตรียมถุงมือ/หมวกไปเองประหยัดกว่า)
-                                </li>
-                                <li><strong>Locker:</strong> ฝากกระเป๋าใหญ่ที่สถานี Karuizawa หรือ Shinjuku สะดวกกว่า
-                                </li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1427,16 +1296,16 @@
 
         <!-- DAY 7: Karuizawa Outlet (Thu, Mar 12) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 7: Karuizawa Outlet & Yakiniku (12 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 7 (Day 7): คารุอิซาวะ เอ้าท์เล็ต (Karuizawa Outlet) - 12 มี.ค.</h2>
 
             <!-- Karuizawa Prince Shopping Plaza -->
             <div class="shop-card highlight">
-                <div class="day-badge">📅 Day 7 - 12 มี.ค. (11:30-16:00)</div>
+                <div class="day-badge">📅 วันที่ 7 (Day 7) - 12 มี.ค. (11:30-16:00)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🛍️</div>
                     <div class="shop-info">
-                        <h3>คารุอิซาวะ ปริ๊นซ์ ช้อปปิ้ง พลาซ่า (Karuizawa Outlet) <span class="must-buy">Outlet
-                                ใหญ่ที่สุด!</span></h3>
+                        <h3>คารุอิซาวะ ปริ๊นซ์ ช้อปปิ้ง พลาซ่า (Karuizawa Outlet) <span
+                                class="must-buy">ใหญ่ที่สุด!</span></h3>
                     </div>
                 </div>
                 <img src="../images/041.jpg" alt="Outlet" class="shop-image">
@@ -1445,92 +1314,41 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>Karuizawa, Nagano (ติดสถานี JR Karuizawa)</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>คารุอิซาวะ, นากาโน่ (Karuizawa, Nagano)</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
+                                <td>⏰ เวลา (Hours)</td>
                                 <td>10:00 - 19:00</td>
                             </tr>
                             <tr>
-                                <td>🚇 การเดินทาง</td>
-                                <td>Shuttle Bus จาก Palcall มาลงที่สถานี Karuizawa</td>
+                                <td>🚇 การเดินทาง (Transport)</td>
+                                <td>ติดสถานีรถไฟความเร็วสูง เจอาร์ คารุอิซาวะ (JR Karuizawa Station)</td>
                             </tr>
                         </table>
 
                         <div class="info-box highlight">
-                            <strong>🚶 แผนการเดิน (Casual & Sneakers):</strong>
+                            <strong>🚶 แผนการเดิน (Walk Plan):</strong>
                             <ol>
-                                <li>เริ่มจากสถานี Karuizawa เดินเข้า Outlet</li>
-                                <li>ไปโซน <strong>East / New East</strong> ก่อน (โซนกีฬา)</li>
-                                <li>พักกินข้าวที่ <strong>Food Court</strong> (ตรงกลาง)</li>
-                                <li>ไปโซน <strong>West / New West</strong> (แฟชั่นทั่วไป/ของฝาก)</li>
+                                <li>โซนตะวันออก (East Zone): เน้นชุดกีฬาและรองเท้า (Sports & Sneakers)</li>
+                                <li>โซนตะวันตก (West Zone): เน้นแฟชั่นทั่วไปและของฝาก (Casual & Fashion)</li>
                             </ol>
                         </div>
 
-                        <p><strong>👟 รองเท้า/Sneakers (โซน East):</strong></p>
-                        <ul class="product-list">
-                            <li><strong>Nike, Adidas, Puma</strong> - ร้านใหญ่ ของเยอะมาก</li>
-                            <li><strong>New Balance</strong> - ฮิตมาก ต้องรีบไปดูไซส์</li>
-                            <li><strong>Onitsuka Tiger</strong> - ถูกกว่าไทยเยอะ</li>
-                            <li><strong>Skechers, Crocs, Asics, HOKA</strong> - มีครบ</li>
-                        </ul>
-
-                        <p><strong>👕 เสื้อผ้า Casual (โซน West):</strong></p>
-                        <ul class="product-list">
-                            <li><strong>GAP Outlet</strong> - เสื้อฮู้ดราคาดี</li>
-                            <li><strong>BEAMS, United Arrows, SHIPS</strong> - แบรนด์ญี่ปุ่น ผ้าดี ทรงสวย</li>
-                            <li><strong>Levi's, Champion, Diesel, Tommy Hilfiger</strong></li>
-                            <li><strong>WEGO</strong> - แฟชั่นวัยรุ่น ราคาเบาๆ (เหมือน H&M/Zara)</li>
-                        </ul>
-
-                        <div class="info-box warning">
-                            <strong>⚠️ หมายเหตุ (แบรนด์ที่ไม่มีใน Outlet นี้):</strong>
-                            <ul>
-                                <li>❌ <strong>Uniqlo, GU</strong> (แนะนำซื้อในเมือง/ใกล้โรงแรม)</li>
-                                <li>❌ <strong>Zara, H&M</strong> (ไม่มี Outlet)</li>
-                                <li>❌ <strong>MLB, Pandora</strong> (แนะนำซื้อที่ Shinjuku/Harajuku)</li>
-                            </ul>
-                        </div>
+                        <p><strong>👟 รองเท้าผ้าใบ (Sneakers):</strong> ไนกี้ (Nike), อดิดาส (Adidas), นิว บาลานซ์ (NB),
+                            โอนิซึกะ ไทเกอร์</p>
+                        <p><strong>👕 แบรนด์แนะนำ:</strong> แก๊ป (GAP), บีมส์ (BEAMS), วีโก้ (WEGO)</p>
 
                         <a href="https://maps.google.com/?q=Karuizawa+Prince+Shopping+Plaza" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://travel.marumura.com/karuizawa-outlet/" target="_blank" class="link-button">🗺️
-                            แผนผังร้านค้า (Map)</a>
+                            class="link-button">📍 เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
+                        <h4>📷 รูปภาพและบรรยากาศ (Photos)</h4>
                         <div class="gallery-grid">
                             <div class="gallery-item large">
                                 <img src="../images/041.jpg" alt="Outlet" class="shop-image">
                             </div>
-                            <div class="gallery-item">
-                                <img src="../images/200.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/201.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/202.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/203.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/204.jpg" alt="Outlet" class="shop-image">
-                            </div>
-                            <div class="gallery-item">
-                                <img src="../images/205.jpg" alt="Outlet" class="shop-image">
-                            </div>
                         </div>
-                    </div>
-                    <div class="extra-info">
-                        <h5>💡 Tips</h5>
-                        <ul>
-                            <li>รับคูปองส่วนลดที่ Information Center ก่อนช้อป</li>
-                            <li>เตรียมรองเท้าที่เดินสบาย (พื้นที่กว้างมาก)</li>
-                            <li>มี Coin Locker ฝากกระเป๋าเดินทางที่สถานี</li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -1581,15 +1399,16 @@
 
         <!-- DAY 8: Last Day - Suga Shrine & Ueno (Fri, Mar 13) -->
         <div class="section">
-            <h2 class="section-title">📅 Day 8: Suga Shrine & Ueno (13 มี.ค.)</h2>
+            <h2 class="section-title">📅 วันที่ 8 (Day 8): ศาลเจ้าซูกะและย่านอุเอโนะ (Suga Shrine & Ueno) - 13 มี.ค.
+            </h2>
 
             <!-- Suga Shrine -->
             <div class="shop-card attraction">
-                <div class="day-badge">📅 Day 8 - 13 มี.ค. (เช้าตรู่ 08:30)</div>
+                <div class="day-badge">📅 วันที่ 8 (Day 8) - 13 มี.ค. (เช้าตรู่ - Early Morning)</div>
                 <div class="shop-header">
                     <div class="shop-icon">⛩️</div>
                     <div class="shop-info">
-                        <h3>ศาลเจ้าซูกะ (Suga Shrine - Yotsuya) 🎬</h3>
+                        <h3>ศาลเจ้าซูกะ ย่านยตสึยะ (Suga Shrine - Yotsuya) 🎬</h3>
                     </div>
                 </div>
                 <img src="../images/198.jpg" alt="Suga Shrine" class="shop-image">
@@ -1597,41 +1416,24 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>5 Sugacho, Shinjuku-ku, Tokyo</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>ยตสึยะ (Yotsuya), ชินจูกุ, โตเกียว</td>
                             </tr>
                             <tr>
-                                <td>🚇 การเดินทาง</td>
-                                <td>JR Chuo: Shinjuku → Yotsuya (5 นาที) แล้วเดิน 5 นาที</td>
-                            </tr>
-                            <tr>
-                                <td>💰 ค่าเข้า</td>
-                                <td>ฟรี</td>
+                                <td>🚇 การเดินทาง (Transport)</td>
+                                <td>รถไฟเจอาร์: สถานี ชินจูกุ → สถานี ยตสึยะ (Yotsuya Station)</td>
                             </tr>
                         </table>
-                        <p><strong>🎬 ทำไมต้องมา?</strong></p>
+                        <p><strong>🎬 จุดถ่ายรูปสำคัญ (Anime Spot):</strong></p>
                         <ul class="product-list">
-                            <li>บันไดในฉากสำคัญของ <strong>"Your Name" (คิมิ โนะ นะ วะ)</strong></li>
-                            <li>ฉากที่ตาคิและมิตสึฮะเดินสวนกัน</li>
-                            <li>แฟนอนิเมะทั่วโลกมาถ่ายรูปที่นี่</li>
+                            <li>บันไดในฉากจบของแอนิเมชั่น <strong>"หลับตาฝัน ถึงชื่อเธอ" (Your Name)</strong></li>
                         </ul>
-                        <div class="info-box"><strong>💡 Tips:</strong> ไปเช้า (08:30) คนน้อย
-                            ถ่ายรูปได้สวยไม่ต้องรอคิว</div>
                         <a href="https://maps.google.com/?q=Suga+Shrine+Yotsuya" target="_blank" class="link-button">📍
-                            Google Maps</a>
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
                         <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/167.jpg" alt="Tokyo Shrine"></div>
                             <div class="gallery-item large"><img src="../images/171.jpg" alt="Japanese Steps"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>บันไดมี 36 ขั้น</li>
-                                <li>ถ่ายรูปมุมเดียวกับในอนิเมะได้</li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -1639,11 +1441,11 @@
 
             <!-- Takeya (Ueno) -->
             <div class="shop-card food">
-                <div class="day-badge">📅 Day 8 - 13 มี.ค. (09:30-11:30)</div>
+                <div class="day-badge">📅 วันที่ 8 (Day 8) - 13 มี.ค. (เช้า - Morning)</div>
                 <div class="shop-header">
                     <div class="shop-icon">🏢</div>
                     <div class="shop-info">
-                        <h3>ทาเคยะ ตึกม่วง (Takeya - Ueno) <span class="must-buy">ของฝากราคาถูก!</span></h3>
+                        <h3>ทาเคยะ ตึกม่วง (Takeya - Ueno) <span class="must-buy">ของฝาก (Souvenirs)</span></h3>
                     </div>
                 </div>
                 <img src="../images/145.jpg" alt="Shopping" class="shop-image">
@@ -1651,82 +1453,26 @@
                     <div class="shop-content-left">
                         <table class="info-table">
                             <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>2-27-1 Yushima, Taito-ku, Tokyo</td>
+                                <td>📍 ที่อยู่ (Address)</td>
+                                <td>ย่าน อุเอโนะ (Ueno), โตเกียว</td>
                             </tr>
                             <tr>
-                                <td>⏰ เวลา</td>
+                                <td>🕒 เวลา (Hours)</td>
                                 <td>10:00 - 20:00</td>
                             </tr>
                             <tr>
-                                <td>🚇 การเดินทาง</td>
-                                <td>JR Yamanote: Shinjuku → Okachimachi/Ueno</td>
-                            </tr>
-                            <tr>
-                                <td>💳 Tax-Free</td>
-                                <td>✅ ซื้อเกิน ¥5,000 (Counter ชั้น 1)</td>
+                                <td>💳 ภาษี (Tax-Free)</td>
+                                <td>✅ ทำคืนภาษีได้ง่ายที่ชั้น 1</td>
                             </tr>
                         </table>
-                        <p><strong>🍫 ของฝากยอดฮิต:</strong></p>
-                        <ul class="product-list">
-                            <li>KitKat รสชาติพิเศษ</li>
-                            <li>Tokyo Banana</li>
-                            <li>วิตามิน / เครื่องสำอาง / สกินแคร์</li>
-                        </ul>
-                        <div class="info-box success"><strong>✅ ทำไมต้อง Takeya?</strong> ราคาถูกกว่า Donki
-                            และคนน้อยกว่า! เดินเลือกของง่าย</div>
-                        <a href="https://maps.google.com/?q=Takeya+Ueno" target="_blank" class="link-button">📍 Google
-                            Maps</a>
-                        <a href="https://chillchilljapan.com/takeya-store-hours-and-review/" target="_blank"
-                            class="link-button">🌐 Website</a>
-                    </div>
-                    <div class="shop-content-right">
-                        <h4>📷 รูปภาพและข้อมูลเพิ่มเติม</h4>
-                        <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/146.jpg" alt="Shopping Store"></div>
-                            <div class="gallery-item"><img src="../images/150.jpg" alt="Ueno Shopping District"></div>
-                        </div>
-                        <div class="extra-info">
-                            <h5>💡 Tips</h5>
-                            <ul>
-                                <li>ตึก Purple Building (ตึกหลัก) มีขนมชั้น 1</li>
-                                <li>ตึกเครื่องสำอางอยู่ข้างๆ</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Ameyoko Market -->
-            <div class="shop-card food">
-                <div class="day-badge">📅 Day 8 - 13 มี.ค. (11:30-12:30)</div>
-                <div class="shop-header">
-                    <div class="shop-icon">🏪</div>
-                    <div class="shop-info">
-                        <h3>ตลาดอะเมโยโกะ (Ameyoko Market) <span class="must-buy">Street Food</span></h3>
-                    </div>
-                </div>
-                <div class="shop-content-wrapper">
-                    <div class="shop-content-left">
-                        <table class="info-table">
-                            <tr>
-                                <td>📍 ที่อยู่</td>
-                                <td>ข้าง JR Ueno Station</td>
-                            </tr>
-                        </table>
-                        <p><strong>🍡 ของกินแนะนำ:</strong></p>
-                        <ul class="product-list">
-                            <li>ข้าวหน้าปลาดิบ (Kaisendon)</li>
-                            <li>ผลไม้เสียบไม้ (สตรอว์เบอร์รี่)</li>
-                            <li>Street Food ต่างๆ</li>
-                        </ul>
-                        <a href="https://maps.google.com/?q=Ameyoko+Market+Ueno" target="_blank" class="link-button">📍
-                            Google Maps</a>
+                        <p><strong>🍫 รายการของฝาก (Must Buy):</strong> ขนมคิทแคท (KitKat), โตเกียวบานาน่า, และสกินแคร์
+                        </p>
+                        <a href="https://maps.google.com/?q=Takeya+Ueno" target="_blank" class="link-button">📍
+                            เปิดแผนที่ (Google Maps)</a>
                     </div>
                     <div class="shop-content-right">
                         <div class="gallery-grid">
-                            <div class="gallery-item"><img src="../images/153.jpg" alt="Ameyoko Market"></div>
-                            <div class="gallery-item"><img src="../images/156.jpg" alt="Fresh Fruits"></div>
+                            <div class="gallery-item large"><img src="../images/146.jpg" alt="Shopping Store"></div>
                         </div>
                     </div>
                 </div>

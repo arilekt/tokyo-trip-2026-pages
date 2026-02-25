@@ -1,1867 +1,471 @@
 <!DOCTYPE html>
-<html lang="ja">
 
+<html lang="jp">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>東京旅行 2026 - 旅のしおり</title>
-    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="../asset/css/common.css">
-    <style>
-        /* Extract from TH Master */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .container {
-            width: 100%;
-            max-width: 100%;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 20px;
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>โตเกียว ทริป 2026 (Tokyo Trip 2026) - คู่มือปฏิบัติการเดินทาง (Tactical Manual)</title>
+<link href="../favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="../asset/css/common.css" rel="stylesheet"/>
+<link href="../asset/css/professional-v2.css" rel="stylesheet"/>
+<style>
+        .tactical-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--p-border);
+            margin-bottom: 3rem;
+            box-shadow: var(--shadow-md);
             overflow: hidden;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
         }
 
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        .tactical-header {
+            background: var(--p-primary);
             color: white;
-            padding: 40px;
-            text-align: center;
-        }
-
-        .header h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-
-        .header .subtitle {
-            font-size: 24px;
-            opacity: 0.9;
-        }
-
-        .header-image {
-            width: 100%;
-            max-height: 300px;
-            object-fit: cover;
-            margin-top: 20px;
-            border-radius: 10px;
-        }
-
-        /* Section */
-        .section {
-            padding: 40px;
-            border-bottom: 3px solid #f0f0f0;
-        }
-
-        .section:last-child {
-            border-bottom: none;
-        }
-
-        .section-title {
-            font-size: 32px;
-            color: #1e3c72;
-            margin-bottom: 30px;
-            padding-bottom: 15px;
-            border-bottom: 4px solid #667eea;
-            display: inline-block;
-        }
-
-        /* Cards */
-        .card {
-            background: #f8f9fa;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            border-left: 5px solid #667eea;
-        }
-
-        .card-title {
-            font-size: 24px;
-            color: #2a5298;
-            margin-bottom: 15px;
-        }
-
-        .card-image {
-            width: 100%;
-            max-height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            margin: 15px 0;
-        }
-
-        /* Day Timeline */
-        .day-card {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            border-radius: 20px;
-            padding: 35px;
-            margin-bottom: 30px;
-            border-left: 8px solid #667eea;
-        }
-
-        .day-header {
+            padding: 1.5rem 2rem;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            margin-bottom: 25px;
         }
 
-        .day-number {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            width: 80px;
-            height: 80px;
+        .tactical-body {
+            padding: 2rem;
+        }
+
+        .step-container {
+            position: relative;
+            padding-left: 3rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .step-container:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 15px;
+            top: 40px;
+            bottom: -20px;
+            width: 2px;
+            border-left: 2px dashed var(--p-accent);
+        }
+
+        .step-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--p-bg);
+            border: 3px solid var(--p-accent);
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
-            font-weight: bold;
-            margin-right: 20px;
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            font-weight: 800;
+            font-size: 0.8rem;
+            z-index: 2;
         }
 
-        .day-info h3 {
-            font-size: 28px;
-            color: #1e3c72;
+        .step-time {
+            font-weight: 900;
+            color: var(--p-accent-dark);
+            font-size: 1.1rem;
+            margin-bottom: 0.3rem;
         }
 
-        .day-info .date {
-            font-size: 18px;
-            color: #666;
+        .step-title {
+            font-weight: 800;
+            color: var(--p-primary);
+            font-size: 1.2rem;
+            margin-bottom: 0.75rem;
         }
 
-        .timeline-item {
-            padding: 15px 0;
-            padding-left: 30px;
-            border-left: 3px solid #667eea;
-            margin-left: 40px;
-            position: relative;
+        .step-detail-box {
+            background: #f8fafc;
+            padding: 1.25rem;
+            border-radius: 12px;
+            border: 1px solid #e2e8f0;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
 
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -8px;
-            top: 20px;
-            width: 12px;
-            height: 12px;
-            background: #667eea;
-            border-radius: 50%;
-        }
-
-        .timeline-time {
-            font-weight: bold;
-            color: #764ba2;
-            font-size: 20px;
-        }
-
-        .timeline-activity {
-            margin-top: 8px;
-            font-size: 18px;
-        }
-
-        /* Info Box */
-        .info-box {
-            background: #e8f4f8;
-            border-radius: 10px;
-            padding: 20px;
-            margin: 15px 0;
-            border: 2px solid #b8daff;
-        }
-
-        .info-box.highlight {
-            background: #fff3cd;
-            border-color: #ffc107;
-        }
-
-        .info-box.success {
-            background: #d4edda;
-            border-color: #28a745;
-        }
-
-        /* Table */
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-size: 18px;
-        }
-
-        th,
-        td {
-            padding: 15px;
-            text-align: left;
-            border-bottom: 2px solid #dee2e6;
-        }
-
-        th {
-            background: #1e3c72;
-            color: white;
-            font-weight: bold;
-        }
-
-        tr:hover {
-            background: #f5f5f5;
-        }
-
-        /* Links */
-        a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        a:hover {
-            text-decoration: underline;
-            color: #764ba2;
-        }
-
-        .link-button {
+        .info-tag {
             display: inline-block;
-            background: #667eea;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+        }
+
+        .tag-exit {
+            background: #fee2e2;
+            color: #b91c1c;
+        }
+
+        .tag-platform {
+            background: #1e293b;
             color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            margin: 5px;
-            font-size: 16px;
-            transition: all 0.3s ease;
         }
 
-        .link-button:hover {
-            background: #764ba2;
-            text-decoration: none;
-            transform: translateY(-2px);
+        .tag-distance {
+            background: #e0f2fe;
+            color: #0369a1;
         }
 
-        /* Grid */
-        .grid-2 {
+        .floor-guide-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 25px;
-        }
-
-        .grid-3 {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        @media (max-width: 1024px) {
-
-            .grid-2,
-            .grid-3 {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Hotel Card */
-        .hotel-card {
-            background: white;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-
-        .hotel-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-        }
-
-        .hotel-content {
-            padding: 25px;
-        }
-
-        .hotel-name {
-            font-size: 22px;
-            color: #1e3c72;
-            margin-bottom: 10px;
-        }
-
-        .hotel-detail {
-            margin: 8px 0;
-            font-size: 16px;
-        }
-
-        .hotel-detail strong {
-            color: #667eea;
-        }
-
-        /* Place Detail */
-        .place-detail {
-            background: white;
-            border-radius: 15px;
-            padding: 25px;
-            margin: 20px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-        }
-
-        .place-detail h4 {
-            font-size: 22px;
-            color: #764ba2;
-            margin-bottom: 15px;
-        }
-
-        .place-detail ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .place-detail li {
-            padding: 8px 0;
-            padding-left: 25px;
-            position: relative;
-        }
-
-        .place-detail li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #28a745;
-            font-weight: bold;
-        }
-
-        /* Footer */
-        .footer {
-            background: #1e3c72;
-            color: white;
-            padding: 30px 40px;
-            text-align: center;
-        }
-
-        .footer .exchange-rate {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-
-        .footer .update-info {
-            opacity: 0.8;
-            font-size: 16px;
-        }
-
-        /* Emoji Icons */
-        .icon {
-            font-size: 24px;
-            margin-right: 10px;
-        }
-
-        /* 2 Column Content Layout */
-        .content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 30px;
-            margin-top: 20px;
-        }
-
-        .content-right {
-            background: #fff;
-            border-radius: 15px;
-            padding: 20px;
-            border: 2px dashed #ddd;
-            min-height: 300px;
-        }
-
-        .content-right h4 {
-            font-size: 18px;
-            color: #764ba2;
-            margin-bottom: 15px;
-        }
-
-        /* Gallery Grid */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 10px;
-            margin-bottom: 15px;
+            margin-top: 1rem;
         }
 
-        .gallery-item {
-            border-radius: 10px;
-            overflow: hidden;
-            aspect-ratio: 1;
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .gallery-item.large {
-            grid-column: span 2;
-            aspect-ratio: 16/9;
-        }
-
-        /* Extra Info */
-        .extra-info {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 15px;
-            margin-bottom: 15px;
-        }
-
-        .extra-info h5 {
-            font-size: 16px;
-            color: #1e3c72;
-            margin-bottom: 10px;
-        }
-
-        .extra-info ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .extra-info li {
-            padding: 5px 0;
-            font-size: 14px;
-        }
-
-        /* Social Links */
-        .social-links {
+        .floor-row {
             display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
+            gap: 10px;
+            padding: 8px;
+            background: white;
+            border-radius: 6px;
+            border: 1px solid #f1f5f9;
         }
 
-        .social-link {
-            display: inline-block;
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 14px;
-            color: white;
-            text-decoration: none;
-            transition: transform 0.2s;
+        .floor-num {
+            font-weight: 800;
+            color: var(--p-accent-dark);
+            min-width: 30px;
         }
 
-        .social-link:hover {
-            transform: scale(1.05);
+        .luggage-alert {
+            background: #fffbeb;
+            border: 2px solid #fde68a;
+            padding: 1rem;
+            border-radius: 12px;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
         }
 
-        .social-link.pinterest {
-            background: #e60023;
-        }
-
-        .social-link.tiktok {
-            background: #000;
-        }
-
-        .social-link.lemon8 {
-            background: #ffeb3b;
-            color: #333;
-        }
-
-        .social-link.instagram {
-            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-        }
-
-        @media (max-width: 1024px) {
-            .content-wrapper {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        /* Mobile */
-        @media (max-width: 768px) {
-            body {
-                padding: 0;
-                font-size: 16px;
-            }
-
-            .container {
-                border-radius: 0;
-            }
-
-            .header {
-                padding: 25px 15px;
-            }
-
-            .header h1 {
-                font-size: 26px;
-            }
-
-            .header .subtitle {
-                font-size: 16px;
-            }
-
-            .section {
-                padding: 25px 15px;
-            }
-
-            .section-title {
-                font-size: 22px;
-            }
-
-            .card {
-                padding: 15px;
-            }
-
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
-
-            .gallery-item.large {
-                grid-column: span 2;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .gallery-item.large {
-                grid-column: span 1;
-            }
+        .guide-section-title {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--p-primary);
+            margin: 4rem 0 2rem;
+            padding-left: 1.5rem;
+            border-left: 8px solid var(--p-accent);
         }
     </style>
 </head>
-
 <body>
-    <div class="container">
-        <!-- Header -->
-        <div class="header">
-            <h1>🗼 東京旅行 2026</h1>
-            <div class="subtitle">完全旅程表 (Complete Itinerary) • 2026年3月6日-13日</div>
-            <img src="../images/001.jpg" alt="東京の夜景と東京タワー" class="header-image">
-        </div>
-
-        <!-- Flight Information -->
-        <div class="section">
-            <h2 class="section-title">✈️ フライト情報</h2>
-
-            <div class="grid-2">
-                <!-- Outbound Flight -->
-                <div class="card">
-                    <h3 class="card-title">🛫 往路 - SL 394</h3>
-                    <img src="../images/002.jpg" alt="離陸する飛行機" class="card-image">
-                    <table>
-                        <tr>
-                            <td><strong>航空会社</strong></td>
-                            <td>タイ・ライオン・エア (Thai Lion Air)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>日付</strong></td>
-                            <td>2026年3月6日 (金)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>時間</strong></td>
-                            <td>06:15 ドンムアン (DMK) → 16:20 成田 (NRT)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ターミナル</strong></td>
-                            <td>成田国際空港 第2ターミナル</td>
-                        </tr>
-                        <tr>
-                            <td><strong>予約番号</strong></td>
-                            <td>MYOWFY</td>
-                        </tr>
-                        <tr>
-                            <td><strong>機内持込</strong></td>
-                            <td>7 kg (40×30×20 cm)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>受託手荷物</strong></td>
-                            <td>Arilek: 15 kg / Nunnaphat: 7 kg 機内持込のみ</td>
-                        </tr>
-                    </table>
-                    <div class="info-box highlight">
-                        <strong>⚠️ 重要:</strong> 03:15 AM (出発3時間前) にドンムアン空港 (DMK) に到着すること | カウンター未定
-                    </div>
-                </div>
-
-                <!-- Return Flight -->
-                <div class="card">
-                    <h3 class="card-title">🛬 復路 - XJ 607</h3>
-                    <img src="../images/003.jpg" alt="成田空港内" class="card-image">
-                    <table>
-                        <tr>
-                            <td><strong>航空会社</strong></td>
-                            <td>タイ・エアアジア X (Thai AirAsia X)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>日付</strong></td>
-                            <td>2026年3月13日 (金)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>時間</strong></td>
-                            <td>21:15 成田 (NRT) → 02:40+1 ドンムアン (DMK)</td>
-                        </tr>
-                        <tr>
-                            <td><strong>ターミナル</strong></td>
-                            <td>成田国際空港 第1ターミナル</td>
-                        </tr>
-                        <tr>
-                            <td><strong>予約番号</strong></td>
-                            <td>G7Y6YF</td>
-                        </tr>
-                        <tr>
-                            <td><strong>受託手荷物</strong></td>
-                            <td>各自 20 kg (追加購入済み)</td>
-                        </tr>
-                    </table>
-                    <div class="info-box highlight">
-                        <strong>⚠️ 重要:</strong> 17:15 (出発4時間前) に成田空港 (NRT) に到着すること | チェックイン前に免税手続きを済ませる
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Accommodation -->
-        <div class="section">
-            <h2 class="section-title">🏨 宿泊施設 (7泊)</h2>
-
-            <div class="grid-3">
-                <!-- Hotel 1 -->
-                <div class="hotel-card">
-                    <img src="../images/004.jpg" alt="APAホテル ロビー" class="hotel-image">
-                    <div class="hotel-content">
-                        <h3 class="hotel-name">🏨 APAホテル 浅草 田原町駅前</h3>
-                        <p class="hotel-detail"><strong>日程:</strong> 3月6日-8日 (2泊)</p>
-                        <p class="hotel-detail"><strong>部屋:</strong> ダブルルーム - 禁煙</p>
-                        <p class="hotel-detail"><strong>住所:</strong> 〒111-0035 東京都台東区西浅草1-2-3</p>
-                        <p class="hotel-detail"><strong>電話:</strong> 03-5830-0611</p>
-                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>アウト:</strong> 11:00</p>
-                        <p class="hotel-detail"><strong>アクセス:</strong> 田原町駅 (銀座線) から徒歩1分</p>
-
-                        <div class="info-box success">
-                            <strong>📍 周辺:</strong><br>
-                            • 浅草寺 - 740 m<br>
-                            • 雷門 - 600 m<br>
-                            • 仲見世通り - 650 m<br>
-                            • ドン・キホーテ 浅草店 - 500 m<br>
-                            • 東京スカイツリー - 1.5 km
-                        </div>
-
-                        <a href="https://maps.google.com/?q=APA+Hotel+Asakusa+Tawaramachi+Ekimae" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.agoda.com/th-th/account/editbooking.html?bookingId=qpUdVJepEWwZRFATGfWKvw%3D%3D&navBack=true&sort=BookingStartDate&state=Upcoming&products=hotels&page=1&ds=gLO%2F8sudleK5x86E"
-                            target="_blank" class="link-button">🌐 Website</a>
-                    </div>
-                </div>
-
-                <!-- Hotel 2 -->
-                <div class="hotel-card">
-                    <img src="../images/005.jpg" alt="ホテルからの富士山" class="hotel-image">
-                    <div class="hotel-content">
-                        <h3 class="hotel-name">♨️ ホテルマイステイズ富士山 展望温泉</h3>
-                        <p class="hotel-detail"><strong>日程:</strong> 3月8日-10日 (2泊)</p>
-                        <p class="hotel-detail"><strong>部屋:</strong> スタンダードダブル - 禁煙</p>
-                        <p class="hotel-detail"><strong>住所:</strong> 〒403-0011 山梨県富士吉田市新倉2654</p>
-                        <p class="hotel-detail"><strong>電話:</strong> 0555-21-7510</p>
-                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>アウト:</strong> 11:00</p>
-                        <p class="hotel-detail"><strong>アクセス:</strong> 河口湖駅から無料送迎バス/タクシー</p>
-
-                        <div class="info-box success">
-                            <strong>✨ 特徴:</strong><br>
-                            • 部屋から富士山が見える!<br>
-                            • 天然温泉あり<br>
-                            • 新倉山浅間公園 (忠霊塔) - 3 km<br>
-                            • 河口湖 - 5 km<br>
-                            • ⚠️ 入湯税 <strong>฿63 (約 ¥300)</strong> (現地払い)
-                        </div>
-
-                        <a href="https://maps.google.com/?q=HOTEL+MYSTAYS+Fuji+Onsen+Resort" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.agoda.com/th-th/account/editbooking.html?bookingId=QBptxjypVnbZ4Up7pz6wDg%3D%3D&navBack=true&sort=BookingStartDate&state=Upcoming&products=hotels&page=1&ds=gLO%2F8sudleK5x86E"
-                            target="_blank" class="link-button">🌐 Website</a>
-                    </div>
-                </div>
-
-                <!-- Hotel 3 -->
-                <div class="hotel-card">
-                    <img src="../images/006.jpg" alt="新宿の夜" class="hotel-image">
-                    <div class="hotel-content">
-                        <h3 class="hotel-name">🌃 新宿グランベルホテル - 1回目</h3>
-                        <p class="hotel-detail"><strong>日程:</strong> 3月10日-11日 (1泊)</p>
-                        <p class="hotel-detail"><strong>部屋:</strong> エコノミーダブル - 禁煙</p>
-                        <p class="hotel-detail"><strong>住所:</strong> 〒160-0021 東京都新宿区歌舞伎町2-14-5</p>
-                        <p class="hotel-detail"><strong>予約ID:</strong> 1975745940 (Agoda)</p>
-                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>アウト:</strong> 11:00</p>
-
-                        <div class="info-box success">
-                            <strong>📍 Info:</strong> スキー場へ行く前にここに大きな荷物を預けるか、新宿駅のロッカーを利用する。
-                        </div>
-
-                        <a href="https://maps.google.com/?q=Shinjuku+Granbell+Hotel" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.agoda.com/th-th/account/editbooking.html?bookingId=5pPdmXfdzjP0Tx7LudfHtg%3D%3D&navBack=true&sort=BookingStartDate&state=Upcoming&page=1&ds=gLO%2F8sudleK5x86E"
-                            target="_blank" class="link-button">🌐 Website</a>
-                    </div>
-                </div>
-
-                <!-- Hotel 4 (Ski Resort) -->
-                <div class="hotel-card">
-                    <img src="../images/045.jpg" alt="パルコール嬬恋リゾート" class="hotel-image">
-                    <div class="hotel-content">
-                        <h3 class="hotel-name">❄️ パルコール嬬恋リゾート</h3>
-                        <p class="hotel-detail"><strong>日程:</strong> 3月11日-12日 (1泊)</p>
-                        <p class="hotel-detail"><strong>部屋:</strong> スタンダードルーム</p>
-                        <p class="hotel-detail"><strong>予約ID:</strong> 1975746539 (Agoda)</p>
-                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>アウト:</strong> 10:00</p>
-                        <p class="hotel-detail"><strong>送迎バス:</strong> 軽井沢駅からの送迎要予約</p>
-
-                        <div class="info-box success">
-                            <strong>✨ 特徴:</strong> エリア最高の雪質。夕食ビュッフェ込み。
-                        </div>
-
-                        <a href="https://maps.google.com/?q=Palcall+Tsumagoi+Resort" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.agoda.com/th-th/account/editbooking.html?bookingId=0e1KHDin%2FwetD1lvZSe3bg%3D%3D&navBack=true&sort=BookingStartDate&state=Upcoming&page=1&ds=gLO%2F8sudleK5x86E"
-                            target="_blank" class="link-button">🌐 Website</a>
-                    </div>
-                </div>
-
-                <!-- Hotel 5 -->
-                <div class="hotel-card">
-                    <img src="../images/006.jpg" alt="新宿の夜" class="hotel-image">
-                    <div class="hotel-content">
-                        <h3 class="hotel-name">🌃 新宿グランベルホテル - 2回目</h3>
-                        <p class="hotel-detail"><strong>日程:</strong> 3月12日-13日 (1泊)</p>
-                        <p class="hotel-detail"><strong>部屋:</strong> エコノミーダブル - 禁煙</p>
-                        <p class="hotel-detail"><strong>予約ID:</strong> 1975747284 (Agoda)</p>
-                        <p class="hotel-detail"><strong>チェックイン:</strong> 15:00 / <strong>アウト:</strong> 11:00</p>
-
-                        <div class="info-box success">
-                            <strong>📍 周辺:</strong><br>
-                            • 歌舞伎町 - すぐ隣<br>
-                            • ドン・キホーテ 新宿 - 300 m<br>
-                            • ねぎし / 焼肉トラジ
-                        </div>
-
-                        <a href="https://maps.google.com/?q=Shinjuku+Granbell+Hotel" target="_blank"
-                            class="link-button">📍 Google Maps</a>
-                        <a href="https://www.agoda.com/th-th/account/editbooking.html?bookingId=7IVmI9XT056UN%2Bsz%2BxBnug%3D%3D"
-                            target="_blank" class="link-button">🌐 Website</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Day 1 -->
-        <div class="section">
-            <h2 class="section-title">📅 日程詳細</h2>
-
-            <!-- Day 1 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">1</div>
-                    <div class="day-info">
-                        <h3>成田到着 & 浅草ステイ</h3>
-                        <div class="date">2026年3月6日 (金)</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">02:00</div>
-                    <div class="timeline-activity">🚗 自宅出発 → ドンムアン空港 (DMK)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">04:30</div>
-                    <div class="timeline-activity">✈️ ドンムアン空港 (DMK) 到着, チェックイン Thai Lion Air (Counter F-H)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">06:15</div>
-                    <div class="timeline-activity">🛫 Flight SL394 出発 (飛行時間 約6時間)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">16:20</div>
-                    <div class="timeline-activity">
-                        🛬 成田空港 (NRT) 第2ターミナル 到着<br>
-                        • 入国審査 & 荷物受取 (約40分)<br>
-                        • JR東日本トラベルサービスセンターで成田エクスプレス (N'EX) チケット購入
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">17:00-18:30</div>
-                    <div class="timeline-activity">
-                        🚄 成田エクスプレス (N'EX) → 東京駅/上野駅<br>
-                        • 地下鉄銀座線に乗り換え → 田原町駅
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">18:30-19:00</div>
-                    <div class="timeline-activity">🏨 ホテルチェックイン (APAホテル 浅草 田原町駅前)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">19:00-20:00</div>
-                    <div class="timeline-activity">
-                        🍽️ 浅草で夕食<br>
-                        • おすすめ: 一蘭ラーメン, すき家, 吉野家 (ホテル近く)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">20:00-21:30</div>
-                    <div class="timeline-activity">
-                        🛍️ <strong>ドン・キホーテ浅草で冬服調達</strong>
-                    </div>
-                </div>
-
-                <!-- Don Quijote Detail -->
-                <div class="place-detail">
-                    <h4>🏪 ドン・キホーテ 浅草店</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/007.jpg" alt="ドンキ外観" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>東京都台東区浅草2-10-14</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>営業時間</strong></td>
-                                    <td>🔥 <strong>24時間営業!</strong></td>
-                                </tr>
-                                <tr>
-                                    <td><strong>距離</strong></td>
-                                    <td>ホテルから徒歩10分</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🛒 購入リスト:</strong></p>
-                            <ul>
-                                <li>ヒートテック/防寒着 (UNIQLO風) - <strong>฿420 - 1,050 (¥2,000 - ¥5,000)</strong></li>
-                                <li>厚手靴下, マフラー, ニット帽 - <strong>฿105 - 420 (¥500 - ¥2,000)</strong></li>
-                                <li>傘, 日用品</li>
-                                <li>3F-4F: 衣類 | 2F: 化粧品</li>
-                            </ul>
-
-                            <div class="info-box success">
-                                <strong>✅ メリット:</strong> 安い, 近い, 24時間営業, 免税対応 (¥5,000以上)
-                            </div>
-
-                            <a href="https://maps.google.com/?q=Don+Quijote+Asakusa" target="_blank"
-                                class="link-button">📍 Google Maps</a>
-                            <a href="https://www.donki-global.com/th/store/shop_detail.php?shop_id=449" target="_blank"
-                                class="link-button">🌐 Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真・情報</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/008.jpg" alt="店内">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/009.jpg" alt="日本商品">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/010.jpg" alt="浅草の夜">
-                                </div>
-                            </div>
-                            <div class="extra-info">
-                                <h5>💡 SNS Tips</h5>
-                                <ul>
-                                    <li>• 2Fの化粧品が安い!</li>
-                                    <li>• 1Fのお菓子種類豊富</li>
-                                    <li>• 免税カウンターは1F</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">22:00</div>
-                    <div class="timeline-activity">😴 就寝 (明日のカメラ購入に備えて!)</div>
-                </div>
-            </div>
-
-            <!-- Day 2 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">2</div>
-                    <div class="day-info">
-                        <h3>浅草観光 & スカイツリーの夕日 🌇</h3>
-                        <div class="date">2026年3月7日 (土)</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">06:00-08:00</div>
-                    <div class="timeline-activity">
-                        🌅 起床 & 朝食<br>
-                        • 免税用にパスポートを準備
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">08:30-09:00</div>
-                    <div class="timeline-activity">
-                        🚇 秋葉原へ移動<br>
-                        • 銀座線: 田原町 → 末広町 (5分)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">09:30-11:00</div>
-                    <div class="timeline-activity">🛍️ <strong>ヨドバシカメラ Akibaで買い物</strong><br>
-                        • 🎯 目的: ファッション / おもちゃ (カメラは見るだけかも)</div>
-                </div>
-
-                <!-- Yodobashi Detail -->
-                <div class="place-detail">
-                    <h4>🏢 ヨドバシカメラ Akiba</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/011.jpg" alt="ヨドバシAkiba" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>東京都千代田区神田花岡町1-1 (秋葉原駅直結)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>営業時間</strong></td>
-                                    <td>09:30-22:00</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🛍️ 売り場:</strong></p>
-                            <ul>
-                                <li><strong>7F (ファッション):</strong> ABC-MART Mega Stage, スーツ, 眼鏡 (Zoff)</li>
-                                <li><strong>6F (おもちゃ):</strong> ガンダム, トミカ, プラレール, レゴ, ガチャポン</li>
-                            </ul>
-
-                            <div class="info-box highlight">
-                                <strong>💡 ヨドバシ vs アウトレット:</strong><br>
-                                • <strong>ヨドバシ:</strong> 最新モデル中心, 免税+ポイント, 便利。<br>
-                                • <strong>アウトレット:</strong> 型落ち品, 30-70% OFF。<br>
-                            </div>
-
-                            <a href="https://maps.google.com/?q=Yodobashi+Akiba" target="_blank" class="link-button">📍
-                                Google Maps</a>
-                            <a href="https://www.yodobashi.com/ec/store/en/0018/" target="_blank" class="link-button">🌐
-                                Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item">
-                                    <img src="../images/012.jpg" alt="カメラ">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/013.jpg" alt="ヴィンテージ">
-                                </div>
-                                <div class="gallery-item large">
-                                    <img src="../images/014.jpg" alt="家電量販店">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">11:00-12:00</div>
-                    <div class="timeline-activity">
-                        🏮 浅草寺へ移動 & ランチ<br>
-                        <strong>買ったばかりのカメラで撮影テスト! 📸</strong>
-                    </div>
-                </div>
-
-                <!-- Senso-ji Detail -->
-                <div class="place-detail">
-                    <h4>⛩️ 浅草寺 (Senso-ji Temple)</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/015.jpg" alt="浅草寺" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>東京都台東区浅草2-3-1</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>開堂時間</strong></td>
-                                    <td>06:00-17:00 (境内自由)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>歴史</strong></td>
-                                    <td>628年創建 (都内最古の寺院)</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎯 見どころ:</strong></p>
-                            <ul>
-                                <li><strong>雷門:</strong> 巨大な赤提灯</li>
-                                <li><strong>仲見世通り:</strong> 250m続く商店街</li>
-                                <li><strong>本堂:</strong> 観音様を祀る</li>
-                                <li><strong>五重塔:</strong> 高さ53m</li>
-                            </ul>
-
-                            <p><strong>🛍️ 食べ歩き (仲見世):</strong></p>
-                            <ul>
-                                <li>人形焼 - <strong>฿42 (¥200)</strong></li>
-                                <li>煎餅 - <strong>฿63 - 126 (¥300 - 600)</strong></li>
-                                <li>抹茶アイス - <strong>฿84 (¥400)</strong></li>
-                            </ul>
-
-                            <div class="info-box">
-                                <strong>💡 Tips:</strong> おみくじ <strong>¥100</strong> - "凶"が出たら結んで帰る。
-                            </div>
-
-                            <a href="https://maps.google.com/?q=Senso-ji+Temple" target="_blank" class="link-button">📍
-                                Google Maps</a>
-                            <a href="https://www.senso-ji.jp/english/" target="_blank" class="link-button">🌐
-                                Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item">
-                                    <img src="../images/016.jpg" alt="提灯">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/017.jpg" alt="仲見世">
-                                </div>
-                                <div class="gallery-item large">
-                                    <img src="../images/018.jpg" alt="夜の浅草寺">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">14:30-15:00</div>
-                    <div class="timeline-activity">🚇 東京スカイツリーへ移動 [押上駅]</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">15:00-18:30</div>
-                    <div class="timeline-activity">🗼 <strong>東京スカイツリー & 夕日</strong></div>
-                </div>
-
-                <!-- Skytree Detail -->
-                <div class="place-detail">
-                    <h4>🗼 東京スカイツリー</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/019.jpg" alt="東京スカイツリー" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>高さ</strong></td>
-                                    <td>634 m (世界一高いタワー)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>営業時間</strong></td>
-                                    <td>08:00-22:00</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎫 入場料:</strong></p>
-                            <ul>
-                                <li><strong>天望デッキ (350m):</strong> 大人 <strong>฿651 (¥3,100)</strong></li>
-                                <li><strong>天望回廊 (450m):</strong> 追加 <strong>฿216 (¥1,030)</strong></li>
-                                <li><strong>セット券:</strong> <strong>฿1,775 (¥8,450)</strong></li>
-                            </ul>
-
-                            <div class="info-box highlight">
-                                <strong>🌅 日の入り:</strong> 17:45<br>
-                                <strong>📸 ゴールデンアワー:</strong> 17:15-18:15<br>
-                                17:00前に登って、昼→夕焼け→夜景を楽しむのがおすすめ。
-                            </div>
-
-                            <a href="https://maps.google.com/?q=Tokyo+Skytree" target="_blank" class="link-button">📍
-                                Google Maps</a>
-                            <a href="https://www.tokyo-skytree.jp/en/" target="_blank" class="link-button">🌐
-                                Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/020.jpg" alt="夕暮れ">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/021.jpg" alt="富士山と景色">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/022.jpg" alt="夜景">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">18:30-20:00</div>
-                    <div class="timeline-activity">🍽️ 東京ソラマチで夕食</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">20:00-21:30</div>
-                    <div class="timeline-activity">🛍️ <strong>東京キャラクターストリート</strong> [東京駅一番街 B1]</div>
-                </div>
-
-                <!-- Character Street Detail -->
-                <div class="place-detail">
-                    <h4>🧸 東京キャラクターストリート</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/027.jpg" alt="キャラクターショップ" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>東京駅 八重洲地下中央口 B1F</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>営業時間</strong></td>
-                                    <td>10:00-20:30</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎯 注目ショップ:</strong></p>
-                            <ul>
-                                <li><strong>どんぐり共和国:</strong> ジブリ (トトロ, カオナシ)</li>
-                                <li><strong>Sanrio Gift Gate:</strong> キティ, シナモロール</li>
-                                <li><strong>ポケモンストア:</strong> ピカチュウ</li>
-                                <li><strong>スヌーピータウン:</strong> ピーナッツ</li>
-                                <li><strong>ウルトラマンワールド:</strong> 好きな人向け</li>
-                            </ul>
-
-                            <a href="https://maps.google.com/?q=Tokyo+Character+Street" target="_blank"
-                                class="link-button">📍 Google Maps</a>
-                            <a href="https://www.tokyoeki-1bangai.co.jp/en/" target="_blank" class="link-button">🌐
-                                Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/023.jpg" alt="ぬいぐるみ">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/024.jpg" alt="サンリオ">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/025.jpg" alt="東京駅">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">22:00</div>
-                    <div class="timeline-activity">😴 ホテル帰着, 河口湖用の荷物準備</div>
-                </div>
-            </div>
-
-            <!-- Day 3 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">3</div>
-                    <div class="day-info">
-                        <h3>河口湖へ出発 🏔️</h3>
-                        <div class="date">2026年3月8日 (日)</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">06:00-08:00</div>
-                    <div class="timeline-activity">🍳 朝食 & チェックアウト (APAホテル)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">08:30</div>
-                    <div class="timeline-activity">
-                        🚃 浅草 → 新宿<br>
-                        • 銀座線 + JR (約30-40分)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">09:35</div>
-                    <div class="timeline-activity">
-                        🚌 高速バス: バスタ新宿(4F) → 河口湖<br>
-                        • 運賃: 大人 <strong>฿462 (¥2,200)</strong> / 子供 <strong>฿231 (¥1,100)</strong><br>
-                        • 所要時間: 約2時間
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">11:40</div>
-                    <div class="timeline-activity">🏔️ 河口湖駅 到着</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">12:00-14:30</div>
-                    <div class="timeline-activity">🍽️ ランチ & 荷物預け</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">15:00</div>
-                    <div class="timeline-activity">🏨 チェックイン (ホテルマイステイズ富士山)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">15:30</div>
-                    <div class="timeline-activity">🚡 <strong>カチカチ山ロープウェイ</strong></div>
-                </div>
-
-                <!-- Kachi-Kachi Detail -->
-                <div class="place-detail">
-                    <h4>🚡 カチカチ山ロープウェイ</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/028.jpg" alt="ロープウェイからの眺め" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>行き先</strong></td>
-                                    <td>天上山公園 (標高 1,075 m)</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>運賃</strong></td>
-                                    <td><strong>฿189 (¥900)</strong> 往復</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎯 見どころ:</strong></p>
-                            <ul>
-                                <li>河口湖と富士山の大パノラマ</li>
-                                <li>タヌキとウサギの像 (カチカチ山伝説)</li>
-                                <li>天上義鐘 (鐘を鳴らして祈願)</li>
-                            </ul>
-
-                            <a href="https://maps.google.com/?q=Kachi+Kachi+Ropeway" target="_blank"
-                                class="link-button">📍 Google Maps</a>
-                            <a href="https://www.mtfujiropeway.jp/en/" target="_blank" class="link-button">🌐
-                                Website</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/029.jpg" alt="富士山">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/030.jpg" alt="河口湖">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/031.jpg" alt="天上山">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">17:00</div>
-                    <div class="timeline-activity">
-                        🍽️ <strong>夕食: ほうとう不動</strong><br>
-                        • 山梨名物 - ほうとう (平打ち麺の味噌煮込み)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">21:00</div>
-                    <div class="timeline-activity">😴 休息, 明日のPojaiの誕生日に備えて! 🎂</div>
-                </div>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="day-card"
-                style="background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); border-left-color: #ff6b6b;">
-                <div class="day-header">
-                    <div class="day-number" style="background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 100%);">4
-                    </div>
-                    <div class="day-info">
-                        <h3>🎂 Pojai 11歳の誕生日!</h3>
-                        <div class="date">2026年3月9日 (月)</div>
-                    </div>
-                </div>
-
-                <div class="info-box"
-                    style="background: #fff5f5; border-color: #ff6b6b; text-align: center; font-size: 24px;">
-                    🎉 <strong>HAPPY 11th BIRTHDAY POJAI!</strong> ✨
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">06:00</div>
-                    <div class="timeline-activity">
-                        🌅 富士山の眺めで目覚める<br>
-                        📸 記念撮影 "バースデーガール & 富士山"
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">07:30</div>
-                    <div class="timeline-activity">
-                        🎁 <strong>誕生日サプライズ</strong><br>
-                        • バースデーソング<br>
-                        • プレゼント贈呈
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">09:00</div>
-                    <div class="timeline-activity">⛩️ <strong>新倉山浅間公園 (忠霊塔)</strong></div>
-                </div>
-
-                <!-- Chureito Detail -->
-                <div class="place-detail">
-                    <h4>🏯 忠霊塔 (Chureito Pagoda)</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/032.jpg" alt="忠霊塔" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>山梨県富士吉田市新倉</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>アクセス</strong></td>
-                                    <td>河口湖駅/下吉田駅から徒歩・バス</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>入場料</strong></td>
-                                    <td>無料</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎯 見どころ:</strong></p>
-                            <ul>
-                                <li>398段の階段 (徒歩約15分)</li>
-                                <li><strong>世界的に有名な富士山撮影スポット!</strong></li>
-                                <li>五重塔 (1963年建立)</li>
-                            </ul>
-
-                            <div class="info-box">
-                                <strong>💡 Tips:</strong> 早朝がおすすめ! 歩きやすい靴で。
-                            </div>
-
-                            <a href="https://maps.google.com/?q=Chureito+Pagoda" target="_blank" class="link-button">📍
-                                Google Maps</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/033.jpg" alt="忠霊塔と富士">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/034.jpg" alt="階段">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/035.jpg" alt="朝の景色">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">13:00</div>
-                    <div class="timeline-activity">
-                        🍽️ <strong>誕生日スペシャルランチ</strong><br>
-                        • メニュー: サーモン寿司 & 天ぷら<br>
-                        • 予算: <strong>฿1,680 (¥8,000)</strong>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">14:30</div>
-                    <div class="timeline-activity">💧 <strong>忍野八海</strong></div>
-                </div>
-
-                <!-- Oshino Detail -->
-                <div class="place-detail">
-                    <h4>💧 忍野八海 (Oshino Hakkai)</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/036.jpg" alt="忍野八海" class="card-image">
-                            <table>
-                                <tr>
-                                    <td><strong>住所</strong></td>
-                                    <td>山梨県南都留郡忍野村</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>料金</strong></td>
-                                    <td><strong>฿63 (¥300)</strong> (一部有料エリア)</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>🎯 見どころ:</strong></p>
-                            <ul>
-                                <li><strong>8つの湧水池</strong> (富士山の雪解け水)</li>
-                                <li>水は非常に澄んでいる (80年かけて濾過)</li>
-                                <li>古き良き日本の村の風景</li>
-                            </ul>
-
-                            <p><strong>🍡 食べ歩き:</strong></p>
-                            <ul>
-                                <li>焼き草餅 - <strong>฿63 (¥300)</strong></li>
-                                <li>富士山の湧き水 - 飲用可能</li>
-                            </ul>
-
-                            <a href="https://maps.google.com/?q=Oshino+Hakkai" target="_blank" class="link-button">📍
-                                Google Maps</a>
-                        </div>
-                        <div class="content-right">
-                            <h4>📷 写真</h4>
-                            <div class="gallery-grid">
-                                <div class="gallery-item large">
-                                    <img src="../images/037.jpg" alt="村">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/038.jpg" alt="池">
-                                </div>
-                                <div class="gallery-item">
-                                    <img src="../images/039.jpg" alt="富士山">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">17:00</div>
-                    <div class="timeline-activity">
-                        ♨️ <strong>温泉タイム (Golden Hour)</strong><br>
-                        夕日と富士山を見ながら入浴。
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">19:00</div>
-                    <div class="timeline-activity">
-                        🎂 <strong>誕生日ディナー (特別)</strong><br>
-                        • ケーキ付きの特別ディナー<br>
-                        • 予算: <strong>฿2,520 (¥12,000)</strong>
-                    </div>
-                </div>
-            </div>
-            <!-- Day 5 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">5</div>
-                    <div class="day-info">
-                        <h3>原宿 & プレミアムしゃぶしゃぶ 🛍️</h3>
-                        <div class="date">2026年3月10日 (火)</div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">10:00-12:00</div>
-                    <div class="timeline-activity">
-                        🚌 バスで新宿へ戻る<br>
-                        • バスタ新宿 到着 ~12:00
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">13:00</div>
-                    <div class="timeline-activity">🏨 新宿グランベルホテルに荷物を預ける</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">13:30-17:00</div>
-                    <div class="timeline-activity">
-                        🌸 <strong>原宿でショッピング</strong><br>
-                        • <strong>キデイランド:</strong> キャラクターグッズ (サンリオ, ジブリ)<br>
-                        • <strong>Brandy Melville:</strong> 人気ティーンファッション<br>
-                        • <strong>竹下通り:</strong> クレープ & 激安ファッション
-                    </div>
-                </div>
-
-                <div class="place-detail">
-                    <h4>🧸 原宿 Highlights</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/052.jpg" alt="キデイランド" class="card-image">
-                            <ul>
-                                <li><strong>キデイランド:</strong> 4フロア (スヌーピー, ジブリ, サンリオ他)</li>
-                                <li><strong>Brandy Melville:</strong> 米国ティーンスタイル (19:00閉店)</li>
-                                <li><strong>竹下通り:</strong> ファッション & クレープ</li>
-                            </ul>
-                        </div>
-                        <div class="content-right">
-                            <div class="gallery-grid">
-                                <div class="gallery-item large"><img src="../images/061.jpg" alt="原宿"></div>
-                                <div class="gallery-item"><img src="../images/054.jpg" alt="サンリオ"></div>
-                                <div class="gallery-item"><img src="../images/063.jpg" alt="クレープ"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">17:30</div>
-                    <div class="timeline-activity">🏨 チェックイン (新宿グランベルホテル)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">18:30</div>
-                    <div class="timeline-activity">
-                        🍽️ <strong>特別ディナー: プレミアムしゃぶしゃぶ/すき焼き</strong><br>
-                        • 都会に戻ったお祝いで高品質な牛肉/豚肉を!<br>
-                        • 新宿タカシマヤ / ルミネエスト
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">21:30</div>
-                    <div class="timeline-activity">🎒 <strong>1泊分の荷造り</strong> (明日のスキーリゾート用)</div>
-                </div>
-            </div>
-
-            <!-- Day 6 -->
-            <div class="day-card"
-                style="background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%); border-left-color: #00bcd4;">
-                <div class="day-header">
-                    <div class="day-number" style="background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);">6
-                    </div>
-                    <div class="day-info">
-                        <h3>⛷️ パルコール嬬恋スキー場</h3>
-                        <div class="date">2026年3月11日 (水)</div>
-                    </div>
-                </div>
-
-                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
-                    <strong>🎫 Tokyo Wide Pass Day 1:</strong> 新幹線で軽井沢 + ホテルバス
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">08:00</div>
-                    <div class="timeline-activity">
-                        🚅 <strong>北陸新幹線</strong> (新宿 → 大宮 → 軽井沢)<br>
-                        • 軽井沢駅でホテル送迎バスに乗車 (予約済)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">09:50</div>
-                    <div class="timeline-activity">🚌 <strong>ホテル送迎バス</strong> (軽井沢駅 → パルコール嬬恋)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">11:30</div>
-                    <div class="timeline-activity">
-                        🏨 <strong>パルコール嬬恋リゾート到着</strong><br>
-                        • 荷物を置いて、レンタルして、雪遊び!
-                    </div>
-                </div>
-
-                <!-- Palcall Detail -->
-                <div class="place-detail">
-                    <h4>⛷️ パルコールスキーリゾート</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/045.jpg" alt="パルコール" class="card-image">
-                            <p><strong>✨ 特徴:</strong></p>
-                            <ul>
-                                <li>広大なゲレンデ, パウダースノー</li>
-                                <li><strong>日の出ゴンドラ:</strong> 明日の朝用</li>
-                                <li><strong>Magic Cove:</strong> 子供用雪遊びエリア</li>
-                            </ul>
-                            <div class="info-box success">
-                                <strong>♨️ 温泉 & ビュッフェ:</strong> カニ食べ放題ディナー & 星空温泉付き!
-                            </div>
-                        </div>
-                        <div class="content-right">
-                            <div class="gallery-grid">
-                                <div class="gallery-item large"><img src="../images/046.jpg" alt="ゴンドラ"></div>
-                                <div class="gallery-item"><img src="../images/047.jpg" alt="雪だるま"></div>
-                                <div class="gallery-item"><img src="../images/044.jpg" alt="ゲレンデ"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">12:30-16:30</div>
-                    <div class="timeline-activity">
-                        🏂 <strong>スノータイム!</strong><br>
-                        • スキー, スノーボード, そり<br>
-                        • ゴンドラで浅間山の絶景を見る
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">18:00</div>
-                    <div class="timeline-activity">🍽️ <strong>夕食ビュッフェ</strong> (ホテル内・夕食券)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">20:00</div>
-                    <div class="timeline-activity">♨️ <strong>星空温泉</strong> & 休憩</div>
-                </div>
-            </div>
-
-            <!-- Day 7 -->
-            <div class="day-card"
-                style="background: linear-gradient(135deg, #fce4ec 0%, #f8bbd9 100%); border-left-color: #e91e63;">
-                <div class="day-header">
-                    <div class="day-number" style="background: linear-gradient(135deg, #e91e63 0%, #c2185b 100%);">7
-                    </div>
-                    <div class="day-info">
-                        <h3>軽井沢アウトレット & 焼肉パーティー 🥩</h3>
-                        <div class="date">2026年3月12日 (木)</div>
-                    </div>
-                </div>
-
-                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
-                    <strong>🎫 Tokyo Wide Pass Day 2:</strong> 軽井沢から東京への復路も無料!
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">06:00</div>
-                    <div class="timeline-activity">
-                        🌄 <strong>日の出ゴンドラ (任意):</strong> 山頂から日の出 (営業時) または朝風呂温泉。
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">09:00</div>
-                    <div class="timeline-activity">🍳 朝食 & チェックアウト</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">10:00</div>
-                    <div class="timeline-activity">🚌 <strong>送迎バス:</strong> パルコール嬬恋 → 軽井沢駅</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">11:00-15:30</div>
-                    <div class="timeline-activity">
-                        🛍️ <strong>軽井沢・プリンスショッピングプラザ (アウトレット)</strong><br>
-                        • 日本で最も美しいアウトレットの一つ!<br>
-                        • <strong>ブランド:</strong> Gucci, Coach, Nike, Adidas, Lego, Sanrio Outlet<br>
-                        • ランチはフードコートにて
-                    </div>
-                </div>
-
-                <!-- Karuizawa Outlet Detail -->
-                <div class="place-detail">
-                    <h4>🛍️ 軽井沢プリンスショッピングプラザ</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/041.jpg" alt="軽井沢アウトレット" class="card-image">
-                            <p><strong>✨ ゾーン:</strong></p>
-                            <ul>
-                                <li><strong>New East:</strong> スポーツ (Nike, Adidas)</li>
-                                <li><strong>Garden Mall:</strong> ラグジュアリー (Gucci, Coach)</li>
-                                <li><strong>Tree Mall:</strong> お土産 & 雑貨</li>
-                            </ul>
-                            <div class="info-box success">
-                                <strong>💡 Tips:</strong> 荷物は軽井沢駅のコインロッカーへ。
-                            </div>
-                        </div>
-                        <div class="content-right">
-                            <div class="gallery-grid">
-                                <div class="gallery-item large"><img src="../images/042.jpg" alt="アウトレット"></div>
-                                <div class="gallery-item"><img src="../images/043.jpg" alt="ショップ"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">16:00</div>
-                    <div class="timeline-activity">
-                        🚅 <strong>北陸新幹線:</strong> 軽井沢 → 上野/東京 → 新宿<br>
-                        • 約1時間
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">18:00</div>
-                    <div class="timeline-activity">🏨 チェックイン (新宿グランベルホテル - 2回目)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">19:00</div>
-                    <div class="timeline-activity">
-                        🥩 <strong>お別れディナー: 焼肉</strong><br>
-                        • おすすめ: <strong>焼肉トラジ</strong> または <strong>六歌仙</strong><br>
-                        • 東京最後の夜をお祝い!
-                    </div>
-                </div>
-            </div>
-
-            <!-- Day 8 -->
-            <div class="day-card">
-                <div class="day-header">
-                    <div class="day-number">8</div>
-                    <div class="day-info">
-                        <h3>君の名は。聖地 & お土産 & 帰国 ✈️</h3>
-                        <div class="date">2026年3月13日 (金)</div>
-                    </div>
-                </div>
-
-                <div class="info-box" style="background: #e3f2fd; border-color: #2196f3;">
-                    <strong>🎫 Tokyo Wide Pass Day 3:</strong> 成田エクスプレスで空港へ!
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">07:00</div>
-                    <div class="timeline-activity">🍳 起床/朝食 & チェックアウト (荷物はホテルへ)</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">08:00-09:30</div>
-                    <div class="timeline-activity">
-                        ⛩️ <strong>須賀神社</strong> - "君の名は。" の階段! 🎬<br>
-                        • 移動: 新宿 → 四ツ谷 (JR中央線)<br>
-                        • あの伝説の階段で記念撮影。
-                    </div>
-                </div>
-
-                <!-- Suga Shrine Detail -->
-                <div class="place-detail">
-                    <h4>⛩️ 須賀神社</h4>
-                    <div class="content-wrapper">
-                        <div class="content-left">
-                            <img src="../images/048.jpg" alt="須賀神社の階段" class="card-image">
-                            <p><strong>📸 フォトスポット:</strong> 瀧と三葉が出会う赤い手すりの階段。</p>
-                            <div class="info-box">
-                                <strong>💡 Tips:</strong> 人が少ない早朝がおすすめ!
-                            </div>
-                        </div>
-                        <div class="content-right">
-                            <div class="gallery-grid">
-                                <div class="gallery-item large"><img src="../images/049.jpg" alt="階段"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">10:00-13:00</div>
-                    <div class="timeline-activity">
-                        🏢 <strong>多慶屋 (紫色のビル - 上野)</strong><br>
-                        • お土産購入 (キットカット, ポッキー, 薬, サプリ)<br>
-                        • または上野公園 / アメ横
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">14:00</div>
-                    <div class="timeline-activity">🏙️ 新宿で荷物をピックアップ</div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">15:45</div>
-                    <div class="timeline-activity">
-                        🚄 <strong>成田エクスプレス (N'EX)</strong> (新宿 → 成田空港)<br>
-                        • 指定席予約済み。
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">17:15</div>
-                    <div class="timeline-activity">
-                        🛬 <strong>成田空港 到着</strong><br>
-                        • 免税手続き (市内で済ませていない場合)<br>
-                        • チェックイン (Thai AirAsia X)
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-time">21:15</div>
-                    <div class="timeline-activity">🛫 <strong>バンコクへ帰国 (XJ 607)</strong></div>
-                </div>
-
-                <!-- Transportation -->
-                <div class="section">
-                    <h2 class="section-title">🚅 交通機関まとめ</h2>
-
-                    <div class="grid-2">
-                        <div class="card">
-                            <h3 class="card-title">🎫 Tokyo Wide Pass (TWP)</h3>
-                            <table>
-                                <tr>
-                                    <td><strong>価格</strong></td>
-                                    <td><strong>฿3,519 (¥15,000)</strong> 大人<br><strong>฿1,760 (¥7,500)</strong> 子供</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>有効期間</strong></td>
-                                    <td>連続する3日間</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>購入場所</strong></td>
-                                    <td>JR東日本トラベルセンター (成田 または 東京駅)</td>
-                                </tr>
-                            </table>
-
-                            <p><strong>利用計画:</strong></p>
-                            <ul>
-                                <li><strong>Day 1 (3/11):</strong> 新宿 ↔ パルコール嬬恋/軽井沢 [新幹線]</li>
-                                <li><strong>Day 2 (3/12):</strong> 軽井沢 → 東京 [新幹線]</li>
-                                <li><strong>Day 3 (3/13):</strong> 新宿 → 成田空港 [N'EX]</li>
-                            </ul>
-                            <a href="https://www.gographjapan.com/jr-east-train-reservation/" target="_blank"
-                                class="social-link instagram">TWP 予約情報</a>
-                        </div>
-
-                        <div class="card">
-                            <h3 class="card-title">🎫 その他のチケット</h3>
-                            <table>
-                                <tr>
-                                    <td><strong>成田エクスプレス (往路)</strong></td>
-                                    <td><strong>฿672 (¥3,200)</strong><br>成田 → 東京/上野</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>東京サブウェイ 24時間券</strong></td>
-                                    <td><strong>฿126 (¥600)</strong><br>Day 2 で使用</td>
-                                </tr>
-                                <tr>
-                                    <td><strong>河口湖発着バス</strong></td>
-                                    <td>
-                                        <strong>฿1,386 (¥6,600)</strong><br>
-                                        2名 往復<br>
-                                        <a href="https://www.highwaybus.com/gp/inbound/inbPlanList?lineId=110&onStationCd=001&offStationCd=064&lang=EN"
-                                            target="_blank" class="link-button"
-                                            style="font-size: 14px; padding: 5px 10px; margin-top: 5px;">バス予約</a>
-                                        <div
-                                            style="margin-top: 10px; font-size: 14px; background: #f0f4f8; padding: 10px; border-radius: 8px;">
-                                            <strong>往路 (3/8):</strong><br>
-                                            🚌 <strong>Bus:</strong> 1407<br>
-                                            ⏰ <strong>Time:</strong> 09:35 (新宿) → 11:20 (河口湖)<br>
-                                        </div>
-                                    </td>
-                                </tr>
-                            </table>
-                            <p><strong>交通費合計目安:</strong> <strong>฿7,463 (¥32,900)</strong></p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Footer -->
-                <div class="footer">
-                    <div class="exchange-rate">
-                        💱 <strong>レート:</strong> ¥100 ≈ 21 THB (1 THB ≈ ¥4.76)
-                    </div>
-                    <div class="update-info">
-                        📅 最終更新: 2025年12月21日 20:00
-                    </div>
-                </div>
-            </div>
-
-            <script src="../asset/js/common.js"></script>
-        </div>
-</body>
-<!-- INSERT_PART_3 -->
+<div class="container">
+<header class="header">
+<div style="text-transform: uppercase; letter-spacing: 0.2em; color: var(--p-accent); font-weight: 800; margin-bottom: 0.5rem;">
+                Ready to Go!</div>
+<h1>🧭ポケットナビゲーションガイド</h1>
+<p class="subtitle">路線、乗り場、ランドマークを見やすくまとめました。クリックして移動できるリンク付き</p>
+</header>
+<!-- DAY 1 -->
+<h2 class="guide-section-title">📅 1 日目: 旅の始まり</h2>
+<div class="tactical-card">
+<div class="tactical-header">
+<div style="font-size: 1.2rem; font-weight: 800;">成田空港→浅草（NRT→浅草）</div>
+<div class="day-label">3月6日（金）</div>
 </div>
+<div class="tactical-body">
+<div class="luggage-alert">
+<span style="font-size: 1.5rem;">🎒</span>
+<div><strong>手荷物戦略:</strong> すぐに宿泊施設に入ります。田原町駅には1番出口にエレベーターがあります（出口）
+                        1)</div>
+</div>
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">16:20 - 17:00</div>
+<div class="step-title">成田空港第2ターミナル（ナリタT2ロジスティクス）</div>
+<div class="step-detail-box">
+<strong>座標:</strong> B1F トレインゾーン <a href="https://www.google.com/maps/search/?api=1&amp;query=JR+East+Travel+Service+Center+Narita+Terminal+2" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a><br/>
+<strong>ランドマーク:</strong> 「JR East Travel Service Center」の看板（赤色）が目印です。 <br/>
+<strong>やるべきこと:</strong> 市内までのN'EX（成田エクスプレス）の切符を購入します。
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">17:00 - 18:30</div>
+<div class="step-title">成田エクスプレス（N'EX）で市内に入ります。</div>
+<div class="step-detail-box">
+<span class="info-tag tag-platform">1番線ホーム</span> <br/>
+<strong>ルート：</strong> 成田空港（NRT T2）→上野または東京<br/>
+<strong>チケット：</strong> 現地購入 約4,600円（2名様） <br/>
+<strong>期間：</strong> 約1時間20分（その後地下鉄で浅草まで）
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">3</div>
+<div class="step-time">18:30 - 19:00</div>
+<div class="step-title">銀座線に乗り換え</div>
+<div class="step-detail-box">
+<strong>対象局：</strong> 田原町（たわらまち）【G18】 <br/>
+<span class="info-tag tag-exit">1番出口（1番出口）</span> エレベーターがございます。 <br/>
+<span class="info-tag tag-distance">歩行距離: 100メートル</span> <br/>
+<strong>ランドマーク:</strong> エレベーターを出て右に100メートル進むと右手にアパホテルがございます。 <a href="https://www.google.com/maps/search/?api=1&amp;query=APA+Hotel+Asakusa+Tawaramachi+Ekimae" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 2 -->
+<h2 class="guide-section-title">📅 2日目: アキバスカイツリーとキャラクター</h2>
+<div class="tactical-card">
+<div class="tactical-header">
+<div style="font-size: 1.2rem; font-weight: 800;">写真撮影やショッピングスポットを探索</div>
+<div class="day-label">3月7日(土)</div>
+</div>
+<div class="tactical-body">
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">08:30 - 09:30</div>
+<div class="step-title">秋葉原への移動（アキバへの送迎）</div>
+<div class="step-detail-box">
+<strong>電車：</strong> 銀座線 田原町→ <strong>末広町駅
+                            （末広町）【G14】</strong> <br/>
+<span class="info-tag tag-exit">3番出口（3番出口）</span> <br/>
+<span class="info-tag tag-distance">歩行距離: 450メートル</span> <br/>
+<strong>ランドマーク:</strong> 3番出口を出て中央通りを450メートル直進します。
+                        左手にヨドバシビルがございます。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Yodobashi+Camera+Multimedia+Akiba" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">09:30 - 11:00</div>
+<div class="step-title">ヨドバシAkibaガイド</div>
+<div class="step-detail-box">
+<strong>カメラ部門コーディネート：</strong> 3階（3F）でCPLフィルター（62mm）を購入 <br/>
+<strong>その他の興味深いフロア:</strong> <br/>
+                        • 6F: おもちゃ、ガンダム、ガチャポン。 <br/>
+                        • 7F: ABC-MART メガステージ (靴がたくさんあります) <br/>
+                        • 8F：フードコート（レストラン）
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">3</div>
+<div class="step-time">15:00 - 18:30</div>
+<div class="step-title">東京スカイツリー（スカイツリー事業）</div>
+<div class="step-detail-box">
+<strong>旅行：</strong> 浅草寺から隅田川を渡って1.2km歩くか、地下鉄をご利用ください。
+                        浅草線1駅 <br/>
+<span class="info-tag tag-exit">押上駅で下車。</span> <br/>
+<strong>ランドマーク:</strong> 駅を出るとデパートが見えます。 <strong>ソラマチ</strong>
+                        スカイツリーの入り口は4階です。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Skytree" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">4</div>
+<div class="step-time">20:00 - 21:30</div>
+<div class="step-title">キャラクターストリート（東京キャラクターストリート）</div>
+<div class="step-detail-box">
+<strong>旅行：</strong> スカイツリーからは半蔵門線→三越前駅。
+                        （三越前）東京駅まで歩きます。 <br/>
+<strong>座標:</strong> フロア B1F 八重洲口側 <a href="https://www.google.com/maps/search/?api=1&amp;query=Tokyo+Character+Street" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a> <br/>
+<strong>対象店舗：</strong> ジブリ、サンリオ、ポケモン (午後 8 時 30 分まで、楽しい時間を確認してください)
+                    </div>
+</div>
+</div>
+</div>
+<!-- DAY 3-4 -->
+<h2 class="guide-section-title">📅 3 ～ 4 日目: 富士と忍野八海村を探索します。</h2>
+<div class="tactical-card">
+<div class="tactical-header" style="background: #fb7185;">
+<div style="font-size: 1.2rem; font-weight: 800;">新宿 ↔ 河口湖</div>
+<div class="day-label">3月8日～9日</div>
+</div>
+<div class="tactical-body">
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">09:35 - 11:20 (Day 3)</div>
+<div class="step-title">バスタ新宿→河口湖</div>
+<div class="step-detail-box">
+<strong>車での旅行:</strong> バス番号 1407 <br/>
+<strong>シート：</strong> 02A, 02B <span style="color: #059669; font-weight: bold;">(参照:
+                            176991625 - 有料)</span> <br/>
+<strong>ピックアップポイント:</strong> バスタ新宿ビル南口向かい（エレベーターをご利用ください）
+                        <strong>4階</strong>) <br/>
+<strong>プラットフォーム (ゲート):</strong> モニター画面でゲート B または C を確認してください (15 分前に到着する必要があります)。
+                        <br/>
+<strong>Google マップの座標:</strong> <a href="https://www.google.com/maps/search/?api=1&amp;query=Busta+Shinjuku" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">09:00 (Day 4)</div>
+<div class="step-title">サイクリングで赤塔へ（忠霊塔 by E-Bike）</div>
+<div class="step-detail-box">
+<strong>レンタルショップ：</strong> フジサンバイク（河口湖駅前） <br/>
+<span class="info-tag tag-distance">自転車走行距離：3.5km（平坦路）</span> <br/>
+<strong>ルート：</strong> 鉄道に沿って自転車で 15 ～ 20 分ほど走り、紅塔の入り口まで行きます。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Chureito+Pagoda" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍ナビゲート]</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">3</div>
+<div class="step-time">14:30 (Day 4)</div>
+<div class="step-title">ナムサイ村（忍野八海物流）へ行く</div>
+<div class="step-detail-box">
+<strong>バス：</strong> 河口湖駅から富士急行バス <br/>
+<span class="info-tag tag-platform">標識番号6（バス停6番）</span> <br/>
+<strong>車のライン:</strong> 山中湖方面へ進み、忍野八海停留所で下車（20分）。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Oshino+Hakkai" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍ナビゲート]</a>
+</div>
+</div>
+</div>
+</div>
+<!-- DAY 5-6 -->
+<h2 class="guide-section-title">📅 5〜6日目: 原宿ショッピングとスキー旅行</h2>
+<div class="tactical-card">
+<div class="tactical-header" style="background: #0ea5e9;">
+<div>原宿 → パルコルスキー場</div>
+<div class="day-label">3月10日～11日</div>
+</div>
+<div class="tactical-body">
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">11:10 - 12:55 (Day 5)</div>
+<div class="step-title">バスで新宿へ戻る（河口湖→新宿）</div>
+<div class="step-detail-box">
+<strong>車での旅行:</strong> バス 1106 <br/>
+<strong>シート：</strong> 11C, 11D <span style="color: #059669; font-weight: bold;">(参照:
+                            177057039 - 有料)</span> <br/>
+<strong>ピックアップポイント:</strong> 河口湖駅 <span class="info-tag tag-platform">3番のりば (3番のりば)</span> <br/>
+<strong>ターゲット：</strong> バスタ新宿で下車してランチ。そしてホテルに荷物を預けて
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">14:30 - 17:30 (Day 5)</div>
+<div class="step-title">原宿オペレーション</div>
+<div class="step-detail-box">
+<strong>駅：</strong> Harajuku Station (JR Yamanote) <br/>
+<span class="info-tag tag-exit">竹下口</span> <br/>
+<strong>ランドマーク:</strong> 出るとすぐに竹下通りが見えます。そこを600メートル歩くとブランデーの店に着きます。
+                        メルビル <a href="https://www.google.com/maps/search/?api=1&amp;query=Brandy+Melville+Harajuku" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">3</div>
+<div class="step-time">08:00 - 09:43 (Day 6)</div>
+<div class="step-title">新幹線で軽井沢へ</div>
+<div class="step-detail-box">
+<strong>チケット：</strong> 使用 <span style="color: #0284c7; font-weight: bold;">Tokyo Wide Pass (Day
+                            1)</span> <br/>
+<strong>駅：</strong> 8時47分発の上野で乗降を選択。<br/>
+<strong>行列：</strong> Hakutaka 555 <br/>
+<strong>シート：</strong> 8号車(8号車) 9D席、9E席 <span style="color: #059669; font-weight: bold;">[Booking: E90665]</span><br/>
+<strong>降車地点:</strong> 軽井沢で下車。 <span class="info-tag tag-exit">南出口
+                            終了</span> 時刻 午前9時43分
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">4</div>
+<div class="step-time">11:50 (Day 6)</div>
+<div class="step-title">パルコールシャトルバス</div>
+<div class="step-detail-box">
+<strong>Booking Ref:</strong> ThuTenc8pq59jPAC <span style="color: #059669; font-weight: bold;">【予約済み】</span> <br/>
+<strong>ピックアップポイント:</strong> 軽井沢駅発 <span class="info-tag tag-exit">South
+                            Exit</span> <br/>駐車場まで歩いて行きます。アウトレットモールのバス停近く。
+                        (パルコールのマークがついた金色のバスが目印です)
+                    </div>
+</div>
+</div>
+</div>
+<!-- DAY 7 -->
+<h2 class="guide-section-title">📅 7日目: アウトレットショッピングと焼き肉を食べる</h2>
+<div class="tactical-card">
+<div class="tactical-header" style="background: #8b5cf6;">
+<div>軽井沢 → 新宿</div>
+<div class="day-label">3月12日(木)</div>
+</div>
+<div class="tactical-body">
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">10:00 (Day 7)</div>
+<div class="step-title">ホテルバスにて軽井沢駅へ戻る（シャトルバス）</div>
+<div class="step-detail-box">
+<strong>時間：</strong> 10:00（チェックアウトラウンド）<br/>
+<strong>降車地点:</strong> 軽井沢駅（南口）アウトレットモール入口横。 <a href="https://www.google.com/maps/search/?api=1&amp;query=Karuizawa+Station+South+Exit" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            バス乗降時のコーディネート】</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">11:30 - 16:00 (Day 7)</div>
+<div class="step-title">軽井沢アウトレット（アウトレット事業）</div>
+<div class="step-detail-box">
+<strong>座標:</strong> Karuizawa Prince Shopping Plaza <a href="https://www.google.com/maps/search/?api=1&amp;query=Karuizawa+Prince+Shopping+Plaza" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            ナビゲーション】</a><br/>
+<strong>ショッピングプラン：</strong> 東ゾーン（スポーツ/スポーツブランド） / 西ゾーン（グッチ/ユースブランド）
+                        <br/>
+<strong>ランドマーク:</strong> 軽井沢駅南口隣、徒歩1分。
+                    </div>
+</div>
+<div class="step-container">
+<div class="step-marker">3</div>
+<div class="step-time">16:48 - 17:46 (Day 7)</div>
+<div class="step-title">新幹線帰り（東京までの新幹線）</div>
+<div class="step-detail-box">
+<strong>チケット：</strong> 使用 <span style="color: #0284c7; font-weight: bold;">Tokyo Wide Pass (Day
+                            2)</span> <br/>
+<strong>駅：</strong> 軽井沢 <br/>
+<strong>行列：</strong> はくたか568号（出発時刻16:48） <br/>
+<strong>シート：</strong> 10号車（10号車）9D、9E席 <span style="color: #059669; font-weight: bold;">[Booking: E90665]</span><br/>
+<strong>ターゲット：</strong> 山手線で新宿行きに乗る場合は、上野で下車することを選択してください。
+                        バッグを返してください
+                    </div>
+</div>
+</div>
+</div>
+<!-- DAY 8 -->
+<h2 class="guide-section-title">📅 8 日目: アニメの足跡をたどり、戻ってきます</h2>
+<div class="tactical-card">
+<div class="tactical-header" style="background: #10b981;">
+<div>新宿 → 成田空港</div>
+<div class="day-label">3月13日（金）</div>
+</div>
+<div class="tactical-body">
+<div class="step-container">
+<div class="step-marker">1</div>
+<div class="step-time">08:30 (Day 8)</div>
+<div class="step-title">須賀神社 - 君の名はスポット</div>
+<div class="step-detail-box">
+<strong>合格：</strong> 使用 <span style="color: #0284c7; font-weight: bold;">Tokyo Wide Pass (Day
+                            3)</span> はい <br/>
+<strong>旅行：</strong> 新宿からJRに乗車 → <strong>四ツ谷駅</strong> <br/>
+<span class="info-tag tag-exit">赤坂口を出る</span> <br/>
+<span class="info-tag tag-distance">歩行距離: 800メートル</span> <br/>
+<strong>ランドマーク:</strong> 静かな集落エリアを散策 伝説の赤い階段へ <a href="https://www.google.com/maps/search/?api=1&amp;query=Suga+Shrine+Stairs+Yotsuya" style="color: #0284c7; font-weight: bold; text-decoration: none;" target="_blank">[📍
+                            クリックすると階段の座標が表示されます]</a>
+</div>
+</div>
+<div class="step-container">
+<div class="step-marker">2</div>
+<div class="step-time">16:08 - 17:25 (Day 8)</div>
+<div class="step-title">成田エクスプレス復路（N'EX下り）</div>
+<div class="step-detail-box">
+<strong>チケット：</strong> 使用 <span style="color: #0284c7; font-weight: bold;">Tokyo Wide Pass (Day
+                            3)</span> <br/>
+<strong>駅：</strong> 新宿 <span class="info-tag tag-platform">5～6番線（JR）
+                            5-6番線ホーム）</span> <br/>
+<strong>行列：</strong> N'EX 41 (バスは定刻通り 16:08 に出発します。準備が遅くならないように注意してください。) <br/>
+<strong>シート：</strong> 9号車（9号車）1A・1B席 <span style="color: #059669; font-weight: bold;">[Booking: E90665]</span> <br/>
+<strong>ターゲット：</strong> 成田空港第2ターミナル駅で下車し、XJ607便のチェックイン準備をします。
+                    </div>
+</div>
+</div>
+</div>
+<footer style="margin-top: 5rem; text-align: center; color: var(--text-muted); padding: 4rem 2rem; border-top: 1px solid #e2e8f0;">
+<h2 style="color: var(--p-primary); margin-bottom: 1rem;">Have a safe flight! ✈️</h2>
+<p>Tactical Guide Portfolio • Update: 25 Feb 2026</p>
+</footer>
+</div>
+<script src="../asset/js/common.js"></script>
 </body>
-
 </html>

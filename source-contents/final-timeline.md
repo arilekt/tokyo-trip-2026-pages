@@ -106,11 +106,11 @@
 - **08:30** - 🚃 เดินทาง Asakusa → Shinjuku (Busta)
   - Metro Ginza Line + JR (30-40 นาที)
 
-- **09:30** - 🚌 รถบัสไป Kawaguchiko (Shinjuku Expressway Bus Terminal)
-  - ค่าใช้จ่าย: ผู้ใหญ่ **462฿ (¥2,200)**, เด็ก **231฿ (¥1,100)**
-  - จอง: [Highway Bus Japan](https://www.highwaybus.com/)
+- **09:35** - 🚌 รถบัสไป Kawaguchiko (Shinjuku Expressway Bus Terminal)
+  - **เที่ยวรถ:** 1407 | **ที่นั่ง:** 02A, 02B (Ref: 176991625)
+  - สถานะ: ✅ จองและชำระเงินเรียบร้อยแล้ว (¥6,600 / ฿1,560)
 
-- **11:40** - 🏔️ ถึง Kawaguchiko Bus Terminal
+- **11:20** - 🏔️ ถึง Kawaguchiko Bus Terminal
 - **12:00-14:30** - 🍽️ อาหารกลางวัน + ฝากกระเป๋า
   - ทานอาหารกลางวันใกล้สถานี และฝากกระเป๋าเดินทางไว้ที่โรงแรม/สถานี (Check-in 15:00 น.)
 - **14:30** - 🏨 เดินทางไป **HOTEL MYSTAYS Fuji Onsen Resort**
@@ -176,16 +176,18 @@
 
 ### ⏰ Timeline
 
-- **07:00-09:00** - 🍳 ตื่น/อาหารเช้า + Check-out MYSTAYS Fuji
-- **10:00** - 🚌 รถบัส Kawaguchiko → Shinjuku (จอง Highway Bus)
-- **12:00** - 🏙️ ถึง Shinjuku Bus Terminal
-- **12:00-13:00** - 🍽️ อาหารกลางวันง่ายๆ ย่าน Shinjuku
-- **13:00** - 🏨 ฝากกระเป๋าที่ **Shinjuku Granbell Hotel** (Check-in 15:00)
+- **07:00-10:00** - 🍳 ตื่น/อาหารเช้า + Check-out MYSTAYS Fuji
+- **10:30** - 🚶‍♂️ เดินทางมารอรถบัสที่ Kawaguchiko Station (ป้าย 3)
+- **11:10** - 🚌 รถบัส Kawaguchiko → Shinjuku (เที่ยวรถ 1106)
+  - **ที่นั่ง:** 11C, 11D (Ref: 177057039)
+- **12:55** - 🏙️ ถึง Shinjuku Bus Terminal
+- **13:00-14:00** - 🍽️ อาหารกลางวันง่ายๆ ย่าน Shinjuku
+- **14:00** - 🏨 ฝากกระเป๋าที่ **Shinjuku Granbell Hotel** (Check-in 15:00)
 
 **🌸 บ่าย - Harajuku (Fashion & Youth Culture)**
 
-- **13:30-14:00** - 🚇 เดินทางไป Harajuku (JR Yamanote)
-- **14:00-17:00** - 🛍️ **Harajuku Exclusive Shopping**
+- **14:30-15:00** - 🚇 เดินทางไป Harajuku (JR Yamanote)
+- **15:00-17:30** - 🛍️ **Harajuku Exclusive Shopping**
   - **Brandy Melville:** (ตามคำขอ) เสื้อผ้าวัยรุ่นฮิต
   - **Kiddy Land:** (Sanrio/Ghibli/Snoopy) ของน่ารัก
   - **Takeshita Street:** เดินเล่นดูของกุ๊กกิ๊กเพื่อนฝากซื้อ
@@ -209,8 +211,8 @@
 
 ### ⏰ Timeline
 
-- **06:45** - ⏱️ Check-out Shinjuku Granbell (ฝากกระเป๋าใหญ่ที่สถานี)
-- **07:15** - 🎒 **ฝากกระเป๋าที่ Locker สถานี Shinjuku** (โซน JR)
+- **06:45** - ⏱️ Check-out Shinjuku Granbell (ฝากกระเป๋าใหญ่ไว้ที่โรงแรม - ฟรี! คอนเฟิร์มทางเมลแล้ว)
+- **07:15** - 🎒 **ฝากสัมภาระทั้งหมดที่โรงแรม** นำไปแค่เป้ใบเล็กสำหรับนอนสกี 1 คืน
 - **08:00** - 🚄 เดินทางไป Tokyo/Ueno ขึ้น Shinkansen
 
 - **08:30-09:40** - 🚅 **Hokuriku Shinkansen (Hakutaka)** -> **Karuizawa Station**
