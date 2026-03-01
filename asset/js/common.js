@@ -15,16 +15,16 @@ function injectPersistentElements() {
 
     const path = window.location.pathname.replace(/\\/g, '/');
     const isInSubfolder = /\/(en|jp|th)\//.test(path);
-    
+
     // Determine current language and page
     let currentLang = 'th';
     if (path.includes('/en/')) currentLang = 'en';
     if (path.includes('/jp/')) currentLang = 'jp';
     if (path.includes('/th/')) currentLang = 'th';
-    
+
     const fileName = path.substring(path.lastIndexOf('/') + 1) || 'index.html';
     const isRoot = !isInSubfolder;
-    const homeLink = isRoot ? 'index.html' : 'index.html';
+    const homeLink = isRoot ? 'index.html' : '../index.html';
 
     const menuLabels = {
         th: { home: 'หน้าแรก (Home)', plan: 'แผนการเดินทาง', shop: 'รายการซื้อของ', cover: 'หน้าหลักสรุป', print: 'เอกสารสำหรับพิมพ์', lang: 'เปลี่ยนภาษา (Language)' },
@@ -83,7 +83,7 @@ function toggleGlobalMenu() {
     const panel = document.getElementById('navMenuPanel');
     const overlay = document.getElementById('navOverlay');
     const btn = document.getElementById('navMenuBtn');
-    
+
     if (panel && overlay) {
         const isOpen = panel.classList.toggle('open');
         overlay.classList.toggle('show');
